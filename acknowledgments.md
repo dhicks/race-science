@@ -1,0 +1,1 @@
+Thanks to Emily Merchant and John Jackson for some initial discussions that clarified the scope of the project and identified some key resources.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles.  
