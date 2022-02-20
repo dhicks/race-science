@@ -6,16 +6,20 @@ library(here)
 data_dir = here('data')
 
 ## Noun phrases ----
-phrases_comb = open_dataset(c(here(data_dir, 'phrases_mq', 'part-0.parquet'),
-                              here(data_dir, 'phrases_mainstr', 'part-0.parquet')),
-                            format = 'parquet')
+# phrases_mq = open_dataset(here(data_dir, '00_phrases_mq'))
+phrases_mq = dataset_factory(here(data_dir, '00_phrases_mq'))
 
-## This crashes
+# phrases_ms = open_dataset(here(data_dir, '00_phrases_mainstr'))
+phrases_ms = dataset_factory(here(data_dir, '00_phrases_mainstr'))
+
+## This is very twitchy; manually combined parquet folders seems more stable
+phrases_comb = open_dataset(c(phrases_mq, phrases_ms))
+
 # write_dataset(phrases_comb, here(data_dir, '01_phrases'))
-## Uses ~4 GB memory, but doesn't crash
+
 phrases_comb |> 
     head(nrow(phrases_comb)) |> 
-    write_dataset(here(data_dir, '01_phrases'))
+    write_csv_arrow(file = here(data_dir, '01_phrases.csv'))
 
 
 ## Metadata ----
