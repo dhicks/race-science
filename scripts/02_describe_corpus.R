@@ -18,6 +18,7 @@ nrow(meta_ar)
 ## Approach 2:  Dataset combined in script 01
 # phrases_ar = open_dataset(here(data_dir, '01_phrases'))
 ## Approach 3:  Manually combined parquet folders
+## This seems to be the most stable option
 phrases_ar = open_dataset(here(data_dir, '00_phrases'))
 
 ## Descriptive plots ----
