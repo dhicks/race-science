@@ -5,3 +5,4 @@ data/01_metadata/container.title=Behavior[[:space:]]Genetics filter=lfs diff=lfs
 data/01_metadata/container.title=Behavioral[[:space:]]and[[:space:]]Brain[[:space:]]Sciences filter=lfs diff=lfs merge=lfs -text
 data/01_phrases/part-0.parquet filter=lfs diff=lfs merge=lfs -text
 data/phrases_mainstr/part-0.parquet filter=lfs diff=lfs merge=lfs -text
+data/00_phrases filter=lfs diff=lfs merge=lfs -text
