@@ -34,13 +34,22 @@ phrases_ar |>
     arrange(desc(n)) |>
     collect()
 
-
-
-
+## Any docs with phrases but not metadata? 
 phrases_ar |>
     count(article_id) |>
     anti_join(meta_ar, by = 'article_id') |>
+    collect() |> 
+    nrow()
+
+## Metadata but not phrases?  
+phrase_ids = phrases_ar |> 
+    count(article_id) |> 
+    pull(article_id)
+
+meta_ar |> 
+    filter(!article_id %in% phrase_ids) |> 
     collect()
+
 
 ## NB Do summaries on phrases_ar *before* joining
 # phrases_ar |> 
@@ -58,5 +67,9 @@ phrases_ar |>
     inner_join(meta_ar, by = 'article_id') |>
     group_by(container.title, year) |>
     summarize(total_phrases = sum(total_phrases)) |> 
-    collect()
+    collect() |> 
+    ggplot(aes(year, total_phrases, 
+               color = container.title, group = container.title)) +
+    geom_line() +
+    scale_y_log10()
 
