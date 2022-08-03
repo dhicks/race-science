@@ -70,14 +70,17 @@ combined = phrases_ar |>
     inner_join(meta_ar, by = 'article_id') |>
     group_by(container.title, year) |>
     summarize(total_phrases = sum(total_phrases)) |> 
-    collect() |> 
-    ggplot(aes(year, total_phrases, 
+    collect()
+
+ggplot(combined, 
+       aes(year, total_phrases, 
                color = container.title, group = container.title)) +
     geom_line() +
     scale_y_log10()
 
 #created a joined df of everything rather than just total phrases by journal-year
-full = inner_join(meta_ar, phrases_ar, by = 'article_id') |> 
+full = inner_join(meta_ar, phrases_ar, 
+                  by = c('article_id', 'year')) |> 
     collect()
 
 #identifying missing values

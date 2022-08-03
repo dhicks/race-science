@@ -22,6 +22,7 @@ phrases_comb = open_dataset(here(data_dir, '00_phrases'))
 
 if (write_csv) {
     phrases_comb |> 
+        select(-year) |> 
         compute() |>
         write_csv_arrow(file = here(data_dir, '01_phrases.csv'))
 }
