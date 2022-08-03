@@ -8,8 +8,9 @@ library(arrow)
 library(here)
 library(tictoc)
 
-
 data_dir = here('data')
+
+k = c(5, seq(10, 50, by = 10))
 
 ## Load data ----
 vocab = read_rds(here(data_dir, '03-vocab-md.Rds'))
@@ -27,8 +28,8 @@ anti_join(meta_df, phrases_df, by = c('article_id')) |>
     count(container.title)
 
 ## Fit topic models ----
-k = c(5, seq(10, 50, by = 5))
-## Like 20 sec
+## Like 20 sec w/ 6 models + sm vocab
+## ~240 sec w/ 6 models + md vocab
 tic()
 topic_models = tmfast(phrases_df, 
                       n = k,
