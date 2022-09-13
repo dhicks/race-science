@@ -2,9 +2,6 @@ library(tidyverse)
 theme_set(theme_minimal())
 library(tmfast)
 
-library(tidygraph)
-library(ggraph)
-
 library(arrow)
 library(here)
 library(assertthat)
@@ -90,49 +87,22 @@ hellinger_betas = function(model_file, name) {
     ggsave(here(out_dir, glue(out_prefix, '_heat_map.png')), 
            height = 2*3, width = 3*4, bg = 'white')
     
-    ## Dendrogram
-    # comp_df |> 
-    #     filter(similarity > .5) |> 
-    #     ggplot() +
-    #     geom_segment(aes(x = topic_a, xend = topic_b, 
-    #                      y = model_a, yend = model_b, 
-    #                      color = similarity), 
-    #                  size = 1) +
-    #     scale_color_viridis_c(limits = c(0.5, 1), 
-    #                           direction = -1) +
-    #     scale_y_reverse(breaks = c(5, 10, 20, 30, 40, 50), 
-    #                     minor_breaks = NULL, 
-    #                     expand = expansion()) +
-    #     labs(x = 'topic', 
-    #          y = 'model (k)')
-    graph = comp_df |> 
-        mutate(start_id = str_c(model_a, '-', topic_a), 
-               end_id = str_c(model_b, '-', topic_b)) |> 
-        select(start_id, end_id, everything()) |> 
-        as_tbl_graph() |> 
-        mutate(model = str_split(name, '-', simplify = TRUE)[,1], 
-               topic = str_split(name, '-', simplify = TRUE)[,2], 
-               across(c(model, topic), 
-                      as.integer))
-    
-    graph |> 
-        activate(edges) |> 
+    comp_df |> 
         filter(similarity > .5) |> 
-        activate(nodes) |> 
-        filter(!node_is_isolated()) |> 
-        ggraph(layout = 'dendrogram') +
-        geom_edge_link(aes(color = similarity), width = 1) +
-        geom_node_label(aes(label = name), 
-                        alpha = .5, 
-                        nudge_y = -.15) +
-        scale_x_reverse() +
-        scale_y_reverse() +
-        scale_edge_color_viridis(limits = c(0.5, 1),
-                                 direction = -1) +
-        coord_flip() +
-        theme(legend.position = c(.2, .2))
+        ggplot() +
+        geom_segment(aes(x = topic_a, xend = topic_b, 
+                         y = model_a, yend = model_b, 
+                         color = similarity), 
+                     size = 1) +
+        scale_color_viridis_c(limits = c(0.5, 1), 
+                              direction = -1) +
+        scale_y_reverse(breaks = c(5, 10, 20, 30, 40, 50), 
+                        minor_breaks = NULL, 
+                        expand = expansion()) +
+        labs(x = 'topic', 
+             y = 'model (k)')
     ggsave(here(out_dir, glue(out_prefix, '_cladogram.png')), 
-           height = 6, width = 6, bg = 'white', scale = 1.5)
+           height = 3, width = 4, bg = 'white', scale = 1.5)
 }
 
 imap(model_files, hellinger_betas)
