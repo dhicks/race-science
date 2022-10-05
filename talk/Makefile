@@ -1,2 +1,2 @@
-talk.pdf: talk.tex
-	touch talk.pdf
+talk.pdf: talk.md
+	quarto render talk.md
