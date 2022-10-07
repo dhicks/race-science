@@ -13,48 +13,74 @@ author: "Dan Hicks & Emilio Lobato"
 institute: "UC Merced"
 ---
 
-# A brief history of race science
+# Race science
 
 ## Some definitions
 
 scientific racism
- ~ efforts to rationalize racial injustice and colonialism by appealing to the epistemic authority of science
+ ~ (purportedly) justifying racial inequality and colonialism by appealing to the epistemic authority of science
  
-race science
+race science - wide sense
  ~ scientific research that is amenable to scientific racism
 
-- Can accurately or inaccurately represent scientific findings
-- Can be pseudoscience, fringe science, or mainstream
-- Can be intentional or unintentional
-- Often overlaps with scientific sexism and eugenics
+race science - narrow sense
+ ~ scientific research that itself engages in scientific racism
 
-## *[title]*
+- Ex: genotype clustering studies [@RosenbergGeneticStructureHuman2002] or polygenic scores for educational attainment [@HardenGeneticAssociationsMathematics2019] 
+can be wide-sense race science without being narrow-sense race science [@CarlsonQuantifyingContextualizingImpact2020; WillsAreClustersRaces2017]
 
-:::: columns
-::: column
-17th-18th century: racial taxonomy
-Linnaeus, Blumenbach, Cuvier, Kant
+- This talk will focus on narrow-sense race science
 
-19th century: monogenism vs. polygenism, racial anatomy
-Agassiz, Morton 
 
-Early 20th century: eugenics
-*[]*
 
+## Race science in the 20th century: Pre-*Brown* {.smaller}
+
+:::: columns 
+::: {.column width="30%"}
+![[Charles Davenport (1866-1944)](https://en.wikipedia.org/wiki/Charles_Davenport), circa 1929. Source: <https://en.wikipedia.org/wiki/File:Charles_Benedict_Davenport.jpg>](img/Charles_Benedict_Davenport.jpg){width="100%"}
 :::
-::: column
-![From Nott and Gliddon 1868, as reproduced by @GouldMismeasureManRevised1996](img/Nott_Gliddon.png)
+
+::: {.column width="30%"}
+![[Franz Boas (1858-1942)](https://en.wikipedia.org/wiki/Franz_Boas), circa 1915. Source: <https://en.wikipedia.org/wiki/File:FranzBoas.jpg>](img/FranzBoas.jpg)
+:::
+
+::: {.column width="30%"}
+![[Margaret Mead (1901-1978)](https://en.wikipedia.org/wiki/Margaret_Mead), 1948. Source: <https://en.wikipedia.org/wiki/File:Margaret_Mead_(1901-1978).jpg>](img/Margaret_Mead_(1901-1978).jpg)
 :::
 ::::
 
-## Marginalization: 1930s
+- 1910: Davenport founds Eugenics Records Office at Cold Spring Harbor
+- 1926: NRC "Committee on the Negro" includes both Davenport and Boas: "neither was influential enough to veto his rival's participation" [@BarkanRetreatScientificRacism1992 113]
+- 1930s: *Coming of Age in Samoa* *[cite]* popularizes cultural anthropology, "free[ing] anthropology from the shackles of biology" [@BarkanRetreatScientificRacism1992 134]
+- 1940: Carnegie Institute defunds Eugenics Records Office
+- 1950: "For all practical social purposes 'race' is not so much a biological phenomenon as a social myth." *[https://unesdoc.unesco.org/ark:/48223/pf0000128291]*
 
-*[anthropology, then biology: Barkan]*
+## Pioneer Fund
 
-## PF, MQ, and Behavior Genetics
+*[todo]*
 
-*[Panofsky]*
 
+
+## *Brown v Board* and *Mankind Quarterly*
+
+:::: columns
+::: {.column width="30%"}
+![[Reginald Ruggles Gates (1882-1962)](https://en.wikipedia.org/wiki/Reginald_Ruggles_Gates), 1921. Source: <https://en.wikipedia.org/wiki/File:Reginald_Ruggles_Gates_Portrait.jpg>](img/Reginald_Ruggles_Gates_Portrait.jpg)
+:::
+
+::: {.column width="30%"}
+![[Henry Garrett (1894-1973)](https://en.wikipedia.org/wiki/Henry_Garrett_(psychologist)). Source: <https://www.psychometricsociety.org/post/past-present-and-incoming-presidents>, citing American Psychologist (1946), 1(9), 371](img/henry_e_garrett.png)
+:::
+
+::: {.column width="30%"}
+![[George Robert Gayre of Gayre and Nigg (1907-1996)](https://en.wikipedia.org/wiki/Robert_Gayre). Source: <https://www.patrickcomerford.com/2020/07/robert-gair-racist-from-rathmines-who.html>, original uncredited](img/Robert Gayre profile.jpg)
+:::
+::::
+
+> Ultimately, anti-'racial' science played a defining role in the Supreme Court’s dismissal of the 'separate-but-equal' principle in education .... [@SchafferScientificRacismAgain2007 261]
+
+
+> [E]veryone agrees that races or ethnic groups exist and that they are in fact the raw material by means of which human evolution has taken place. (Gates, *MQ* 1:1 [1960], 11)
 
 
 
