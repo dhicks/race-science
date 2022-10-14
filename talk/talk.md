@@ -87,42 +87,69 @@ can be wide-sense race science without being narrow-sense race science [@Carlson
 
 # Race science as agnotology and echo chamber
 
+## The Tobacco Strategy
+
+Five core strategies used by industry to manufacture doubt and create the appearance of legitimate scientific controversy [after @FernandezPintoKnowBetterNot2017, esp. 59]
+
+1. Emphasize scientific uncertainty
+2. Support friendly research
+3. Recruit distinguished scientists as spokesperson
+4. [Construct echo chambers]{.red}
+	- "creation and distribution of non-peer-reviewed journals and pamphlets"
+	- "funding and organizing of symposiums" 
+	- ["In this way, the tobacco industry circumvented peer review standards in publication"]{.red}
+5. Attack unfavorable research 
+
+\
+
+[Did Pioneer and *Mankind Quarterly* function in this way for race science?]{.blue}
+
+
+
+
+
+
+
+
+
 # Data and methods
 
 ## Pioneer-funded researchers
 
-:::: columns
-::: {.column} 
-| |
-|:-----|
-| [Thomas J. Bouchard, Jr.](https://en.wikipedia.org/wiki/Thomas_J._Bouchard_Jr.) |
-| Brunetto Chiarelli |
-| [Hans Eysenck](https://en.wikipedia.org/wiki/Hans_Eysenck) |
-| [Robert Gordon](https://en.wikipedia.org/wiki/Robert_A._Gordon) |
-| [Linda Gottfredson](https://en.wikipedia.org/wiki/Linda_Gottfredson) |
-| [Garrett Hardin](https://en.wikipedia.org/wiki/Garrett_Hardin) |
-| [Joseph M. Horn](https://en.wikipedia.org/wiki/Joseph_M._Horn) |
-| [Lloyd Humphreys](https://en.wikipedia.org/wiki/Lloyd_Humphreys) |
-| [Arthur Jensen](https://en.wikipedia.org/wiki/Arthur_Jensen) |
-| [Michael Levin](https://en.wikipedia.org/wiki/Michael_Levin) |
-| [Richard Lynn](https://en.wikipedia.org/wiki/Richard_Lynn) |
-| [R. Travis Osborne](https://en.wikipedia.org/wiki/R._Travis_Osborne) |
-| [J. Phillippe Rushton](https://en.wikipedia.org/wiki/J._Phillippe_Rushton) |
-| [Audrey M. Shuey](https://en.wikipedia.org/wiki/Audrey_M._Shuey) |
-| [Philip A. Vernon](https://en.wikipedia.org/wiki/Philip_A._Vernon) |
-| [Daniel Vining, Jr.](https://en.wikipedia.org/wiki/Daniel_Vining_Jr.) |
+::::: columns
+:::: column
+::: {.smaller}
+| | |
+|:-----|:-----|
+| [Thomas J. Bouchard, Jr.](https://en.wikipedia.org/wiki/Thomas_J._Bouchard_Jr.) | psychology |
+| Brunetto Chiarelli | | anthropology? |
+| [Hans Eysenck](https://en.wikipedia.org/wiki/Hans_Eysenck) | psychology |
+| [Robert Gordon](https://en.wikipedia.org/wiki/Robert_A._Gordon) | sociology |
+| [Linda Gottfredson](https://en.wikipedia.org/wiki/Linda_Gottfredson) | psychology |
+| [Garrett Hardin](https://en.wikipedia.org/wiki/Garrett_Hardin) | ecology |
+| [Joseph M. Horn](https://en.wikipedia.org/wiki/Joseph_M._Horn) | psychology |
+| [Lloyd Humphreys](https://en.wikipedia.org/wiki/Lloyd_Humphreys) | psychology |
+| [Arthur Jensen](https://en.wikipedia.org/wiki/Arthur_Jensen) | psychology |
+| [Michael Levin](https://en.wikipedia.org/wiki/Michael_Levin) | philosophy |
+| [Richard Lynn](https://en.wikipedia.org/wiki/Richard_Lynn) | psychology |
+| [R. Travis Osborne](https://en.wikipedia.org/wiki/R._Travis_Osborne) | psychology |
+| [J. Phillippe Rushton](https://en.wikipedia.org/wiki/J._Phillippe_Rushton) | psychology |
+| [Audrey M. Shuey](https://en.wikipedia.org/wiki/Audrey_M._Shuey) | psychology |
+| [Philip A. Vernon](https://en.wikipedia.org/wiki/Philip_A._Vernon) | psychology |
+| [Daniel Vining, Jr.](https://en.wikipedia.org/wiki/Daniel_Vining_Jr.) | demography |
 :::
+:::: 
 
-::: column
+:::: column
 - @MillerPioneerFundBankrolling1994
 - [List of Grantees from PF website](https://web.archive.org/web/20130103005545/http://www.pioneerfund.org/Grantees.html)
 
 \
 
-- WOS author search results for 14 authors (Sept/Oct 2021)
+- WoS author search results for 14 authors (Sept/Oct 2021)
 - Identify journals that published more than 5/14
-:::
 ::::
+:::::
 
 
 ## Corpus
@@ -142,9 +169,12 @@ can be wide-sense race science without being narrow-sense race science [@Carlson
 - PID is missing many relevant book reviews and essays
 	- eg, [Rushton's review of Lynn's book on Pioneer](https://www.sciencedirect.com/science/article/pii/S0191886901001337) *[confirm not included]*
 
+<!-- 
 \
+
 - Extract article full text from PDF or HTML
-- Extract noun phrases using spaCy NLP package
+- Extract noun phrases using spaCy NLP
+ -->
 
 
 ## Topic modeling
