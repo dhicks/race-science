@@ -1,2 +1,2 @@
-talk.pdf: talk.md
-	quarto render talk.md
+talk.html: talk.qmd
+	quarto render talk.qmd
