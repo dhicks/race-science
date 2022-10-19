@@ -71,7 +71,11 @@ umap_plot = weight_df |>
 if (interactive()) umap_plot
 
 p = ggplotly(umap_plot, 
-             tooltip = c('id', 'so', 'yr', 'ti', 'tp', 'tr')) |> 
+             tooltip = c('id', 'so', 'yr', 'ti', 'tp', 'tr'), 
+             width = 1*1440, 
+             height = .8*1080) |> 
+    layout(legend = list(font = list(size = 24)), 
+           hoverlabel = list(font = list(size = 24))) |> 
     style(visible = FALSE, traces = (1:k)+5) |> 
     layout(updatemenus = list(
         list(

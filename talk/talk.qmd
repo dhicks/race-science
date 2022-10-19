@@ -13,8 +13,9 @@ author: "Dan Hicks & Emilio Lobato"
 institute: "UC Merced"
 ---
 
-# Race science
+# Race science in the 20th century
 
+<!--
 ## Some definitions
 
 scientific racism
@@ -30,22 +31,23 @@ race science - narrow sense
 can be wide-sense race science without being narrow-sense race science [@CarlsonQuantifyingContextualizingImpact2020; WillsAreClustersRaces2017]
 
 - This talk will focus on narrow-sense race science
+-->
 
 
 
-## Race science in the 20th century: Pre-*Brown* {.smaller}
+## Before *Brown* {.smaller}
 
 :::: columns 
 ::: {.column width="30%"}
-![[Charles Davenport (1866-1944)](https://en.wikipedia.org/wiki/Charles_Davenport), circa 1929. Source: <https://en.wikipedia.org/wiki/File:Charles_Benedict_Davenport.jpg>](img/Charles_Benedict_Davenport.jpg){width="100%"}
+![[Charles Davenport (1866-1944)](https://en.wikipedia.org/wiki/Charles_Davenport), circa 1929. [Source](https://en.wikipedia.org/wiki/File:Charles_Benedict_Davenport.jpg)](img/Charles_Benedict_Davenport.jpg){width="100%"}
 :::
 
 ::: {.column width="30%"}
-![[Franz Boas (1858-1942)](https://en.wikipedia.org/wiki/Franz_Boas), circa 1915. Source: <https://en.wikipedia.org/wiki/File:FranzBoas.jpg>](img/FranzBoas.jpg)
+![[Franz Boas (1858-1942)](https://en.wikipedia.org/wiki/Franz_Boas), circa 1915. [Source](https://en.wikipedia.org/wiki/File:FranzBoas.jpg)](img/FranzBoas.jpg)
 :::
 
 ::: {.column width="30%"}
-![[Margaret Mead (1901-1978)](https://en.wikipedia.org/wiki/Margaret_Mead), 1948. Source: <https://en.wikipedia.org/wiki/File:Margaret_Mead_(1901-1978).jpg>](img/Margaret_Mead_(1901-1978).jpg)
+![[Margaret Mead (1901-1978)](https://en.wikipedia.org/wiki/Margaret_Mead), 1948. [Source](https://en.wikipedia.org/wiki/File:Margaret_Mead_(1901-1978).jpg)](img/Margaret_Mead_(1901-1978).jpg)
 :::
 ::::
 
@@ -65,27 +67,33 @@ can be wide-sense race science without being narrow-sense race science [@Carlson
 
 :::: columns
 ::: {.column width="30%"}
-![[Reginald Ruggles Gates (1882-1962)](https://en.wikipedia.org/wiki/Reginald_Ruggles_Gates), 1921. Source: <https://en.wikipedia.org/wiki/File:Reginald_Ruggles_Gates_Portrait.jpg>](img/Reginald_Ruggles_Gates_Portrait.jpg)
+![[Reginald Ruggles Gates (1882-1962)](https://en.wikipedia.org/wiki/Reginald_Ruggles_Gates), 1921. [Source](https://en.wikipedia.org/wiki/File:Reginald_Ruggles_Gates_Portrait.jpg)](img/Reginald_Ruggles_Gates_Portrait.jpg)
 :::
 
 ::: {.column width="30%"}
-![[Henry Garrett (1894-1973)](https://en.wikipedia.org/wiki/Henry_Garrett_(psychologist)). Source: <https://www.psychometricsociety.org/post/past-present-and-incoming-presidents>, citing American Psychologist (1946), 1(9), 371](img/henry_e_garrett.png)
+![[Henry Garrett (1894-1973)](https://en.wikipedia.org/wiki/Henry_Garrett_(psychologist)). [Source](https://www.psychometricsociety.org/post/past-present-and-incoming-presidents), citing American Psychologist (1946), 1(9), 371](img/henry_e_garrett.png){width="100%"}
 :::
 
 ::: {.column width="30%"}
-![[George Robert Gayre of Gayre and Nigg (1907-1996)](https://en.wikipedia.org/wiki/Robert_Gayre). Source: <https://www.patrickcomerford.com/2020/07/robert-gair-racist-from-rathmines-who.html>, original uncredited](img/Robert Gayre profile.jpg)
+![[George Robert Gayre of Gayre and Nigg (1907-1996)](https://en.wikipedia.org/wiki/Robert_Gayre). [Source](https://www.patrickcomerford.com/2020/07/robert-gair-racist-from-rathmines-who.html), original uncredited](img/Robert Gayre profile.jpg)
 :::
 ::::
 
 > Ultimately, anti-'racial' science played a defining role in the Supreme Court’s dismissal of the 'separate-but-equal' principle in education .... [@SchafferScientificRacismAgain2007 261]
 
 
-> [E]veryone agrees that races or ethnic groups exist and that they are in fact the raw material by means of which human evolution has taken place. (Gates, *MQ* 1:1 [1960], 11)
+## *MQ* was founded as race science
+
+> [[E]veryone agrees that races or ethnic groups exist and that they are in fact the raw material by means of which human evolution has taken place]{.red} ....
+
+> A scientific approach to racial questions, [free from sentiment, propaganda or bias]{.blue}, may lead to a more reasonable attitude to the problems which agitate considerable sections of mankind. This need for a calmer approach to problems of race on the part of [civilised peoples as well as more primitive tribes]{.red} makes it desirable that a journal should exist in which the problems of racial origin and racial relationships can be quietly discussed, [without rancour or bigotry and with the primary aim of elucidating facts]{.blue}. (Gates, *MQ* 1:1 [1960], 11)
 
 
 
 
-# Race science as agnotology and echo chamber
+
+
+# Race science agntology
 
 ## The Tobacco Strategy
 
@@ -113,6 +121,14 @@ Five core strategies used by industry to manufacture doubt and create the appear
 
 
 # Data and methods
+
+## Did PF and MQ function as a race science echo chamber? 
+
+- Empirical, text-mining approach
+- Identify Pioneer-funded researchers
+- Identify journals that published their work
+- Analyze all articles published in those journals, 1960-2010
+
 
 ## Pioneer-funded researchers
 
@@ -165,6 +181,8 @@ Five core strategies used by industry to manufacture doubt and create the appear
 
 - 34k journal articles
 - Published 1960-2010
+
+\
 - 3 journals published by American Psychological Association not available
 - PID is missing many relevant book reviews and essays
 	- eg, [Rushton's review of Lynn's book on Pioneer](https://www.sciencedirect.com/science/article/pii/S0191886901001337) *[confirm not included]*
@@ -186,6 +204,7 @@ Five core strategies used by industry to manufacture doubt and create the appear
 - Custom R package [`tmfast`](https://github.com/dhicks/tmfast)
 
 
+<!-- 
 ## Gould's critique of factor analysis
 
 > As a tool for simplification, [PCA/factor analysis] has proved its great value in many disciplines. But many factorists have gone beyond simplification, and tried to define factors as causal entities. This error of reification has plagued the technique since its inception .... [F]actors, by themselves, are neither things nor causes; they are mathematical abstractions. [@GouldMismeasureManRevised1996 284-5]
@@ -209,5 +228,25 @@ Topics as phenomena [@BogenSavingPhenomena1988; @WoodwardDataPhenomenaRestatemen
 	
 These words tend to be used together; **but why?**\
 These test items tend to be answered in the same way; **but why?**
+ -->
+
+
+# Mainstreaming race science
+
+## Umap interactive
+
+```{r}
+#| out-width: 1440px
+#| out-height: 1080px
+#| fig-cap: "UMAP visualization of Hellinger similarity, medium vocabulary, k = 30"
+library(readr)
+library(here)
+library(plotly)
+
+vis_dir = here('out')
+
+umap_vis = read_rds(here(vis_dir, '07_md_30.Rds'))
+umap_vis
+```
 
 

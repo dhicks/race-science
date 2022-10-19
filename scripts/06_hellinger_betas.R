@@ -11,26 +11,13 @@ data_dir = here('data')
 tm_dir = here(data_dir, '04_tm')
 out_dir = here('out')
 
+source(here('R', 'compare_betas.R'))
+
 model_files = list.files(tm_dir, 'tmfast') |> 
     set_names('lg', 'md', 'sm')
 
 # model = here(tm_dir, '04_md_tmfast.Rds') |>
 #     read_rds()
-
-compare_betas = function(beta1, beta2, vocab) {
-    fill = function(beta) {
-        beta |> 
-            complete(token = vocab, topic, fill = list(beta = 0)) |> 
-            build_matrix(topic, token, beta) %>%
-            .[, vocab]
-    }
-    beta1 = fill(beta1)
-    beta2 = fill(beta2)
-    
-    assert_that(all(colnames(beta1) == colnames(beta2)))
-    
-    hellinger(beta1, beta2)
-}
 
 # compare_betas(betas$`5`, betas$`10`)
 
