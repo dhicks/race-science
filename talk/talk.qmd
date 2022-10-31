@@ -2,18 +2,30 @@
 format: 
     revealjs:
         scrollable: true
-        width: 1440
+        width: 1.1*1440
         height: 1080
         toc: true
+        toc-depth: 1
+        toc-title: Overview
         slide-number: true
         theme: [default, custom.scss]
 
 title: "Mainstreaming Scientific Racism"
 author: "Dan Hicks & Emilio Lobato"
-institute: "UC Merced"
+institute: "University of California, Merced"
+bibliography: ../paper/race_science.yaml
 ---
 
 # Race science in the 20th century
+
+```{r setup}
+library(readr)
+library(here)
+library(plotly)
+library(gt)
+
+vis_dir = here('out')
+```
 
 <!--
 ## Some definitions
@@ -38,28 +50,52 @@ can be wide-sense race science without being narrow-sense race science [@Carlson
 ## Before *Brown* {.smaller}
 
 :::: columns 
-::: {.column width="30%"}
-![[Charles Davenport (1866-1944)](https://en.wikipedia.org/wiki/Charles_Davenport), circa 1929. [Source](https://en.wikipedia.org/wiki/File:Charles_Benedict_Davenport.jpg)](img/Charles_Benedict_Davenport.jpg){width="100%"}
+::: {.column width="33%"}
+![[Charles Davenport (1866-1944)](https://en.wikipedia.org/wiki/Charles_Davenport), circa 1929. [Source](https://en.wikipedia.org/wiki/File:Charles_Benedict_Davenport.jpg)](img/Charles_Benedict_Davenport.jpg){width="70%"}
 :::
 
-::: {.column width="30%"}
-![[Franz Boas (1858-1942)](https://en.wikipedia.org/wiki/Franz_Boas), circa 1915. [Source](https://en.wikipedia.org/wiki/File:FranzBoas.jpg)](img/FranzBoas.jpg)
+::: {.column width="33%"}
+![[Franz Boas (1858-1942)](https://en.wikipedia.org/wiki/Franz_Boas), circa 1915. [Source](https://en.wikipedia.org/wiki/File:FranzBoas.jpg)](img/FranzBoas.jpg){width="70%"}
 :::
 
-::: {.column width="30%"}
-![[Margaret Mead (1901-1978)](https://en.wikipedia.org/wiki/Margaret_Mead), 1948. [Source](https://en.wikipedia.org/wiki/File:Margaret_Mead_(1901-1978).jpg)](img/Margaret_Mead_(1901-1978).jpg)
+::: {.column width="33%"}
+![[Margaret Mead (1901-1978)](https://en.wikipedia.org/wiki/Margaret_Mead), 1948. [Source](https://en.wikipedia.org/wiki/File:Margaret_Mead_(1901-1978).jpg)](img/Margaret_Mead_(1901-1978).jpg){width="70%"}
 :::
 ::::
 
 - 1910: Davenport founds Eugenics Records Office at Cold Spring Harbor
 - 1926: NRC "Committee on the Negro" includes both Davenport and Boas: "neither was influential enough to veto his rival's participation" [@BarkanRetreatScientificRacism1992 113]
-- 1930s: *Coming of Age in Samoa* *[cite]* popularizes cultural anthropology, "free[ing] anthropology from the shackles of biology" [@BarkanRetreatScientificRacism1992 134]
+- 1930s: *Coming of Age in Samoa* [@MeadComingAgeSamoa1928] popularizes cultural anthropology, "free[ing] anthropology from the shackles of biology" [@BarkanRetreatScientificRacism1992 134]
 - 1940: Carnegie Institute defunds Eugenics Records Office
-- 1950: "For all practical social purposes 'race' is not so much a biological phenomenon as a social myth." *[https://unesdoc.unesco.org/ark:/48223/pf0000128291]*
+- 1950: "For all practical social purposes 'race' is not so much a biological phenomenon as a social myth" [@BeagleholeRaceQuestion1950; though see @BrattainRaceRacismAntiracism2007]
 
-## Pioneer Fund
 
-*[todo]*
+## The decline of eugenics and the Pioneer Fund {.smaller}
+
+:::: columns
+::: {.column width="30%"}
+![[Wickliffe Draper (1891-1972)](https://en.wikipedia.org/wiki/Wickliffe_Preston_Draper), textile heir, eugenicist, segregationist, 1918. [Source](https://en.wikipedia.org/wiki/File:Wickliffe_Draper.jpg)](img/Draper.jpg)
+:::
+
+::: {.column width="30%"}
+![[Harry Laughlin (1880-1943)](https://en.wikipedia.org/wiki/Harry_Laughlin), 
+superintendent of Eugenics Records Office, anti-immigrationist, c. 1929. [Source](https://en.wikipedia.org/wiki/File:Harry_Laughlin.jpg)](img/Harry_Laughlin.jpg){width="100%"}
+:::
+
+::: {.column width="30%"}
+![[Frederick Osborn (1889-1981)](https://en.wikipedia.org/wiki/Frederick_Osborn), railroad heir, eugenicist, shaped postwar pivot to "positive eugenics," undated. [Source](https://www.meehanreports.com/eugen-PT-pt1.htm)](img/osbornphoto.jpg){width="100%"}
+:::
+::::
+
+Founded in 1937 to "support academic research and the \'[sic]dissemination of information, into the 'problem of heredity and eugenics' and 'the problems of race betterment'" [@MehlerFoundationFascismNew1989 21, quoting Laughlin]
+<!-- 
+- Presidents
+	- Harry Laughlin, 1937-1941
+	- Frederick Osborn, 1941–1958
+	- Harry Weyher, Jr., 1958-2002
+	- J. Phillippe Rushton, 2002-12
+	- Richard Lynn, 2012-??
+ -->
 
 
 
@@ -79,23 +115,23 @@ can be wide-sense race science without being narrow-sense race science [@Carlson
 :::
 ::::
 
-> Ultimately, anti-'racial' science played a defining role in the Supreme Court’s dismissal of the 'separate-but-equal' principle in education .... [@SchafferScientificRacismAgain2007 261]
+> Ultimately, anti-'racial' science played a defining role in the Supreme Court’s dismissal of the 'separate-but-equal' principle in education .... [@SchafferScientificRacismAgain2007 261; see also @JacksonScienceSegregationRace2005]
 
 
 ## *MQ* was founded as race science
 
 > [[E]veryone agrees that races or ethnic groups exist and that they are in fact the raw material by means of which human evolution has taken place]{.red} ....
 
-> A scientific approach to racial questions, [free from sentiment, propaganda or bias]{.blue}, may lead to a more reasonable attitude to the problems which agitate considerable sections of mankind. This need for a calmer approach to problems of race on the part of [civilised peoples as well as more primitive tribes]{.red} makes it desirable that a journal should exist in which the problems of racial origin and racial relationships can be quietly discussed, [without rancour or bigotry and with the primary aim of elucidating facts]{.blue}. (Gates, *MQ* 1:1 [1960], 11)
+> [A scientific approach to racial questions, free from sentiment, propaganda or bias]{.blue}, may lead to a more reasonable attitude to the problems which agitate considerable sections of mankind. This need for a calmer approach to problems of race on the part of [civilised peoples as well as more primitive tribes]{.red} makes it desirable that a journal should exist in which the problems of racial origin and racial relationships can be quietly discussed, [without rancour or bigotry and with the primary aim of elucidating facts]{.blue}. (Gates, *MQ* 1:1 [1960], 11)
 
 
 
 
 
 
-# Race science agntology
+# Race science agnotology
 
-## The Tobacco Strategy
+## The Tobacco Strategy {.smallish}
 
 Five core strategies used by industry to manufacture doubt and create the appearance of legitimate scientific controversy [after @FernandezPintoKnowBetterNot2017, esp. 59]
 
@@ -110,24 +146,21 @@ Five core strategies used by industry to manufacture doubt and create the appear
 
 \
 
-[Did Pioneer and *Mankind Quarterly* function in this way for race science?]{.blue}
+[Did Pioneer and *Mankind Quarterly* function in this way for race science?]{.red}
 
 
 
 
-
-
-
-
-
-# Data and methods
-
-## Did PF and MQ function as a race science echo chamber? 
+<!-- 
+## PF and MQ as a race science echo chamber? 
 
 - Empirical, text-mining approach
 - Identify Pioneer-funded researchers
 - Identify journals that published their work
 - Analyze all articles published in those journals, 1960-2010
+
+\
+ -->
 
 
 ## Pioneer-funded researchers
@@ -138,7 +171,7 @@ Five core strategies used by industry to manufacture doubt and create the appear
 | | |
 |:-----|:-----|
 | [Thomas J. Bouchard, Jr.](https://en.wikipedia.org/wiki/Thomas_J._Bouchard_Jr.) | psychology |
-| Brunetto Chiarelli | | anthropology? |
+| Brunetto Chiarelli | anthropology? |
 | [Hans Eysenck](https://en.wikipedia.org/wiki/Hans_Eysenck) | psychology |
 | [Robert Gordon](https://en.wikipedia.org/wiki/Robert_A._Gordon) | sociology |
 | [Linda Gottfredson](https://en.wikipedia.org/wiki/Linda_Gottfredson) | psychology |
@@ -168,7 +201,14 @@ Five core strategies used by industry to manufacture doubt and create the appear
 :::::
 
 
-## Corpus
+## Pioneer-funded researchers
+
+![Journals publishing 6 or more Pioneer-funded researchers, WOS](img/wos_results.png)
+
+
+
+
+## Corpus {.smallish}
 
 |                                |       |
 |:-------------------------------|------:|
@@ -176,16 +216,16 @@ Five core strategies used by industry to manufacture doubt and create the appear
 | Behavioral & Brain Sciences    |   898 |
 | Intelligence                   |  1237 |
 | **Mankind Quarterly**          |  1821 |
-| Person. & Individ. Differences |  7274 |
+| Personality & Individual<br> Differences |  7274 |
 | Psychological Reports          | 21398 |
 
 - 34k journal articles
 - Published 1960-2010
 
-\
 - 3 journals published by American Psychological Association not available
+- In B&BS, focal papers + commentaries all bundled together
 - PID is missing many relevant book reviews and essays
-	- eg, [Rushton's review of Lynn's book on Pioneer](https://www.sciencedirect.com/science/article/pii/S0191886901001337) *[confirm not included]*
+	- eg, [Rushton's review of Lynn's book on Pioneer](https://www.sciencedirect.com/science/article/pii/S0191886901001337)
 
 <!-- 
 \
@@ -195,17 +235,63 @@ Five core strategies used by industry to manufacture doubt and create the appear
  -->
 
 
-## Topic modeling
+## Topic modeling 
 
-![Diachronic evolution of topic categories in *Philosophy of Science*, 1934–2015. @MalaterreWhatThisThing2019 fig. 2.](img/MalaterreWhatThisThing2019.jpeg){width="80%"}
+:::: columns
+::: {.column width="60%"}
+![Diachronic evolution of topic categories in *Philosophy of Science*, 1934–2015. @MalaterreWhatThisThing2019 fig. 2.](img/MalaterreWhatThisThing2019.jpeg){width="100%"}
+:::
 
+::: {.column width="40%"}
 - Statistical method for clustering documents and words simultaneously
-- Documents are composed of topics; topics are composed of words
+- [Can we identify a race science topic?]{.red}
+- [Does this topic start in MQ, spread to mainstream journals?]{.red}
+:::
+::::
+
+::: {.smaller}
 - Custom R package [`tmfast`](https://github.com/dhicks/tmfast)
+- 18 different models (3 vocabulary sizes $\times$ $k$ = 5, 10, 20, ..., 50)
+:::
 
 
-<!-- 
-## Gould's critique of factor analysis
+## UMAP interactive
+
+```{r}
+#| out-width: 1.1*1440px
+#| out-height: 1080px
+#| fig-cap: "UMAP visualization of Hellinger similarity, medium vocabulary, k = 30"
+
+umap_vis = read_rds(here(vis_dir, '07_md_30.Rds'))
+umap_vis
+```
+
+## 3 focal topics {.smaller}
+
+```{r}
+beta_gt = read_rds(here(vis_dir, '??_beta_table.Rds'))
+beta_gt
+```
+
+---
+
+*[focal topics by journal over time]*
+
+# Conclusion
+
+- Race & intelligence research did not appear to originate in MQ and spread to other journals
+- Instead, Intelligence and PID were the primary "echo chambers" used to legitimize this psychological form of race science
+- "The agnotology is coming from inside the house"
+
+
+
+
+## Different topics or different communities?  {visibility="uncounted"}
+
+![Authors by topic](../out/_authors.png)
+
+
+## Gould's critique of factor analysis {visibility="uncounted"}
 
 > As a tool for simplification, [PCA/factor analysis] has proved its great value in many disciplines. But many factorists have gone beyond simplification, and tried to define factors as causal entities. This error of reification has plagued the technique since its inception .... [F]actors, by themselves, are neither things nor causes; they are mathematical abstractions. [@GouldMismeasureManRevised1996 284-5]
 
@@ -216,7 +302,7 @@ Five core strategies used by industry to manufacture doubt and create the appear
 - Need to avoid hasty reification of topics
 
 
-## Topic modeling as phenomena construction
+## Topic modeling as phenomena construction {visibility="uncounted"}
 
 Topics as phenomena [@BogenSavingPhenomena1988; @WoodwardDataPhenomenaRestatement2009]
 
@@ -228,25 +314,5 @@ Topics as phenomena [@BogenSavingPhenomena1988; @WoodwardDataPhenomenaRestatemen
 	
 These words tend to be used together; **but why?**\
 These test items tend to be answered in the same way; **but why?**
- -->
 
-
-# Mainstreaming race science
-
-## Umap interactive
-
-```{r}
-#| out-width: 1440px
-#| out-height: 1080px
-#| fig-cap: "UMAP visualization of Hellinger similarity, medium vocabulary, k = 30"
-library(readr)
-library(here)
-library(plotly)
-
-vis_dir = here('out')
-
-umap_vis = read_rds(here(vis_dir, '07_md_30.Rds'))
-umap_vis
-```
-
-
+## References {visibility="uncounted"}

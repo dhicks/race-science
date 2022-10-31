@@ -1,10 +1,18 @@
 /*-- scss:defaults --*/
 
-/*$presentation-font-size-root: 30px;*/
+$presentation-font-size-root: 50px;
 
 /*-- scss:rules --*/
-.smaller {
+.smallish {
   font-size: 80%!important;
+}
+
+.smallish h2 {
+  font-size: 80px;
+}
+
+.smaller {
+  font-size: 65%!important;
 }
 
 .red {
