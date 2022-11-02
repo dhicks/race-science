@@ -4,7 +4,7 @@ format:
         scrollable: true
         width: 1.1*1440
         height: 1080
-        toc: true
+        toc: false
         toc-depth: 1
         toc-title: Overview
         slide-number: true
@@ -12,11 +12,80 @@ format:
 
 title: "Mainstreaming Scientific Racism"
 author: "Dan Hicks & Emilio Lobato"
-institute: "University of California, Merced"
+institute: "University of California, Merced<br><https://mainstream-race-science.netlify.app>"
 bibliography: ../paper/race_science.yaml
 ---
 
-# Race science in the 20th century
+
+# Introduction
+
+## The return(?) of race science
+
+:::: columns
+::: column
+![](img/Saini.png){width="70%"}\
+@SainiSuperiorReturnRace2019
+:::
+::: column
+> [Many people assumed that the eugenicists had all but disappeared with the Nazi regime, and that race science was pretty much finished at the same time.]{.blue .fragment} 
+
+> [Intellectual racism has always existed, and indeed for a chunk of history, it thrived. I believe it is still the toxic little seed at the heart of academia. However dead you might think it is, it needs only a little water, and now it’s raining.]{.red .fragment} 
+:::
+::::
+
+
+## Institutions of race science
+
+Pioneer Fund
+: Founded 1937, during the decline of (institutionalized) eugenics
+
+*Mankind Quarterly*
+: Founded 1960 by marginalized academics as part of the backlash to *Brown v Board*
+
+. . .
+
+\
+
+The Tobacco Strategy
+: Used by regulated industries to create the appearance of legitimate scientific controversy and thereby block or delay regulation [@OreskesMerchantsDoubtHow2011; @FernandezPintoKnowBetterNot2017]
+
+
+
+## Echo chambers
+
+- "creation and distribution of non-peer reviewed journals and pamphlets"
+- "funding and organizing of symposiums" for industry-funded research
+- ["In this way, the tobacco industry circumvented peer review standards in publication"]{.red} [@FernandezPintoKnowBetterNot2017]
+
+. . .
+
+\
+
+- "a bounded, enclosed media space that has the potential to both magnify the messages delivered within it and [insulate them from rebuttal]{.red}" [@JamiesonEchoChamberRush2008 76]
+
+. . .
+
+\
+
+[**Did Pioneer and *Mankind Quarterly* nurture race science by protecting it from mainstream peer review?**]{}
+
+
+
+
+<!-- 
+## PF and MQ as a race science echo chamber? 
+
+- Empirical, text-mining approach
+- Identify Pioneer-funded researchers
+- Identify journals that published their work
+- Analyze all articles published in those journals, 1960-2010
+
+\
+ -->
+
+
+<!-- 
+# Race science, 1910-1960
 
 ```{r setup}
 library(readr)
@@ -46,20 +115,20 @@ can be wide-sense race science without being narrow-sense race science [@Carlson
 -->
 
 
-
-## Before *Brown* {.smaller}
+<!--
+## Rise and fall of eugenics {.smaller}
 
 :::: columns 
 ::: {.column width="33%"}
-![[Charles Davenport (1866-1944)](https://en.wikipedia.org/wiki/Charles_Davenport), circa 1929. [Source](https://en.wikipedia.org/wiki/File:Charles_Benedict_Davenport.jpg)](img/Charles_Benedict_Davenport.jpg){width="70%"}
+![[Charles Davenport (1866-1944)](https://en.wikipedia.org/wiki/Charles_Davenport), circa 1929. [Source](https://en.wikipedia.org/wiki/File:Charles_Benedict_Davenport.jpg)](img/Charles_Benedict_Davenport.jpg){width="80%"}
 :::
 
 ::: {.column width="33%"}
-![[Franz Boas (1858-1942)](https://en.wikipedia.org/wiki/Franz_Boas), circa 1915. [Source](https://en.wikipedia.org/wiki/File:FranzBoas.jpg)](img/FranzBoas.jpg){width="70%"}
+![[Franz Boas (1858-1942)](https://en.wikipedia.org/wiki/Franz_Boas), circa 1915. [Source](https://en.wikipedia.org/wiki/File:FranzBoas.jpg)](img/FranzBoas.jpg){width="80%"}
 :::
 
 ::: {.column width="33%"}
-![[Margaret Mead (1901-1978)](https://en.wikipedia.org/wiki/Margaret_Mead), 1948. [Source](https://en.wikipedia.org/wiki/File:Margaret_Mead_(1901-1978).jpg)](img/Margaret_Mead_(1901-1978).jpg){width="70%"}
+![[Margaret Mead (1901-1978)](https://en.wikipedia.org/wiki/Margaret_Mead), 1948. [Source](https://en.wikipedia.org/wiki/File:Margaret_Mead_(1901-1978).jpg)](img/Margaret_Mead_(1901-1978).jpg){width="80%"}
 :::
 ::::
 
@@ -67,9 +136,10 @@ can be wide-sense race science without being narrow-sense race science [@Carlson
 - 1926: NRC "Committee on the Negro" includes both Davenport and Boas: "neither was influential enough to veto his rival's participation" [@BarkanRetreatScientificRacism1992 113]
 - 1930s: *Coming of Age in Samoa* [@MeadComingAgeSamoa1928] popularizes cultural anthropology, "free[ing] anthropology from the shackles of biology" [@BarkanRetreatScientificRacism1992 134]
 - 1940: Carnegie Institute defunds Eugenics Records Office
-- 1950: "For all practical social purposes 'race' is not so much a biological phenomenon as a social myth" [@BeagleholeRaceQuestion1950; though see @BrattainRaceRacismAntiracism2007]
+<!-- - 1950: "For all practical social purposes 'race' is not so much a biological phenomenon as a social myth" [@BeagleholeRaceQuestion1950; though see @BrattainRaceRacismAntiracism2007] -->
 
 
+<!--
 ## The decline of eugenics and the Pioneer Fund {.smaller}
 
 :::: columns
@@ -91,26 +161,26 @@ Founded in 1937 to "support academic research and the \'[sic]dissemination of in
 <!-- 
 - Presidents
 	- Harry Laughlin, 1937-1941
-	- Frederick Osborn, 1941–1958
+	- Frederick Osborn, 1941-1958
 	- Harry Weyher, Jr., 1958-2002
 	- J. Phillippe Rushton, 2002-12
 	- Richard Lynn, 2012-??
  -->
 
 
-
-## *Brown v Board* and *Mankind Quarterly*
+<!--
+## *Brown v Board* (1954) and *Mankind Quarterly*
 
 :::: columns
-::: {.column width="30%"}
-![[Reginald Ruggles Gates (1882-1962)](https://en.wikipedia.org/wiki/Reginald_Ruggles_Gates), 1921. [Source](https://en.wikipedia.org/wiki/File:Reginald_Ruggles_Gates_Portrait.jpg)](img/Reginald_Ruggles_Gates_Portrait.jpg)
-:::
-
-::: {.column width="30%"}
+::: {.column width="32%"}
 ![[Henry Garrett (1894-1973)](https://en.wikipedia.org/wiki/Henry_Garrett_(psychologist)). [Source](https://www.psychometricsociety.org/post/past-present-and-incoming-presidents), citing American Psychologist (1946), 1(9), 371](img/henry_e_garrett.png){width="100%"}
 :::
 
-::: {.column width="30%"}
+::: {.column width="32%"}
+![[Reginald Ruggles Gates (1882-1962)](https://en.wikipedia.org/wiki/Reginald_Ruggles_Gates), 1921. [Source](https://en.wikipedia.org/wiki/File:Reginald_Ruggles_Gates_Portrait.jpg)](img/Reginald_Ruggles_Gates_Portrait.jpg)
+:::
+
+::: {.column width="32%"}
 ![[George Robert Gayre of Gayre and Nigg (1907-1996)](https://en.wikipedia.org/wiki/Robert_Gayre). [Source](https://www.patrickcomerford.com/2020/07/robert-gair-racist-from-rathmines-who.html), original uncredited](img/Robert Gayre profile.jpg)
 :::
 ::::
@@ -124,44 +194,12 @@ Founded in 1937 to "support academic research and the \'[sic]dissemination of in
 
 > [A scientific approach to racial questions, free from sentiment, propaganda or bias]{.blue}, may lead to a more reasonable attitude to the problems which agitate considerable sections of mankind. This need for a calmer approach to problems of race on the part of [civilised peoples as well as more primitive tribes]{.red} makes it desirable that a journal should exist in which the problems of racial origin and racial relationships can be quietly discussed, [without rancour or bigotry and with the primary aim of elucidating facts]{.blue}. (Gates, *MQ* 1:1 [1960], 11)
 
+-->
 
 
 
 
-
-# Race science agnotology
-
-## The Tobacco Strategy {.smallish}
-
-Five core strategies used by industry to manufacture doubt and create the appearance of legitimate scientific controversy [after @FernandezPintoKnowBetterNot2017, esp. 59]
-
-1. Emphasize scientific uncertainty
-2. Support friendly research
-3. Recruit distinguished scientists as spokesperson
-4. [Construct echo chambers]{.red}
-	- "creation and distribution of non-peer-reviewed journals and pamphlets"
-	- "funding and organizing of symposiums" 
-	- ["In this way, the tobacco industry circumvented peer review standards in publication"]{.red}
-5. Attack unfavorable research 
-
-\
-
-[Did Pioneer and *Mankind Quarterly* function in this way for race science?]{.red}
-
-
-
-
-<!-- 
-## PF and MQ as a race science echo chamber? 
-
-- Empirical, text-mining approach
-- Identify Pioneer-funded researchers
-- Identify journals that published their work
-- Analyze all articles published in those journals, 1960-2010
-
-\
- -->
-
+# Mainstreaming race science
 
 ## Pioneer-funded researchers
 
@@ -203,7 +241,7 @@ Five core strategies used by industry to manufacture doubt and create the appear
 
 ## Pioneer-funded researchers
 
-![Journals publishing 6 or more Pioneer-funded researchers, WOS](img/wos_results.png)
+![Journals publishing 6 or more Pioneer-funded researchers, WOS author search results](img/wos_results.png)
 
 
 
@@ -239,7 +277,7 @@ Five core strategies used by industry to manufacture doubt and create the appear
 
 :::: columns
 ::: {.column width="60%"}
-![Diachronic evolution of topic categories in *Philosophy of Science*, 1934–2015. @MalaterreWhatThisThing2019 fig. 2.](img/MalaterreWhatThisThing2019.jpeg){width="100%"}
+![Diachronic evolution of topic categories in *Philosophy of Science*, 1934-2015. @MalaterreWhatThisThing2019 fig. 2.](img/MalaterreWhatThisThing2019.jpeg){width="100%"}
 :::
 
 ::: {.column width="40%"}
@@ -277,18 +315,26 @@ beta_gt
 
 *[focal topics by journal over time]*
 
+
 # Conclusion
 
-- Race & intelligence research did not appear to originate in MQ and spread to other journals
-- Instead, Intelligence and PID were the primary "echo chambers" used to legitimize this psychological form of race science
-- "The agnotology is coming from inside the house"
+- Race & intelligence research did not appear to originate in *MQ* and spread to other journals
+- Instead, *Intelligence* and *PID* were the primary venues used to legitimize this psychological form of race science
+- "The race science is coming from inside the house!"
+
+# Thanks! {visibility="uncounted"}
+
+<https://mainstream-race-science.netlify.app>
 
 
 
+
+
+# Bonus content {visibility="uncounted"}
 
 ## Different topics or different communities?  {visibility="uncounted"}
 
-![Authors by topic](../out/_authors.png)
+![Authors by topic](img/_authors.png)
 
 
 ## Gould's critique of factor analysis {visibility="uncounted"}
