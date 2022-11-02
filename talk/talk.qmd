@@ -17,7 +17,7 @@ bibliography: ../paper/race_science.yaml
 ---
 
 
-# Introduction
+# Introduction {visibility="uncounted"}
 
 ## The return(?) of race science
 
@@ -199,7 +199,7 @@ Founded in 1937 to "support academic research and the \'[sic]dissemination of in
 
 
 
-# Mainstreaming race science
+# Mainstreaming race science {visibility="uncounted"}
 
 ## Pioneer-funded researchers
 
@@ -311,15 +311,20 @@ beta_gt = read_rds(here(vis_dir, '??_beta_table.Rds'))
 beta_gt
 ```
 
----
+## Focal topics, by journal, over time
 
-*[focal topics by journal over time]*
+![](img/08_presentation.png)
 
 
-# Conclusion
+# Conclusions {visibility="hidden"}
+## Conclusions
 
-- Race & intelligence research did not appear to originate in *MQ* and spread to other journals
-- Instead, *Intelligence* and *PID* were the primary venues used to legitimize this psychological form of race science
+- Most Pioneer-funded researchers did not publish heavily in *MQ*
+- Race & intelligence research did not appear to originate in *MQ*
+
+\
+
+- Instead, *Psychological Reports* and later *Intelligence* and *PID* were the primary venues for this psychological form of race science
 - "The race science is coming from inside the house!"
 
 # Thanks! {visibility="uncounted"}
