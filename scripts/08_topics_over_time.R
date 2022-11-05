@@ -30,18 +30,26 @@ articles_df = phrases_ar |>
 sm_tmf = readRDS(here(tm_dir, '04_sm_tmfast.Rds'))
 md_tmf = readRDS(here(tm_dir, '04_md_tmfast.Rds'))
 
+md_tmf |> 
+    tidy(k = 30, matrix = 'gamma') |> 
+    filter(topic %in% c('V05', 'V07', 'V19')) |> 
+    ggplot(aes(gamma, color = topic)) +
+    stat_ecdf() +
+    geom_hline(yintercept = .9)
+
 create_dataframes = function(model, 
                              k = c(5, seq(10, 50, by = 10)), 
                              topics = NULL, 
                              articles = articles_df, 
-                             agg_fn = median) {
+                             gamma_treshhold = .05,
+                             agg_fn = mean) {
     full_topic_list = list()
     
     for (i in k){
         out_prefix = as.character(i)
         ## Median value of gamma by year-topic-journal
         dataframe = tidy(model, k = i, matrix = 'gamma') |>
-            filter(gamma > .05) |>
+            filter(gamma > gamma_treshhold) |>
             left_join(articles, by = c('document' = 'article_id')) |> 
             group_by(topic, container.title, year) |> 
             summarise(gamma = agg_fn(gamma), 
@@ -76,15 +84,16 @@ ggplot(topics_time_md, aes(year, gamma,
 
 topics_time_md_count = create_dataframes(md_tmf, 
                                          topics = c('V07', 'V19', 'V05'), 
-                                         # agg_fn = \(x)(n())
-                                         agg_fn = sum)
+                                         agg_fn = \(x)(n()), 
+                                         # agg_fn = sum,
+                                         gamma_treshhold = .07)
 topics_time_md_count |> 
     filter(k == 30) |> 
     group_by(k, topic, container.title) |> 
     mutate(gamma_sm = slider::slide_index_dbl(gamma, year, 
                                               mean, 
-                                              .before = 4, 
-                                              .after = 4)) |> 
+                                              .before = 2, 
+                                              .after = 2)) |> 
     ungroup() |> 
     ggplot(aes(year,  
                color = container.title, 
@@ -92,13 +101,14 @@ topics_time_md_count |>
     geom_line(aes(y = gamma_sm), size = 1.25, color = 'black') +
     geom_line(aes(y = gamma), alpha = .5) +
     geom_line(aes(y = gamma_sm), size = 1) +
-    facet_wrap(vars(topic)) +
-    labs(y = expression(paste(Sigma, '(', gamma, '|', gamma, '>.05)')), 
+    facet_wrap(vars(topic), scales = 'free_y') +
+    labs(y = expression(paste('#{', gamma, '>.07}')), 
          caption = 'Medium vocabulary, k = 30') +
-    coord_cartesian(ylim = c(NA, 11)) +
+    coord_cartesian(ylim = c(NA, NA)) +
     scale_color_viridis_d(option = 'D', 
                           name = '') +
     theme(legend.position = 'bottom')
 
 ggsave(here(out_dir, '08_presentation.png'), 
        height = 5, width = 9, bg = 'white')
+ 

@@ -1,7 +1,7 @@
 all: talk
 
 talk: talk.html
-talk.html: talk.qmd ../paper/race_science.yaml custom.scss
+talk.html: talk.qmd ../paper/race_science.yaml custom.scss img/*
 	quarto render talk.qmd
 
 publish:

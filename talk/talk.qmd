@@ -59,17 +59,12 @@ The Tobacco Strategy
 - "funding and organizing of symposiums" for industry-funded research
 - ["In this way, the tobacco industry circumvented peer review standards in publication"]{.red} [@FernandezPintoKnowBetterNot2017]
 
-. . .
-
-\
-
+::: {.incremental}
 - "a bounded, enclosed media space that has the potential to both magnify the messages delivered within it and [insulate them from rebuttal]{.red}" [@JamiesonEchoChamberRush2008 76]
+:::
 
-. . .
-
-\
-
-[**Did Pioneer and *Mankind Quarterly* nurture race science by protecting it from mainstream peer review?**]{}
+[**Did Pioneer and *Mankind Quarterly* nurture race science by protecting it from mainstream peer review?**]{.fragment}\
+[**Our analysis indicates *MQ* did not play this role**]{.fragment .red}
 
 
 
@@ -248,7 +243,7 @@ Founded in 1937 to "support academic research and the \'[sic]dissemination of in
 
 
 
-## Corpus {}
+## Text-mining corpus
 
 |                                |       |
 |:-------------------------------|------:|
@@ -278,8 +273,11 @@ Founded in 1937 to "support academic research and the \'[sic]dissemination of in
 
 ::: {.column width="40%"}
 - Statistical method for clustering documents and words simultaneously
-- [Can we identify a race science topic?]{.red}
-- [Does this topic start in MQ, spread to mainstream journals?]{.red}
+
+\
+
+- [Can we identify a race science topic?]{.blue}
+- [Does this topic start in MQ, spread to mainstream journals?]{.blue}
 :::
 ::::
 
@@ -324,10 +322,10 @@ beta_gt
 \
 
 - *MQ* was the primary venue for one form of race science
-	- Anthropological? 
+	- "Anthropology-flavored"? 
 - While mainstream journals were the primary venues for a distinct form of race science
 	- *Psychological Reports*, later *Intelligence* and *PID*
-	- Psychological? 
+	- "Psychology-flavored"? 
 - "The race science is coming from inside the house!"
 
 # Thanks! {visibility="uncounted"}
