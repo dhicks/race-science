@@ -26,7 +26,8 @@ author_data = function(data_dir = here::here('data'),
     
     ## Canonicalized names
     canonicalized_df = read_csv(here(data_dir, canon_file)) |> 
-        filter(!is.na(canonical))
+        filter(!is.na(canonical)) |> 
+        select(-...3)
     
     comb_df = bind_rows(mq_df, 
                         mainstream_df) |> 
