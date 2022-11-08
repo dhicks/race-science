@@ -16,8 +16,16 @@ institute: "University of California, Merced<br><https://mainstream-race-science
 bibliography: ../paper/race_science.yaml
 ---
 
-
 # Introduction {visibility="uncounted"}
+
+```{r setup}
+library(readr)
+library(here)
+library(plotly)
+library(gt)
+
+vis_dir = here('out')
+```
 
 ## The return(?) of race science
 
@@ -70,47 +78,7 @@ The Tobacco Strategy
 
 
 <!-- 
-## PF and MQ as a race science echo chamber? 
-
-- Empirical, text-mining approach
-- Identify Pioneer-funded researchers
-- Identify journals that published their work
-- Analyze all articles published in those journals, 1960-2010
-
-\
- -->
-
-
-<!-- 
 # Race science, 1910-1960
-
-```{r setup}
-library(readr)
-library(here)
-library(plotly)
-library(gt)
-
-vis_dir = here('out')
-```
-
-<!--
-## Some definitions
-
-scientific racism
- ~ (purportedly) justifying racial inequality and colonialism by appealing to the epistemic authority of science
- 
-race science - wide sense
- ~ scientific research that is amenable to scientific racism
-
-race science - narrow sense
- ~ scientific research that itself engages in scientific racism
-
-- Ex: genotype clustering studies [@RosenbergGeneticStructureHuman2002] or polygenic scores for educational attainment [@HardenGeneticAssociationsMathematics2019] 
-can be wide-sense race science without being narrow-sense race science [@CarlsonQuantifyingContextualizingImpact2020; WillsAreClustersRaces2017]
-
-- This talk will focus on narrow-sense race science
--->
-
 
 <!--
 ## Rise and fall of eugenics {.smaller}
@@ -337,6 +305,25 @@ beta_gt
 
 
 # Bonus content {visibility="uncounted"}
+
+## Some definitions {visibility="uncounted"}
+
+scientific racism
+ ~ (purportedly) justifying racial inequality and colonialism by appealing to the epistemic authority of science\
+   [compare @LewontinBourgeoisIdeologyOrigins1982]
+ 
+race science - wide sense
+ ~ scientific research that is amenable to scientific racism
+
+race science - narrow sense
+ ~ scientific research that itself engages in scientific racism
+
+\
+
+Ex: genotype clustering studies [@RosenbergGeneticStructureHuman2002] or polygenic scores for educational attainment [@HardenGeneticAssociationsMathematics2019] 
+can be wide-sense race science without being narrow-sense race science [@WillsAreClustersRaces2017; @CarlsonQuantifyingContextualizingImpact2020]
+
+
 
 ## Different topics or different communities?  {visibility="uncounted"}
 
