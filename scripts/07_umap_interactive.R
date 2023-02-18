@@ -2,6 +2,7 @@ library(tidyverse)
 theme_set(theme_minimal())
 library(tmfast)
 library(plotly)
+library(writexl)
 
 library(arrow)
 library(here)
@@ -15,8 +16,12 @@ out_dir = here('out')
 data_dir = here('data')
 tm_dir = here('data', '04_tm')
 
-meta_df = open_dataset(here(data_dir, '01_metadata')) |> 
-    collect()
+source(here('R', 'author_data.R'))
+meta_df = open_dataset(here('data', '01_metadata')) |> 
+    left_join(author_data(), by = 'article_id') |> 
+    collect() |>
+    nest(authors = author)
+
 phrases_ar = open_dataset(here(data_dir, '01_phrases.csv'), 
                           format = 'csv')
 model = here(tm_dir, glue('04_{vocab}_tmfast.Rds')) |> 
@@ -34,16 +39,35 @@ gamma_max = gamma |>
 
 weight_df = phrases_ar |> 
     inner_join(gamma_max, by = c('article_id' = 'document')) |> 
-    inner_join(beta, by = c('phrase' = 'token')) |> 
-    filter(topic.x == topic.y) |> 
+    inner_join(beta, by = c('phrase' = 'token', 'topic' = 'topic')) |> 
     mutate(weight = n * beta) |> 
     collect() |> 
     group_by(article_id) |> 
     top_n(5, wt = weight)
 
+## Table of V19 articles, for QC
+weight_df |> 
+    filter(topic == 'V19') |> 
+    group_by(topic, gamma, article_id) |> 
+    summarize(phrases = str_c(phrase, collapse = '; ')) |> 
+    ungroup() |> 
+    arrange(desc(gamma)) |> 
+    # head() |> 
+    left_join(meta_df, by = c('article_id')) |> 
+    mutate(authors = map_chr(authors, 
+                             ~ {. |> 
+                                     pull(author) |> 
+                                     str_c(collapse = '; ')})) |> 
+    select(topic, gamma, article_id, 
+           container.title, year, 
+           title, phrases, authors) |> 
+    # write_csv(here('out', '07_v19_articles.csv'))
+    write_xlsx(here('out', '07_v19_articles.xlsx'))
+
+
 ## Interactive visualization ----
 umap_plot = weight_df |> 
-    select(article_id, topic = topic.x, phrase) |> 
+    select(article_id, topic, phrase) |> 
     group_by(article_id, topic) |> 
     summarize(terms = list(str_c(phrase, sep = '; '))) |> 
     inner_join(umap, by = c('article_id' = 'document')) |> 
@@ -65,8 +89,8 @@ umap_plot = weight_df |>
     scale_color_manual(values = c(viridisLite::viridis(5), 
                                   viridisLite::viridis(k)), 
                        name = '') +
-    xlim(-10, 10) +
-    ylim(-10, 10)
+    xlim(-20, 20) +
+    ylim(-20, 20)
 
 if (interactive()) umap_plot
 
