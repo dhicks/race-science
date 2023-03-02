@@ -29,6 +29,8 @@ model = here(tm_dir, glue('04_{vocab}_tmfast.Rds')) |>
 umap = here(tm_dir, glue('04_{vocab}_{k}_umap.Rds')) |> 
     read_rds()
 
+
+
 gamma = tidy(model, k, matrix = 'gamma')
 beta  = tidy(model, k, matrix = 'beta')
 

@@ -27,29 +27,36 @@ articles_df = phrases_ar |>
     # filter(container.title != 'Psychological Reports') |> 
     collect()
 
-sm_tmf = readRDS(here(tm_dir, '04_sm_tmfast.Rds'))
+# sm_tmf = readRDS(here(tm_dir, '04_sm_tmfast.Rds'))
 md_tmf = readRDS(here(tm_dir, '04_md_tmfast.Rds'))
 
+md_exp = read_rds(here(data_dir, '05_md_exponents.Rds')) |> 
+    pull(exponent, name = k)
+
 md_tmf |> 
-    tidy(k = 30, matrix = 'gamma') |> 
+    tidy(k = 30, matrix = 'gamma', exponent = md_exp['30']) |> 
     filter(topic %in% c('V05', 'V07', 'V19')) |> 
     ggplot(aes(gamma, color = topic)) +
     stat_ecdf() +
     geom_hline(yintercept = .9)
 
 create_dataframes = function(model, 
+                             exponents,
                              k = c(5, seq(10, 50, by = 10)), 
                              topics = NULL, 
                              articles = articles_df, 
-                             gamma_treshhold = .05,
+                             gamma_threshold = .05,
                              agg_fn = mean) {
     full_topic_list = list()
     
     for (i in k){
         out_prefix = as.character(i)
         ## Median value of gamma by year-topic-journal
-        dataframe = tidy(model, k = i, matrix = 'gamma') |>
-            filter(gamma > gamma_treshhold) |>
+        dataframe = tidy(model, 
+                         k = i, 
+                         matrix = 'gamma', 
+                         exponent = exponents[as.character(i)]) |>
+            filter(gamma > gamma_threshold) |>
             left_join(articles, by = c('document' = 'article_id')) |> 
             group_by(topic, container.title, year) |> 
             summarise(gamma = agg_fn(gamma), 
@@ -71,43 +78,79 @@ create_dataframes = function(model,
     return(bind_rows(full_topic_list, .id = 'k'))
 }
 
-topics_time_sm = create_dataframes(sm_tmf, topics = 'V05')
-topics_time_md = create_dataframes(md_tmf, topics = c('V07', 'V19', 'V05'))
-
-ggplot(topics_time_md, aes(year, gamma, 
-                           color = container.title, 
-                           group = container.title)) +
+## Mean value of gamma, no threshold
+create_dataframes(md_tmf, md_exp,
+                  topics = c('V07', 'V19', 'V05'), 
+                  gamma_threshold = 0) |> 
+    ggplot(aes(year, gamma, 
+               color = container.title, 
+               group = container.title)) +
     geom_line() +
     facet_grid(rows = vars(k), 
                cols = vars(topic), 
                scales = 'free_y')
 
-topics_time_md_count = create_dataframes(md_tmf, 
-                                         topics = c('V07', 'V19', 'V05'), 
-                                         agg_fn = \(x)(n()), 
-                                         # agg_fn = sum,
-                                         gamma_treshhold = .07)
-topics_time_md_count |> 
-    filter(k == 30) |> 
-    group_by(k, topic, container.title) |> 
-    mutate(gamma_sm = slider::slide_index_dbl(gamma, year, 
-                                              mean, 
-                                              .before = 2, 
-                                              .after = 2)) |> 
-    ungroup() |> 
-    ggplot(aes(year,  
+## Mean value of gamma, 1% threshold
+create_dataframes(md_tmf, md_exp,
+                  topics = c('V07', 'V19', 'V05'), 
+                  gamma_threshold = .1) |> 
+    ggplot(aes(year, gamma, 
                color = container.title, 
                group = container.title)) +
-    geom_line(aes(y = gamma_sm), size = 1.25, color = 'black') +
-    geom_line(aes(y = gamma), alpha = .5) +
-    geom_line(aes(y = gamma_sm), size = 1) +
-    facet_wrap(vars(topic), scales = 'free_y') +
-    labs(y = expression(paste('#{', gamma, '>.07}')), 
-         caption = 'Medium vocabulary, k = 30') +
-    coord_cartesian(ylim = c(NA, NA)) +
-    scale_color_viridis_d(option = 'D', 
-                          name = '') +
-    theme(legend.position = 'bottom')
+    geom_line() +
+    facet_grid(rows = vars(k), 
+               cols = vars(topic), 
+               scales = 'free_y')
+
+## Mean value of gamma, 25% threshold
+create_dataframes(md_tmf, md_exp,
+                  topics = c('V07', 'V19', 'V05'), 
+                  gamma_threshold = .25) |> 
+    ggplot(aes(year, gamma, 
+               color = container.title, 
+               group = container.title)) +
+    geom_line() +
+    facet_grid(rows = vars(k), 
+               cols = vars(topic), 
+               scales = 'free_y')
+
+count_plot = function(tmf, vocab, exp, this_k, topics, threshold) {
+    y_label = glue('#{ɣ > [threshold]}', 
+                   .open = '[', .close = ']')
+    
+    create_dataframes(tmf, exp, topics, k = this_k,
+                      agg_fn = \(x)(n()), 
+                      gamma_threshold = threshold) |> 
+        group_by(k, topic, container.title) |> 
+        mutate(gamma_sm = slider::slide_index_dbl(gamma, year, 
+                                                  mean, 
+                                                  .complete = TRUE,
+                                                  .before = 2, 
+                                                  .after = 2)) |> 
+        ungroup() |> 
+        ggplot(aes(year,  
+                   color = container.title, 
+                   group = container.title)) +
+        geom_line(aes(y = gamma_sm), size = 1.25, color = 'black') +
+        geom_line(aes(y = gamma), alpha = .5) +
+        geom_line(aes(y = gamma_sm), size = 1) +
+        facet_wrap(vars(topic), scales = 'free_y') +
+        labs(y = y_label, 
+             caption = glue('{vocab} vocabulary, k = {this_k}')) +
+        coord_cartesian(ylim = c(NA, NA)) +
+        scale_color_viridis_d(option = 'D', 
+                              name = '') +
+        theme(legend.position = 'bottom')
+}
+
+## Count, 7% threshold, w/ rolling average
+count_plot(md_tmf, 'medium', md_exp, 30, c('V07', 'V19', 'V05'), .07)
+## Count, 25% threshold, w/ rolling average
+count_plot(md_tmf, 'medium', md_exp, 30, c('V07', 'V19', 'V05'), .25)
+## Count, 50% threshold, w/ rolling average
+count_plot(md_tmf, 'medium', md_exp, 30, c('V07', 'V19', 'V05'), .50)
+## Count, 80% threshold, w/ rolling average
+count_plot(md_tmf, 'medium', md_exp, 30, c('V07', 'V19', 'V05'), .80)
 
 ggsave(here(out_dir, '08_presentation.png'), 
        height = 5, width = 9, bg = 'white')

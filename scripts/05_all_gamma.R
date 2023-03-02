@@ -1,6 +1,9 @@
 library(tidyverse)
 theme_set(theme_minimal())
 library(tmfast)
+library(magrittr)
+library(furrr)
+plan(multisession, workers = availableCores() - 2)
 
 library(arrow)
 library(here)
@@ -15,7 +18,7 @@ meta_df = open_dataset(here(data_dir, '01_metadata')) |>
 
 model_files = list.files(tm_dir, 'tmfast') %>%
     here(tm_dir, .) |> 
-    set_names('lg', 'md', 'sm')
+    set_names(c('lg', 'md', 'sm'))
 
 all_gammas = function(path, name) {
     out_prefix = glue('05_{name}')
@@ -43,15 +46,32 @@ all_gammas = function(path, name) {
     ggsave(here(out_dir, glue(out_prefix, '_cumvar.png')),
            width = 4, height = 3, scale = 1.5, bg = 'white')
     
-    gamma = tidy_all(model, matrix = 'gamma')
+    ## Renormalization
+    get_power = function(this_k, model) {
+        ee = expected_entropy(peak_alpha(this_k, 1, peak = .8, scale = 1))
+        model |> 
+            tidy(this_k, 'gamma') |> 
+            target_power(document, gamma, ee)
+    }
+    all_k = model$n
+    exponents = future_map_dbl(all_k, get_power, model)
+    tibble(k = all_k, 
+           exponent = exponents) |> 
+        write_rds(here(data_dir, glue(out_prefix, '_exponents.Rds')))
     
+    gamma = tidy_all(model, matrix = 'gamma') |> 
+        group_split(k) |> 
+        map2_dfr(exponents, ~ renorm(.x, document, gamma, .y))
+
     ## Combine w/ metadata to order by year
     comb_df = right_join(meta_df, gamma, 
-                         by = c('article_id' = 'document')) |> 
+                         by = c('article_id' = 'document'), 
+                         multiple = 'all') |> 
         mutate(article_id = fct_reorder(article_id, 
                                         year, 
                                         .fun = min))
     
+    ## topic-doc entropies
     comb_df |> 
         group_by(k, container.title, article_id) |> 
         summarize(H = sum(-gamma * log2(gamma + 1e-15))) |> 
@@ -68,6 +88,7 @@ all_gammas = function(path, name) {
     ggsave(here(out_dir, glue(out_prefix, '_entropy.png')), 
            width = 6, height = 3, scale = 1.5, bg = 'white')
     
+    ## tile visualization of topic-docs
     ggplot(comb_df, aes(topic, article_id, fill = log1p(gamma))) +
         geom_raster() +
         geom_vline(xintercept = c(10, 20, 30, 40) + .5, 
