@@ -1,3 +1,1 @@
 -[] 04: remove UMAP?; need to calculate after getting exponents in 05
--[] 06: check entropy of betas; renormalizing worthwhile? 
--[] 07: renormalize

@@ -8,8 +8,10 @@ library(arrow)
 library(here)
 library(glue)
 
-vocab = 'md'
+vocab = 'sm'
 k = 30
+force = FALSE  ## Force re-calculating UMAP projection
+outliers = .01 ## Used to calculate window for visualization
 
 ## Load data ----
 out_dir = here('out')
@@ -19,6 +21,7 @@ tm_dir = here('data', '04_tm')
 source(here('R', 'author_data.R'))
 meta_df = open_dataset(here('data', '01_metadata')) |> 
     left_join(author_data(), by = 'article_id') |> 
+    filter(container.title != 'Psychological Reports') |> 
     collect() |>
     nest(authors = author)
 
@@ -26,13 +29,30 @@ phrases_ar = open_dataset(here(data_dir, '01_phrases.csv'),
                           format = 'csv')
 model = here(tm_dir, glue('04_{vocab}_tmfast.Rds')) |> 
     read_rds()
-umap = here(tm_dir, glue('04_{vocab}_{k}_umap.Rds')) |> 
-    read_rds()
+# umap = here(tm_dir, glue('04_{vocab}_{k}_umap.Rds')) |> 
+#     read_rds()
+
+exponent = here(data_dir, glue('05_{vocab}_exponents.Rds')) |> 
+    read_rds() |> 
+    pull(exponent, name = k) |> 
+    magrittr::extract(as.character(k))
 
 
-
-gamma = tidy(model, k, matrix = 'gamma')
+gamma = tidy(model, k, matrix = 'gamma', exponent = exponent) |> 
+    filter(document %in% meta_df$article_id)
 beta  = tidy(model, k, matrix = 'beta')
+
+umap_file = here(data_dir, glue('07_{vocab}_{k}_umap.Rds'))
+if (!file.exists(umap_file) || force) {
+    message(glue('Calculating UMAP projection for {vocab}-{k}'))
+    umap_df = hellinger(gamma, prob1 = gamma) |> 
+        umap(verbose = TRUE)
+    write_rds(umap_df, umap_file)
+} else {
+    umap_df = read_rds(umap_file)
+}
+
+    
 
 ## Weighted phrases for each document ----
 gamma_max = gamma |> 
@@ -48,31 +68,39 @@ weight_df = phrases_ar |>
     top_n(5, wt = weight)
 
 ## Table of V19 articles, for QC
-weight_df |> 
-    filter(topic == 'V19') |> 
-    group_by(topic, gamma, article_id) |> 
-    summarize(phrases = str_c(phrase, collapse = '; ')) |> 
-    ungroup() |> 
-    arrange(desc(gamma)) |> 
-    # head() |> 
-    left_join(meta_df, by = c('article_id')) |> 
-    mutate(authors = map_chr(authors, 
-                             ~ {. |> 
-                                     pull(author) |> 
-                                     str_c(collapse = '; ')})) |> 
-    select(topic, gamma, article_id, 
-           container.title, year, 
-           title, phrases, authors) |> 
-    # write_csv(here('out', '07_v19_articles.csv'))
-    write_xlsx(here('out', '07_v19_articles.xlsx'))
+# weight_df |> 
+#     filter(topic == 'V19') |> 
+#     group_by(topic, gamma, article_id) |> 
+#     summarize(phrases = str_c(phrase, collapse = '; ')) |> 
+#     ungroup() |> 
+#     arrange(desc(gamma)) |> 
+#     # head() |> 
+#     left_join(meta_df, by = c('article_id')) |> 
+#     mutate(authors = map_chr(authors, 
+#                              ~ {. |> 
+#                                      pull(author) |> 
+#                                      str_c(collapse = '; ')})) |> 
+#     select(topic, gamma, article_id, 
+#            container.title, year, 
+#            title, phrases, authors) |> 
+#     # write_csv(here('out', '07_v19_articles.csv'))
+#     write_xlsx(here('out', '07_v19_articles.xlsx'))
 
 
 ## Interactive visualization ----
+window = umap_df |> 
+    reframe(across(c(x, y), 
+                     ~ quantile(.x, 
+                                probs = c(outliers, 1-outliers)))) |> 
+    mutate(across(c(x, y), 
+                  ~ .x * 1.15))
+
+
 umap_plot = weight_df |> 
     select(article_id, topic, phrase) |> 
     group_by(article_id, topic) |> 
     summarize(terms = list(str_c(phrase, sep = '; '))) |> 
-    inner_join(umap, by = c('article_id' = 'document')) |> 
+    inner_join(umap_df, by = c('article_id' = 'document')) |> 
     inner_join(meta_df, by = 'article_id') |> 
     ggplot(aes(x, y, 
                color = container.title, 
@@ -91,8 +119,8 @@ umap_plot = weight_df |>
     scale_color_manual(values = c(viridisLite::viridis(5), 
                                   viridisLite::viridis(k)), 
                        name = '') +
-    xlim(-20, 20) +
-    ylim(-20, 20)
+    lims(x = window$x, 
+         y = window$y)
 
 if (interactive()) umap_plot
 
