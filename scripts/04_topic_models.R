@@ -80,6 +80,9 @@ process_vocab = function(this_vocab, vocab_name, force = FALSE) {
     }
     
     ## Loop over values of k ----
+    ## UMAP embeddings are now calculated later in the pipeline, 
+    ## in order to use the renormalization exponents calculated in 
+    ## script 05
     process_k = function(this_k, force = FALSE) {
         message(glue('k = {this_k}'))
         
@@ -116,15 +119,15 @@ process_vocab = function(this_vocab, vocab_name, force = FALSE) {
         } else {
             message('Calculating UMAP projection')
             tic()
-            space = dist_mx |> 
-                as.matrix() |> 
+            space = dist_mx |>
+                as.matrix() |>
                 umap(verbose = TRUE, df = TRUE)
             toc()
             write_rds(space, umap_file)
         }
     }
     
-    map(k, process_k, force)
+    # map(k, process_k, force)
     return(TRUE)
 }
 

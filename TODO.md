@@ -1,1 +1,1 @@
--[] 04: remove UMAP?; need to calculate after getting exponents in 05
+-[] 07: loop UMAP vis generation over all models
