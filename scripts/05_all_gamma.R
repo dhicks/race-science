@@ -1,9 +1,11 @@
+renv::load(here::here())
 library(tidyverse)
 theme_set(theme_minimal())
 library(tmfast)
 library(magrittr)
 library(furrr)
 plan(multisession, workers = availableCores() - 2)
+warning('This script uses multisession parallel processing.')
 
 library(arrow)
 library(here)
@@ -21,6 +23,7 @@ model_files = list.files(tm_dir, 'tmfast') %>%
     set_names(c('lg', 'md', 'sm'))
 
 all_gammas = function(path, name) {
+    message(glue('Processing topic model {name}'))
     out_prefix = glue('05_{name}')
     model = read_rds(path)
     
@@ -47,6 +50,7 @@ all_gammas = function(path, name) {
            width = 4, height = 3, scale = 1.5, bg = 'white')
     
     ## Renormalization
+    message('Calculating renormalization exponents')
     get_power = function(this_k, model) {
         ee = expected_entropy(peak_alpha(this_k, 1, peak = .8, scale = 1))
         model |> 
@@ -54,16 +58,19 @@ all_gammas = function(path, name) {
             target_power(document, gamma, ee)
     }
     all_k = model$n
-    exponents = future_map_dbl(all_k, get_power, model)
+    exponents = future_map_dbl(all_k, get_power, model, 
+                               .progress = TRUE)
     tibble(k = all_k, 
            exponent = exponents) |> 
         write_rds(here(data_dir, glue(out_prefix, '_exponents.Rds')))
     
+    message('Applying renormalization exponents')
     gamma = tidy_all(model, matrix = 'gamma') |> 
         group_split(k) |> 
         map2_dfr(exponents, ~ renorm(.x, document, gamma, .y))
 
     ## Combine w/ metadata to order by year
+    message('Joining metadata with topic-doc distributions')
     comb_df = right_join(meta_df, gamma, 
                          by = c('article_id' = 'document'), 
                          multiple = 'all') |> 
@@ -72,6 +79,7 @@ all_gammas = function(path, name) {
                                         .fun = min))
     
     ## topic-doc entropies
+    message('Calculating topic-doc entropies')
     comb_df |> 
         group_by(k, container.title, article_id) |> 
         summarize(H = sum(-gamma * log2(gamma + 1e-15))) |> 
@@ -89,6 +97,7 @@ all_gammas = function(path, name) {
            width = 6, height = 3, scale = 1.5, bg = 'white')
     
     ## tile visualization of topic-docs
+    message('Building topic-doc tile visualizations')
     ggplot(comb_df, aes(topic, article_id, fill = log1p(gamma))) +
         geom_raster() +
         geom_vline(xintercept = c(10, 20, 30, 40) + .5, 

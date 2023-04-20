@@ -1,3 +1,4 @@
+renv::load(here::here())
 library(dplyr)
 library(arrow)
 
@@ -18,7 +19,8 @@ write_csv = FALSE  ## Write phrases out to a single CSV?
 # phrases_comb = open_dataset(c(phrases_mq, phrases_ms))
 # write_dataset(phrases_comb, here(data_dir, '01_phrases'))
 
-phrases_comb = open_dataset(here(data_dir, '00_phrases'))
+source(here('R', 'phrases.R'))
+phrases_comb = phrases()
 
 if (write_csv) {
     phrases_comb |> 

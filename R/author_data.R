@@ -1,5 +1,5 @@
 author_data = function(data_dir = here::here('data'), 
-                       canon_file = 'scratch_authors_canonicalized.csv') {
+                       canon_file = '00_authors_canonicalized.csv') {
     mainstream_df = arrow::open_dataset(here(data_dir, 
                                       '00_authors_mainstr')) |> 
         select(article_id = doi, given, family) |> 

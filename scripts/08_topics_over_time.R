@@ -1,3 +1,4 @@
+renv::load(here::here())
 library(tidyverse)
 library(tidytext)
 theme_set(theme_bw())
@@ -16,8 +17,8 @@ out_dir = here('out')
 
 meta_ar = open_dataset(here(data_dir, '01_metadata'))
 
-phrases_ar = open_dataset(here(data_dir, '00_phrases')) |> 
-    select(-year) |> 
+source(here('R', 'phrases.R'))
+phrases_ar = phrases() |> 
     mutate(n = log1p(n))
 
 articles_df = phrases_ar |>

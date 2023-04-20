@@ -1,4 +1,5 @@
 ## This script uses length-proportional conditional entropy to select the analysis vocabulary
+renv::load(here::here())
 library(tidyverse)
 theme_set(theme_bw())
 library(tmfast)
@@ -18,8 +19,8 @@ vocab_ratio = c(1/5, 1, 5)
 ## Load data ----
 message('Loading data')
 meta_ar = open_dataset(here(data_dir, '01_metadata'))
-phrases_ar = open_dataset(here(data_dir, '00_phrases')) |> 
-    select(-year)
+source(here('R', 'phrases.R'))
+phrases_ar = phrases()
 
 ## 6.3M distinct phrases
 ## ~16 sec

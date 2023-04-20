@@ -1,3 +1,4 @@
+renv::load(here::here())
 library(tidyverse)
 theme_set(theme_minimal())
 library(tmfast)
@@ -8,6 +9,9 @@ library(assertthat)
 library(glue)
 library(furrr)
 plan(multisession, workers = availableCores() - 2)
+
+library(patchwork)
+library(tidytext)
 
 data_dir = here('data')
 tm_dir = here(data_dir, '04_tm')
@@ -20,6 +24,7 @@ model_files = list.files(tm_dir, 'tmfast') %>%
     set_names('lg', 'md', 'sm')
 
 hellinger_betas = function(model_file, name) {
+    message(glue('{name} vocabulary'))
     out_prefix = glue('06_{name}')
     model = read_rds(model_file)
     
@@ -31,18 +36,73 @@ hellinger_betas = function(model_file, name) {
             target_power(topic, beta, ee)
     }
     all_k = model$n
-    exponents = future_map_dbl(all_k, get_power, model)
+    exponents = future_map_dbl(all_k, get_power, model, 
+                               .progress = TRUE)
     # return(exponents)
     
     betas = tidy_all(model) |> 
         group_split(k) |> 
         map2(exponents, ~ renorm(.x, topic, beta, .y))
     
+    ## Silge plots
+    betas |> 
+        list_rbind() |> 
+        group_by(k, topic) |> 
+        top_n(10, beta) |> 
+        ungroup() |> 
+        arrange(k, topic, desc(beta)) |> 
+        mutate(token = reorder_within(token, 
+                                      beta,
+                                      list(k, topic))) |> 
+        group_by(k) |> 
+        group_map(~ {ggplot(.x, 
+                            aes(token, beta)) +
+                geom_point() +
+                geom_linerange(aes(ymax = beta), ymin = 0) +
+                scale_x_reordered() +
+                scale_y_continuous(
+                    breaks = scales::pretty_breaks(n = 3)) +
+                coord_flip(ylim = c(0, NA)) +
+                facet_wrap(vars(topic),
+                           scales = 'free',
+                           ncol = 5) +
+                theme(plot.background = 
+                          element_rect(colour = "black", 
+                                       fill = NA, 
+                                       linewidth = 1))}, 
+                .keep = TRUE) |> 
+        wrap_plots(design = 
+                       'AB
+               #B
+               CD
+               CD
+               CD
+               CD
+               #D
+               #D
+               EF
+               EF
+               EF
+               EF
+               EF
+               EF
+               EF
+               EF
+               #F
+               #F') +
+        labs(caption = glue('{name} vocabulary'))
+    ggsave(here(out_dir, glue('06-{name}-silge.pdf')), 
+           width = 10, height = (10+30+50)/5, 
+           limitsize = FALSE,
+           scale = 3)
+    
     ## Pairwise Hellinger distance/similarity
     vocab = model$cols
     
     compared = map(1:(length(betas) - 1), 
-                   ~ compare_betas(betas[[.x]], betas[[.x + 1]], vocab))
+                   ~ compare_betas(betas[[.x]], 
+                                   betas[[.x + 1]], 
+                                   vocab))
     
     ## Tidy
     comp_df = compared |> 

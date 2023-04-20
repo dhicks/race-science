@@ -1,4 +1,5 @@
-library(tidyverse)
+renv::load(here::here())
+ library(tidyverse)
 theme_set(theme_minimal())
 library(arrow)
 
@@ -7,8 +8,8 @@ library(here)
 data_dir = here('data')
 
 ## Load metadata ----
-meta_ar = open_dataset(here(data_dir, '01_metadata')) |> 
-    collect()
+meta_ar = open_dataset(here(data_dir, '01_metadata'))
+    # collect()
 
 nrow(meta_ar)
 
@@ -20,9 +21,10 @@ nrow(meta_ar)
 # phrases_ar = open_dataset(here(data_dir, '01_phrases'))
 ## Approach 3:  Manually combined parquet folders
 ## This seems to be the most stable option
-#phrases_ar = open_dataset(here(data_dir, '00_phrases'))
+source(here('R', 'phrases.R'))
+phrases_ar = phrases()
 
-phrases_ar = read_csv(here(data_dir, '01_phrases.csv'))
+# phrases_ar = read_csv(here(data_dir, '01_phrases.csv'))
 
 ## Descriptive plots ----
 meta_ar |>
@@ -79,25 +81,33 @@ ggplot(combined,
     scale_y_log10()
 
 #created a joined df of everything rather than just total phrases by journal-year
-full = inner_join(meta_ar, phrases_ar, 
-                  by = c('article_id', 'year')) |> 
+full = inner_join(phrases_ar, meta_ar, 
+                  by = c('article_id'), 
+                  multiple = 'all') |> 
     collect()
 
 #identifying missing values
-which(is.na(full$article_id)) #none
-which(is.na(full$title)) #lots 437,092
-which(is.na(full$volume)) #lots 927,591
-which(is.na(full$issue)) #none
-which(is.na(full$container.title)) #none
-which(is.na(full$year)) #none
-which(is.na(full$phrase)) #lots 18,144
-which(is.na(full$n)) #none
+n_distinct(full$article_id)
+sum(is.na(full$article_id)) #none
+sum(is.na(full$title)) #lots 441,751
+sum(is.na(full$volume)) #lots 928,591
+sum(is.na(full$issue)) #1,375
+sum(is.na(full$container.title)) #none
+sum(is.na(full$n)) #none
 
-#check which article_id exist only in meta_ar or phrases_ar
-meta_ar[!meta_ar$article_id %in% phrases_ar$article_id,] #two article_id unique to meta_ar; pdfs for these articles are corrupt
-phrases_ar[!phrases_ar$article_id %in% meta_ar$article_id,] #zero article_id unique to phrases_ar
+#' Matching checks
+#articles only in meta_ar
+#pdfs for these articles are corrupt
+anti_join(meta_ar, phrases_ar, by = 'article_id') |> 
+    collect()
 
-#plot total phrases by journal-year
+# articles only in phrases_ar
+#none
+anti_join(phrases_ar, meta_ar, by = 'article_id') |> 
+    collect()
+
+
+#' plot total phrases by journal-year
 options(scipen = 999) #changes scientific notation to standard notation for y-axis
 combined |> 
     ggplot(aes(x = year, y = total_phrases, color = container.title)) +
@@ -115,11 +125,15 @@ full |>
     scale_x_discrete(breaks = NULL) +
     facet_grid(. ~ container.title, scales = "free")
 
-#number of distinct phrases
+#' number of distinct phrases
 n_distinct(full$phrase) #5,437,430
 
-#unique phrases
+#' unique phrases
 ##count number of rows per noun phrase, filter to just the noun phrases that only show up in one doc
 unique = phrases_ar |> 
+    count(article_id, phrase) |> 
     count(phrase) |> 
-    filter(n == 1)
+    filter(n == 1L) |> 
+    collect()
+# 4,826,771
+nrow(unique)
