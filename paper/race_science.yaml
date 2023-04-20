@@ -1,0 +1,3327 @@
+---
+references:
+- id: AdamsMisAppropriationBiological2021
+  abstract: >-
+    Most biological anthropologists acknowledge that phenotypic human variation
+    is distinct from human race. However, there is the potential for the
+    research on human variation to be (mis)interpreted by the public as a
+    reification of biological races. To explore this possible misuse, this study
+    is a content analysis of articles (n = 1146) in the prominent race science
+    journals Mankind Quarterly; The Journal of Social, Political, and Economic
+    Studies; and The Occidental Quarterly. The goal is to investigate how race
+    science employs research in biological and forensic anthropology to justify
+    arguments. Articles were evaluated according to country affiliation,
+    discipline, data sets, racial/ethnic terminology, position on racial
+    hierarchy, position on racial segregation and eugenics, focus of study,
+    views of scientific community, and the average power index (PI).
+    Additionally, specific examples of (mis)appropriation are highlighted.
+  accessed:
+    - year: 2022
+      month: 7
+      day: 5
+  author:
+    - family: Adams
+      given: Donovan
+    - family: Pilloud
+      given: Marin
+  citation-key: AdamsMisAppropriationBiological2021
+  container-title: Forensic Anthropology
+  container-title-short: FA
+  DOI: 10.5744/fa.2021.0010
+  ISSN: 2573-5039, 2573-5020
+  issued:
+    - year: 2021
+      month: 12
+      day: 30
+  language: en
+  source: DOI.org (Crossref)
+  title: >-
+    The (Mis)appropriation of Biological Anthropology in Race Science and the
+    Implications for Forensic Anthropology
+  type: article-journal
+  URL: http://journals.upress.ufl.edu/fa/article/view/1659
+
+- id: ArthurJensen
+  abstract: >-
+    Arthur Jensen was arguably the father of modern academic racism. For over 40
+    years, Jensen, an educational psychologist at the University of California,
+    Berkeley, provided a patina of academic respectability to pseudoscientific
+    theories of black inferiority and segregationist public policies. Jensen was
+    responsible for resurrecting the idea that the black population is
+    inherently and immutably less intelligent than the white population, an
+    ideology that immediately became known as “jensenism.”
+  accessed:
+    - year: 2020
+      month: 2
+      day: 22
+  citation-key: ArthurJensen
+  container-title: Southern Poverty Law Center
+  language: en
+  title: Arthur Jensen
+  type: webpage
+  URL: >-
+    https://www.splcenter.org/fighting-hate/extremist-files/individual/arthur-jensen
+
+- id: BarkanRetreatScientificRacism1992
+  abstract: >-
+    This fascinating study in the sociology of knowledge documents the
+    refutation of scientific foundations for racism in Britain and the United
+    States between the two world wars, when the definition of race as a
+    biological concept was replaced by a cultural notion of race. Discussing the
+    work of the leading biologists and anthropologists who wrote about race
+    between the wars, Dr. Barkan argues that the impetus for the shift in
+    ideologies of race came from the inclusion of outsiders--women, Jews, and
+    leftists--into the mainstream of scientific discourse.
+  author:
+    - family: Barkan
+      given: Elazar
+  citation-key: BarkanRetreatScientificRacism1992
+  ISBN: 978-0-521-45875-7
+  issued:
+    - year: 1992
+  language: en
+  number-of-pages: '400'
+  publisher: Cambridge University Press
+  source: Google Books
+  title: >-
+    The Retreat of Scientific Racism: Changing Concepts of Race in Britain and
+    the United States Between the World Wars
+  title-short: The Retreat of Scientific Racism
+  type: book
+
+- id: BeagleholeRaceQuestion1950
+  accessed:
+    - year: 2022
+      month: 10
+      day: 28
+  author:
+    - family: Beaglehole
+      given: Ernest
+    - family: Comas
+      given: Juan
+    - family: Costa Pinto
+      given: L. A.
+    - family: Frazier
+      given: Franklin
+    - family: Ginsberg
+      given: Morris
+    - family: Kabir
+      given: Humayun
+    - family: Levi-Strauss
+      given: Claude
+    - family: Montagu
+      given: Ashley
+  citation-key: BeagleholeRaceQuestion1950
+  container-title: UNESCO and its Programme
+  ISSN: 0501-364X
+  issue: '3'
+  issued:
+    - year: 1950
+  title: The Race Question
+  type: article-journal
+  URL: https://unesdoc.unesco.org/ark:/48223/pf0000128291
+  volume: '1'
+
+- id: BirdNoSupportHereditarian2021
+  abstract: >-
+    Objectives Debate about the cause of IQ score gaps between Black and White
+    populations has persisted within genetics, anthropology, and psychology.
+    Recently, authors claimed polygenic scores provide evidence that a
+    significant portion of differences in cognitive performance between Black
+    and White populations are caused by genetic differences due to natural
+    selection, the “hereditarian hypothesis.” This study aims to show conceptual
+    and methodological flaws of past studies supporting the hereditarian
+    hypothesis. Materials and methods Polygenic scores for educational
+    attainment were constructed for African and European samples of the 1000
+    Genomes Project. Evidence for selection was evaluated using an excess
+    variance test. Education associated variants were further evaluated for
+    signals of selection by testing for excess genetic differentiation (Fst).
+    Expected mean difference in IQ for populations was calculated under a
+    neutral evolutionary scenario and contrasted to hereditarian claims. Results
+    Tests for selection using polygenic scores failed to find evidence of
+    natural selection when the less biased within-family GWAS effect sizes were
+    used. Tests for selection using Fst values did not find evidence of natural
+    selection. Expected mean difference in IQ was substantially smaller than
+    postulated by hereditarians, even under unrealistic assumptions that
+    overestimate genetic contribution. Conclusion Given these results,
+    hereditarian claims are not supported in the least. Cognitive performance
+    does not appear to have been under diversifying selection in Europeans and
+    Africans. In the absence of diversifying selection, the best case estimate
+    for genetic contributions to group differences in cognitive performance is
+    substantially smaller than hereditarians claim and is consistent with
+    genetic differences contributing little to the Black–White gap.
+  accessed:
+    - year: 2022
+      month: 1
+      day: 27
+  author:
+    - family: Bird
+      given: Kevin A.
+  citation-key: BirdNoSupportHereditarian2021
+  container-title: American Journal of Physical Anthropology
+  DOI: 10.1002/ajpa.24216
+  ISSN: 1096-8644
+  issue: '2'
+  issued:
+    - year: 2021
+  language: en
+  page: 465-476
+  source: Wiley Online Library
+  title: >-
+    No support for the hereditarian hypothesis of the Black–White achievement
+    gap using polygenic scores and tests for divergent selection
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/ajpa.24216
+  volume: '175'
+
+- id: BogenSavingPhenomena1988
+  accessed:
+    - year: 2015
+      month: 7
+      day: 1
+  author:
+    - family: Bogen
+      given: James
+    - family: Woodward
+      given: James
+  citation-key: BogenSavingPhenomena1988
+  container-title: The Philosophical Review
+  container-title-short: The Philosophical Review
+  ISSN: 0031-8108
+  issue: '3'
+  issued:
+    - year: 1988
+      month: 7
+      day: 1
+  license: Copyright © 1988 Duke University Press
+  page: 303-352
+  source: JSTOR
+  title: Saving the Phenomena
+  type: article-journal
+  URL: http://www.jstor.org/stable/2185445
+  volume: '97'
+
+- id: BrattainRaceRacismAntiracism2007
+  accessed:
+    - year: 2022
+      month: 10
+      day: 28
+  author:
+    - family: Brattain
+      given: M.
+  citation-key: BrattainRaceRacismAntiracism2007
+  container-title: The American Historical Review
+  container-title-short: The American Historical Review
+  DOI: 10.1086/ahr.112.5.1386
+  ISSN: 0002-8762, 1937-5239
+  issue: '5'
+  issued:
+    - year: 2007
+      month: 12
+      day: 1
+  language: en
+  page: 1386-1413
+  source: DOI.org (Crossref)
+  title: >-
+    Race, Racism, and Antiracism: UNESCO and the Politics of Presenting Science
+    to the Postwar Public
+  title-short: Race, Racism, and Antiracism
+  type: article-journal
+  URL: https://academic.oup.com/ahr/article-lookup/doi/10.1086/ahr.112.5.1386
+  volume: '112'
+
+- id: BrownApportionmentRacialDiversity2001
+  abstract: >-
+    It has become increasingly popular to theorize and assert significant
+    genetic differences between arbitrary regional, ethnic, and racial groupings
+    of humans. Beginning with Livingstone, Brace, and Newman is the early 1960s,
+    biological anthropologists have shown that variation in human traits is
+    non-concordant along racial lines, as they are products of overlapping,
+    dynamic selective pressures. In 1972, Lewontin analyzed blood groups, serum
+    protein, and red blood cell enzyme variants and found that only about 6% of
+    total genetic variance was accounted for by race, while the majority of
+    variance is accounted for by differences between individuals. Using similar
+    assays, Latter obtained similar results in 1980. In 1982, Nei and
+    Roychoudhury analyzed 62 protein variants and 23 blood groups, finding that
+    roughly 10% of genetic variance was accounted for by race. Analyzing
+    protein, blood group, and HLA variants, Ryman and coworkers obtained similar
+    figures in 1983. More recently, Dean and coworkers (1994) and Barbujani and
+    coworkers (1997) have used PCR techniques to analyze RFLP and microsattelite
+    loci, again yielding estimates of around 10% for the amount of genetic
+    variance accounted for by race. Furthermore, recent research on regional and
+    racial variance in mtDNA (Excoffier and coworkers, 1992), a traditional
+    marker for human racial groupings, shows a higher proportion of variance
+    within than across racial categories. These studies used a variety of assays
+    and analytical techniques, some of which are designed to maximize the amount
+    of variance accounted for by race. In light of this, the low proportion of
+    genetic variance across racial groupings strongly suggests a re-examination
+    of the race concept. It no longer makes sense to adhere to arbitrary racial
+    categories, or to expect that the next genetic study will provide the key to
+    racial classification. Evol. Anthropol. 10:34–40, 2001. © 2001 Wiley-Liss,
+    Inc.
+  accessed:
+    - year: 2022
+      month: 6
+      day: 14
+  author:
+    - family: Brown
+      given: Ryan A.
+    - family: Armelagos
+      given: George J.
+  citation-key: BrownApportionmentRacialDiversity2001
+  container-title: 'Evolutionary Anthropology: Issues, News, and Reviews'
+  DOI: 10.1002/1520-6505(2001)10:1<34::AID-EVAN1011>3.0.CO;2-P
+  ISSN: 1520-6505
+  issue: '1'
+  issued:
+    - year: 2001
+  language: en
+  page: 34-40
+  source: Wiley Online Library
+  title: 'Apportionment of racial diversity: A review'
+  title-short: Apportionment of racial diversity
+  type: article-journal
+  URL: >-
+    https://onlinelibrary.wiley.com/doi/abs/10.1002/1520-6505%282001%2910%3A1%3C34%3A%3AAID-EVAN1011%3E3.0.CO%3B2-P
+  volume: '10'
+
+- id: ByeonEvolvingUseAncestry2021
+  accessed:
+    - year: 2021
+      month: 12
+      day: 4
+  author:
+    - family: Byeon
+      given: Yen Ji Julia
+    - family: Islamaj
+      given: Rezarta
+    - family: Yeganova
+      given: Lana
+    - family: Wilbur
+      given: W. John
+    - family: Lu
+      given: Zhiyong
+    - family: Brody
+      given: Lawrence C.
+    - family: Bonham
+      given: Vence L.
+  citation-key: ByeonEvolvingUseAncestry2021
+  container-title: The American Journal of Human Genetics
+  container-title-short: The American Journal of Human Genetics
+  DOI: 10.1016/j.ajhg.2021.10.008
+  ISSN: 0002-9297, 1537-6605
+  issue: '12'
+  issued:
+    - year: 2021
+      month: 12
+      day: 2
+  language: English
+  page: 2215-2223
+  PMID: '34861173'
+  publisher: Elsevier
+  source: www.cell.com
+  title: >-
+    Evolving use of ancestry, ethnicity, and race in genetics research—A survey
+    spanning seven decades
+  type: article-journal
+  URL: https://www.cell.com/ajhg/abstract/S0002-9297(21)00385-2
+  volume: '108'
+
+- id: ByLawsBehaviorGenetics
+  accessed:
+    - year: 2022
+      month: 6
+      day: 14
+  citation-key: ByLawsBehaviorGenetics
+  title: By-Laws | Behavior Genetics Association
+  type: webpage
+  URL: https://bga.org/about/by-laws/
+
+- id: CallierTakingStandGenetics2015
+  abstract: >-
+    There is a longstanding debate about genetics research into intelligence.
+    Some scholars question the value of focusing on genetic contributions to
+    intelligence in a society where social and environmental determinants
+    powerfully influence cognitive ability and educational outcomes. Others warn
+    that censoring certain research questions, such as inquiries about genetic
+    differences in intellectual potential, compromises academic freedom. Still
+    others view interest in this subject as a corollary to a long and
+    troublesome history of eugenics research. The dawn of a new era in genome
+    sequencing as a commodity will sustain scientific interest in the genetics
+    of intelligence for the foreseeable future, but deep-rooted challenges
+    threaten the scientific merit of the research. The use of imprecise
+    definitions of study populations, the difficult nature of studying the
+    environment, and the potential of researcher bias are inextricably linked
+    with concerns about the trustworthiness and utility of research in this
+    area. Leadership by the genetics community is essential to ensure the value
+    and trustworthiness of these studies.
+  accessed:
+    - year: 2021
+      month: 11
+      day: 24
+  author:
+    - family: Callier
+      given: Shawneequa L.
+    - family: Bonham
+      given: Vence L.
+  citation-key: CallierTakingStandGenetics2015
+  container-title: Hastings Center Report
+  DOI: 10.1002/hast.500
+  ISSN: 1552-146X
+  issue: S1
+  issued:
+    - year: 2015
+  language: en
+  page: S54-S58
+  source: Wiley Online Library
+  title: >-
+    Taking a Stand: The Genetics Community's Responsibility for Intelligence
+    Research
+  title-short: Taking a Stand
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/hast.500
+  volume: '45'
+
+- id: CarlsonQuantifyingContextualizingImpact2020
+  abstract: >-
+    Engagement with scientific manuscripts is frequently facilitated by Twitter
+    and other social media platforms. As such, the demographics of a paper's
+    social media audience provide a wealth of information about how scholarly
+    research is transmitted, consumed, and interpreted by online communities. By
+    paying attention to public perceptions of their publications, scientists can
+    learn whether their research is stimulating positive scholarly and public
+    thought. They can also become aware of potentially negative patterns of
+    interest from groups that misinterpret their work in harmful ways, either
+    willfully or unintentionally, and devise strategies for altering their
+    messaging to mitigate these impacts. In this study, we collected 331,696
+    Twitter posts referencing 1,800 highly tweeted bioRxiv preprints and
+    leveraged topic modeling to infer the characteristics of various communities
+    engaging with each preprint on Twitter. We agnostically learned the
+    characteristics of these audience sectors from keywords each user’s
+    followers provide in their Twitter biographies. We estimate that 96% of the
+    preprints analyzed are dominated by academic audiences on Twitter,
+    suggesting that social media attention does not always correspond to greater
+    public exposure. We further demonstrate how our audience segmentation method
+    can quantify the level of interest from nonspecialist audience sectors such
+    as mental health advocates, dog lovers, video game developers, vegans,
+    bitcoin investors, conspiracy theorists, journalists, religious groups, and
+    political constituencies. Surprisingly, we also found that 10% of the
+    preprints analyzed have sizable (>5%) audience sectors that are associated
+    with right-wing white nationalist communities. Although none of these
+    preprints appear to intentionally espouse any right-wing extremist messages,
+    cases exist in which extremist appropriation comprises more than 50% of the
+    tweets referencing a given preprint. These results present unique
+    opportunities for improving and contextualizing the public discourse
+    surrounding scientific research.
+  accessed:
+    - year: 2020
+      month: 9
+      day: 26
+  author:
+    - family: Carlson
+      given: Jedidiah
+    - family: Harris
+      given: Kelley
+  citation-key: CarlsonQuantifyingContextualizingImpact2020
+  container-title: PLOS Biology
+  container-title-short: PLOS Biology
+  DOI: 10.1371/journal.pbio.3000860
+  ISSN: 1545-7885
+  issue: '9'
+  issued:
+    - year: 2020
+      month: 9
+      day: 22
+  language: en
+  page: e3000860
+  publisher: Public Library of Science
+  source: PLoS Journals
+  title: >-
+    Quantifying and contextualizing the impact of bioRxiv preprints through
+    automated social media audience segmentation
+  type: article-journal
+  URL: >-
+    https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000860
+  volume: '18'
+
+- id: CarolineOrrBueno
+  abstract: >-
+    “Re. Last night’s #TrumpRally: While often taking on the appearance of
+    entertainment, rallies actually serve an incredibly important purpose in
+    fascist movements, and we’d be wise not to write them off as a sideshow that
+    can be ignored. 1/”
+  accessed:
+    - year: 2022
+      month: 9
+      day: 20
+  citation-key: CarolineOrrBueno
+  container-title: Twitter
+  language: en
+  title: Caroline Orr Bueno, Ph.D on Twitter
+  type: webpage
+  URL: https://twitter.com/RVAwonk/status/1571716342297796610
+
+- id: CoopLotteryLuckLegacy2022
+  abstract: >-
+    A book review of “The genetic lottery: why DNA matters for social equality.”
+    (Princeton University Press, 2021) by Kathryn Paige Harden.
+  accessed:
+    - year: 2022
+      month: 5
+      day: 15
+  author:
+    - family: Coop
+      given: Graham
+    - family: Przeworski
+      given: Molly
+  citation-key: CoopLotteryLuckLegacy2022
+  container-title: Evolution
+  DOI: 10.1111/evo.14449
+  ISSN: 1558-5646
+  issue: '4'
+  issued:
+    - year: 2022
+  language: en
+  page: 846-853
+  source: Wiley Online Library
+  title: >-
+    Lottery, luck, or legacy. A review of “The Genetic Lottery: Why DNA matters
+    for social equality”
+  title-short: Lottery, luck, or legacy. A review of “The Genetic Lottery
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1111/evo.14449
+  volume: '76'
+
+- id: DownesEarlyHistoryHeritability2021
+  abstract: >-
+    Fisher’s 1918 paper accomplished two distinct goals: unifying discrete
+    Mendelian genetics with continuous biometric phenotypes and quantifying the
+    variance components of variation in complex human characteristics. The
+    former contributed to the foundation of modern quantitative genetics; the
+    latter was adopted by social scientists interested in the pursuit of
+    Galtonian nature-nurture questions about the biological and social origins
+    of human behavior, especially human intelligence. This historical divergence
+    has produced competing notions of the estimation of variance ratios referred
+    to as heritability. Jay Lush showed that they could be applied to selective
+    breeding on the farm, while the early twin geneticists used them as a
+    descriptive statistic to describe the degree of genetic determination in
+    complex human traits. Here we trace the early history (1918 to 1960) of the
+    heritability coefficient now used by social scientists.
+  accessed:
+    - year: 2022
+      month: 5
+      day: 21
+  author:
+    - family: Downes
+      given: Stephen M.
+    - family: Turkheimer
+      given: Eric
+  citation-key: DownesEarlyHistoryHeritability2021
+  container-title: Biological Theory
+  container-title-short: Biol Theory
+  DOI: 10.1007/s13752-021-00392-9
+  ISSN: 1555-5550
+  issued:
+    - year: 2021
+      month: 11
+      day: 22
+  language: en
+  source: Springer Link
+  title: >-
+    An Early History of the Heritability Coefficient Applied to Humans
+    (1918–1960)
+  type: article-journal
+  URL: https://doi.org/10.1007/s13752-021-00392-9
+
+- id: DownesReformEvolutionarySocial2016
+  accessed:
+    - year: 2022
+      month: 5
+      day: 21
+  author:
+    - family: Downes
+      given: Stephen M.
+  citation-key: DownesReformEvolutionarySocial2016
+  container-title: Metascience
+  container-title-short: Metascience
+  DOI: 10.1007/s11016-016-0115-4
+  ISSN: 1467-9981
+  issue: '3'
+  issued:
+    - year: 2016
+      month: 11
+      day: 1
+  language: en
+  page: 479-485
+  source: Springer Link
+  title: Reform for the evolutionary social sciences or new theory of human nature?
+  type: article-journal
+  URL: https://doi.org/10.1007/s11016-016-0115-4
+  volume: '25'
+
+- id: DusterBackdoorEugenics2003
+  abstract: >-
+    Considered a classic in the field, Troy Duster's Backdoor to Eugenics was a
+    groundbreaking book that grappled with the social and political implications
+    of the new genetic technologies. Completely updated and revised, this work
+    will be welcomed back into print as we struggle to understand the pros and
+    cons of prenatal detection of birth defects; gene therapies; growth
+    hormones; and substitute genetic answers to problems linked with such groups
+    as Jews, Scandinavians, Native American, Arabs, and African Americans.
+    Duster's book has never been more timely.
+  author:
+    - family: Duster
+      given: Troy
+  citation-key: DusterBackdoorEugenics2003
+  ISBN: 978-0-415-94805-0
+  issued:
+    - year: 2003
+  language: en
+  number-of-pages: '240'
+  publisher: Routledge
+  source: Google Books
+  title: Backdoor to Eugenics
+  type: book
+
+- id: DusterChapter13Buried2003
+  abstract: >-
+    Chapter 13. Buried Alive was published in Genetic Nature/Culture on page
+    258.
+  accessed:
+    - year: 2021
+      month: 11
+      day: 29
+  author:
+    - family: Duster
+      given: Troy
+  citation-key: DusterChapter13Buried2003
+  container-title: Genetic Nature/Culture
+  DOI: 10.1525/9780520929975-017
+  ISBN: 978-0-520-92997-5
+  issued:
+    - year: 2003
+      month: 11
+      day: 6
+  language: en
+  page: 258-277
+  publisher: University of California Press
+  source: www.degruyter.com
+  title: 'Chapter 13. Buried Alive: The Concept of Race in Science'
+  title-short: Chapter 13. Buried Alive
+  type: chapter
+  URL: https://www.degruyter.com/document/doi/10.1525/9780520929975-017/html
+
+- id: DusterSelectiveArrestsEverExpanding2008
+  author:
+    - family: Duster
+      given: Troy
+  call-number: QH333 .T33 2008
+  citation-key: DusterSelectiveArrestsEverExpanding2008
+  collection-title: Leonardo
+  container-title: 'Tactical biopolitics: art, activism, and technoscience'
+  editor:
+    - family: Da Costa
+      given: Beatriz
+    - family: Philip
+      given: Kavita
+  event-place: Cambridge, Mass
+  ISBN: 978-0-262-04249-9
+  issued:
+    - year: 2008
+  language: en
+  note: 'OCLC: 163605167'
+  publisher: MIT Press
+  publisher-place: Cambridge, Mass
+  source: Library of Congress ISBN
+  title: >-
+    Selective Arrests, an Ever-Expanding DNA  Forensic Database, and the Specter
+    of an Early  Twenty-First-Century Equivalent of Phrenology
+  type: chapter
+
+- id: EvansUnwelcomeRevivalRace2018
+  abstract: >-
+    The long read: Its defenders claim to be standing up for uncomfortable
+    truths, but race science is still as bogus as ever
+  accessed:
+    - year: 2018
+      month: 9
+      day: 3
+  author:
+    - family: Evans
+      given: Gavin
+  citation-key: EvansUnwelcomeRevivalRace2018
+  container-title: The Guardian
+  ISSN: 0261-3077
+  issued:
+    - year: 2018
+      month: 3
+      day: 2
+  language: en-GB
+  section: News
+  source: www.theguardian.com
+  title: The unwelcome revival of ‘race science’
+  type: article-newspaper
+  URL: >-
+    https://www.theguardian.com/news/2018/mar/02/the-unwelcome-revival-of-race-science
+
+- id: FernandezPintoKnowBetterNot2017
+  accessed:
+    - year: 2017
+      month: 6
+      day: 23
+  author:
+    - family: Fernández Pinto
+      given: Manuela
+  citation-key: FernandezPintoKnowBetterNot2017
+  container-title: Science & Technology Studies
+  DOI: 10.23987/sts.61030
+  ISSN: 2243-4690
+  issue: '2'
+  issued:
+    - year: 2017
+      month: 5
+      day: 11
+  page: 53-72
+  source: sciencetechnologystudies.journal.fi
+  title: To Know or Better Not to
+  type: article-journal
+  URL: https://sciencetechnologystudies.journal.fi/article/view/61030
+  volume: '30'
+
+- id: GiangrandeRaceEthnicityScarrRowe2021
+  abstract: >-
+    In 2020, Pesta et al. published an article entitled “Racial and Ethnic Group
+    Differences in the Heritability of Intelligence: A Systematic Review and
+    Meta-Analysis” in the journal Intelligence. The authors framed their
+    analysis as an examination of the Scarr-Rowe hypothesis, which holds that
+    the heritability of intelligence varies as a function of socioeconomic
+    status. Pesta et al. concluded that the heritability of intelligence does
+    not differ across racial and ethnic groups in the United States. They
+    claimed their results challenge the Scarr-Rowe hypothesis and support the
+    hereditarian position that mean differences in IQ among racial and ethnic
+    groups are attributable to genetic differences rather than environmental
+    disparities. In this commentary, we outline severe theoretical,
+    methodological, and rhetorical flaws in every step of Pesta et al.’s
+    meta-analysis. The most reliable finding from Pesta et al. is consistent
+    with the Scarr-Rowe hypothesis and directly contradicts a hereditarian
+    understanding of group differences in intelligence. Finally, we suggest that
+    Pesta et al. serves as an example of how racially motivated and poorly
+    executed work can find its way into a mainstream scientific journal,
+    underscoring the importance of robust peer review and rigorous editorial
+    judgment in the open-science era.
+  accessed:
+    - year: 2021
+      month: 11
+      day: 22
+  author:
+    - family: Giangrande
+      given: Evan J.
+    - family: Turkheimer
+      given: Eric
+  citation-key: GiangrandeRaceEthnicityScarrRowe2021
+  container-title: Perspectives on Psychological Science
+  container-title-short: Perspect Psychol Sci
+  DOI: 10.1177/17456916211017498
+  ISSN: 1745-6916
+  issued:
+    - year: 2021
+      month: 11
+      day: 18
+  language: en
+  page: '17456916211017498'
+  publisher: SAGE Publications Inc
+  source: SAGE Journals
+  title: >-
+    Race, Ethnicity, and the Scarr-Rowe Hypothesis: A Cautionary Example of
+    Fringe Science Entering the Mainstream
+  title-short: Race, Ethnicity, and the Scarr-Rowe Hypothesis
+  type: article-journal
+  URL: https://doi.org/10.1177/17456916211017498
+
+- id: GouldMismeasureManRevised1996
+  abstract: "The definitive refutation to the argument of The Bell Curve. When published in 1981, The Mismeasure of Man was immediately hailed as a masterwork, the ringing answer to those who would classify people, rank them according to their supposed genetic gifts and limits. And yet the idea of innate limits—of biology as destiny—dies hard, as witness the attention devoted to\_The Bell Curve, whose arguments are here so effectively anticipated and thoroughly undermined by Stephen Jay Gould. In this edition Dr. Gould has written a substantial new introduction telling how and why he wrote the book and tracing the subsequent history of the controversy on innateness right through The Bell Curve. Further, he has added five essays on questions of The Bell Curve in particular and on race, racism, and biological determinism in general. These additions strengthen the book's claim to be, as Leo J. Kamin of Princeton University has said, \"a major contribution toward deflating pseudo-biological 'explanations' of our present social woes.\""
+  author:
+    - family: Gould
+      given: Stephen Jay
+  citation-key: GouldMismeasureManRevised1996
+  event-place: New York
+  ISBN: 978-0-393-34040-2
+  issued:
+    - year: 1996
+  language: en
+  number-of-pages: '307'
+  publisher: W. W. Norton & Company
+  publisher-place: New York
+  source: Google Books
+  title: The Mismeasure of Man (Revised & Expanded)
+  type: book
+
+- id: Grantees
+  accessed:
+    - year: 2021
+      month: 9
+      day: 20
+  citation-key: Grantees
+  title: Grantees
+  type: webpage
+  URL: >-
+    https://web.archive.org/web/20130103005545/http://www.pioneerfund.org/Grantees.html
+
+- id: GravesRacismNotRace2021
+  abstract: >-
+    The science on race is clear. Common categories like “Black,” “white,” and
+    “Asian” do not represent genetic differences among groups. But if race is a
+    pernicious fiction according to natural science, it is all too significant
+    in the day-to-day lives of racialized people across the globe. Inequities in
+    health, wealth, and an array of other life outcomes cannot be explained
+    without referring to “race”—but their true source is racism. What do we need
+    to know about the pseudoscience of race in order to fight racism and fulfill
+    human potential?In this book, two distinguished scientists tackle common
+    misconceptions about race, human biology, and racism. Using an accessible
+    question-and-answer format, Joseph L. Graves Jr. and Alan H. Goodman explain
+    the differences between social and biological notions of race. Although
+    there are many meaningful human genetic variations, they do not map onto
+    socially constructed racial categories. Drawing on evidence from both
+    natural and social science, Graves and Goodman dismantle the malignant myth
+    of gene-based racial difference. They demonstrate that the ideology of
+    racism created races and show why the inequalities ascribed to race are in
+    fact caused by racism.Graves and Goodman provide persuasive and timely
+    answers to key questions about race and racism for a moment when people of
+    all backgrounds are striving for social justice. Racism, Not Race shows
+    readers why antiracist principles are both just and backed by sound science.
+  author:
+    - family: Graves
+      given: Joseph L.
+      suffix: Jr
+    - family: Goodman
+      given: Alan H.
+  citation-key: GravesRacismNotRace2021
+  ISBN: 978-0-231-55373-5
+  issued:
+    - year: 2021
+      month: 12
+      day: 7
+  language: en
+  number-of-pages: '332'
+  publisher: Columbia University Press
+  source: Google Books
+  title: 'Racism, Not Race: Answers to Frequently Asked Questions'
+  title-short: Racism, Not Race
+  type: book
+
+- id: HamiltonReviewDysgenicsGenetic2000
+  abstract: >-
+    Editorial Note This book review arrived here at the beginning of this year
+    with a very apologetic note from the author, Bill Hamilton, about the long
+    delay in producing the review and its ‘rambling essay format’. Sadly,
+    Hamilton died just a few weeks later from complications following malarial
+    infection. Several tributes have been published, such as Science (2000),
+    287, 2438, and we continue the tributes with a final unedited manuscript
+    from the hand of this unique, colourful and idiosyncratic evolutionary
+    theorist. Dysgenics: Genetic Deterioration in Modern Populations. Human
+    Evolution, Behaviour, and Intelligence Series. By R. Lynn (Series Editor: S.
+    Itzkoff). Westport, Connecticut and London: Praeger. 1996. Pp. 237. £47.50
+    (hardback). In a sense a dominance hierarchy has only one satisfied
+    individual – she or he at the top. If the hierarchy is bottom-numerous
+    rather than linear, as is the case with most human hierarchies, it is all
+    the more true that the vast majority of people are dissatisfied, wishing
+    they were higher up, a thought which provides a basic reason why democracies
+    (and especially, within democracies, such institutions as their state school
+    systems) have to be unstable. We see a wobbly pyramid, and particularly
+    within that pyramid we see certain side stairs all human examples have by
+    which demagogues skip up a level or two so as to shout down to the restless
+    base that the whole structure is somehow ‘wrong’. Under a different system,
+    the demagogue shouts, ‘You could be higher too’.
+  accessed:
+    - year: 2022
+      month: 2
+      day: 12
+  author:
+    - family: Hamilton
+      given: W. D.
+  citation-key: HamiltonReviewDysgenicsGenetic2000
+  container-title: Annals of Human Genetics
+  DOI: 10.1046/j.1469-1809.2000.6440363.x
+  ISSN: 1469-1809
+  issue: '4'
+  issued:
+    - year: 2000
+  language: en
+  page: 363-374
+  source: Wiley Online Library
+  title: 'A review of Dysgenics: Genetic Deterioration in Modern Populations'
+  title-short: A review of Dysgenics
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1469-1809.2000.6440363.x
+  volume: '64'
+
+- id: HardenGeneticAssociationsMathematics2019
+  abstract: >-
+    Maximizing the flow of students through the science, technology,
+    engineering, and math (STEM) pipeline is important to promoting human
+    capital development and reducing economic inequality1. A critical juncture
+    in the STEM pipeline is the highly-cumulative sequence of secondary school
+    math courses2–5. Students from disadvantaged schools are less likely to
+    complete advanced math courses, but debate continues about why6,7. Here, we
+    address this question using student polygenic scores, which are DNA-based
+    indicators of propensity to succeed in education8. We integrated genetic and
+    official school transcript data from over 3,000 European-ancestry students
+    from U.S. high schools. We used polygenic scores as a molecular tracer to
+    understand how the flow of students through the high school math pipeline
+    differs in socioeconomically advantaged versus disadvantaged schools.
+    Students with higher education polygenic scores were tracked to more
+    advanced math already at the beginning of high school and persisted in math
+    for more years. Molecular tracer analyses revealed that the dynamics of the
+    math pipeline differed by school advantage. Compared to disadvantaged
+    schools, advantaged schools tracked more students with high polygenic scores
+    into advanced math classes at the start of high school, and they buffered
+    students with low polygenic scores from dropping out of math. Across all
+    schools, even students with exceptional polygenic scores (top 2%) were
+    unlikely to take the most advanced math classes, suggesting substantial room
+    for improvement in the development of potential STEM talent. These results
+    link new molecular genetic discoveries to a common target of
+    educational-policy reforms.
+  accessed:
+    - year: 2022
+      month: 10
+      day: 7
+  author:
+    - family: Harden
+      given: K. Paige
+    - family: Domingue
+      given: Benjamin W.
+    - family: Belsky
+      given: Daniel W.
+    - family: Boardman
+      given: Jason D.
+    - family: Crosnoe
+      given: Robert
+    - family: Malanchini
+      given: Margherita
+    - family: Nivard
+      given: Michel
+    - family: Tucker-Drob
+      given: Elliot M.
+    - family: Harris
+      given: Kathleen Mullan
+  citation-key: HardenGeneticAssociationsMathematics2019
+  DOI: 10.1101/598532
+  issued:
+    - year: 2019
+      month: 4
+      day: 5
+  language: en
+  license: >-
+    © 2019, Posted by Cold Spring Harbor Laboratory. This pre-print is available
+    under a Creative Commons License (Attribution-NonCommercial-NoDerivs 4.0
+    International), CC BY-NC-ND 4.0, as described at
+    http://creativecommons.org/licenses/by-nc-nd/4.0/
+  page: '598532'
+  publisher: bioRxiv
+  section: New Results
+  source: bioRxiv
+  title: >-
+    Genetic Associations with Mathematics Tracking and Persistence in Secondary
+    School
+  type: article
+  URL: https://www.biorxiv.org/content/10.1101/598532v1
+
+- id: HeldEpistemicViolencePsychological2020
+  abstract: >-
+    A primary target of Indigenous psychologists and critical psychologists is
+    the epistemic violence found in mainstream research. The epistemic violence
+    derives from two alleged mainstream tendencies: (a) omitting
+    concepts/conceptions of othered peoples and (b) interpreting observed group
+    differences to be caused by inherent inferiorities of othered peoples. In
+    seeking remedial research practice, some theoretical psychologists
+    distinguish (a) psychological knowledge from and for the folk, which they
+    advocate and (b) psychological “knowledge” about the folk, the alleged
+    source of objectification of othered peoples. Though seemingly self-evident,
+    this for/about prepositional divide may not be clear. First, mainstream
+    epistemic violence often depends on folk notions. Second, the use in science
+    of folk concepts/conceptions has advanced oppressive purposes, whereas some
+    mainstream findings may serve progressive goals. I exemplify with race
+    concepts, especially racialized essentialism and dehumanization, and I
+    demonstrate how mainstream science sometimes reveals mechanisms of othering
+    that may inform progressive social reform efforts.
+  accessed:
+    - year: 2021
+      month: 9
+      day: 21
+  author:
+    - family: Held
+      given: Barbara S.
+  citation-key: HeldEpistemicViolencePsychological2020
+  container-title: Theory & Psychology
+  container-title-short: Theory & Psychology
+  DOI: 10.1177/0959354319883943
+  ISSN: 0959-3543
+  issue: '3'
+  issued:
+    - year: 2020
+      month: 6
+      day: 1
+  language: en
+  page: 349-370
+  publisher: SAGE Publications Ltd
+  source: SAGE Journals
+  title: >-
+    Epistemic violence in psychological science: Can knowledge of, from, and for
+    the (othered) people solve the problem?
+  title-short: Epistemic violence in psychological science
+  type: article-journal
+  URL: https://doi.org/10.1177/0959354319883943
+  volume: '30'
+
+- id: HumanGeneticistsCurb
+  abstract: >-
+    Field still struggles with how to accurately describe populations, study
+    finds
+  accessed:
+    - year: 2021
+      month: 12
+      day: 4
+  citation-key: HumanGeneticistsCurb
+  language: en
+  title: Human geneticists curb use of the term ‘race’ in their papers
+  type: webpage
+  URL: >-
+    https://www.science.org/content/article/human-geneticists-curb-use-term-race-their-papers
+
+- id: JacksonArthurJensenHis2019
+  abstract: >-
+    Arthur Jensen’s famous 1969 article on race and IQ relied on white
+    supremacists for his key argument.
+  accessed:
+    - year: 2019
+      month: 8
+      day: 28
+  author:
+    - family: Jackson
+      given: John
+  citation-key: JacksonArthurJensenHis2019
+  container-title: Fardels Bear
+  issued:
+    - year: 2019
+      month: 6
+      day: 7
+  language: en
+  title: Arthur Jensen and His Nazi Friends
+  type: post-weblog
+  URL: https://altrightorigins.com/2019/06/07/jensen-nazi-friends/
+
+- id: JacksonArthurJensenRacist2020
+  abstract: Arthur Jensen was a racial eugenicist.
+  accessed:
+    - year: 2020
+      month: 7
+      day: 6
+  author:
+    - family: Jackson
+      given: John
+  citation-key: JacksonArthurJensenRacist2020
+  container-title: Fardels Bear
+  issued:
+    - year: 2020
+      month: 7
+      day: 6
+  language: en
+  source: altrightorigins.com
+  title: Arthur Jensen’s Racist Eugenics
+  type: post-weblog
+  URL: https://altrightorigins.com/2020/07/06/jensen-white-nationalist/
+
+- id: JacksonJr.ArthurJensenEvolutionary2022
+  abstract: >-
+    Arthur R. Jensen (1923–2012) defended the idea that racial differences in
+    intelligence were biologically based. He based his ideas on what he claimed
+    were sound population genetics and evolutionary biology. Viewing his work
+    through the lenses of those disciplines reveals that his arguments for
+    biological racial differences did not meet the minimum evidentiary
+    requirements needed to show that socially defined races were genetic
+    populations. His evidence was from 19th-century race science and the race
+    science of the Nazi regime. His reliance on such evidence supported Jensen’s
+    fears that the country was in danger of collapse because of dysgenic
+    breeding by those of low intelligence. Jensen’s well-known associations with
+    scientific racists were not incidental to his scientific work, but central
+    because he cited their work throughout his career. (PsycInfo Database Record
+    (c) 2022 APA, all rights reserved)
+  author:
+    - family: Jackson Jr.
+      given: John P.
+  citation-key: JacksonJr.ArthurJensenEvolutionary2022
+  container-title: History of Psychology
+  DOI: 10.1037/hop0000221
+  event-place: US
+  ISSN: 1939-0610
+  issued:
+    - year: 2022
+  page: No Pagination Specified-No Pagination Specified
+  publisher: American Psychological Association
+  publisher-place: US
+  source: APA PsycNet
+  title: Arthur Jensen, evolutionary biology, and racism
+  type: article-journal
+
+- id: JacksonMythicalTabooRace2020
+  abstract: >-
+    Recent discussions have revived old claims that hereditarian research on
+    race differences in intelligence has been subject to a long and effective
+    taboo. We arg...
+  accessed:
+    - year: 2020
+      month: 10
+      day: 11
+  archive_location: 'Sage CA: Los Angeles, CA'
+  author:
+    - family: Jackson
+      given: John P.
+      suffix: Jr.
+    - family: Winston
+      given: Andrew S.
+  citation-key: JacksonMythicalTabooRace2020
+  container-title: Review of General Psychology
+  DOI: 10.1177/1089268020953622
+  issued:
+    - year: 2020
+      month: 10
+      day: 7
+  language: en
+  license: © 2020 The Author(s)
+  publisher: 'SAGE PublicationsSage CA: Los Angeles, CA'
+  source: journals.sagepub.com
+  title: 'The Mythical Taboo on Race and Intelligence:'
+  title-short: The Mythical Taboo on Race and Intelligence
+  type: article-journal
+  URL: https://journals.sagepub.com/eprint/UC8HG8URH2WQWVIWN5AG/full
+
+- id: JacksonPerilsPolysemyRacial2022
+  abstract: >-
+    <p>This paper critiques the biological race realism of Quayshawn Spencer.
+    Spencer's recent embrace of “radical race pluralism” (RRP) is welcome but
+    incomplete, because it needs methods that distinguish different
+    communicative contexts for how American English speakers use “race” and
+    related terms. I offer a pragmatic approach to identifying such contexts
+    that combines pragmatic argumentation theory, rhetorical polysemy, and a
+    pragmatic approach to definition. One consequence of embracing RRP is that
+    Spencer's theory of “OMB race talk” is unsupportable because it collapses
+    three distinct communicative contexts: genomic research, legal and
+    regulatory governance, and ordinary talk. By so doing, OMB race talk blocks
+    attempts to fight racism and violates ethical standards that should allow
+    people the agency to define their own identities.</p>
+  accessed:
+    - year: 2022
+      month: 5
+      day: 26
+  author:
+    - family: Jackson
+      given: John P.
+      suffix: Jr.
+  citation-key: JacksonPerilsPolysemyRacial2022
+  container-title: Philosophy, Theory, and Practice in Biology
+  DOI: 10.3998/ptpbio.2630
+  ISSN: 2475-3025
+  issue: '0'
+  issued:
+    - year: 2022
+      month: 5
+      day: 26
+  language: eng
+  number: '0'
+  publisher: Michigan Publishing
+  source: journals.publishing.umich.edu
+  title: 'The Perils of Polysemy: Racial Realism in the Real World'
+  title-short: The Perils of Polysemy
+  type: article-journal
+  URL: https://journals.publishing.umich.edu/ptpbio/article/id/2630/
+  volume: '14'
+
+- id: JacksonQuilletteRightAre2019
+  abstract: >-
+    Despite Quillette’s claims to the contrary, scientists write about race all
+    the time.
+  accessed:
+    - year: 2020
+      month: 5
+      day: 25
+  author:
+    - family: Jackson
+      given: John
+  citation-key: JacksonQuilletteRightAre2019
+  container-title: Fardels Bear
+  issued:
+    - year: 2019
+      month: 8
+      day: 16
+  language: en
+  source: altrightorigins.com
+  title: 'Is Quillette Right? Are Scientists Afraid to Discuss Race? (Spoiler: No)'
+  title-short: Is Quillette Right?
+  type: post-weblog
+  URL: >-
+    https://altrightorigins.com/2019/08/16/are-scientists-afraid-to-discuss-race/
+
+- id: JacksonScienceSegregationRace2005
+  abstract: >-
+    In this fascinating examination of the intriguing but understudied period
+    following the landmark Brown v. Board of Education decision, John Jackson
+    examines the scientific case aimed at dismantling the legislation.Offering a
+    trenchant assessment of the so-called scientific evidence, Jackson focuses
+    on the 1959 formation of the International Society for the Advancement of
+    Ethnology and Eugenics (IAAEE), whose expressed function was to objectively
+    investigate racial differences and publicize their findings. Notable figures
+    included Carleton Putnam, Wesley Critz George, and Carleton Coon. In an
+    attempt to link race, eugenics and intelligence, they launched legal
+    challenges to the Brown ruling, each chronicled here, that went to trial but
+    ultimately failed. The history Jackson presents speaks volumes about the
+    legacy of racism, as we can see similar arguments alive and well today in
+    such books as The Bell Curve and in other debates on race, science, and
+    intelligence. With meticulous research and a nuanced understanding of the
+    complexities of race and law, Jackson tells a disturbing tale about race in
+    America.
+  author:
+    - family: Jackson
+      given: John P.
+      suffix: Jr.
+  citation-key: JacksonScienceSegregationRace2005
+  ISBN: 978-0-8147-4271-6
+  issued:
+    - year: 2005
+      month: 8
+  language: en
+  number-of-pages: '304'
+  publisher: NYU Press
+  source: Google Books
+  title: >-
+    Science for Segregation: Race, Law, and the Case Against Brown V. Board of
+    Education
+  title-short: Science for Segregation
+  type: book
+
+- id: JacksonScientificAttackBrown2004
+  abstract: >-
+    Psychologists' work was cited in the Supreme Court case of Brown v. Board of
+    Education (1954). One criticism of the citation was that psychology could be
+    used to overturn the Brown decision and return the country to segregation. A
+    historical examination of such an attempt to overturn Brown in the early
+    1960s on the basis of new psychological knowledge shows that psychology was
+    not persuasive in the face of the civil rights movement. The failure of
+    segregationists to overturn Brown with psychological experts underscores how
+    psychology is ineluctably bound to the larger society. (PsycINFO Database
+    Record (c) 2017 APA, all rights reserved)
+  author:
+    - family: Jackson
+      given: John P.
+      suffix: Jr.
+  citation-key: JacksonScientificAttackBrown2004
+  container-title: American Psychologist
+  DOI: 10.1037/0003-066X.59.6.530
+  event-place: US
+  ISSN: 1935-990X(Electronic),0003-066X(Print)
+  issue: '6'
+  issued:
+    - year: 2004
+  page: 530-537
+  publisher: American Psychological Association
+  publisher-place: US
+  source: APA PsycNET
+  title: The Scientific Attack on Brown v. Board of Education, 1954-1964
+  type: article-journal
+  volume: '59'
+
+- id: JacksonSocialScientistsSocial2001
+  abstract: >-
+    In one of the twentieth century's landmark Supreme Court cases, Brown v.
+    Board of Education, social scientists such as Kenneth Clark helped to
+    convince the Supreme Court Justices of the debilitating psychological
+    effects of racism and segregation. John P. Jackson, Jr., examines the
+    well-known studies used in support of Brown, such as Clark’s famous “doll
+    tests,” as well as decades of research on race which lead up to the case.
+    Jackson reveals the struggles of social scientists in their effort to impact
+    American law and policy on race and poverty and demonstrates that without
+    these scientists, who brought their talents to bear on the most pressing
+    issues of the day, we wouldn’t enjoy the legal protections against
+    discrimination we may now take for granted. For anyone interested in the
+    history and legacy of Brown v. Board of Education, this is an essential
+    book.
+  author:
+    - family: Jackson
+      given: John P.
+  citation-key: JacksonSocialScientistsSocial2001
+  ISBN: 978-0-8147-4327-0
+  issued:
+    - year: 2001
+      month: 11
+      day: 1
+  language: en
+  number-of-pages: '304'
+  publisher: NYU Press
+  source: Google Books
+  title: 'Social Scientists for Social Justice: Making the Case against Segregation'
+  title-short: Social Scientists for Social Justice
+  type: book
+
+- id: JamiesonEchoChamberRush2008
+  author:
+    - family: Jamieson
+      given: Kathleen Hall
+    - family: Cappella
+      given: Joseph N.
+  citation-key: JamiesonEchoChamberRush2008
+  event-place: New York
+  ISBN: 978-0-19-539860-1
+  issued:
+    - year: 2008
+  language: en
+  number-of-pages: '301'
+  publisher: Oxford University Press
+  publisher-place: New York
+  source: K10plus ISBN
+  title: 'Echo chamber: Rush Limbaugh and the conservative media establishment'
+  title-short: Echo chamber
+  type: book
+
+- id: JosephReevaluation1990Minnesota2022
+  abstract: >-
+    In 1990, Thomas J. Bouchard Jr. and colleagues published the widely cited
+    1990 “Minnesota Study of Twins Reared Apart” (MISTRA) *Science* IQ study. To
+    arrive at the conclusion that “IQ is strongly affected by genetic factors,”
+    Bouchard and colleagues omitted their control group reared-apart dizygotic
+    twin (DZA) IQ score correlations. Near-full-sample correlations published
+    after the study’s 2000 end point show that the reared-apart monozygotic twin
+    (MZA) and DZA group IQ correlations did not differ at a statistically
+    significant level, suggesting that the study failed the first step in
+    determining that IQ scores are influenced by heredity. After bypassing the
+    model-fitting technique they used in most non-IQ MISTRA studies, the
+    researchers assumed that the MZA group IQ score correlation alone “directly
+    estimates heritability.” This method was based on unsupported assumptions by
+    the researchers, and they largely overlooked the confounding influence of
+    cohort effects. Bouchard and colleagues then decided to count most
+    environmental influences they did recognize as genetic influences. I
+    conclude that the MISTRA IQ study failed to discover genetic influences on
+    IQ scores and cognitive ability across the studied population, and that the
+    study should be evaluated in the context of psychology’s replication
+    problem.
+  accessed:
+    - year: 2022
+      month: 6
+      day: 7
+  author:
+    - family: Joseph
+      given: Jay
+  citation-key: JosephReevaluation1990Minnesota2022
+  container-title: Human Development
+  container-title-short: HDE
+  DOI: 10.1159/000521922
+  ISSN: 0018-716X, 1423-0054
+  issue: '1'
+  issued:
+    - year: 2022
+  language: english
+  page: 48-65
+  publisher: Karger Publishers
+  source: www.karger.com
+  title: A Reevaluation of the 1990 “Minnesota Study of Twins Reared Apart” IQ Study
+  type: article-journal
+  URL: https://www.karger.com/Article/FullText/521922
+  volume: '66'
+
+- id: JoyBrennanTwitter
+  abstract: >-
+    Like many of you, I've been thinking about the corrosive effects of prestige
+    and hierarchy within the academy. Here's a story about white and male
+    dominated hierarchy within Buddhist philosophy.
+  accessed:
+    - year: 2022
+      month: 2
+      day: 13
+  citation-key: JoyBrennanTwitter
+  container-title: Twitter
+  language: en
+  title: Joy Brennan on Twitter
+  type: webpage
+  URL: https://twitter.com/joycbrennan/status/1492197126415261700
+
+- id: KaplanGouldMortonRedux2015
+  abstract: "Lewis et\_al. (2011) attempted to restore the reputation of Samuel George Morton, a 19th century physician who reported on the skull sizes of different folk-races. Whereas Gould (1978) claimed that Morton's conclusions were invalid because they reflected unconscious bias, Lewis et\_al. alleged that Morton's findings were, in fact, supported, and Gould's analysis biased. We take strong exception to Lewis et\_al.’s thesis that Morton was “right.” We maintain that Gould was right to reject Morton's analysis as inappropriate and misleading, but wrong to believe that a more appropriate analysis was available. Lewis et\_al. fail to recognize that there is, given the dataset available, no appropriate way to answer any of the plausibly interesting questions about the “populations” in question (which in many cases are not populations in any biologically meaningful sense). We challenge the premise shared by both Gould and Lewis et\_al. that Morton's confused data can be used to draw any meaningful conclusions. This, we argue, reveals the importance of properly focusing on the questions asked, rather than more narrowly on the data gathered."
+  accessed:
+    - year: 2016
+      month: 4
+      day: 19
+  author:
+    - family: Kaplan
+      given: Jonathan Michael
+    - family: Pigliucci
+      given: Massimo
+    - family: Banta
+      given: Joshua Alexander
+  citation-key: KaplanGouldMortonRedux2015
+  collection-title: Genomics and Philosophy of Race
+  container-title: >-
+    Studies in History and Philosophy of Science Part C: Studies in History and
+    Philosophy of Biological and Biomedical Sciences
+  container-title-short: >-
+    Studies in History and Philosophy of Science Part C: Studies in History and
+    Philosophy of Biological and Biomedical Sciences
+  DOI: 10.1016/j.shpsc.2015.01.001
+  ISSN: 1369-8486
+  issued:
+    - year: 2015
+      month: 8
+  page: 22-31
+  source: ScienceDirect
+  title: 'Gould on Morton, Redux: What can the debate reveal about the limits of data?'
+  title-short: Gould on Morton, Redux
+  type: article-journal
+  URL: http://www.sciencedirect.com/science/article/pii/S1369848615000035
+  volume: '52'
+
+- id: KaplanMisinformationMisrepresentationMisuse2006
+  accessed:
+    - year: 2021
+      month: 11
+      day: 28
+  author:
+    - family: Kaplan
+      given: Jonathan
+  citation-key: KaplanMisinformationMisrepresentationMisuse2006
+  container-title: Law and Contemporary Problems
+  ISSN: 0023-9186
+  issue: 1/2
+  issued:
+    - year: 2006
+  page: 47-80
+  publisher: Duke University School of Law
+  source: JSTOR
+  title: >-
+    Misinformation, Misrepresentation, and Misuse of Human Behavioral Genetics
+    Research
+  type: article-journal
+  URL: https://www.jstor.org/stable/27592123
+  volume: '69'
+
+- id: KaplanRaceIQSearch2015
+  abstract: >-
+    Some authors defending the “hereditarian” hypothesis with respect to
+    differences in average IQ scores between populations have argued that the
+    sorts of environmental variation hypothesized by some researchers rejecting
+    the hereditarian position should leave discoverable statistical traces,
+    namely changes in the overall variance of scores or in variance–covariance
+    matrices relating scores to other variables. In this paper, I argue that the
+    claims regarding the discoverability of such statistical signals are broadly
+    mistaken—there is no good reason to suspect that the hypothesized
+    environmental causes would leave detectable traces of the sorts suggested.
+    As there remains no way to gather evidence that would permit the direct
+    refutation of the environmental hypotheses, and no direct evidence for the
+    hereditarian position, it remains the case, I argue, that the hereditarian
+    position is unsupported by current evidence.
+  accessed:
+    - year: 2021
+      month: 11
+      day: 28
+  author:
+    - family: Kaplan
+      given: Jonathan Michael
+  citation-key: KaplanRaceIQSearch2015
+  container-title: Biology & Philosophy
+  container-title-short: Biol Philos
+  DOI: 10.1007/s10539-014-9428-0
+  ISSN: 1572-8404
+  issue: '1'
+  issued:
+    - year: 2015
+      month: 1
+      day: 1
+  language: en
+  page: 1-17
+  source: Springer Link
+  title: >-
+    Race, IQ, and the search for statistical signals associated with so-called
+    “X”-factors: environments, racism, and the “hereditarian hypothesis”
+  title-short: >-
+    Race, IQ, and the search for statistical signals associated with so-called
+    “X”-factors
+  type: article-journal
+  URL: https://doi.org/10.1007/s10539-014-9428-0
+  volume: '30'
+
+- id: KevinBirdAntiracistGenomicsResponding2022
+  accessed:
+    - year: 2022
+      month: 9
+      day: 20
+  citation-key: KevinBirdAntiracistGenomicsResponding2022
+  dimensions: '15:34'
+  director:
+    - literal: Kevin Bird
+  issued:
+    - year: 2022
+      month: 3
+      day: 29
+  source: YouTube
+  title: >-
+    Anti-racist genomics: responding to scientific racism in the 21st century -
+    Kevin Bird AABA2022
+  title-short: Anti-racist genomics
+  type: motion_picture
+  URL: https://www.youtube.com/watch?v=eiGYum9LxYY
+
+- id: LaFraniereVeryHarmfulLack2022
+  abstract: >-
+    Major data gaps, the result of decades of underinvestment in public health,
+    have undercut the government response to the coronavirus and now to
+    monkeypox.
+  accessed:
+    - year: 2022
+      month: 9
+      day: 20
+  author:
+    - family: LaFraniere
+      given: Sharon
+  citation-key: LaFraniereVeryHarmfulLack2022
+  container-title: The New York Times
+  ISSN: 0362-4331
+  issued:
+    - year: 2022
+      month: 9
+      day: 20
+  language: en-US
+  section: U.S.
+  source: NYTimes.com
+  title: ‘Very Harmful’ Lack of Data Blunts U.S. Response to Outbreaks
+  type: article-newspaper
+  URL: https://www.nytimes.com/2022/09/20/us/politics/covid-data-outbreaks.html
+
+- id: LarsenMoreProvocativeLess2020
+  abstract: >-
+    (2020). More than provocative, less than scientific: A commentary on the
+    editorial decision to publish Cofnas (2020) Philosophical Psychology: Vol.
+    33, No. 7, pp. 893-898.
+  accessed:
+    - year: 2021
+      month: 11
+      day: 28
+  archive_location: world
+  author:
+    - family: Larsen
+      given: Rasmus Rosenberg
+    - family: Cruz
+      given: Helen De
+    - family: Kaplan
+      given: Jonathan
+    - family: Fuentes
+      given: Agustín
+    - family: Marks
+      given: Jonathan
+    - family: Pigliucci
+      given: Massimo
+    - family: Alfano
+      given: Mark
+    - family: Smith
+      given: David Livingstone
+    - family: Schroeder
+      given: Lauren
+  citation-key: LarsenMoreProvocativeLess2020
+  container-title: Philosophical Psychology
+  ISSN: 0951-5089
+  issued:
+    - year: 2020
+      month: 8
+      day: 15
+  language: en
+  license: © 2020 Informa UK Limited, trading as Taylor & Francis Group
+  publisher: Routledge
+  source: www.tandfonline.com
+  title: >-
+    More than provocative, less than scientific: A commentary on the editorial
+    decision to publish Cofnas (2020)
+  title-short: More than provocative, less than scientific
+  type: article-journal
+  URL: https://www.tandfonline.com/doi/abs/10.1080/09515089.2020.1805199
+
+- id: LastRefugeScoundrels2022
+  abstract: >-
+    Hiding behind "academic freedom," E. O. Wilson actively propagated race
+    pseudoscience in collusion with white supremacists.
+  accessed:
+    - year: 2022
+      month: 2
+      day: 1
+  citation-key: LastRefugeScoundrels2022
+  container-title: Science for the People Magazine
+  issued:
+    - year: 2022
+      month: 2
+      day: 1
+  language: en-US
+  title: “The Last Refuge of Scoundrels” • SftP Magazine
+  type: post-weblog
+  URL: >-
+    https://magazine.scienceforthepeople.org/online/the-last-refuge-of-scoundrels/
+
+- id: LewisGettingGeneticAncestry2022
+  accessed:
+    - year: 2022
+      month: 4
+      day: 19
+  author:
+    - family: Lewis
+      given: Anna C. F.
+    - family: Molina
+      given: Santiago J.
+    - family: Appelbaum
+      given: Paul S.
+    - family: Dauda
+      given: Bege
+    - family: Di Rienzo
+      given: Anna
+    - family: Fuentes
+      given: Agustin
+    - family: Fullerton
+      given: Stephanie M.
+    - family: Garrison
+      given: Nanibaa’ A.
+    - family: Ghosh
+      given: Nayanika
+    - family: Hammonds
+      given: Evelynn M.
+    - family: Jones
+      given: David S.
+    - family: Kenny
+      given: Eimear E.
+    - family: Kraft
+      given: Peter
+    - family: Lee
+      given: Sandra S.-J.
+    - family: Mauro
+      given: Madelyn
+    - family: Novembre
+      given: John
+    - family: Panofsky
+      given: Aaron
+    - family: Sohail
+      given: Mashaal
+    - family: Neale
+      given: Benjamin M.
+    - family: Allen
+      given: Danielle S.
+  citation-key: LewisGettingGeneticAncestry2022
+  container-title: Science
+  DOI: 10.1126/science.abm7530
+  issue: '6590'
+  issued:
+    - year: 2022
+      month: 4
+      day: 15
+  page: 250-252
+  publisher: American Association for the Advancement of Science
+  source: science.org (Atypon)
+  title: Getting genetic ancestry right for science and society
+  type: article-journal
+  URL: https://www.science.org/doi/full/10.1126/science.abm7530
+  volume: '376'
+
+- id: LewontinBourgeoisIdeologyOrigins1982
+  accessed:
+    - year: 2022
+      month: 6
+      day: 14
+  author:
+    - family: Lewontin
+      given: Richard
+    - family: Rose
+      given: Steven
+    - family: Kamin
+      given: Leo
+  citation-key: LewontinBourgeoisIdeologyOrigins1982
+  container-title: Race & Class
+  container-title-short: Race & Class
+  DOI: 10.1177/030639688202400101
+  ISSN: 0306-3968
+  issue: '1'
+  issued:
+    - year: 1982
+      month: 7
+      day: 1
+  language: en
+  page: 1-16
+  publisher: SAGE Publications Ltd
+  source: SAGE Journals
+  title: Bourgeois ideology and the origins of biological determinism
+  type: article-journal
+  URL: https://doi.org/10.1177/030639688202400101
+  volume: '24'
+
+- id: LewontinNotOurGenes1984
+  author:
+    - family: Lewontin
+      given: Richard C.
+    - family: Rose
+      given: Steven Peter Russell
+    - family: Kamin
+      given: Leon J.
+  citation-key: LewontinNotOurGenes1984
+  ISBN: 978-0-394-50817-7
+  issued:
+    - year: 1984
+  language: en
+  number-of-pages: '346'
+  publisher: Pantheon Books
+  source: Google Books
+  title: 'Not in Our Genes: Biology, Ideology, and Human Nature'
+  title-short: Not in Our Genes
+  type: book
+
+- id: LongHUMANGENETICVARIATION2004
+  author:
+    - family: Long
+      given: Jeffrey C
+  citation-key: LongHUMANGENETICVARIATION2004
+  issued:
+    - year: 2004
+  language: en
+  page: '21'
+  source: Zotero
+  title: 'HUMAN GENETIC VARIATION: THE MECHANISMS AND RESULTS OF MICROEVOLUTION'
+  type: article-journal
+
+- id: MainstreamScienceIntelligence
+  accessed:
+    - year: 2021
+      month: 9
+      day: 20
+  citation-key: MainstreamScienceIntelligence
+  title: Mainstream Science on Intelligence - Wikipedia
+  type: webpage
+  URL: https://en.wikipedia.org/wiki/Mainstream_Science_on_Intelligence
+
+- id: MalaterreEarlyDaysContemporary2022
+  abstract: >-
+    Topic model is a well proven tool to investigate the semantic content of
+    textual corpora. Yet corpora sometimes include texts in several languages,
+    making it impossible to apply language-specific computational approaches
+    over their entire content. This is the problem we encountered when setting
+    to analyze a philosophy of science corpus spanning over eight decades and
+    including original articles in Dutch, German and French, on top of a large
+    majority of articles in English. To circumvent this multilingual problem, we
+    use machine-translation tools to bulk translate non-English documents into
+    English. Though largely imperfect, especially syntactically, these
+    translations nevertheless provide correctly translated terms and preserve
+    the semantic proximity of documents with respect to one another. To assess
+    the quality of this translation step, we develop a “semantic topology
+    preservation test” that relies on estimating the extent to which
+    document-to-document distances have been preserved during translation. We
+    then conduct an LDA topic-model analysis over the entire corpus of
+    translated and English original texts, and compare it to a topic-model done
+    over the English original texts only. We thereby identify the specific
+    contribution of the translated texts. These studies reveal a more complete
+    picture of main topics that can found in the philosophy of science
+    literature, especially during the early days of the discipline when numerous
+    articles were published in languages other than English.
+  accessed:
+    - year: 2022
+      month: 6
+      day: 1
+  author:
+    - family: Malaterre
+      given: Christophe
+    - family: Lareau
+      given: Francis
+  citation-key: MalaterreEarlyDaysContemporary2022
+  container-title: Synthese
+  container-title-short: Synthese
+  DOI: 10.1007/s11229-022-03722-x
+  ISSN: 1573-0964
+  issue: '3'
+  issued:
+    - year: 2022
+      month: 5
+      day: 31
+  language: en
+  page: '242'
+  source: Springer Link
+  title: >-
+    The early days of contemporary philosophy of science: novel insights from
+    machine translation and topic-modeling of non-parallel multilingual corpora
+  title-short: The early days of contemporary philosophy of science
+  type: article-journal
+  URL: https://doi.org/10.1007/s11229-022-03722-x
+  volume: '200'
+
+- id: MalaterreWhatThisThing2019
+  accessed:
+    - year: 2020
+      month: 9
+      day: 18
+  author:
+    - family: Malaterre
+      given: Christophe
+    - family: Chartier
+      given: Jean-François
+    - family: Pulizzotto
+      given: Davide
+  citation-key: MalaterreWhatThisThing2019
+  container-title: >-
+    HOPOS: The Journal of the International Society for the History of
+    Philosophy of Science
+  container-title-short: >-
+    HOPOS: The Journal of the International Society for the History of
+    Philosophy of Science
+  DOI: 10.1086/704372
+  ISSN: 2152-5188, 2156-6240
+  issue: '2'
+  issued:
+    - year: 2019
+      month: 9
+  language: en
+  page: 215-249
+  source: DOI.org (Crossref)
+  title: >-
+    What Is This Thing Called *Philosophy of Science* ? A Computational
+    Topic-Modeling Perspective, 1934–2015
+  title-short: What Is This Thing Called *Philosophy of Science* ?
+  type: article-journal
+  URL: https://www.journals.uchicago.edu/doi/10.1086/704372
+  volume: '9'
+
+- id: MartinsWhatCanGenetic2021
+  abstract: >-
+    Personal genetic testing is here, opening the door to ancestry tracing. What
+    does that mean to the conversation about “race”?
+  accessed:
+    - year: 2021
+      month: 11
+      day: 20
+  author:
+    - family: Martins
+      given: Nuno M. C.
+    - family: Carson
+      given: Michael J.
+    - literal: Genetics and Society Working Group
+  citation-key: MartinsWhatCanGenetic2021
+  container-title: Science for the People Magazine
+  issued:
+    - year: 2021
+      month: 11
+      day: 19
+  language: en-US
+  title: What Can Genetic Testing Tell You About ‘Race’? • SftP Magazine
+  title-short: What Can Genetic Testing Tell You About ‘Race’?
+  type: post-weblog
+  URL: >-
+    https://magazine.scienceforthepeople.org/lewontin-special-issue/genetics-of-race-gswg/
+
+- id: MatthewsThreeLegsMissing2022
+  abstract: >-
+    The so-called ‘missing heritability problem’ is often characterized by
+    behavior geneticists as a numerical discrepancy between alternative kinds of
+    heritability. For example, while ‘traditional heritability’ derived from
+    twin and family studies indicates that approximately ∼50% of variation in
+    intelligence is attributable to genetics, ‘SNP heritability’ derived from
+    genome-wide association studies indicates that only ∼10% of variation in
+    intelligence is attributable to genetics. This 40% gap in variance accounted
+    for by alternative kinds of heritability is frequently referred to as what's
+    “missing.” Philosophers have picked up on this reading, suggesting that
+    “dissolving” the missing heritability problem is merely a matter of closing
+    the numerical gap between traditional and molecular kinds of heritability.
+    We argue that this framing of the problem undervalues the severity of the
+    many challenges to scientific understanding of the “heritability” of human
+    behavior. On our view, resolving the numerical discrepancies between
+    alternative kinds of heritability will do little to advance scientific
+    explanation and understanding of behavior genetics. Thus, we propose a new
+    conceptual framework of the missing heritability problem that comprises
+    three independent methodological and explanatory challenges: the numerical
+    gap, the prediction gap, and the mechanism gap.
+  accessed:
+    - year: 2022
+      month: 5
+      day: 15
+  author:
+    - family: Matthews
+      given: Lucas J.
+    - family: Turkheimer
+      given: Eric
+  citation-key: MatthewsThreeLegsMissing2022
+  container-title: Studies in History and Philosophy of Science
+  container-title-short: Studies in History and Philosophy of Science
+  DOI: 10.1016/j.shpsa.2022.04.004
+  ISSN: 0039-3681
+  issued:
+    - year: 2022
+      month: 6
+      day: 1
+  language: en
+  page: 183-191
+  source: ScienceDirect
+  title: Three legs of the missing heritability problem
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0039368122000632
+  volume: '93'
+
+- id: Md20852AmericanSocietyHuman2020
+  abstract: >-
+    Realizing the benefits of human genetics and genomics research for people
+    everywhere.
+  accessed:
+    - year: 2022
+      month: 6
+      day: 14
+  author:
+    - family: Md 20852
+      given: ''
+  citation-key: Md20852AmericanSocietyHuman2020
+  container-title: ASHG
+  issued:
+    - year: 2020
+      month: 9
+      day: 24
+  language: en-US
+  title: >-
+    American Society of Human Genetics Statement Regarding Concepts of “Good
+    Genes” and Human Genetics
+  type: webpage
+  URL: >-
+    https://www.ashg.org/publications-news/ashg-news/statement-regarding-good-genes-human-genetics/
+
+- id: MeadComingAgeSamoa1928
+  author:
+    - family: Mead
+      given: Margaret
+  citation-key: MeadComingAgeSamoa1928
+  event-place: New York
+  issued:
+    - year: 1928
+  publisher: William Morrow and Company
+  publisher-place: New York
+  title: Coming of Age in Samoa
+  type: book
+
+- id: MehlerFoundationFascismNew1989
+  abstract: >-
+    J. Philippe Rushton recently gained widespread publicity in North America
+    with his controversial eugenic theories of racial difference. Barry Mehler
+    shows that his ideas coincide with, and are supported by, the wealthy
+    organization promoting eugenics in the US today, the Pioneer Fund, and the
+    journal Mankind Quarterly, and scrutinizes the political and academic
+    influence of those bodies.
+  accessed:
+    - year: 2022
+      month: 5
+      day: 24
+  author:
+    - family: Mehler
+      given: Barry
+  citation-key: MehlerFoundationFascismNew1989
+  container-title: Patterns of Prejudice
+  DOI: 10.1080/0031322X.1989.9970026
+  ISSN: 0031-322X
+  issue: '4'
+  issued:
+    - year: 1989
+      month: 12
+      day: 1
+  page: 17-25
+  publisher: Routledge
+  source: Taylor and Francis+NEJM
+  title: 'Foundation for fascism: The new eugenics movement in the United States'
+  title-short: Foundation for fascism
+  type: article-journal
+  URL: https://doi.org/10.1080/0031322X.1989.9970026
+  volume: '23'
+
+- id: MillerPioneerFundBankrolling1994
+  accessed:
+    - year: 2021
+      month: 9
+      day: 16
+  author:
+    - family: Miller
+      given: Adam
+  citation-key: MillerPioneerFundBankrolling1994
+  container-title: The Journal of Blacks in Higher Education
+  DOI: 10.2307/2962466
+  ISSN: 1077-3711
+  issue: '6'
+  issued:
+    - year: 1994
+  page: 58-61
+  publisher: JBHE Foundation, Inc
+  source: JSTOR
+  title: 'The Pioneer Fund: Bankrolling the Professors of Hate'
+  title-short: The Pioneer Fund
+  type: article-journal
+  URL: https://www.jstor.org/stable/2962466
+
+- id: NathanCofnasProblemIsnThat2021
+  accessed:
+    - year: 2021
+      month: 12
+      day: 8
+  author:
+    - literal: Nathan Cofnas
+  citation-key: NathanCofnasProblemIsnThat2021
+  container-title: '@nathancofnas'
+  genre: Tweet
+  issued:
+    - year: 2021
+      month: 9
+      day: 10
+  language: en
+  title: >-
+    The problem isn't that we aren't "all the same." It's that some people—and
+    groups—have significantly worse outcomes than others because of innate
+    cognitive limitations, and there's not much we can do about it. What does
+    "social justice" look like if we accept that reality?
+  type: post-weblog
+  URL: https://twitter.com/nathancofnas/status/1436475447487860738
+
+- id: NguyenEchoChambersEpistemic2020
+  abstract: >-
+    Discussion of the phenomena of post-truth and fake news often implicates the
+    closed epistemic networks of social media. The recent conversation has,
+    however, blurred two distinct social epistemic phenomena. An epistemic
+    bubble is a social epistemic structure in which other relevant voices have
+    been left out, perhaps accidentally. An echo chamber is a social epistemic
+    structure from which other relevant voices have been actively excluded and
+    discredited. Members of epistemic bubbles lack exposure to relevant
+    information and arguments. Members of echo chambers, on the other hand, have
+    been brought to systematically distrust all outside sources. In epistemic
+    bubbles, other voices are not heard; in echo chambers, other voices are
+    actively undermined. It is crucial to keep these phenomena distinct. First,
+    echo chambers can explain the post-truth phenomena in a way that epistemic
+    bubbles cannot. Second, each type of structure requires a distinct
+    intervention. Mere exposure to evidence can shatter an epistemic bubble, but
+    may actually reinforce an echo chamber. Finally, echo chambers are much
+    harder to escape. Once in their grip, an agent may act with epistemic
+    virtue, but social context will pervert those actions. Escape from an echo
+    chamber may require a radical rebooting of one's belief system.
+  accessed:
+    - year: 2021
+      month: 1
+      day: 27
+  author:
+    - family: Nguyen
+      given: C. Thi
+  citation-key: NguyenEchoChambersEpistemic2020
+  container-title: Episteme
+  DOI: 10.1017/epi.2018.32
+  ISSN: 1742-3600, 1750-0117
+  issue: '2'
+  issued:
+    - year: 2020
+      month: 6
+  language: en
+  page: 141-161
+  publisher: Cambridge University Press
+  source: Cambridge University Press
+  title: Echo Chambers and Epistemic Bubbles
+  type: article-journal
+  URL: >-
+    https://www.cambridge.org/core/journals/episteme/article/echo-chambers-and-epistemic-bubbles/5D4AC3A808C538E17C50A7C09EC706F0
+  volume: '17'
+
+- id: NormandinHowNetworkConservationists2015
+  abstract: >-
+    Continuing historical narratives of the early twentieth century nexus of
+    conservationism, eugenics, and nativism (exemplified by Madison Grant), this
+    paper traces the history of the contemporary US anti-immigration movement's
+    roots in environmentalism and global population control activism, through an
+    exploration of the thoughts and activities of the activist, John Tanton, who
+    has been called “the most influential unknown man in America.” We explore
+    the “neo-Malthusian” ideas that sparked a seminal moment for population
+    control advocacy in the late 1960s and early 1970s, leading to the creation
+    of Zero Population Growth (ZPG). After rising to the presidency of ZPG,
+    Tanton, and ZPG spun off the Federation for American Immigration Reform.
+    After leaving ZPG's leadership, Tanton created additional anti-immigration
+    advocacy groups and built up connections with existing organizations such as
+    the Pioneer Fund. We trace Tanton's increasingly radical conservative
+    network of anti-immigration advocates, conservationists, and population
+    control activists to the present day. Tanton's archived papers illustrate,
+    among other things, his interactions with collaborators such as ecologist
+    Garrett Hardin (author of the famous “Tragedy of the Commons”) and his
+    documented interest in reviving eugenics. We contend that this history of
+    Tanton's network provides key insights into understanding how there came to
+    be an overlap between the ideologies and activist communities of immigration
+    restrictionism, population control, conservationism and eugenics.
+  accessed:
+    - year: 2022
+      month: 5
+      day: 24
+  author:
+    - family: Normandin
+      given: Sebastian
+    - family: Valles
+      given: Sean A.
+  citation-key: NormandinHowNetworkConservationists2015
+  container-title: Endeavour
+  container-title-short: Endeavour
+  DOI: 10.1016/j.endeavour.2015.05.001
+  ISSN: 0160-9327
+  issue: '2'
+  issued:
+    - year: 2015
+      month: 6
+      day: 1
+  language: en
+  page: 95-105
+  source: ScienceDirect
+  title: >-
+    How a network of conservationists and population control activists created
+    the contemporary US anti-immigration movement
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0160932715200622
+  volume: '39'
+
+- id: OreskesMerchantsDoubtHow2011
+  abstract: >-
+    The U.S. scientific community has long led the world in research on such
+    areas as public health, environmental science, and issues affecting quality
+    of life. These scientists have produced landmark studies on the dangers of
+    DDT, tobacco smoke, acid rain, and global warming. But at the same time, a
+    small yet potent subset of this community leads the world in vehement denial
+    of these dangers.Merchants of Doubt tells the story of how a loose-knit
+    group of high-level scientists and scientific advisers, with deep
+    connections in politics and industry, ran effective campaigns to mislead the
+    public and deny well-established scientific knowledge over four decades.
+    Remarkably, the same individuals surface repeatedly-some of the same figures
+    who have claimed that the science of global warming is "not settled" denied
+    the truth of studies linking smoking to lung cancer, coal smoke to acid
+    rain, and CFCs to the ozone hole. "Doubt is our product," wrote one tobacco
+    executive. These "experts" supplied it. Naomi Oreskes and Erik M. Conway,
+    historians of science, roll back the rug on this dark corner of the American
+    scientific community, showing how ideology and corporate interests, aided by
+    a too-compliant media, have skewed public understanding of some of the most
+    pressing issues of our era.
+  author:
+    - family: Oreskes
+      given: Naomi
+    - family: Conway
+      given: Erik M.
+  citation-key: OreskesMerchantsDoubtHow2011
+  event-place: New York, NY, USA
+  ISBN: 978-1-4088-2877-9
+  issued:
+    - year: 2011
+      month: 10
+      day: 3
+  language: en
+  number-of-pages: '368'
+  publisher: Bloomsbury
+  publisher-place: New York, NY, USA
+  source: Google Books
+  title: >-
+    Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues
+    from Tobacco Smoke to Global Warming
+  title-short: Merchants of Doubt
+  type: book
+
+- id: PanofskyGeneticAncestryTesting2019
+  abstract: >-
+    White nationalists have a genetic essentialist understanding of racial
+    identity, so what happens when using genetic ancestry tests (GATs) to
+    explore personal identities, they receive upsetting results they consider
+    evidence of non-white or non-European ancestry? Our answer draws on
+    qualitative analysis of posts on the white nationalist website Stormfront,
+    interpreted by synthesizing the literatures on white nationalism and GATs
+    and identity. We show that Stormfront posters exert much more energy
+    repairing individuals’ bad news than using it to exclude or attack them.
+    Their repair strategies combine anti-scientific, counter-knowledge attacks
+    on the legitimacy of GATs and quasi-scientific reinterpretations of GATs in
+    terms of white nationalist histories. However, beyond individual identity
+    repair they also reinterpret the racial boundaries and hierarchies of white
+    nationalism in terms of the relationships GATs make visible. White
+    nationalism is not simply an identity community or political movement but
+    should be understood as bricoleurs with genetic knowledge displaying aspects
+    of citizen science.
+  accessed:
+    - year: 2019
+      month: 7
+      day: 2
+  author:
+    - family: Panofsky
+      given: Aaron
+    - family: Donovan
+      given: Joan
+  citation-key: PanofskyGeneticAncestryTesting2019
+  container-title: Social Studies of Science
+  container-title-short: Soc Stud Sci
+  DOI: 10.1177/0306312719861434
+  ISSN: 0306-3127
+  issued:
+    - year: 2019
+      month: 7
+      day: 2
+  language: en
+  page: '0306312719861434'
+  source: SAGE Journals
+  title: >-
+    Genetic ancestry testing among white nationalists: From identity repair to
+    citizen science
+  title-short: Genetic ancestry testing among white nationalists
+  type: article-journal
+  URL: https://doi.org/10.1177/0306312719861434
+
+- id: PanofskyHowWhiteNationalists2021
+  abstract: >-
+    Objectives Our aim in this study was to understand how genetics ideas are
+    appropriated and mobilized online toward the political projects of White
+    nationalism and the alt right. Studying three different online venues, we
+    investigated how genetics is used to support racial realism,
+    hereditarianism, and racial hierarchy. We analyzed how these ideas are
+    connected to political and metapolitical projects. In addition, we examined
+    the strategies used to build authority for these interpretations. Methods We
+    analyze three online venues in which genetics has been mobilized to advance
+    racial realism and hereditarian explanations of racial differences. These
+    were (a) the use of genetic ancestry tests in online nationalist
+    discussions, (b) blogs and other venues in which the human biodiversity
+    ideas are articulated, (c) activities surrounding the OpenPsych collection
+    of online journals. Ethnographic and interpretive methods were applied to
+    investigate scientific and political meanings of efforts to mobilize genetic
+    ideas. Results We found that White nationalists use genetic ancestry tests
+    to align White identity with ideas of racial purity and diversity, educating
+    each other about genetics, and debating the boundaries of Whiteness. “Human
+    biodiversity” has been mobilized as a movement to catalog and create
+    hereditarian ideas about racial differences and to distribute them as “red
+    pills” to transform online discourse. The OpenPsych journals have allowed
+    amateur hereditarian psychologists to publish papers, coordinate activity,
+    and legitimate their project at the academic margins. Conclusions These
+    various appropriations of genetics aim to further racial realism and
+    hereditarian explanations of racial social and behavioral differences.
+    Beyond these substantive aims, on a “metapolitical” level, they serve to
+    reframe concepts and standards for political and scientific discussion of
+    race, challenge structures of academic legitimacy and expertise, and build a
+    cadre of ideological foot soldiers armed with an argumentative toolkit. As
+    professional anthropologists and geneticists aim to accurately communicate
+    their science and its implications for understanding human differences to
+    the public, they must contend with these substantive claims and
+    metapolitical contexts.
+  accessed:
+    - year: 2021
+      month: 11
+      day: 24
+  author:
+    - family: Panofsky
+      given: Aaron
+    - family: Dasgupta
+      given: Kushan
+    - family: Iturriaga
+      given: Nicole
+  citation-key: PanofskyHowWhiteNationalists2021
+  container-title: American Journal of Physical Anthropology
+  DOI: 10.1002/ajpa.24150
+  ISSN: 1096-8644
+  issue: '2'
+  issued:
+    - year: 2021
+  language: en
+  page: 387-398
+  source: Wiley Online Library
+  title: >-
+    How White nationalists mobilize genetics: From genetic ancestry and human
+    biodiversity to counterscience and metapolitics
+  title-short: How White nationalists mobilize genetics
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/ajpa.24150
+  volume: '175'
+
+- id: PanofskyMisbehavingScienceControversy2014
+  abstract: "Behavior genetics has always been a breeding ground for controversies. From the “criminal chromosome” to the “gay gene,” claims about the influence of genes like these have led to often vitriolic national debates about race, class, and inequality. Many behavior geneticists have encountered accusations of racism and have had their scientific authority and credibility questioned, ruining reputations, and threatening their access to coveted resources. \_ In\_Misbehaving Science,\_Aaron Panofsky traces the field of behavior genetics back to its origins in the 1950s, telling the story through close looks at five major controversies. In the process, Panofsky argues that persistent, ungovernable controversy in behavior genetics is due to the broken hierarchies within the field. All authority and scientific norms are questioned, while the absence of unanimously accepted methods and theories leaves a foundationless field, where disorder is ongoing. Critics charge behavior geneticists with political motivations; champions say they merely follow the data where they lead. But Panofsky shows how pragmatic coping with repeated controversies drives their scientific actions. Ironically, behavior geneticists’ struggles for scientific authority and efforts to deal with the threats to their legitimacy and autonomy have made controversy inevitable—and in some ways essential—to the study of behavior genetics."
+  accessed:
+    - year: 2021
+      month: 11
+      day: 24
+  author:
+    - family: Panofsky
+      given: Aaron
+  citation-key: PanofskyMisbehavingScienceControversy2014
+  event-place: Chicago, IL
+  ISBN: 978-0-226-05845-0
+  issued:
+    - year: 2014
+      month: 7
+  language: en
+  number-of-pages: '320'
+  publisher: University of Chicago Press
+  publisher-place: Chicago, IL
+  source: University of Chicago Press
+  title: 'Misbehaving Science: Controversy and the Development of Behavior Genetics'
+  title-short: Misbehaving Science
+  type: book
+  URL: https://press.uchicago.edu/ucp/books/book/chicago/M/bo16124298.html
+
+- id: ParensWillSociogenomicsReduce2021
+  abstract: >-
+    In her new book, Kathryn Paige Harden is full of hope that insights from
+    genetics will become powerful tools for advancing a left-leaning political
+  accessed:
+    - year: 2022
+      month: 5
+      day: 15
+  author:
+    - family: Parens
+      given: Erik
+  citation-key: ParensWillSociogenomicsReduce2021
+  container-title: The Hastings Center
+  issued:
+    - year: 2021
+      month: 9
+      day: 30
+  language: en-US
+  title: Will Sociogenomics Reduce Social Inequality?
+  type: post-weblog
+  URL: >-
+    https://www.thehastingscenter.org/will-sociogenomics-reduce-social-inequality/
+
+- id: PinkerGroupsGenes2006
+  abstract: >-
+    The lessons of the Ashkenazim.
+
+    My grandparents were immigrants from Eastern Europe who owned a small
+    necktie factory on the outskirts of Montreal. While visiting them one
+    weekend, I found my grandfather on the factory floor, cutting shapes out of
+    irregular stacks of cloth with a fabric saw. He explained that by carving up
+    the remnants that were left over when the neckties had been cut out and
+    stit...
+  accessed:
+    - year: 2021
+      month: 9
+      day: 30
+  author:
+    - family: Pinker
+      given: Steven
+  citation-key: PinkerGroupsGenes2006
+  container-title: The New Republic
+  ISSN: 0028-6583
+  issued:
+    - year: 2006
+      month: 6
+      day: 26
+  source: The New Republic
+  title: Groups and Genes
+  type: article-magazine
+  URL: https://newrepublic.com/article/77727/groups-and-genes
+
+- id: PlayingGeneCard
+  accessed:
+    - year: 2022
+      month: 6
+      day: 16
+  citation-key: PlayingGeneCard
+  title: Playing the gene Card? A Report on Race and Human Biotechnology
+  type: report
+  URL: https://www.geneticsandsociety.org/sites/default/files/complete_PTGC.pdf
+
+- id: PronczukRacistResearcherExposed2022
+  abstract: >-
+    The work of Michael Woodley, a Briton who was cited by the teenager who
+    killed 10 Black people at a supermarket in Buffalo, included
+    pseudoscientific theories that have been used to justify racism.
+  accessed:
+    - year: 2022
+      month: 6
+      day: 9
+  author:
+    - family: Pronczuk
+      given: Monika
+    - family: Ryckewaert
+      given: Koba
+  citation-key: PronczukRacistResearcherExposed2022
+  container-title: The New York Times
+  ISSN: 0362-4331
+  issued:
+    - year: 2022
+      month: 6
+      day: 9
+  language: en-US
+  section: World
+  source: NYTimes.com
+  title: A Racist Researcher, Exposed by a Mass Shooting
+  type: article-newspaper
+  URL: >-
+    https://www.nytimes.com/2022/06/09/world/europe/michael-woodley-buffalo-shooting.html
+
+- id: PublishingSpreadThisWildfire2022
+  abstract: >-
+    The mass shooting in Buffalo of May 2022 was sparked by a long history of
+    racialist ideology and weaponized science. What is to be done?
+  accessed:
+    - year: 2022
+      month: 9
+      day: 26
+  author:
+    - family: Publishing
+      given: SftP
+  citation-key: PublishingSpreadThisWildfire2022
+  container-title: Science for the People Magazine
+  issued:
+    - year: 2022
+      month: 9
+      day: 26
+  language: en-US
+  title: Spread This Like Wildfire! • SftP Magazine
+  type: post-weblog
+  URL: https://magazine.scienceforthepeople.org/online/spread-this-like-wildfire/
+
+- id: RichardsonPostgenomicsPerspectivesBiology2015
+  call-number: QH445.2 .P678 2015
+  citation-key: RichardsonPostgenomicsPerspectivesBiology2015
+  contributor:
+    - family: Altman
+      given: Russ
+    - family: Ankeny
+      given: Rachel A.
+    - family: Bliss
+      given: Catherine
+    - family: Dupré
+      given: John
+    - family: Fortun
+      given: Mike
+    - family: Keller
+      given: Evelyn Fox
+    - family: Leonelli
+      given: Sabina
+    - family: Mackenzie
+      given: Adrian
+    - family: Moinester
+      given: Margot
+    - family: Panofsky
+      given: Aaron
+    - family: Richardson
+      given: Sarah S.
+    - family: Shostak
+      given: Sara
+    - family: Stevens
+      given: Hallam
+  editor:
+    - family: Richardson
+      given: Sarah S.
+    - family: Stevens
+      given: Hallam
+  event-place: Durham ; London
+  ISBN: 978-0-8223-5922-7 978-0-8223-5894-7 978-0-8223-7544-9
+  issued:
+    - year: 2015
+  publisher: Duke University Press
+  publisher-place: Durham ; London
+  source: Library of Congress ISBN
+  title: 'Postgenomics: perspectives on biology after the genome'
+  title-short: Postgenomics
+  type: book
+
+- id: RichardsonTrustworthinessDeficitPostgenomic2015
+  abstract: >-
+    In the past, work on racial and ethnic variation in brain and behavior was
+    marginalized within genetics. Against the backdrop of genetics’ eugenic
+    legacy, wide consensus held such research to be both ethically problematic
+    and methodologically controversial. But today it is finding new
+    opportunistic venues in a global, transdisciplinary, data-rich postgenomic
+    research environment in which such a consensus is increasingly strained. The
+    postgenomic sciences display worrisome deficits in their ability to govern
+    and negotiate standards for making postgenomic claims in the
+    transdisciplinary space between human population variation research, studies
+    of intelligence, neuroscience, and evolutionary biology. Today some
+    researchers are pursuing the genomics of intelligence on a newly grand
+    scale. They are sequencing large numbers of whole genomes of people
+    considered highly intelligent (by varying empirical and social measures) in
+    the hope of finding gene variants predictive of intelligence. Troubling and
+    at times outlandish futurist claims accompany this research. Scientists
+    involved in this research have openly discussed the possibility of marketing
+    prenatal tests for intelligence, of genetic engineering or selective embryo
+    implantation to increase the likelihood of a high-IQ child, and of
+    genotyping children to guide their education. In this permissive and
+    contested environment, what would trustworthy research on the genomics of
+    high intelligence look like?
+  accessed:
+    - year: 2021
+      month: 11
+      day: 24
+  author:
+    - family: Richardson
+      given: Sarah S.
+  citation-key: RichardsonTrustworthinessDeficitPostgenomic2015
+  container-title: Hastings Center Report
+  DOI: 10.1002/hast.493
+  ISSN: 1552-146X
+  issue: S1
+  issued:
+    - year: 2015
+  language: en
+  page: S15-S20
+  source: Wiley Online Library
+  title: The Trustworthiness Deficit in Postgenomic Research on Human Intelligence
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/hast.493
+  volume: '45'
+
+- id: RobertsCanResearchGenetics2015
+  abstract: >-
+    The history of research on the genetics of intelligence is fraught with
+    social bias. During the eugenics era, the hereditary theory of intelligence
+    justified policies that encouraged the proliferation of favored races and
+    coercively stemmed procreation by disfavored ones. In the 1970s, Berkeley
+    psychologist Arthur Jensen argued that black students’ innate cognitive
+    inferiority limited the efficacy of federal education programs. The 1994
+    controversial bestseller The Bell Curve, by Richard J. Herrnstein and
+    Charles Murray, rehashed the claim that race and class disparities stem from
+    immutable differences in inherited intelligence, which could not be
+    eliminated through social interventions. Today most scientists studying the
+    genetics of intelligence distance themselves from this history of social
+    bias by arguing that their research need not investigate intellectual
+    differences between social groups. Rather, they argue, examining the
+    heritability of intelligence can be socially neutral and may even help to
+    reduce social inequities. I argue, however, that research on the genetics of
+    intelligence cannot be socially neutral. Even if we divorce the heritability
+    of intelligence from a eugenicist mission, measuring intelligence remains
+    useful only as a gage of individuals’ appropriate positions in society.
+    Research into the genetics of intelligence ultimately helps to determine
+    individuals’ inherited capacity for particular social positions, even when
+    researchers aim to modify the effects of inheritance.
+  accessed:
+    - year: 2021
+      month: 11
+      day: 24
+  author:
+    - family: Roberts
+      given: Dorothy
+  citation-key: RobertsCanResearchGenetics2015
+  container-title: Hastings Center Report
+  DOI: 10.1002/hast.499
+  ISSN: 1552-146X
+  issue: S1
+  issued:
+    - year: 2015
+  language: en
+  page: S50-S53
+  source: Wiley Online Library
+  title: Can Research on the Genetics of Intelligence Be “Socially Neutral”?
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/hast.499
+  volume: '45'
+
+- id: RoheVintageFactorAnalysis2020
+  abstract: >-
+    Psychologists developed Multiple Factor Analysis to decompose multivariate
+    data into a small number of interpretable factors without any a priori
+    knowledge about those factors. In this form of factor analysis, the Varimax
+    "factor rotation" is a key step to make the factors interpretable. Charles
+    Spearman and many others objected to factor rotations because the factors
+    seem to be rotationally invariant. These objections are still reported in
+    all contemporary multivariate statistics textbooks. This is an engima
+    because this vintage form of factor analysis has survived and is widely
+    popular because, empirically, the factor rotation often makes the factors
+    easier to interpret. We argue that the rotation makes the factors easier to
+    interpret because, in fact, the Varimax factor rotation performs statistical
+    inference. We show that Principal Components Analysis (PCA) with the Varimax
+    rotation provides a unified spectral estimation strategy for a broad class
+    of modern factor models, including the Stochastic Blockmodel and a natural
+    variation of Latent Dirichlet Allocation (i.e., "topic modeling"). In
+    addition, we show that Thurstone's widely employed sparsity diagnostics
+    implicitly assess a key "leptokurtic" condition that makes the rotation
+    statistically identifiable in these models. Taken together, this shows that
+    the know-how of Vintage Factor Analysis performs statistical inference,
+    reversing nearly a century of statistical thinking on the topic. With a
+    sparse eigensolver, PCA with Varimax is both fast and stable. Combined with
+    Thurstone's straightforward diagnostics, this vintage approach is suitable
+    for a wide array of modern applications.
+  accessed:
+    - year: 2022
+      month: 5
+      day: 22
+  author:
+    - family: Rohe
+      given: Karl
+    - family: Zeng
+      given: Muzhe
+  citation-key: RoheVintageFactorAnalysis2020
+  DOI: 10.48550/arXiv.2004.05387
+  issued:
+    - year: 2020
+      month: 4
+      day: 20
+  number: arXiv:2004.05387
+  publisher: arXiv
+  source: arXiv.org
+  title: Vintage Factor Analysis with Varimax Performs Statistical Inference
+  type: article
+  URL: http://arxiv.org/abs/2004.05387
+
+- id: RosemanLewontinDidNot2021
+  abstract: >-
+    In 1972, R.C. Lewontin concluded that it follows from the fact that the
+    large majority of human genetic variation (≈ 85%) is among individuals
+    within local populations that racial taxonomy is unjustified. Three decades
+    later, Edwards demonstrated that while the accuracy with which individuals
+    may be assigned to groups is poor for a single locus, consideration of
+    multi-locus data allows for highly accurate assignments. Edwards concluded
+    that Lewontin's dismissal of racial taxonomy was unwarranted. Edwards
+    misidentified the aim of Lewontin's critique, which was directed at the
+    utility of racial classification and not at assigning individuals to groups
+    using genetic data. Moreover, Edwards conflated distinct kinds of
+    correlation when sketching out his argument. If we follow Edwards’ argument
+    to its natural terminus, it becomes clear that it is consideration of all of
+    the correlation structure among local groups in human genetic data that
+    renders racial taxonomy scientifically useless. Lewontin considers the
+    correlation structure relevant to his analysis of racial taxonomy and does
+    not make his eponymous misstep. Rather, critics of Lewontin who use racial
+    taxonomies in their work are the primary offenders when it comes to
+    committing Lewontin's fallacy.
+  accessed:
+    - year: 2022
+      month: 5
+      day: 15
+  author:
+    - family: Roseman
+      given: Charles C.
+  citation-key: RosemanLewontinDidNot2021
+  container-title: BioEssays
+  DOI: 10.1002/bies.202100204
+  ISSN: 1521-1878
+  issue: '12'
+  issued:
+    - year: 2021
+  language: en
+  page: '2100204'
+  source: Wiley Online Library
+  title: >-
+    Lewontin did not commit Lewontin's fallacy, his critics do: Why racial
+    taxonomy is not useful for the scientific study of human variation
+  title-short: Lewontin did not commit Lewontin's fallacy, his critics do
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/bies.202100204
+  volume: '43'
+
+- id: RosenbergGeneticStructureHuman2002
+  abstract: >-
+    We studied human population structure using genotypes at 377 autosomal
+    microsatellite loci in 1056 individuals from 52 populations.
+    Within-population differences among individuals account for 93 to 95% of
+    genetic variation; differences among major groups constitute only 3 to 5%.
+    Nevertheless, without using prior information about the origins of
+    individuals, we identified six main genetic clusters, five of which
+    correspond to major geographic regions, and subclusters that often
+    correspond to individual populations. General agreement of genetic and
+    predefined populations suggests that self-reported ancestry can facilitate
+    assessments of epidemiological risks but does not obviate the need to use
+    genetic information in genetic association studies.
+  accessed:
+    - year: 2020
+      month: 4
+      day: 9
+  author:
+    - family: Rosenberg
+      given: Noah A.
+    - family: Pritchard
+      given: Jonathan K.
+    - family: Weber
+      given: James L.
+    - family: Cann
+      given: Howard M.
+    - family: Kidd
+      given: Kenneth K.
+    - family: Zhivotovsky
+      given: Lev A.
+    - family: Feldman
+      given: Marcus W.
+  citation-key: RosenbergGeneticStructureHuman2002
+  container-title: Science
+  DOI: 10.1126/science.1078311
+  ISSN: 0036-8075, 1095-9203
+  issue: '5602'
+  issued:
+    - year: 2002
+      month: 12
+      day: 20
+  language: en
+  page: 2381-2385
+  PMID: '12493913'
+  publisher: American Association for the Advancement of Science
+  section: Report
+  source: science.sciencemag.org
+  title: Genetic Structure of Human Populations
+  type: article-journal
+  URL: https://science.sciencemag.org/content/298/5602/2381
+  volume: '298'
+
+- id: SainiSuperiorReturnRace2019
+  abstract: >-
+    An astute and timely examination of the re-emergence of scientific research
+    into racial differences  Superior tells the disturbing story of the
+    persistent thread of belief in biological racial differences in the world of
+    science.  After the horrors of the Nazi regime in WWII, the mainstream
+    scientific world turned its back on eugenics and the study of racial
+    difference. But a worldwide network of unrepentant eugenicists quietly
+    founded journals and funded research, providing the kind of shoddy studies
+    that were ultimately cited in Richard Hernstein's and Charles Murray's 1994
+    title, The Bell Curve, which purported to show differences in intelligence
+    among races.  If the vast majority of scientists and scholars disavowed
+    these ideas, and considered race a social construct, it was still an idea
+    that managed to somehow make its way into the research into the human genome
+    that began in earnest in the mid-1990s and continues today. Dissecting the
+    statements and work of contemporary scientists studying human biodiversity,
+    most of whom claim to be just following the data, Saini shows us how, again
+    and again, science is retrofitted to accommodate race. Even as our
+    understanding of highly complex traits like intelligence, and the
+    complicated effect of environmental influences on human beings, from the
+    molecular level on up, grows, the hope of finding simple genetic differences
+    between "races"--to explain differing rates of disease, to explain poverty
+    or test scores or to justify cultural assumptions--stubbornly persists.  At
+    a time when racialized nationalisms are a resurgent threat throughout the
+    world, Superior is a powerful reminder that biologically, we are all far
+    more alike than different.
+  author:
+    - family: Saini
+      given: Angela
+  citation-key: SainiSuperiorReturnRace2019
+  ISBN: 978-0-8070-7691-0
+  issued:
+    - year: 2019
+  language: en
+  number-of-pages: '258'
+  publisher: Beacon Press
+  source: Google Books
+  title: 'Superior: The Return of Race Science'
+  title-short: Superior
+  type: book
+
+- id: SaletanLiberalCreationism2007
+  abstract: >-
+    We hold these truths to be self-evident, that all men are created equal,
+    that they are endowed by their Creator with certain unalienable Rights …
+  accessed:
+    - year: 2021
+      month: 9
+      day: 30
+  author:
+    - family: Saletan
+      given: William
+  citation-key: SaletanLiberalCreationism2007
+  container-title: Slate
+  ISSN: 1091-2339
+  issued:
+    - year: 2007
+      month: 11
+      day: 18
+  language: en-US
+  section: Human Nature
+  source: slate.com
+  title: "Liberal\_Creationism"
+  type: article-magazine
+  URL: https://slate.com/technology/2007/11/liberal-creationism.html
+
+- id: SchafferScientificRacismAgain2007
+  abstract: >-
+    Biologist and botanist Reginald Gates is mainly remembered as a staunch
+    scientific conservative, a defender of racial theory and fierce opponent of
+    racial mixing. In post-war Britain and America, Gates's racial views made
+    him something of a pariah. This article explores Gates's post-war career as
+    a micro-historical analysis of racial science and society after the Second
+    World War. It examines the relationship between scientific racists and
+    segregationists in the US, especially concerning the Brown ruling and the
+    establishment of the Mankind Quarterly journal, arguing that science in this
+    period was subsumed into politics as protagonists on both sides of the
+    segregation debate used science to justify ideological positions.
+  accessed:
+    - year: 2021
+      month: 9
+      day: 21
+  author:
+    - family: Schaffer
+      given: Gavin
+  citation-key: SchafferScientificRacismAgain2007
+  container-title: Journal of American Studies
+  DOI: 10.1017/S0021875807003477
+  ISSN: 1469-5154, 0021-8758
+  issue: '2'
+  issued:
+    - year: 2007
+      month: 8
+  language: en
+  page: 253-278
+  publisher: Cambridge University Press
+  source: Cambridge University Press
+  title: >-
+    “‘Scientific’ Racism Again?”: Reginald Gates, the Mankind Quarterly and the
+    Question of “Race” in Science after the Second World War
+  title-short: “‘Scientific’ Racism Again?
+  type: article-journal
+  URL: >-
+    https://www.cambridge.org/core/journals/journal-of-american-studies/article/abs/scientific-racism-again1-reginald-gates-the-mankind-quarterly-and-the-question-of-race-in-science-after-the-second-world-war/DD34BD25EB09D1905623A7C803F72B59
+  volume: '41'
+
+- id: SchaffnerLiberalsAteMy2004
+  accessed:
+    - year: 2022
+      month: 3
+      day: 29
+  author:
+    - family: Schaffner
+      given: Kenneth F.
+    - family: Segerstrale
+      given: Ullica
+    - family: Griffiths
+      given: Paul E.
+    - family: Pinker
+      given: Steven
+  citation-key: SchaffnerLiberalsAteMy2004
+  container-title: Metascience
+  container-title-short: Metascience
+  DOI: 10.1023/B:MESC.0000023263.09462.6c
+  ISSN: 0815-0796
+  issue: '1'
+  issued:
+    - year: 2004
+      month: 3
+  language: en
+  page: 28-51
+  source: DOI.org (Crossref)
+  title: Liberals Ate My Genes?
+  type: article-journal
+  URL: http://link.springer.com/10.1023/B:MESC.0000023263.09462.6c
+  volume: '13'
+
+- id: SepkoskiIdeologyBiology2022
+  abstract: >-
+    E. O. Wilson corresponded for years with a notorious proponent of race
+    science, advocating for his research behind the scenes. What does it tell us
+    about his most controversial work?
+  accessed:
+    - year: 2022
+      month: 2
+      day: 10
+  author:
+    - family: Sepkoski
+      given: David
+    - family: Borrello
+      given: Mark
+  citation-key: SepkoskiIdeologyBiology2022
+  container-title: The New York Review of Books
+  issued:
+    - year: 2022
+      month: 2
+      day: 5
+  language: en
+  title: Ideology as Biology
+  type: article-magazine
+  URL: https://www.nybooks.com/daily/2022/02/05/ideology-as-biology/
+
+- id: StemwedelScienceMustNot
+  abstract: >-
+    It&rsquo;s scientists&rsquo; responsibility to reveal the inherent biases of
+    studies used to disparage Black people&nbsp;and other groups
+  accessed:
+    - year: 2022
+      month: 6
+      day: 14
+  author:
+    - family: Stemwedel
+      given: Janet D.
+  citation-key: StemwedelScienceMustNot
+  container-title: Scientific American
+  language: en
+  title: Science Must Not Be Used to Foster White Supremacy
+  type: webpage
+  URL: >-
+    https://www.scientificamerican.com/article/science-must-not-be-used-to-foster-white-supremacy/
+
+- id: TaberyWhyStudyingGenetics2015
+  abstract: >-
+    From the very beginning, studies of the nature and nurture of intelligence
+    have been closely associated with an interest in intervening, and those
+    interventions have been surrounded by controversy. The nature of those
+    controversies has not always been the same, however. Since the
+    mid-nineteenth century, when Francis Galton imagined a science that would
+    assess the extent to which a trait like “genius” was due to nature or due to
+    nurture, science and technology have changed dramatically, and so have the
+    interventions that have been envisioned in light of those developments. A
+    scientist today can search for particular stretches of DNA and assess
+    whether differences in those stretches are associated with differences in a
+    human trait of interest; a genetic counselor today can genetically test an
+    individual (be it an embryo, fetus, newborn, child, or adult) and provide
+    information about what that genetic result means, allowing for interventions
+    that can range from terminating a pregnancy to prescribing chemotherapy. So
+    when one asks a question like, “Why is studying the genetics of intelligence
+    controversial?,” it is important to realize up front that the answer will
+    be, “It can be controversial for a variety of different reasons, and those
+    reasons have evolved over time.” The purpose of this essay is to provide a
+    survey of the controversies that surround genetic studies of intelligence.
+    With the survey in place, I will then draw out several lessons both for
+    scientists who study the genetics of intelligence as well as for science
+    studies scholars (bioethicists, philosophers, historians, sociologists) who
+    reflect and comment on the controversies surrounding that research.
+  accessed:
+    - year: 2021
+      month: 11
+      day: 24
+  author:
+    - family: Tabery
+      given: James
+  citation-key: TaberyWhyStudyingGenetics2015
+  container-title: Hastings Center Report
+  DOI: 10.1002/hast.492
+  ISSN: 1552-146X
+  issue: S1
+  issued:
+    - year: 2015
+  language: en
+  page: S9-S14
+  source: Wiley Online Library
+  title: Why Is Studying the Genetics of Intelligence So Controversial?
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/hast.492
+  volume: '45'
+
+- id: TuckerBankrollingRacismScience2001
+  abstract: >-
+    Founded by Wickliffe Preston Draper in 1937, the Pioneer Fund has long been
+    the major source of support for researchers who conclude that blacks are
+    genetically less intelligent than whites. The fund’s president, New York
+    attorney Harry F. Weyher, has steadfastly maintained that his only interest
+    has been to promote the advancement of scientific knowledge. Archival
+    records indicate, however, that Weyher, Draper and others connected with the
+    fund have a lengthy history of surreptitiously opposing the extension of
+    constitutional guarantees to black citizens.
+  accessed:
+    - year: 2021
+      month: 9
+      day: 21
+  author:
+    - family: Tucker
+      given: William H.
+  citation-key: TuckerBankrollingRacismScience2001
+  container-title: Race and Society
+  container-title-short: Race and Society
+  DOI: 10.1016/S1090-9524(03)00009-3
+  ISSN: 1090-9524
+  issue: '2'
+  issued:
+    - year: 2001
+      month: 1
+      day: 1
+  language: en
+  page: 195-205
+  source: ScienceDirect
+  title: 'Bankrolling racism: “science” and the Pioneer Fund'
+  title-short: Bankrolling racism
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S1090952403000093
+  volume: '4'
+
+- id: TuckerBibliography
+  accessed:
+    - year: 2021
+      month: 9
+      day: 21
+  citation-key: TuckerBibliography
+  title: Tucker bibliography
+  type: webpage
+  URL: http://crab.rutgers.edu/~btucker/Publications.html
+
+- id: TuckerFundingScientificRacism2002
+  author:
+    - family: Tucker
+      given: William H.
+  citation-key: TuckerFundingScientificRacism2002
+  event-place: Urbana
+  ISBN: 978-0-252-02762-8
+  issued:
+    - year: 2002
+  language: eng
+  publisher: University of Illinois Press
+  publisher-place: Urbana
+  source: ucmerced.primo.exlibrisgroup.com
+  title: 'The funding of scientific racism: Wickliffe Draper and the Pioneer Fund'
+  title-short: The funding of scientific racism
+  type: book
+
+- id: UCIMediaAaronPanofskyHow2014
+  abstract: >-
+    Aaron Panofsky, University of California, Los Angeles
+
+    How “Unscientific” Ideas about Race Contribute to the Scientific Authority
+    of Behavior Genetics
+  accessed:
+    - year: 2021
+      month: 11
+      day: 24
+  citation-key: UCIMediaAaronPanofskyHow2014
+  dimensions: '30:59'
+  director:
+    - literal: UCI Media
+  issued:
+    - year: 2014
+      month: 12
+      day: 5
+  source: YouTube
+  title: Aaron Panofsky - How “Unscientific” Ideas about Race Contribute to...
+  type: motion_picture
+  URL: https://www.youtube.com/watch?v=ftxYl5zybNw
+
+- id: WeinbergPhilosophyJournalHosts2022
+  abstract: "Have Jews insinuated themselves into positions of power and influence in politics and culture because they are innately gifted with higher IQs, or is it also because they are ethnocentric and hypocritical networkers good at using non-Jews in their self-serving mission of “transforming America contrary to white interests”? Race science and/or conspiracy theory? This—pardon the editorializing—outrageous question is currently under discussion in the pages of the academic philosophy journal Philosophia. Welcome to 2022. January 1st saw the online publication of “The ‘Default Hypothesis’ Fails to Explain Jewish Influence” by Kevin MacDonald, who is described on Wikipedia as an “anti-Semitic conspiracy theorist, white supremacist, and retired professor of evolutionary psychology.” MacDonald’s 32-page article is a response to a piece by Nathan Cofnas, “The Anti-Jewish Narrative,” that Philosophia\_published last February, and which is one of a series of pieces in which Cofnas critiques McDonald. Both MacDonald and Cofnas are preoccupied with the question: “Did Jews create liberal multiculturalism to advance their ethnic interests?” (Cofnas, p.1332). Cofnas’s take on that issue is ultimately based on his claim that “Jews are overrepresented in all intellectual movements and activities that are not overtly anti-Semitic primarily because they have high mean IQs” (Cofnas, p.1331). This is part of his view that there is “legitimate science on race differences” (Cofnas, p. 1332) in regard to intelligence (previously). Cofnas characterizes MacDonald as claiming that “intelligent, ethnocentric Jews created liberal intellectual and political movements to promote Jewish interests at the expense of gentiles” (Cofnas, pp. 1330-31). MacDonald posits ethnocentric “ethnic networking” (MacDonald, p.2), “Jewish hypocrisy” (p.9), “Jewish activism” (throughout), and efforts to “recruit gentiles as ‘window dressing’ to conceal the extent of Jewish dominance” (p.3) in leftwing organizations, among other things, as elements of the Jewish conspiracy. MacDonald also takes up the question of whether Jews should be welcomed by white supremacists. Here is his answer, which I reproduce as a screenshot for those who might otherwise be incredulous that an academic journal published these words: Did I mention that\_Philosophia‘s subtitle is “Philosophical Quarterly of Israel“? One might wonder to what extent Cofnas and MacDonald consider the publication of their articles in an Israel-based journal evidence against the presumptions of their debate. Philosophia\_is edited by Asa Kasher (Tel Aviv)..."
+  accessed:
+    - year: 2022
+      month: 1
+      day: 3
+  author:
+    - family: Weinberg
+      given: Justin
+  citation-key: WeinbergPhilosophyJournalHosts2022
+  container-title: Daily Nous
+  issued:
+    - year: 2022
+      month: 1
+      day: 3
+  language: en-US
+  section: Publishing
+  title: Philosophy Journal Hosts Debate on “Jewish Influence”
+  type: webpage
+  URL: >-
+    https://dailynous.com/2022/01/03/philosophy-journal-hosts-debate-on-jewish-influence/
+
+- id: WeisbergMortonGouldBias2016
+  abstract: >-
+    A closer look at Stephen Jay Gould’s criticisms of Samuel Morton vindicates
+    Gould’s accusations of racial bias in Morton’s cranial measurements.
+  accessed:
+    - year: 2016
+      month: 4
+      day: 19
+  author:
+    - family: Weisberg
+      given: Michael
+    - family: Paul
+      given: Diane B.
+  citation-key: WeisbergMortonGouldBias2016
+  container-title: PLOS Biol
+  container-title-short: PLOS Biol
+  DOI: 10.1371/journal.pbio.1002444
+  ISSN: 1545-7885
+  issue: '4'
+  issued:
+    - year: 2016
+      month: 4
+      day: 19
+  page: e1002444
+  source: PLoS Journals
+  title: 'Morton, Gould, and Bias: A Comment on “The Mismeasure of Science”'
+  title-short: Morton, Gould, and Bias
+  type: article-journal
+  URL: http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002444
+  volume: '14'
+
+- id: WellsMuchWeakInconclusive2022
+  abstract: >-
+    The evaluative, pejorative category ‘pseudoscientific’ has, thanks to its
+    questionable analytical value, been far less often applied to racial thought
+    than in previous decades. Yet this tendency comes at the cost of obscuring
+    one of the most interesting questions about racial ideas – how far were they
+    not only conceivable, but respectable? This article makes the case for using
+    the category of the pseudoscientific to describe early modern racial ideas,
+    despite its apparent anachronism, because few labels can better capture the
+    intellectual foul play at work. After exploring the development and use of
+    ‘pseudoscience’ for a more recent era, this article discusses the evidence
+    base for racial ideas – especially its close relation to movement and
+    communication – before analysing a case study (the debate on polygenesis
+    after 1770) replete with the features of ‘pseudoscience’.
+  accessed:
+    - year: 2022
+      month: 9
+      day: 28
+  author:
+    - family: Wells
+      given: Andrew
+  citation-key: WellsMuchWeakInconclusive2022
+  container-title: Global Intellectual History
+  DOI: 10.1080/23801883.2022.2074509
+  ISSN: 2380-1883
+  issue: '0'
+  issued:
+    - year: 2022
+      month: 6
+      day: 14
+  page: 1-26
+  publisher: Routledge
+  source: Taylor and Francis+NEJM
+  title: >-
+    “So much weak and inconclusive reasoning”: race, movement, and pseudoscience
+    in the British world, 1740–1820
+  title-short: “So much weak and inconclusive reasoning”
+  type: article-journal
+  URL: https://doi.org/10.1080/23801883.2022.2074509
+  volume: '0'
+
+- id: WillsAreClustersRaces2017
+  author:
+    - family: Wills
+      given: Melissa
+  citation-key: WillsAreClustersRaces2017
+  container-title: Philosophy & Theory in Biology
+  DOI: 10.3998/ptb.6959004.0009.012
+  ISSN: 1949-0739
+  issued:
+    - year: 2017
+  title: >-
+    Are Clusters Races? A Discussion of the Rhetorical Appropriation of
+    Rosenberg et al.'s “Genetic Structure of Human Populations”
+  title-short: Are Clusters Races?
+  type: article-journal
+  URL: http://hdl.handle.net/2027/spo.6959004.0009.012
+  volume: '9'
+
+- id: WinstonNeoliberalismIQNaturalizing2018
+  abstract: >-
+    How did IQ become an important means of naturalizing economic and racial
+    inequality and supporting neoliberal visions of a fully privatized, free
+    market society? I show how post-WWII neoliberals and libertarians could
+    employ ideas of “innate intelligence” to promote the reduction of government
+    funding of social programs. For extreme libertarian economist Murray
+    Rothbard, inequality among individuals and ethnicities was self-evident from
+    human history and the a priori examination of the “natural order,” but IQ
+    data could also be employed in the fight against “egalitarianism.” Any
+    attempt to interfere in this “natural order,” such as civil rights
+    legislation, was viewed as inherently evil. For libertarian Charles Murray
+    and more mainstream neoliberals such as Milton Friedman, empirical research
+    on intelligence was an effective means of influencing public perception and
+    policy on welfare, affirmative action, and immigration. I discuss recent
+    work on “national intelligence” in relation to neoliberal projects and
+    enduring fears regarding reproduction and family.
+  accessed:
+    - year: 2021
+      month: 9
+      day: 30
+  author:
+    - family: Winston
+      given: Andrew S.
+  citation-key: WinstonNeoliberalismIQNaturalizing2018
+  container-title: Theory & Psychology
+  container-title-short: Theory & Psychology
+  DOI: 10.1177/0959354318798160
+  ISSN: 0959-3543
+  issue: '5'
+  issued:
+    - year: 2018
+      month: 10
+      day: 1
+  language: en
+  page: 600-618
+  publisher: SAGE Publications Ltd
+  source: SAGE Journals
+  title: 'Neoliberalism and IQ: Naturalizing economic and racial inequality'
+  title-short: Neoliberalism and IQ
+  type: article-journal
+  URL: https://doi.org/10.1177/0959354318798160
+  volume: '28'
+
+- id: WinstonScienceServiceFar1998
+  abstract: >-
+    Henry E. Garrett (1894–1973) was the President of the American Psychological
+    Association in 1946 and Chair of Psychology at Columbia University from 1941
+    to 1955. In the 1950s Garrett helped organize...
+  accessed:
+    - year: 2021
+      month: 12
+      day: 13
+  author:
+    - family: Winston
+      given: Andrew S.
+  citation-key: WinstonScienceServiceFar1998
+  container-title: Journal of Social Issues
+  DOI: 10.1111/j.1540-4560.1998.tb01212.x
+  ISSN: 1540-4560
+  issue: '1'
+  issued:
+    - year: 1998
+      month: 4
+      day: 1
+  language: en
+  page: 179-210
+  publisher: John Wiley & Sons, Ltd
+  source: spssi.onlinelibrary.wiley.com
+  title: >-
+    Science in the Service of the Far Right: Henry E. Garrett, the IAAEE, and
+    the Liberty Lobby
+  title-short: Science in the Service of the Far Right
+  type: article-journal
+  URL: https://spssi.onlinelibrary.wiley.com/doi/10.1111/j.1540-4560.1998.tb01212.x
+  volume: '54'
+
+- id: WinstonScientificRacismNorth2020a
+  abstract: >-
+    The use of psychological concepts and data to promote ideas of an enduring
+    racial hierarchy dates from the late 1800s and has continued to the present.
+    The history of scientific racism in psychology is intertwined with broader
+    debates, anxieties, and political issues in American society. With the rise
+    of intelligence testing, joined with ideas of eugenic progress and dysgenic
+    reproduction, psychological concepts and data came to play an important role
+    in naturalizing racial inequality. Although racial comparisons were not the
+    primary concern of most early mental testing, results were employed to
+    justify beliefs regarding Black “educability” and the dangers of Southern
+    and Eastern European immigration. Mainstream American psychology became
+    increasingly liberal and anti-racist in the late 1930s and after World War
+    II. However, scientific racism did not disappear and underwent renewal
+    during the civil rights era and again during the 1970s and 1990s,
+    Intelligence test scores were a primary weapon in attempts to preserve
+    segregated schools and later to justify economic inequality. In the case of
+    Henry Garrett, Arthur Jensen, and Philippe Rushton, their work included
+    active, public promotion of their ideas of enduring racial differences, and
+    involvement with publications and groups under control of racial extremists
+    and neo-Nazis. Despite 100 years of strong critiques of scientific racism, a
+    small but active group of psychologists helped revive vicious 19th-century
+    claims regarding Black intelligence, brain size, morality, criminality, and
+    sexuality, presented as detached scientific facts. These new claims were
+    used in popular campaigns that aimed to eliminate government programs,
+    promote racial separation, and increase immigration restriction. This
+    troubling history raises important ethical questions for the discipline.
+  accessed:
+    - year: 2021
+      month: 9
+      day: 21
+  author:
+    - family: Winston
+      given: Andrew S.
+  citation-key: WinstonScientificRacismNorth2020a
+  container-author:
+    - family: Winston
+      given: Andrew S.
+  container-title: Oxford Research Encyclopedia of Psychology
+  DOI: 10.1093/acrefore/9780190236557.013.516
+  ISBN: 978-0-19-023655-7
+  issued:
+    - year: 2020
+      month: 5
+      day: 29
+  language: en
+  publisher: Oxford University Press
+  source: DOI.org (Crossref)
+  title: Scientific Racism and North American Psychology
+  type: chapter
+  URL: >-
+    https://oxfordre.com/psychology/view/10.1093/acrefore/9780190236557.001.0001/acrefore-9780190236557-e-516
+
+- id: WinstonValueNeutralitySPSSI2011
+  abstract: >-
+    I describe how the problem of “value neutrality” remained a central issue
+    for SPSSI from the founding of the organization to the 1960s, as SPSSI
+    leaders worked to maintain legitimacy in both scientific and public spheres.
+    In 1930s psychology, notions of objectivity and political neutrality were
+    intertwined in ways that produced substantial debate over SPSSI's aims.
+    Under pressures from anticommunism and changes in public and private funding
+    for research, the problem of neutrality intensified by the 1950s. In this
+    new climate, the need to demonstrate value neutrality was a powerful
+    constraint on the ability of SPSSI to respond to resurgent scientized racism
+    after the Supreme Court Brown decision.
+  accessed:
+    - year: 2021
+      month: 9
+      day: 30
+  author:
+    - family: Winston
+      given: Andrew S.
+  citation-key: WinstonValueNeutralitySPSSI2011
+  container-title: Journal of Social Issues
+  DOI: 10.1111/j.1540-4560.2010.01683.x
+  ISSN: 1540-4560
+  issue: '1'
+  issued:
+    - year: 2011
+  language: en
+  page: 59-72
+  source: Wiley Online Library
+  title: 'Value Neutrality and SPSSI: The Quest for Policy, Purity, and Legitimacy'
+  title-short: Value Neutrality and SPSSI
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-4560.2010.01683.x
+  volume: '67'
+
+- id: WinstonWhyMainstreamResearch2020
+  abstract: >-
+    Mainstream research on racial essentialization may be valuable in the fight
+    against racism, as Held (2020) suggested. I argue that the production of
+    scientific racism in the literature of psychology is unlikely to be affected
+    by such research. Assertions by psychologists of Black people’s average
+    inferiority in brain size, intelligence, and morality have persisted for
+    over 100 years despite repeated, careful critiques. Recent presentations of
+    these old and discredited claims have sidestepped the fundamental criticism
+    that they rest on essentialized racial categories. The survival of
+    scientific racism in mainstream psychology journals should be understood as
+    a community project with its own Weltanschauung of “racial progress.”
+  accessed:
+    - year: 2021
+      month: 9
+      day: 21
+  author:
+    - family: Winston
+      given: Andrew S.
+  citation-key: WinstonWhyMainstreamResearch2020
+  container-title: Theory & Psychology
+  container-title-short: Theory & Psychology
+  DOI: 10.1177/0959354320925176
+  ISSN: 0959-3543
+  issue: '3'
+  issued:
+    - year: 2020
+      month: 6
+      day: 1
+  language: en
+  page: 425-430
+  publisher: SAGE Publications Ltd
+  source: SAGE Journals
+  title: Why mainstream research will not end scientific racism in psychology
+  type: article-journal
+  URL: https://doi.org/10.1177/0959354320925176
+  volume: '30'
+
+- id: WoodwardDataPhenomenaRestatement2009
+  abstract: >-
+    This paper provides a restatement and defense of the data/ phenomena
+    distinction introduced by Jim Bogen and me several decades ago (e.g., Bogen
+    and Woodward, The Philosophical Review, 303–352, 1988). Additional
+    motivation for the distinction is introduced, ideas surrounding the
+    distinction are clarified, and an attempt is made to respond to several
+    criticisms.
+  accessed:
+    - year: 2015
+      month: 7
+      day: 1
+  author:
+    - family: Woodward
+      given: James F.
+  citation-key: WoodwardDataPhenomenaRestatement2009
+  container-title: Synthese
+  container-title-short: Synthese
+  DOI: 10.1007/s11229-009-9618-5
+  ISSN: 0039-7857, 1573-0964
+  issue: '1'
+  issued:
+    - year: 2009
+      month: 7
+      day: 7
+  language: en
+  page: 165-179
+  source: link.springer.com
+  title: 'Data and phenomena: a restatement and defense'
+  title-short: Data and phenomena
+  type: article-journal
+  URL: http://link.springer.com/article/10.1007/s11229-009-9618-5
+  volume: '182'
+
+- id: YoderAssociation2022
+  abstract: "(Flickr: Eugene Zemlyanskiy) I grew up in the Mennonite Church, a sort of next-level Protestant Christian tradition. (In cartoonish brief:\_Ulrich Zwingli\_rebelled against the Roman Cathol…"
+  accessed:
+    - year: 2022
+      month: 1
+      day: 27
+  author:
+    - family: Yoder
+      given: Jeremy
+  citation-key: YoderAssociation2022
+  container-title: The Molecular Ecologist
+  issued:
+    - year: 2022
+      month: 1
+      day: 27
+  language: en-US
+  title: By association
+  type: post-weblog
+  URL: https://www.molecularecologist.com/2022/01/27/by-association/
+...

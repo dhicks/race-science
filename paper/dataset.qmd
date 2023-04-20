@@ -1,0 +1,99 @@
+# Data and Methods
+
+## Corpus Assembly
+
+Corpus assembly is summarized in figure @fig-corpus.  The corpus was assembled in two parts, one for *Mankind Quarterly* and the other for mainstream journals.  
+
+```{mermaid}
+%%| fig-cap: Dataset construction and analysis overview
+%%| fig-label: fig-corpus
+graph TD
+
+subgraph Mankind Quarterly Corpus
+MQ("Mankind Quarterly<br>
+    All articles, 1960-2004")
+unz(Unz Review) --> MQ
+pq(ProQuest) --> MQ
+end
+
+subgraph Pioneer Fund Corpus
+au("Pioneer-funded authors<br>16") --> wos("Web of Science<br>
+                                         author records")
+wos --> journals
+journals("Journals publishing<br> 
+          6+ PF authors")
+journals --> apa("APA journals<br>
+                  not available")
+journals --> generalist("Science & Nature<br>
+                         excluded")
+journals --> PF("Pioneer Fund Corpus<br>
+                 5 journals<br>
+                 All articles, 1960-2010")
+end
+
+subgraph Publishable Data and Code
+
+MQ & PF --> corpus["Combined corpus<br>
+                     (34k documents)"]
+corpus --> pos("Noun phrase extraction")
+pos --> vocab("Vocabulary selection<br>
+                   (large, medium, small)")
+vocab --> tm("Topic modeling<br>
+               (k = 5, 10, 20, 30, 40, 50)")
+tm --> space("Discursive space<br>analysis")
+end
+```
+
+### Mankind Quarterly
+
+An electronic archive of *Mankind Quarterly*, from the first issue through 2004, is available for free on the open web from *The Unz Review*, which has been characterized as a white nationalist website by the Southern Poverty Law Center *[<https://www.splcenter.org/hatewatch/2021/01/19/meet-white-nationalist-organizer-who-spewed-hate-against-lawmakers>]*.  Web scraping packages and techniques *[which?]* were used to retrieve every PDF available in this archive.  These PDFs were processed using the open-source OCR (optical character recognition) software `tesseract` and the R API `rtesseract` *[cites]*.  This part of corpus assembly was conducted in Fall 2021.  
+
+### Mainstream journals
+
+To identify suitable mainstream journals for inclusion in the corpus, we first identified academic researchers who had been funded by the Pioneer Fund.  Pioneer is an American non-profit organization founded in 1937 to fund eugenics research.  After the *Brown v. Board of Education* ruling in 1954, Pioneer funded various segregationist efforts across the United States.  *[Shockley and Jensen]*.  We reviewed a critical profile of Pioneer *[cite]* as well as an archived page from the organization's own web site *[cite]*, which together listed 16 researchers who had received Pioneer funds.  
+
+We then used the author search tool in Clarivate's Web of Science platform, retrieving publication lists for 14 researchers.  These searches were conducted between 2021-09-24 and 2021-10-05 by DJH.  After parsing these results, we counted how many of the 14 researchers had published in each journal.  13 journals had published 6 or more of the 14 Pioneer-funded researchers.  We excluded *Mankind Quarterly* (already covered) as well as *Science* and *Nature* (as too general) from further consideration in this side of the corpus.  3 journals published by the American Psychological Association (*American Psychologist*, *Contemporary Psychology*, and *Journal of Educational Psychology*) had to be excluded due to confusion over could give us permission to use the archives for a text mining project, with both APA and ProQuest asserting that we needed to get permission from the other.  *European Journal of Personality*, published by SAGE, also had to be excluded because our institutional access only went back to 1999.  
+
+The remaining 5 journals are all published by large academic publishers — Elsevier, Springer, or *[Cambridge UP]* — and each item in the entire run of each journal has been assigned a DOI (digital object identifier) for archival purposes.  We used the Crossref API and `rcrossref` R interface to this API to retrieve metadata for each item published from 1960-2010 in each of these 6 journals.  These metadata included individual license information — confirming that the text of each item could be used for text mining projects — and a URL to an electronic version of the item.  These URLs were used to retrieve an HTML or PDF version of each item, except for *Personality and Individual Differences*.  This journal has published a relatively large number of non-article documents, such as book reviews and commentaries, which are not available at the URL included in the Crossref metadata.  (This is unfortunate, as it was not difficult to find highly relevant documents that we could not automatically retrieve and therefore excluded from our corpus *[review]*.)  Instead we used Elsevier's ScienceDirect API to search and retrieve all items from *Personality and Individual Differences* that are available.  PDFs were run through OCR and text extraction as necessary, as with the *Mankind Quarterly* documents.  
+
+All together, *[corpus summary, total and by journal; table]*
+
+## Data preparation
+
+After document retrieval and text extraction, we pre-processed the text using the `spaCy` NLP (natural language processing) Python library and the R API `spacyr` *[version, cites]*.  Specifically, we applied regular expressions to remove header/footer copyright notices and hyphenation, used spaCy to annotate and extract noun phrases (eg, "the intelligence test items"), and then cleaned and standardized these phrases (eg, removing the/an/a, coverting all text to lowercase, and replacing all whitespace with underscores: "intelligence_test_items").  We then counted the occurrence of each noun phrase in the document.  The aggregated "document-term matrix" was stored in Parquet format *[cite]* for performance reasons, and written and read using the `arrow` package for R *[cite]*.  *[availability]*
+
+NLP-extracted noun phrases offer a number of advantages over the more traditional unigram ("single-word") tokens.  First, noun phrase extraction removes many standard stopwords (articles, common verbs) without relying on an a priori stopword list.  Phrases can be more informative than single terms, for example, distinguishing "intelligence test" from "hypothesis test."  While simple n-gram extraction will include phrases that are not especially meaningful.  Consider the sentence "Since our first analyses of feeding patterns in rats, we had been using a criterion of 40 minutes (Le Magnen & Tallon 1963; 1966)" *[10.1017__^__s0140525x0000042x]*.  Bigrams such as "since our" and "criterion 40" will likely be discarded in vocabulary selection, but add to the computational cost of vocabulary selection.  Noun phrase extraction is therefore more efficient.  
+
+After noun phrase extraction, the corpus comprised *[tokens]* of *[distinct noun phrases]*.  
+
+### Vocabulary selection
+
+We took an information-theoretic approach to vocabulary selection.  Consider a game in which I draw a document from the corpus, then a single token from that document.  I tell you the term, and you have to guess which document I picked.  Intuitively, highly informative terms (in this project, noun phrase types) are distinctive, allowing you to dramatically narrow down the list of potential documents.  This "informativeness" of a term can be quantified as the KL (Kullback-Leibler) divergence from a "baseline" distribution of documents to the distribution conditional on the term.  Because the most informative terms tend to be typos and OCR errors — these are unique to a single document — we multiply the KL divergence by the logarithm of the total number of occurrences of the term across the entire corpus.  We refer to the resulting measure as $log(n) \Delta H$ or simply `ndH`. 
+
+*[Hicks 2021?]* used the `ndH` approach in a topic modeling analysis, where the baseline distribution was the uniform distribution across documents.  In the current project, we found that this approach heavily favored recurrent noun phrases in the longest documents.  Many of the documents published in *Psychological Reports* are extremely short, 1-2 reports of a single study; while many of the documents published in *Brain and Behavioral Sciences* are book-length collections that include a long review article and sometimes dozens of commentaries.  More generic noun phrases in the latter can occur orders of magnitude more often than highly distinctive phrases in the former, and so the $log(n)$ factor overwhelms the $\Delta H$ factor.  
+
+To address this, we used a different baseline distribution of documents.  Namely, we used a distribution in which document probability is proportional to length.  This makes phrases from short documents much more surprising, and hence dramatically increases their informativeness.  This was more effective at identifying useful phrases from across the corpus.  
+
+A common rule of thumb in topic modeling is that the vocabulary should have about 10 times as many distinct terms as the number of documents in the corpus *[cite]*.  However, we had some concerns with computational demands here:  the resulting document-term matrix would have roughly $33,000 \times 330,000$ or 10.9 billion entries; with 10% density this would require on the order of 4 GB of memory; while most of the analysis was to be conducted on the authors' laptops.  We therefore chose to work with three smaller vocabularies, $5 \times$, $1 \times$ and $\frac{1/5} \times$ the number of documents.  We refer to these as the "large," "medium," and "small" vocabulary, respectively, and they include *[counts]* distinct phrases.  We compare findings across vocabularies as a robustness check.  
+
+
+## Topic modeling
+
+To fit topic models, we followed the approach proposed by *[cite]*, which uses varimax-rotated partial principal components instead of the variational inference methods used by standard topic model packages *[eg, stm]*.  This novel approach was implemented in the R package `tmfast`, available separately at *[url]*.  A simulation study of `tmfast` found that it was significantly faster and slightly less accurate at reconstructing known word-topic and topic-document distributions, compared to `stm`.  
+
+Topic models were fit for all three vocabularies (large, medium, and small) with $k = 5, 10, 20, 30, 40, 50$ (number of topics), resulting in a total of 18 models. 
+
+Following the approach of *[Hicks 2021?]*, we did not attempt to identify a unique best model for further analysis.  While we focus on the medium vocabulary, $k=30$ model as the "median" among the 18 models fit, we compare and contrast findings from this model with those from the other models.  
+
+
+### Topic model interpretation
+
+After fitting topic models, our first research question was whether we could identify distinctive "race science" topics.  We addressed this question in two ways.  Following common practice in topic modeling, we extracted lists of the top $n$ (highest-probability) terms (noun phrases) from each topic in each model, with $n$ generally ranging between 5 and 15 as we explored the models.  *[tables + Silge plots]*  
+
+We also adapted the "discursive space" analysis proposed by *[Hicks 2021?]*.  This analysis combines the Hellinger distance between topic-document distributions — capturing how "far apart" two documents are — with dimensional reduction techniques used for data visualization.  This produces a two-dimensional visualization of individual documents, arranged so that documents with similar topic distributions are visually clustered and visually distinct from documents with different topic distributions.  
+
+Specifically, for each fitted topic model, we extracted topic-document distributions for each document and calculated pairwise Hellinger distances.  We then processed these distances using the UMAP algorithm for dimension reduction, as implemented in the `umap` package *[details; cite]*.  To reduce computational requirements for these steps, we first dropped documents published in the journal *[Psychological Reports]* (*[x documents removed, y remaining]*; note that the full corpus was used to fit the topic models, *Psychological Reports* was removed just for this visualization).  Using the `plotly` library, we construct an interactive visualization:  each point represents a single document, and points can be colored based on either their journal or highest-probability topic.  Tooltips are displayed when we hover over a point, including document metadata (title, journal, authors, year) as well as "key phrases."  
+
+To calculate key phrases for a given document $d$, we first identify the highest-probability topic $t$ for that document and the word-topic (noun phrase-topic) distribution $\beta_{w,t}$ for that topic.  We also retrieve the document-term matrix, containing the count $n_{w,d}$ of occurrences for each word (noun phrase), and calculate a weighting $n_{w,d} \beta_{w,t}$ for each word.  The key phrases are the 5 most highly-weighted terms for the given document.  
+
+
