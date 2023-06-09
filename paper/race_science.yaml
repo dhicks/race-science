@@ -638,6 +638,53 @@ references:
     of an Early  Twenty-First-Century Equivalent of Phrenology
   type: chapter
 
+- id: ElgabsiEthicKnowledgeResponsible2021
+  abstract: >-
+    This study takes off from the ethical problem that racism grounded in
+    population genetics raises. It is an analysis of four standard scientific
+    responses to the problem of genetically motivated racism, seen in connection
+    with the Human Genome Diversity Project (HGDP): (1) Discriminatory uses of
+    scientific facts and arguments are in principle ‘misuses’ of scientific data
+    that the researcher cannot be further responsible for. (2) In a strict
+    scientific sense, genomic facts ‘disclaim racism’, which means that an
+    epistemically correct grasp of genomics should be ethically justified. (3)
+    Ethical difficulties are issues to be ‘resolved’ by an ethics institution or
+    committee, which will guarantee the ethical quality of the research
+    scrutinized. (4) Although population genetics occasionally may lead to
+    racism, its overall ‘value’ for humankind justifies its cause as a desirable
+    pursuit. I argue that these typical responses to genetically motivated
+    racism supervene on a principle called the ‘ethic of knowledge’, which
+    implies that an epistemically correct account has intrinsic ethical value.
+    This principle, and its logically related ideas concerning the ethic of
+    science, effectively avoids a deeper ethical question of responsibility in
+    science from being raised.
+  accessed:
+    - year: 2021
+      month: 12
+      day: 29
+  author:
+    - family: Elgabsi
+      given: Natan
+  citation-key: ElgabsiEthicKnowledgeResponsible2021
+  container-title: Social Studies of Science
+  container-title-short: Soc Stud Sci
+  DOI: 10.1177/03063127211063887
+  ISSN: 0306-3127
+  issued:
+    - year: 2021
+      month: 12
+      day: 28
+  language: en
+  page: '03063127211063887'
+  publisher: SAGE Publications Ltd
+  source: SAGE Journals
+  title: >-
+    The ‘ethic of knowledge’ and responsible science: Responses to genetically
+    motivated racism
+  title-short: The ‘ethic of knowledge’ and responsible science
+  type: article-journal
+  URL: https://doi.org/10.1177/03063127211063887
+
 - id: EvansUnwelcomeRevivalRace2018
   abstract: >-
     The long read: Its defenders claim to be standing up for uncomfortable
@@ -2803,6 +2850,45 @@ references:
   title: Ideology as Biology
   type: article-magazine
   URL: https://www.nybooks.com/daily/2022/02/05/ideology-as-biology/
+
+- id: SlobodianUnequalMindHow2023
+  abstract: >-
+    An instant bestseller, The Bell Curve (1994) by Richard J. Herrnstein and
+    Charles Murray deployed psychological race science against enduring demands
+    in the United States for social justice and equality of economic outcomes.
+    Using new archival evidence, this article situates the book in a
+    long-standing transatlantic exchange about race science that runs through
+    the world of conservative philanthropy and free-market think tanks, with a
+    special role played by the psychologist Richard Lynn. It also illuminates a
+    broader shift in the history of free-market conservatism in the 1990s away
+    from behaviorism, rational choice theory, and cost-benefit analysis and
+    toward the idioms of differential psychology and intelligence. What I call
+    the "new fusionism" defends libertarian policies through arguments borrowed
+    from cognitive, behavioral, and evolutionary psychology and, in some cases,
+    genetics and genomics, sociobiology, and biological anthropology. Assertions
+    about the unequal mind became a renewed basis for attacks on
+    political-economic equality.
+  accessed:
+    - year: 2023
+      month: 6
+      day: 6
+  author:
+    - family: Slobodian
+      given: Quinn
+  citation-key: SlobodianUnequalMindHow2023
+  container-title: 'Capitalism: A Journal of History and Economics'
+  ISSN: 2576-6406
+  issue: '1'
+  issued:
+    - year: 2023
+  page: 73-108
+  publisher: University of Pennsylvania Press
+  source: Project MUSE
+  title: 'The Unequal Mind: How Charles Murray and Neoliberal Think Tanks Revived IQ'
+  title-short: The Unequal Mind
+  type: article-journal
+  URL: https://muse.jhu.edu/pub/56/article/899272
+  volume: '4'
 
 - id: StemwedelScienceMustNot
   abstract: >-

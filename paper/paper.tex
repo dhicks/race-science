@@ -1,0 +1,182 @@
+% Use only LaTeX2e, calling the article.cls class and 12-point type.
+\documentclass[12pt]{article}
+
+% Users of the {thebibliography} environment or BibTeX should use the
+% scicite.sty package, downloadable from *Science* at
+% www.sciencemag.org/about/authors/prep/TeX_help/ .
+% This package should properly format in-text
+% reference calls and reference-list numbers.
+
+% Science template required packages
+\usepackage{scicite}
+
+\usepackage{times}
+
+% add-ons for rticles
+% based on arxiv.sty
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage[hidelinks]{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{lipsum}
+\usepackage{graphicx}
+
+% the basics
+\usepackage{amsmath}
+\usepackage{calc}
+\usepackage{tabularx}
+
+% for figure adjustment
+\usepackage{placeins}
+\usepackage{flafter}
+
+
+
+
+% tightlist command for lists without linebreak
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+% Pandoc citation processing
+
+
+
+% The following parameters seem to provide a reasonable page setup.
+
+\topmargin 0.0cm
+\oddsidemargin 0.2cm
+\textwidth 16cm
+\textheight 21cm
+\footskip 1.0cm
+
+
+%The next command sets up an environment for the abstract to your paper.
+\usepackage{setspace}
+
+\newenvironment{sciabstract}{%
+\begin{quote} \singlespacing}
+{\end{quote}}
+
+
+% If your reference list includes text notes as well as references,
+% include the following line; otherwise, comment it out.
+
+\renewcommand\refname{References and Notes}
+
+% The following lines set up an environment for the last note in the
+% reference list, which commonly includes acknowledgments of funding,
+% help, etc.  It's intended for users of BibTeX or the {thebibliography}
+% environment.  Users who are hand-coding their references at the end
+% using a list environment such as {enumerate} can simply add another
+% item at the end, and it will be numbered automatically.
+
+\newcounter{lastnote}
+\newenvironment{scilastnote}{%
+\setcounter{lastnote}{\value{enumiv}}%
+\addtocounter{lastnote}{+1}%
+\begin{list}%
+{\arabic{lastnote}.}
+{\setlength{\leftmargin}{.22in}}
+{\setlength{\labelsep}{.5em}}}
+{\end{list}}
+
+
+% Include your paper's title here
+
+\title{\bf Mainstreaming Race Science}
+
+
+% Place the author information here.  Please hand-code the contact
+% information and notecalls; do *not* use \footnote commands.  Let the
+% author contact information appear immediately below the author names
+% as shown.  We would also prefer that you don't change the type-size
+% settings shown here.
+
+
+\author{
+Daniel J. Hicks,\textsuperscript{1}\textsuperscript{*}
+and Emilio Lobato\textsuperscript{1}
+\\
+\\
+\normalsize{\textsuperscript{1}University of California, Merced}\\
+\\
+\textsuperscript{*}To whom correspondence should be addressed; E-mail:
+\href{mailto:dhicks4@ucmerced.edu}{\nolinkurl{dhicks4@ucmerced.edu}}.
+}
+
+% Include the date command, but leave its argument blank.
+
+\date{}
+
+
+
+%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+% Double-space the manuscript.
+
+\baselineskip24pt
+
+% Make the title.
+
+\maketitle
+
+% Place your abstract within the special {sciabstract} environment.
+
+\begin{sciabstract}
+Enter the text of your abstract here.
+\end{sciabstract}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+foo \cite{JacksonScienceSegregationRace2005}
+\bibliography{references.bib}
+\bibliographystyle{Science}
+
+% Following is a new environment, {scilastnote}, that's defined in the
+% preamble and that allows authors to add a reference at the end of the
+% list that's not signaled in the text; such references are used in
+% *Science* for acknowledgments of funding, help, etc.
+
+\begin{scilastnote}
+\item Please include your acknowledgments here, set in a single
+paragraph.
+\end{scilastnote}
+
+
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+
+%%%begfigs---
+
+%%%endfigs---
+
+%%%begtabs---
+
+%%%endtabs---
+
+% Needs a bit of work on the \ref{} TODO  before uncommenting
+%\renewcommand{\thetable}{A\arabic{table}}
+%\renewcommand{\thefigure}{A\arabic{figure}}
+%\setcounter{table}{0}
+%\setcounter{figure}{0}
+
+%%%begappxfigs---
+
+%%%endappxfigs---
+
+%%%begappxtabs---
+
+%%%endappxtabs---
+
+\end{document}
