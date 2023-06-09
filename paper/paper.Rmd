@@ -17,11 +17,12 @@ acknowledgements: |
 bibliography: "references.bib"
 output: 
   # https://github.com/rstudio/rticles/pull/486
+  # skeleton: <https://github.com/christopherkenny/rticles/tree/master/inst/rmarkdown/templates/science>
   rticles::science_article:
       keep_tex: true
       move_figures: false
       draft: false
-      number_sections: true
+      number_sections: false
 ---
 
 <!-- 
