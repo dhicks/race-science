@@ -711,6 +711,44 @@ references:
   URL: >-
     https://www.theguardian.com/news/2018/mar/02/the-unwelcome-revival-of-race-science
 
+- id: EysenckEditorial1980
+  accessed:
+    - year: 2023
+      month: 6
+      day: 12
+  author:
+    - family: Eysenck
+      given: H. J.
+  citation-key: EysenckEditorial1980
+  container-title: Personality and Individual Differences
+  container-title-short: Personality and Individual Differences
+  DOI: 10.1016/0191-8869(80)90002-1
+  ISSN: 0191-8869
+  issue: '1'
+  issued:
+    - year: 1980
+      month: 1
+      day: 1
+  language: en
+  page: 1-2
+  source: ScienceDirect
+  title: Editorial
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/0191886980900021
+  volume: '1'
+
+- id: EysenckPERSONALITYINDIVIDUALDIFFERENCES
+  author:
+    - family: Eysenck
+      given: H J
+    - family: Crespigny
+      given: De
+  citation-key: EysenckPERSONALITYINDIVIDUALDIFFERENCES
+  language: en
+  source: Zotero
+  title: PERSONALITY AND INDIVIDUAL DIFFERENCES
+  type: article-journal
+
 - id: FernandezPintoKnowBetterNot2017
   accessed:
     - year: 2017
@@ -2689,6 +2727,27 @@ references:
   URL: https://science.sciencemag.org/content/298/5602/2381
   volume: '298'
 
+- id: SainiDraperMillionsPhilanthropic2022
+  abstract: >-
+    Wickliffe Draper spent his inheritance helping to skew the science of human
+    difference. That mission continues among beneficiaries of his largesse.
+  accessed:
+    - year: 2023
+      month: 1
+      day: 25
+  author:
+    - family: Saini
+      given: Angela
+  citation-key: SainiDraperMillionsPhilanthropic2022
+  issued:
+    - year: 2022
+      month: 12
+      day: 16
+  title: 'Draper''s Millions: The Philanthropic Wellspring of Modern Race Science'
+  type: webpage
+  URL: >-
+    https://race.undark.org/articles/drapers-millions-the-philanthropic-wellspring-of-modern-race-science?utm_source=Undark:+News+%26+Updates&utm_campaign=68be9b0aaa-RSS_EMAIL_CAMPAIGN&utm_medium=email&utm_term=0_5cee408d66-68be9b0aaa-176017345
+
 - id: SainiSuperiorReturnRace2019
   abstract: >-
     An astute and timely examination of the re-emergence of scientific research
@@ -3231,7 +3290,7 @@ references:
   URL: https://spssi.onlinelibrary.wiley.com/doi/10.1111/j.1540-4560.1998.tb01212.x
   volume: '54'
 
-- id: WinstonScientificRacismNorth2020a
+- id: WinstonScientificRacismNorth2020
   abstract: >-
     The use of psychological concepts and data to promote ideas of an enduring
     racial hierarchy dates from the late 1800s and has continued to the present.
@@ -3265,7 +3324,7 @@ references:
   author:
     - family: Winston
       given: Andrew S.
-  citation-key: WinstonScientificRacismNorth2020a
+  citation-key: WinstonScientificRacismNorth2020
   container-author:
     - family: Winston
       given: Andrew S.

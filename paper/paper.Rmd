@@ -9,11 +9,11 @@ authors:
 address:
   - code: 1
     address: "University of California, Merced"
-corresponding_author: "To whom correspondence should be addressed; E-mail: dhicks4@ucmerced.edu."
+corresponding_author: "Corresponding author: Daniel J. Hicks, dhicks4@ucmerced.edu."
 abstract: |
-  Enter the text of your abstract here.
+  *[structured]*
 acknowledgements: |
-  Please include your acknowledgments here, set in a single paragraph.
+  *[strutured]* Thanks to Emily Merchant and John Jackson for some initial discussions that helped clarify the scope of the project and identify some key resources related to the Pioneer Fund and *Mankind Quarterly*.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles.  EL's work on this project was supported by UC Merced.  DH's work on this project was not supported by any specific funding. 
 bibliography: "references.bib"
 output: 
   # https://github.com/rstudio/rticles/pull/486
@@ -54,27 +54,184 @@ List of Supplementary Materials
 
 # Introduction
 
-foo \cite{JacksonScienceSegregationRace2005}
+*[hey you should read this paper]*
+
+*[incorporate def'ns]*
+scientific racism 
+ ~ purporting to justify racial inequality and colonialism by appealing to the epistemic authority of science
+ 
+race science
+ ~ (pseudo-)scientific research that can be utilized for scientific racism
+ 
+race science discourse
+ ~ treating race science as a legitimate area of scientific research; this includes methodological critiques of race science and empirical tests that falsify race science hypotheses
+
+
+# Race science 1910-1960
+
+## The rise and fall of eugenics
+
+- scientific racism is thoroughly entangled with eugenics, but still conceptually distinct [@SlobodianUnequalMindHow2023]
+    - sterilization laws focused on categories of criminality and mental ability, rather than race per se
+    - contemporary defenders of eugenics at least sometimes claim to oppose racism 
+    - claims of innate racial differences in intelligence can be made without dysgenic prophecies of a rapidly-expanding biological underclass
+
+- 1910: Davenport founds Eugenics Records Office at Cold Spring Harbor
+- 1926: NRC "Committee on the Negro" includes both Davenport and Boas: "neither was influential enough to veto his rival's participation" [@BarkanRetreatScientificRacism1992 113]
+- 1930s: *Coming of Age in Samoa* [@MeadComingAgeSamoa1928] popularizes cultural anthropology, "free[ing] anthropology from the shackles of biology" [@BarkanRetreatScientificRacism1992 134]
+- 1937: Pioneer Fund is founded to "support academic research and the \'[sic]dissemination of information, into the 'problem of heredity and eugenics' and 'the problems of race betterment'" [@MehlerFoundationFascismNew1989 21, quoting Laughlin]
+- 1940: Carnegie Institute defunds Eugenics Records Office
+- 1950: "For all practical social purposes 'race' is not so much a biological phenomenon as a social myth" [@BeagleholeRaceQuestion1950; though see @BrattainRaceRacismAntiracism2007]
+
+
+## *Brown v Board* and *Mankind Quarterly*
+
+Histories of scientific racism in the second half of the twentieth century have often emphasized the parascholarly journal *Mankind Quarterly* (MQ) \cite{
+MehlerFoundationFascismNew1989,
+WinstonScienceServiceFar1998,
+SchafferScientificRacismAgain2007,
+SainiSuperiorReturnRace2019,
+WinstonScientificRacismNorth2020,
+AdamsMisAppropriationBiological2021,
+SainiDraperMillionsPhilanthropic2022
+}, with or without its connections to PF. MQ was founded in 1960 by biologist R. Ruggles Gates (1882-1962), psychologist Henry Garrett (1894-1973), and non-academic anthropologist G. Robert Gayre (self-styled as "Gayre of Gayre and Nigg"; 1907-1996).  Gates' professional status was closely tied to eugenics and the explicit scientific racism of the 1920s, and he had been thoroughly marginalized in the wake of World War II \cite{WinstonScienceServiceFar1998}.  In contrast, Garrett had been president of the American Psychological Association in 1946 and chair of Psychology at Columbia from 1941 to 1955 *[cite]*.  
+
+In the landmark case *Brown v Board of Education of Topeka* (1954), the US Supreme Court had banned *de jure* educational segregation.  The Court's decision relied on expert testimony from psychologists and education researchers; but the segregationists had also put forward their own experts, including Henry Garrett \cite{WinstonScienceServiceFar1998, JacksonScienceSegregationRace2005, SchafferScientificRacismAgain2007}.  Shortly after *Brown*, Garrett left Columbia, taking a visiting position at the University of Virginia, and becoming increasingly involved in segregationist, eugenicist, and even the neofascist Northern League.  
+
+In the context of *Brown*, MQ was created as what contemporary scholars call an "echo chamber" \cite{FernandezPintoKnowBetterNot2017}, a favorable venue for race scientists to publish their views, on the grounds that an "equalitarian dogma" created a censorious "taboo" against their research in mainstream publications \cite{TuckerFundingScientificRacism2002, JacksonMythicalTabooRace2020}.  Historians, philosophers, and sociologists of science have shown that echo chambers have been a key part of the "tobacco strategy," used by numerous regulated industries — most infamously tobacco, but also fossil fuels and chemical manufacturing, among others — to "manufacture doubt" and delay regulation to protect public and environmental health *[cites]*.  
+
+In light of the origins of MQ, the significant attention paid to the journal by historians of scientific racism, and contemporary research on the "tobacco strategy," it is surprising that MQ did not play a significant role in nurturing race science.  
+
+
+# *Mankind Quarterly* and Pioneer-funded researchers
+
+We identified 16 researchers who had received funding from Pioneer; 14 of these researchers had profiles in the Web of Science (WoS) author search *[table + WoS pub coucnt]*, allowing us identify 13 WoS-indexed journals that had published 6 or more of these authors.
+
+| | | |
+|:-----|-----:|:----|
+| Thomas J. Bouchard, Jr. | psychology | |
+| Brunetto Chiarelli | anthropology? | |
+| Hans Eysenck | psychology | |
+| Robert Gordon | sociology | |
+| Linda Gottfredson | psychology | |
+| Garrett Hardin | ecology | |
+| Joseph M. Horn | psychology | |
+| Lloyd Humphreys | psychology | |
+| Arthur Jensen | psychology | |
+| Michael Levin | philosophy | |
+| Richard Lynn | psychology | |
+| R. Travis Osborne | psychology | |
+| J. Phillippe Rushton | psychology | |
+| Audrey M. Shuey | psychology | |
+| Philip A. Vernon | psychology | |
+| Daniel Vining, Jr. | demography | |
+
+Table: Pioneer-funded researchers.  Either identified in *[cite]* or named on Pioneer's website, along with identified discipline and WoS author search result counts. 
+
+![Journals publishing 6 or more Pioneer-funded researchers, WoS author search results *[date coverage]*](img/wos_results.png){width="4.76in" height="2.6in"}
+
+Figure *[fig]* shows that, while MQ is on this list of "Pioneer-publishing" journals, a number of mainstream journals are more prominent: *Personality and Individual Differences* (PID), *Intelligence* (I), *Behavior Genetics* (BG), and *Psychological Reports* (PR).  In addition, only psychologist Richard Lynn appears to have published heavily in MQ.  Lynn has been an assistant editor of MQ since 1979 *[check this: https://rationalwiki.org/wiki/Mankind_Quarterly]* and president of PF since the death of psychologist J. Phillippe Rushton in 2012 *[cite]*.  By contrast, a number of Pioneer-funded researchers have published in PID, I, and to a lesser degree BG: Bouchard, Eysenck, Jensen, Rushton, Vernon, and also Lynn.  
+
+PID was founded in 1980, with Eysenck as editor-in-chief and an editorial board including Jensen and Lynn. In the inaugural editorial, Eysenck identified "studies of the genetic determinants of individual differences in the areas of personality and intelligence" as one of the journal's eight major areas of interest.  Eysenck remained editor-in-chief until his death in 1997.  In 2005 the editorial board still included Jensen and Lynn. PID was first published by Pergamon Press, a mainstream academic press, and today is published by Elsevier.  According to the Scimago Journal Rankings, based on Scopus citation data, in 2022 PID had an H-index of 193, #29 in Psychology, and a citation index of 5.27, #24 in Psychology.  
+
+*[similar para on I]*
+
+*[segue to topic model analysis]*
+
+
+# Topic model analysis
+
+
+
+
+
+
+*[max ~50 refs]*
 
 
 \appendix
 # Materials and methods
-Appendix figures and tables will also need to be moved. A basic example is provided here so this feature is also tested.
 
-First we have a figure.
+*[probably some introduction]*
 
-```{r thrice, echo=FALSE, fig.cap='test thrice'}
-plot(rnorm(10))
-```
+## Corpus assembly
 
-And next we have a table
+Corpus assembly is summarized in figure *[xref]*.  The corpus was assembled in two parts, one for *Mankind Quarterly* and the other for mainstream journals.  
 
-\begin{table}[ht]
-\begin{center}
-\begin{tabular}{ll}
-thrice & 1 \\
-thrice & 2\\
-\end{tabular}
-\end{center}
-\end{table}
+*[figure]*
+
+### Mankind Quarterly
+
+An electronic archive of *Mankind Quarterly*, from the first issue in *[1969]* through 2004, is available for free on the open web from *The Unz Review*, which has been characterized as a white nationalist website by the Southern Poverty Law Center *[<https://www.splcenter.org/hatewatch/2021/01/19/meet-white-nationalist-organizer-who-spewed-hate-against-lawmakers>]*.  Web scraping packages and techniques *[which?]* were used to retrieve every PDF available in this archive.  These PDFs were processed using the open-source OCR (optical character recognition) software `tesseract` and the R API `rtesseract` *[cites]*.  This stage of corpus assembly was conducted in Fall 2021.  
+
+### Mainstream journals
+
+To identify suitable mainstream journals for inclusion in the corpus, we first identified academic researchers who had been funded by the Pioneer Fund.  Pioneer is an American non-profit organization founded in 1937 to fund eugenics research *[cite]*.  After the *Brown v. Board of Education* ruling in 1954, Pioneer funded various segregationist efforts across the United States.  *[Shockley and Jensen]*.  We reviewed a critical profile of Pioneer *[cite]* as well as an archived page from the organization's own web site *[cite]*, which together listed 16 researchers who had received Pioneer funds.  
+
+We then used the author search tool in Clarivate's Web of Science platform *[url]*, retrieving publication lists for 14 researchers.  These searches were conducted between 2021-09-24 and 2021-10-05 by DJH.  After parsing these results, we counted how many of the 14 researchers had published in each journal.  13 journals had published 6 or more of the 14 Pioneer-funded researchers.  We excluded *Mankind Quarterly* (as already included) as well as *Science* and *Nature* (as too general) from further consideration in this side of the corpus.  3 journals published by the American Psychological Association (APA; *American Psychologist*, *Contemporary Psychology*, and *Journal of Educational Psychology*) had to be excluded due to confusion over who could give us permission to use the archives for a text mining project, with both APA and ProQuest asserting that we needed to get permission from the other entity.  *European Journal of Personality*, published by SAGE, also had to be excluded because our institutional access only went back to 1999.  
+
+The remaining 5 journals are all published by major academic publishers — Elsevier, Springer, or Cambridge University Press — and each item in the entire run of each journal has been assigned a DOI (digital object identifier) for archival purposes.  We used the Crossref API and `rcrossref` R interface to this API *[cite]* to retrieve metadata for each item published from 1960-2010 in each of these 6 journals.  These metadata included item-level license information — confirming that the text of each item could be used for text mining projects — and a URL to an electronic version of the item.  These URLs were used to retrieve an HTML or PDF version of each item, except for *Personality and Individual Differences*.  This journal has published a relatively large number of non-article documents, such as book reviews and commentaries, which are not available at the URL included in the Crossref metadata.  (This is unfortunate, as it was not difficult to find highly relevant documents that we could not automatically retrieve and therefore excluded from our corpus *[review]*.)  Instead we used Elsevier's ScienceDirect API *[url]* to search and retrieve all items from *Personality and Individual Differences* that are available.  PDFs were run through OCR and text extraction as necessary, as with the *Mankind Quarterly* documents.  
+
+All together, *[corpus summary, total and by journal; table]*
+
+## Data preparation
+
+After document retrieval and text extraction, we pre-processed the text using the `spaCy` NLP (natural language processing) Python library and the R API `spacyr` *[version, cites]*.  Specifically, we applied regular expressions to remove header/footer copyright notices and hyphenation, used spaCy to annotate and extract noun phrases (eg, "the intelligence test items"), and then cleaned and standardized these phrases (eg, removing the/an/a, coverting all text to lowercase, and replacing all whitespace with underscores: "intelligence_test_items").  We then counted the occurrence of each noun phrase in the document.  The aggregated "document-term matrix" was stored in Parquet format *[cite]* for performance reasons, and written and read using the `arrow` package for R *[cite]*.  *[availability]*
+
+NLP-extracted noun phrases offer a number of advantages over the more traditional unigram ("single-word") tokens.  First, noun phrase extraction removes many standard stopwords (articles, common verbs) without relying on a fixed, a priori stopword list.  Phrases can be more informative than single terms, for example, distinguishing "intelligence test" from "hypothesis test."  But simple n-gram extraction will include numerous phrases that are not especially meaningful.  Consider the sentence "Since our first analyses of feeding patterns in rats, we had been using a criterion of 40 minutes (Le Magnen & Tallon 1963; 1966)" *[10.1017__^__s0140525x0000042x]*.  Bigrams such as "since our" and "criterion 40" will likely be discarded in vocabulary selection, but significantly increase the computational cost of vocabulary selection.  Noun phrase extraction is therefore more efficient.  
+
+After noun phrase extraction, the corpus comprised *[tokens]* of *[distinct noun phrases]*.  
+
+### Vocabulary selection
+
+We took an information-theoretic approach to vocabulary selection.  Consider a game in which I draw a document from the corpus, then a single token from that document.  I tell you the term, and you have to guess which document I picked.  Intuitively, highly informative terms (in this project, noun phrase types) are distinctive, allowing you to dramatically narrow down the list of potential documents.  This "informativeness" of a term can be quantified as the KL (Kullback-Leibler) divergence from a "baseline" distribution of documents to the distribution conditional on the term.  Because the most informative terms tend to be typos and OCR errors — these are unique to a single document — we multiply the KL divergence by the logarithm of the total number of occurrences of the term across the entire corpus.  We refer to the resulting measure as $log(n) \Delta H$ or simply `ndH`. 
+
+*[Hicks 2021?]* used the `ndH` approach in a topic modeling analysis, where the baseline distribution was the uniform distribution across documents.  In the current project, we found that this approach heavily favored recurrent noun phrases in the longest documents.  Many of the documents published in *Psychological Reports* are extremely short, 1-2 reports of a single study; while many of the documents published in *Brain and Behavioral Sciences* are book-length collections that include a long review article and sometimes dozens of commentaries.  Very generic noun phrases that happen to appear in the latter can occur orders of magnitude more often than highly distinctive phrases in the former, and so the $log(n)$ factor overwhelms the $\Delta H$ factor.  
+
+To address this, we used a different baseline distribution of documents, namely, one in which document probability is proportional to length.  This makes phrases from short documents much more "surprising" (much less likely to occur according to the baseline), and hence substantially increases their informativeness.  This was more effective at identifying useful phrases from across the corpus.  
+
+A common rule of thumb in topic modeling is that the vocabulary should have about 10 times as many distinct terms as the number of documents in the corpus *[cite]*.  However, we had some concerns with computational demands here:  the resulting document-term matrix would have roughly $10 \times 33,000^2$ or 10.9 billion entries; with 10% density this would require on the order of 4 GB of memory just for a single copy of the matrix; and most of the analysis was to be conducted on the authors' laptops.  We therefore chose to work with three smaller vocabularies, $5 \times$, $1 \times$ and $\frac{1/5} \times$ the number of documents.  We refer to these as the "large," "medium," and "small" vocabulary, respectively, and they include *[counts]* distinct phrases.  We compare findings across vocabularies as a robustness check.  
+
+
+## Topic modeling
+
+To fit topic models, we followed the approach proposed by *[cite]*, which uses varimax-rotated partial principal components instead of the variational inference methods used by standard topic model packages *[eg, stm]*.  This novel approach was implemented in the R package `tmfast`, *[cite]*.  A simulation study of `tmfast` found that it was significantly faster and only slightly less accurate at reconstructing known word-topic and topic-document distributions, compared to the standard topic modeling package `stm`.  
+
+Topic models were fit for all three vocabularies (large, medium, and small) with $k = 5, 10, 20, 30, 40, 50$ (number of topics), resulting in a total of 18 models. 
+
+Following the approach of *[Hicks 2021?]*, we did not attempt to identify a unique best model for further analysis.  While we focus on the medium vocabulary, $k=30$ model as the "median" among the 18 models fit, we compare and contrast findings from this model with those from the other models.  
+
+
+### Topic model interpretation
+
+After fitting topic models, our first research question was whether we could identify distinctive "race science" topics.  We addressed this question in two ways.  Following common practice in topic modeling, we extracted lists of the top $n$ (highest-probability) terms (noun phrases) from each topic in each model, with $n$ generally ranging between 5 and 15 as we explored the models.  *[tables + Silge plots]*  
+
+We also adapted the "discursive space" analysis proposed by *[Hicks 2021?]*.  This analysis combines the Hellinger distance between topic-document distributions — capturing how "far apart" two documents are — with dimensional reduction techniques used for data visualization.  This produces a two-dimensional visualization of individual documents, arranged so that documents with similar topic distributions are visually clustered and visually distinct from documents with different topic distributions.  *[availability]*
+
+Specifically, for each fitted topic model, we extracted topic-document distributions for each document and calculated pairwise Hellinger distances.  We then processed these distances using the UMAP algorithm for dimension reduction, as implemented in the `umap` package *[details; cite]*.  To reduce computational requirements for these steps, we first dropped documents published in the journal *[Psychological Reports]* (*[x documents removed, y remaining]*; note that the full corpus was used to fit the topic models, *Psychological Reports* was removed just for this visualization).  Using the `plotly` library *[cite]*, we construct an interactive visualization:  each point represents a single document, and points can be colored based on either their journal or highest-probability topic.  Tooltips are displayed when we hover over a point, including document metadata (title, journal, authors, year) as well as "key phrases."  
+
+To calculate key phrases for a given document $d$, we first identified the highest-probability topic $t$ for that document and the word-topic (noun phrase-topic) distribution $\beta_{w,t}$ for that topic.  We also retrieved the document-term matrix, containing the count $n_{w,d}$ of occurrences for each word (noun phrase), and calculated a weighting $n_{w,d} \beta_{w,t}$ for each word.  The key phrases are the 5 most highly-weighted terms for the given document.  
+
+### Topic quality assessment
+
+We next conducted a topic quality check of topic 19 from the medium vocabulary, $k=30$ model.  Keyword and inspection of the UMAP interactives seemed to indicate that this topic was a "race science discourse" topic in this model.  
+
+To confirm this initial impression, a spreadsheet of all articles with $\gamma > 0.25$ for this topic was extracted (excluding articles published in *Psychological Reports*), and the top 200 articles were reviewed manually by both authors.  For this qualitative analysis, we defined *scientific racism* as (purporting) to justify racial inequality and colonialism by appealing to the epistemic authority of science; *race science* as (pseudo-)scientific research that can be utilized for scientific racism; and *race science discourse* as treating race science as a legitimate area of scientific research; this includes methodological critiques of race science and empirical tests that falsify race science hypotheses.  Our qualitative review of the top-200 topic-19 articles focused on classifying them as *race science discourse*.  
+
+For the first round of review, both authors worked independently,  dichotomously coding each article as race science discourse or not.  We calculated the "false positive rate" — documents with a very high $\gamma$ in this topic that were not race science discourse — and interrater reliability using Cohen's $\kappa$.  
+*[false positive rate]* 
+*[Initial interrater reliability was low, $\kappa = 0.4$, with 50 out of 200 articles classified discordantly.]*  To understand the disagreement, both authors examined the 50 discordant articles using an interactive grounded theory approach.  After this process, some initial codings were changed and *[almost]* all of the remaining *[n]* discordant articles were coded as follows:  
+
+hereditarianism and/or eugenics
+ ~ 29 papers.  On the “eugenics” side, mostly examines or otherwise discusses the "dysgenic" claim that "low-intelligence" people have more children than "high-intelligence" people.  The “hereditarianism” side is more varied, with papers on environmentalist interventions to raise IQ, genetics of IQ, and several other sub-topics.  
+
+Flynn effect 
+ ~ 15 papers.  Supporting, challenging, or otherwise focusing on Flynn’s findings that IQ has increased over time. 
+
+Lynn/national IQ
+ ~ 3 papers.  Supports, challenges, or focuses on international IQ data/comparisons made by Richard Lynn. 
+
+We agreed that, for all three categories of papers, there was reasonable ambiguity about whether they should be classified as race science discourse.  These papers either do not explicitly mention race, or do so with just a brief mention of the "race and intelligence controversy."  On the other hand, they either contribute to or legitimatize areas of research that are deeply entangled with race science, and might thereby contribute to public perceptions of a legitimate scientific debate about race and intelligence.  
+
+Based on this qualitative review, we judged that the topic model approach was sufficiently sensitive (low "false positive" rate) in identifying race science discourse. 
 
