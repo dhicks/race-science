@@ -29,6 +29,7 @@ hellinger_betas = function(model_file, name) {
     model = read_rds(model_file)
     
     ## Renormalization
+    message('Calculating renormalization exponents')
     get_power = function(this_k, model) {
         ee = expected_entropy(.1, this_k)
         model |> 
@@ -40,6 +41,7 @@ hellinger_betas = function(model_file, name) {
                                .progress = TRUE)
     # return(exponents)
     
+    message('Extracting betas for Silge plots')
     betas = tidy_all(model) |> 
         group_split(k) |> 
         map2(exponents, ~ renorm(.x, topic, beta, .y))
@@ -72,31 +74,33 @@ hellinger_betas = function(model_file, name) {
                                        linewidth = 1))}, 
                 .keep = TRUE) |> 
         wrap_plots(design = 
-                       'AB
-               #B
-               CD
-               CD
-               CD
-               CD
-               #D
-               #D
-               EF
-               EF
-               EF
-               EF
-               EF
-               EF
-               EF
-               EF
-               #F
-               #F') +
+              'ABCD
+               #BCD
+               ##CD
+               ##CD
+               ###D
+               EFGH
+               EFGH
+               EFGH
+               EFGH
+               EFGH
+               EFGH
+               EFGH
+               EFGH
+               #FGH
+               #FGH
+               ##GH
+               ##GH
+               ###H
+               ###H') +
         labs(caption = glue('{name} vocabulary'))
     ggsave(here(out_dir, glue('06-{name}-silge.pdf')), 
-           width = 10, height = (10+30+50)/5, 
+           width = 4*5, height = (30+70)/5, 
            limitsize = FALSE,
            scale = 3)
     
     ## Pairwise Hellinger distance/similarity
+    message('Hellinger similarities')
     vocab = model$cols
     
     compared = map(1:(length(betas) - 1), 
@@ -126,6 +130,7 @@ hellinger_betas = function(model_file, name) {
                comparison = fct_inorder(comparison))
     
     ## Heat map
+    message('Constructing Hellinger visualizations')
     ggplot(comp_df, aes(topic_b, topic_a, fill = similarity)) +
         geom_raster() +
         facet_wrap(vars(comparison), 
@@ -142,24 +147,26 @@ hellinger_betas = function(model_file, name) {
               legend.position = c(.9, .2),
               legend.justification = c(1, 0))
     ggsave(here(out_dir, glue(out_prefix, '_heat_map.png')), 
-           height = 2*3, width = 3*4, bg = 'white')
+           height = 3*3, width = 3*4, bg = 'white')
     
+    ## "Mereogram"
     comp_df |> 
-        filter(similarity > .5) |> 
+        filter(similarity > .25) |> 
         ggplot() +
         geom_segment(aes(x = topic_a, xend = topic_b, 
                          y = model_a, yend = model_b, 
-                         color = similarity), 
+                         color = similarity, 
+                         alpha = similarity), 
                      linewidth = 1) +
-        scale_color_viridis_c(limits = c(0.5, 1), 
+        scale_color_viridis_c(limits = c(0.25, 1), 
                               direction = -1) +
         scale_y_reverse(breaks = model$n, 
                         minor_breaks = NULL, 
                         expand = expansion()) +
         labs(x = 'topic', 
              y = 'model (k)')
-    ggsave(here(out_dir, glue(out_prefix, '_cladogram.png')), 
-           height = 3, width = 4, bg = 'white', scale = 1.5)
+    ggsave(here(out_dir, glue(out_prefix, '_mereogram.png')), 
+           height = 5, width = 4, bg = 'white', scale = 1.5)
 }
 
 # debug(hellinger_betas)

@@ -62,7 +62,9 @@ calc_densities = function(dataf, var1, var2, group_var, group_values, ...) {
 }
 
 ## Static UMAP visualization with highlighted topics
-visualize = function(vocab, k, highlight_topics, write = TRUE) {
+visualize = function(vocab, k, highlight_topics, 
+                     breaks_threshold = .15,
+                     write = TRUE) {
     model = here(tm_dir, glue('04_{vocab}_tmfast.Rds')) |> 
         read_rds()
     
@@ -102,7 +104,7 @@ visualize = function(vocab, k, highlight_topics, write = TRUE) {
         geom_point(alpha = .01) +
         geom_textcontour(aes(label = topic, z = z), linewidth = 1,
                          upright = TRUE, straight = TRUE,
-                         breaks = .15,
+                         breaks = breaks_threshold,
                          data = densities) +
         scale_color_viridis_d(guide = 'none') +
         lims(x = window$x, 
@@ -119,18 +121,21 @@ visualize = function(vocab, k, highlight_topics, write = TRUE) {
 }
 
 # debugonce(visualize)
-visualize('md', 30, c('V05', 'V07', 'V19'))
+visualize('md', 40, c('V05', 'V07', 'V22', 'V24'), 
+          breaks_threshold = .1,
+          write = FALSE)
 
 topics_of_interest = tribble(
     ~ vocab, ~ k, ~ highlight_topics,
-    'sm', 20, c('V04', 'V12', 'V20'),
-    'sm', 30, c('V04', 'V12', 'V20'),
-    'sm', 40, c('V04', 'V12', 'V20', 'V34'),
-    'md', 30, c('V05', 'V07', 'V19'),
-    'md', 40, c('V05', 'V07', 'V22', 'V24', 'V36'),
-    'lg', 20, c('V05', 'V06'),
-    'lg', 30, c('V06', 'V24', 'V27'),
-    'lg', 40, c('V06', 'V24', 'V26')
+    'sm', 30, c('V04', 'V23'),
+    'sm', 40, c('V04', 'V28', 'V36'),
+    'sm', 50, c('V04', 'V36', 'V47'),
+    'md', 30, c('V05', 'V07', 'V22'),
+    'md', 40, c('V05', 'V07', 'V22', 'V24', 'V35'),
+    'md', 50, c('V05', 'V07', 'V22', 'V24', 'V35')
+    # 'lg', 20, c('V05', 'V06'),
+    # 'lg', 30, c('V06', 'V24', 'V27'),
+    # 'lg', 40, c('V06', 'V24', 'V26')
 )
 
 pwalk(topics_of_interest, 

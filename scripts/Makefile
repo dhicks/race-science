@@ -61,7 +61,7 @@ $(target05): 05_all_gamma.R \
 	rscript 05_all_gamma.R
 
 ## Script 06: Hellinger distances for word-topic distributions between values of k
-target06 := $(out)/06_sm_cladogram.png
+target06 := $(out)/06_sm_mereogram.png
 $(target06): 06_hellinger_betas.R \
              $(models)
 	rscript 06_hellinger_betas.R

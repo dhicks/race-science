@@ -12,12 +12,12 @@ library(glue)
 
 data_dir = here('data')
 
-k = c(5, seq(10, 50, by = 10))
+k = c(5, seq(10, 70, by = 10))
 ## Models are not re-fit automatically.  To refit: 
 ## 1. Pass --force through the command line 
 source(here('R', 'args.R'))
 ## 2. Set `force` manually here
-force = TRUE
+# force = TRUE
 
 ## Load data ----
 meta_ar = open_dataset(here(data_dir, '01_metadata'))

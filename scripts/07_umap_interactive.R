@@ -201,8 +201,8 @@ make_umap = function(vocab,
 
 # debugonce(process_k)
 ## Generate a single spreadsheet for topic quality check
-# make_umap('md', 30, spreadsheet = 'V19', visualization = FALSE)
+# make_umap('md', 40, spreadsheet = 'V24', visualization = FALSE)
 ## Generate visualizations for all models of interest
-make_umap('md', c(20, 30, 40), seed = seed, force = force)
-make_umap('sm', c(20, 30, 40), seed = seed, force = force)
-make_umap('lg', c(20, 30, 40), seed = seed, force = force)
+make_umap('md', c(20, 30, 40, 50, 60, 70), seed = seed, force = force)
+make_umap('sm', c(20, 30, 40, 50, 60, 70), seed = seed, force = force)
+make_umap('lg', c(20, 30, 40, 50, 60, 70), seed = seed, force = force)

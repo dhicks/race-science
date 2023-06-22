@@ -100,7 +100,7 @@ all_gammas = function(path, name) {
     message('Building topic-doc tile visualizations')
     ggplot(comb_df, aes(topic, article_id, fill = log1p(gamma))) +
         geom_raster() +
-        geom_vline(xintercept = c(10, 20, 30, 40) + .5, 
+        geom_vline(xintercept = c(10, 20, 30, 40, 50, 60) + .5, 
                    color = 'black') +
         facet_grid(rows = vars(container.title), 
                    cols = vars(k), 
@@ -108,7 +108,7 @@ all_gammas = function(path, name) {
                    labeller = label_wrap_gen(width = 15), 
                    switch = 'y') +
         scale_x_discrete(breaks = c('V10', 'V20', 'V30',
-                                    'V40', 'V50')) +
+                                    'V40', 'V50', 'V60', 'V70')) +
         scale_y_discrete(breaks = NULL, 
                          name = '') +
         scale_fill_viridis_c(option = 'viridis', direction = 1) +
@@ -117,7 +117,7 @@ all_gammas = function(path, name) {
               legend.position = 'bottom', 
               plot.margin = margin(r = 10))
     ggsave(here(out_dir, glue(out_prefix, '_gamma.png')), 
-           width = 6, height = 6.5, scale = 1.5, bg = 'white')
+           width = 8, height = 6.5, scale = 1.5, bg = 'white')
 }
 
 iwalk(model_files, all_gammas)
