@@ -461,6 +461,51 @@ references:
   type: webpage
   URL: https://twitter.com/RVAwonk/status/1571716342297796610
 
+- id: CofnasResearchGroupDifferences2019
+  abstract: >-
+    In a very short time, it is likely that we will identify many of the genetic
+    variants underlying individual differences in intelligence. We should be
+    prepared for the possibility that these variants are not distributed
+    identically among all geographic populations, and that this explains some of
+    the phenotypic differences in measured intelligence among groups. However,
+    some philosophers and scientists believe that we should refrain from
+    conducting research that might demonstrate the (partly) genetic origin of
+    group differences in IQ. Many scholars view academic interest in this topic
+    as inherently morally suspect or even racist. The majority of philosophers
+    and social scientists take it for granted that all population differences in
+    intelligence are due to environmental factors. The present paper argues that
+    the widespread practice of ignoring or rejecting research on intelligence
+    differences can have unintended negative consequences. Social policies
+    predicated on environmentalist theories of group differences may fail to
+    achieve their aims. Large swaths of academic work in both the humanities and
+    social sciences assume the truth of environmentalism and are vulnerable to
+    being undermined. We have failed to work through the moral implications of
+    group differences to prepare for the possibility that they will be shown to
+    exist.
+  accessed:
+    - year: 2019
+      month: 12
+      day: 24
+  author:
+    - family: Cofnas
+      given: Nathan
+  citation-key: CofnasResearchGroupDifferences2019
+  container-title: Philosophical Psychology
+  DOI: 10.1080/09515089.2019.1697803
+  ISSN: 0951-5089
+  issue: '0'
+  issued:
+    - year: 2019
+      month: 12
+      day: 23
+  page: 1-23
+  source: Taylor and Francis+NEJM
+  title: 'Research on group differences in intelligence: A defense of free inquiry'
+  title-short: Research on group differences in intelligence
+  type: article-journal
+  URL: https://doi.org/10.1080/09515089.2019.1697803
+  volume: '0'
+
 - id: CoopLotteryLuckLegacy2022
   abstract: >-
     A book review of “The genetic lottery: why DNA matters for social equality.”
@@ -1366,6 +1411,32 @@ references:
   title-short: Echo chamber
   type: book
 
+- id: JensenHowMuchCan1969
+  abstract: >-
+    Arthur Jensen argues that the failure of recent compensatory education
+    efforts to produce lasting effects on children's IQ and achievement suggests
+    that the premises on which these efforts have been based should be
+    reexamined.
+  author:
+    - family: Jensen
+      given: Arthur
+  citation-key: JensenHowMuchCan1969
+  container-title: Harvard Educational Review
+  container-title-short: Harvard Educational Review
+  DOI: 10.17763/haer.39.1.l3u15956627424k7
+  ISSN: 0017-8055
+  issue: '1'
+  issued:
+    - year: 1969
+      month: 4
+      day: 1
+  page: 1-123
+  source: hepgjournals.org (Atypon)
+  title: How Much Can We Boost IQ and Scholastic Achievement?
+  type: article-journal
+  URL: http://www.hepgjournals.org/doi/abs/10.17763/haer.39.1.l3u15956627424k7
+  volume: '39'
+
 - id: JosephReevaluation1990Minnesota2022
   abstract: >-
     In 1990, Thomas J. Bouchard Jr. and colleagues published the widely cited
@@ -2059,6 +2130,60 @@ references:
     "social justice" look like if we accept that reality?
   type: post-weblog
   URL: https://twitter.com/nathancofnas/status/1436475447487860738
+
+- id: NathanCofnasTwitter
+  accessed:
+    - year: 2020
+      month: 1
+      day: 22
+  citation-key: NathanCofnasTwitter
+  container-title: Twitter
+  language: en
+  title: >-
+    (5) Nathan Cofnas on Twitter: "@jasonintrator @AfroLGBTpsy (1) You thought
+    my paper was important enough to publicly call on people to "denounce" it.
+    You owe me an explanation. (2) You've now publicly referred to my "racism."
+    You owe me an explanation for this, too. (3) You made a criticism of my
+    paper that suggests you didn't read it." / Twitter
+  title-short: (5) Nathan Cofnas on Twitter
+  type: webpage
+  URL: https://twitter.com/nathancofnas/status/1219033800690360320
+
+- id: NathanCofnasTwitter2020
+  accessed:
+    - year: 2021
+      month: 11
+      day: 14
+  citation-key: NathanCofnasTwitter2020
+  issued:
+    - year: 2020
+      month: 1
+      day: 20
+  title: >-
+    Nathan Cofnas on Twitter: "(1) You thought my paper was important enough to
+    publicly call on people to "denounce" it. You owe me an explanation. (2)
+    You've now publicly referred to my "racism." You owe me an explanation for
+    this, too. (3) You made a criticism of my paper that suggests you didn't
+    read it.… https://t.co/Pl4fsNuYUC"
+  title-short: Nathan Cofnas on Twitter
+  type: webpage
+  URL: >-
+    https://web.archive.org/web/20200120084316/https://twitter.com/nathancofnas/status/1219033800690360320
+
+- id: NathanCofnasTwittera
+  accessed:
+    - year: 2020
+      month: 1
+      day: 22
+  citation-key: NathanCofnasTwittera
+  title: >-
+    Nathan Cofnas on Twitter: "(1) You thought my paper was important enough to
+    publicly call on people to "denounce" it. You owe me an explanation. (2)
+    You've now publicly referred to my "racism." You owe me an explanation for
+    this, too. (3) You made a criticism of my paper that suggests you didn't
+    read it.… https://t.co/Pl4fsNuYUC"
+  type: webpage
+  URL: https://twitter.com/nathancofnas/status/1219033800690360320
 
 - id: NguyenEchoChambersEpistemic2020
   abstract: >-

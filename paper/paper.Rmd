@@ -105,6 +105,8 @@ In light of the origins of MQ, the significant attention paid to the journal by 
 
 # *Mankind Quarterly* and Pioneer-funded researchers
 
+*[for xref: https://bookdown.org/yihui/bookdown/a-single-document.html]*
+
 We identified 16 researchers who had received funding from Pioneer; 14 of these researchers had profiles in the Web of Science (WoS) author search *[table + WoS pub coucnt]*, allowing us identify 13 WoS-indexed journals that had published 6 or more of these authors.
 
 | | | |
@@ -174,7 +176,7 @@ The remaining 5 journals are all published by major academic publishers — Else
 
 All together, *[corpus summary, total and by journal; table]*
 
-## Data preparation
+## Text preparation
 
 After document retrieval and text extraction, we pre-processed the text using the `spaCy` NLP (natural language processing) Python library and the R API `spacyr` *[version, cites]*.  Specifically, we applied regular expressions to remove header/footer copyright notices and hyphenation, used spaCy to annotate and extract noun phrases (eg, "the intelligence test items"), and then cleaned and standardized these phrases (eg, removing the/an/a, coverting all text to lowercase, and replacing all whitespace with underscores: "intelligence_test_items").  We then counted the occurrence of each noun phrase in the document.  The aggregated "document-term matrix" was stored in Parquet format *[cite]* for performance reasons, and written and read using the `arrow` package for R *[cite]*.  *[availability]*
 
@@ -182,7 +184,14 @@ NLP-extracted noun phrases offer a number of advantages over the more traditiona
 
 After noun phrase extraction, the corpus comprised *[tokens]* of *[distinct noun phrases]*.  
 
-### Vocabulary selection
+### Data and code availability
+
+Document metadata retrieved from Crossref does not appear to be covered by any copyright or other intellectual property restrictions.  However, due to copyright restrictions, we are unable to make document fulltext or Web of Science search results publicly available.  Code for the corpus assembly and text preparation steps described above is available by request. 
+
+The public analysis repository, <https://github.com/dhicks/race-science> *[DOI]*, includes document metadata and documentwise counts of NLP-extracted noun phrases ("document-term matrices"), along with code to reproduce the analysis of the following sections.  *[repo readme: requires R 4.1.2; rig (<https://github.com/r-lib/rig/>) for managing multiple R installations]*
+
+
+## Vocabulary selection
 
 We took an information-theoretic approach to vocabulary selection.  Consider a game in which I draw a document from the corpus, then a single token from that document.  I tell you the term, and you have to guess which document I picked.  Intuitively, highly informative terms (in this project, noun phrase types) are distinctive, allowing you to dramatically narrow down the list of potential documents.  This "informativeness" of a term can be quantified as the KL (Kullback-Leibler) divergence from a "baseline" distribution of documents to the distribution conditional on the term.  Because the most informative terms tend to be typos and OCR errors — these are unique to a single document — we multiply the KL divergence by the logarithm of the total number of occurrences of the term across the entire corpus.  We refer to the resulting measure as $log(n) \Delta H$ or simply `ndH`. 
 
