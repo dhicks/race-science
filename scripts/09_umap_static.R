@@ -121,7 +121,7 @@ visualize = function(vocab, k, highlight_topics,
 }
 
 # debugonce(visualize)
-visualize('md', 40, c('V05', 'V07', 'V22', 'V24'), 
+visualize('md', 40, c('V07', 'V24', 'V05', 'V22', 'V35', 'V38'), 
           breaks_threshold = .1,
           write = FALSE)
 
@@ -129,13 +129,13 @@ topics_of_interest = tribble(
     ~ vocab, ~ k, ~ highlight_topics,
     'sm', 30, c('V04', 'V23'),
     'sm', 40, c('V04', 'V28', 'V36'),
-    'sm', 50, c('V04', 'V36', 'V47'),
+    'sm', 50, c('V04', 'V47', 'V36', 'V25', 'V46'),
     'md', 30, c('V05', 'V07', 'V22'),
-    'md', 40, c('V05', 'V07', 'V22', 'V24', 'V35'),
-    'md', 50, c('V05', 'V07', 'V22', 'V24', 'V35')
-    # 'lg', 20, c('V05', 'V06'),
-    # 'lg', 30, c('V06', 'V24', 'V27'),
-    # 'lg', 40, c('V06', 'V24', 'V26')
+    'md', 40, c('V07', 'V24', 'V05', 'V22', 'V35', 'V38'),
+    'md', 50, c('V07', 'V24', 'V05', 'V22', 'V35', 'V45'),
+    'lg', 30, c('V27', 'V06'),
+    'lg', 40, c('V27', 'V02', 'V06', 'V26', 'V32', 'V37'),
+    'lg', 50, c('V27', 'V06', 'V32', 'V34', 'V35', 'V49')
 )
 
 pwalk(topics_of_interest, 

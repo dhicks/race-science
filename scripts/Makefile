@@ -79,7 +79,7 @@ $(target07): 07_umap_interactive.R \
 	@echo "UMAP embeddings may need to be recalculated. Run rscript 07_umap_interactive.R --force"; exit 1
 
 ## Script 08: Occurrence of topics over time by journal
-target08 := $(out)/08_presentation.png
+target08 := $(out)/08_grid_lg.pdf
 $(target08): 08_topics_over_time.R \
              $(meta) \
              $(phrases) \

@@ -6,11 +6,11 @@ theme_set(theme_bw())
 library(tmfast)
 library(here)
 library(arrow)
-# remotes::install_github("mtennekes/cols4all")
-# library(cols4all)
 library(patchwork)
 library(glue)
+library(ggh4x)
 
+## Load data ----
 data_dir = here('data')
 tm_dir = here(data_dir, '04_tm')
 out_dir = here('out')
@@ -28,27 +28,28 @@ articles_df = phrases_ar |>
     # filter(container.title != 'Psychological Reports') |> 
     collect()
 
-# sm_tmf = readRDS(here(tm_dir, '04_sm_tmfast.Rds'))
-md_tmf = readRDS(here(tm_dir, '04_md_tmfast.Rds'))
+model_files = list.files(tm_dir, '*_tmfast.Rds') %>%
+    here(tm_dir, .) |> 
+    set_names('lg', 'md', 'sm')
+exp_files = list.files(data_dir, '*_exponents.Rds') %>%
+    here(data_dir, .) |> 
+    set_names('lg', 'md', 'sm')
+## Helper to read exponents as a named num
+read_exp = function(file) {
+    file |> 
+        read_rds() |> 
+        pull(exponent, name = k)
+}
 
-md_exp = read_rds(here(data_dir, '05_md_exponents.Rds')) |> 
-    pull(exponent, name = k)
 
-md_tmf |> 
-    tidy(k = 30, matrix = 'gamma', exponent = md_exp['30']) |> 
-    filter(topic %in% c('V05', 'V07', 'V22')) |> 
-    ggplot(aes(gamma, color = topic)) +
-    stat_ecdf() +
-    geom_hline(yintercept = .9)
-
+## Create a dataframe of aggregated gamma scores by year ----
 create_dataframes = function(model, 
                              exponents,
-                             k = c(5, seq(10, 50, by = 10)), 
+                             k = c(5, seq(10, 70, by = 10)), 
                              topics = NULL, 
                              articles = articles_df, 
                              gamma_threshold = .05,
                              agg_fn = mean) {
-    ## Create a dataframe of aggregated gamma scores by year
     full_topic_list = list()
     
     for (i in k){
@@ -80,55 +81,57 @@ create_dataframes = function(model,
     return(bind_rows(full_topic_list, .id = 'k'))
 }
 
-## Mean value of gamma, no threshold
-create_dataframes(md_tmf, md_exp,
-                  topics = c('V07', 'V22', 'V05', 'V24'), 
-                  gamma_threshold = 0) |> 
-    ggplot(aes(year, gamma, 
-               color = container.title, 
-               group = container.title)) +
-    geom_line() +
-    facet_grid(rows = vars(k), 
-               cols = vars(topic), 
-               scales = 'free_y')
+## Ex: Mean value of gamma, no threshold
+# create_dataframes(md_tmf, md_exp,
+#                   topics = c('V07', 'V22', 'V05', 'V24'), 
+#                   gamma_threshold = 0) |> 
+#     ggplot(aes(year, gamma, 
+#                color = container.title, 
+#                group = container.title)) +
+#     geom_line() +
+#     facet_grid(rows = vars(k), 
+#                cols = vars(topic), 
+#                scales = 'free_y')
 
 ## Mean value of gamma, 1% threshold
-create_dataframes(md_tmf, md_exp,
-                  topics = c('V07', 'V22', 'V05', 'V24'), 
-                  gamma_threshold = .1) |> 
-    ggplot(aes(year, gamma, 
-               color = container.title, 
-               group = container.title)) +
-    geom_line() +
-    facet_grid(rows = vars(k), 
-               cols = vars(topic), 
-               scales = 'free_y')
+# create_dataframes(md_tmf, md_exp,
+#                   topics = c('V07', 'V22', 'V05', 'V24'), 
+#                   gamma_threshold = .1) |> 
+#     ggplot(aes(year, gamma, 
+#                color = container.title, 
+#                group = container.title)) +
+#     geom_line() +
+#     facet_grid(rows = vars(k), 
+#                cols = vars(topic), 
+#                scales = 'free_y')
 
 ## Mean value of gamma, 25% threshold
-create_dataframes(md_tmf, md_exp,
-                  topics = c('V07', 'V22', 'V05'), 
-                  gamma_threshold = .25) |> 
-    ggplot(aes(year, gamma, 
-               color = container.title, 
-               group = container.title)) +
-    geom_line() +
-    facet_grid(rows = vars(k), 
-               cols = vars(topic), 
-               scales = 'free_y')
+# create_dataframes(md_tmf, md_exp,
+#                   topics = c('V07', 'V22', 'V05'), 
+#                   gamma_threshold = .25) |> 
+#     ggplot(aes(year, gamma, 
+#                color = container.title, 
+#                group = container.title)) +
+#     geom_line() +
+#     facet_grid(rows = vars(k), 
+#                cols = vars(topic), 
+#                scales = 'free_y')
 
+## "Count plot" ----
+## Count documents "in" a topic (gamma > threshold); 
+## smooth with 5-year running average; 
+## and return a plot
 count_plot = function(tmf, vocab, exp, this_k, topics, threshold, 
-                      plot = TRUE,
-                      position = 'identity', 
-                      annotate = TRUE) {
+                      plot = TRUE, # return the plot? or just the dataframe
+                      annotate = TRUE # fancy y-axis and notes in caption
+) { 
     if (identical(length(topics), 0L)) {
         return(ggplot())
     }
-    y_label = glue('#{ɣ > [threshold]}', 
-                   .open = '[', .close = ']')
     
     dataf = create_dataframes(tmf, exp, topics, k = this_k,
-                      agg_fn = \(x)(n()), 
-                      gamma_threshold = threshold) |> 
+                              agg_fn = \(x)(n()), 
+                              gamma_threshold = threshold) |> 
         group_by(k, topic, container.title) |> 
         complete(year = seq.int(min(year), max(year)), 
                  fill = list('gamma' = 0)) |> 
@@ -143,37 +146,133 @@ count_plot = function(tmf, vocab, exp, this_k, topics, threshold,
     }
     plot = ggplot(dataf, 
                   aes(year,  
-                   color = container.title, 
-                   group = container.title)) +
-        geom_line(aes(y = gamma_sm), size = 1.25, color = 'black') +
+                      color = container.title, 
+                      group = container.title)) +
+        geom_line(aes(y = gamma_sm), linewidth = 1.25, color = 'black') +
         geom_line(aes(y = gamma), alpha = .5) +
-        geom_line(aes(y = gamma_sm), size = 1) +
-        coord_cartesian(ylim = c(NA, NA)) +
+        geom_line(aes(y = gamma_sm), linewidth = 1) +
         scale_y_continuous(breaks = scales::pretty_breaks()) +
         scale_color_viridis_d(option = 'D', 
-                              name = '') +
+                              name = '', 
+                              aesthetics = c('color', 'fill')) +
         theme(legend.position = 'bottom')
     if (length(topics) > 1) {
         plot = plot + facet_wrap(vars(topic), scales = 'free_y')
     }
     if (annotate) {
+        y_label = glue('#{ɣ > [threshold]}', .open = '[', .close = ']')
         plot = plot + labs(y = y_label, 
-                    caption = glue('{vocab} vocabulary, k = {this_k}'))
+                           caption = glue('{vocab} vocabulary, k = {this_k}'))
     }
     return(plot)
 }
 
-count_plot(md_tmf, 'medium', md_exp, 40, c('V05', 'V07', 'V22', 'V24'), .25)
 
-## Count, 7% threshold, w/ rolling average
-count_plot(md_tmf, 'medium', md_exp, 40, c('V05', 'V07', 'V22', 'V24'), .07)
-## Count, 25% threshold, w/ rolling average
-count_plot(md_tmf, 'medium', md_exp, 40, c('V05', 'V07', 'V22', 'V24'), .25)
-## Count, 50% threshold, w/ rolling average
-count_plot(md_tmf, 'medium', md_exp, 40, c('V05', 'V07', 'V22', 'V24'), .50)
-## Count, 80% threshold, w/ rolling average
-count_plot(md_tmf, 'medium', md_exp, 40, c('V05', 'V07', 'V22', 'V24'), .80)
+## Individual model plots ----
+md_tmf = read_rds(model_files['md'])
+md_exp = read_exp(exp_files['md'])
 
-ggsave(here(out_dir, '08_presentation.png'), 
+## Similar trends for low, medium, and high threshold
+count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V05'), .25)
+plot_50 = count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V05'), .50)
+plot_50
+count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V05'), .80)
+
+## Direct labelled version of plot_50
+jr_labels = tribble(
+    ~ topic, ~ container.title, ~ label, ~ date, ~ y,
+    'V05', 'Personality and Individual Differences', 'Person. & Indiv. Diff.', 1970, 10,
+    'V05', 'Intelligence', 'Intelligence', 1973, 7,
+    'V07', 'Mankind Quarterly', 'Mankind Quarterly', 1995, 30, 
+    'V24', 'Psychological Reports', 'Psychological Reports', 1997, 8
+)
+
+plot_50 +
+    geom_label(aes(x = date, y = y, label = label, 
+                   fill = container.title), 
+               color = 'black', size = 3,
+               data = jr_labels)
+
+ggsave(here(out_dir, '08_focal_topics.png'), 
        height = 5, width = 9, bg = 'white')
- 
+
+## "Error in `[.data.frame`(d, sc$aesthetics) : undefined columns selected"
+# plotly::ggplotly(p = plot_50)
+
+
+## Big grid ----
+big_grid = function(model_file, exp_file, name, plot = TRUE) {
+    model = read_rds(model_file)
+    exp = read_exp(exp_file)
+    
+    ## Identify topics of interest: 
+    ## race and/or intelligence keywords in top 10 terms
+    topics = tidy_all(model) |> 
+        filter(k > 5) |> 
+        group_by(k, topic) |> 
+        top_n(10, beta) |> 
+        arrange(k, topic, beta) |> 
+        summarize(race = any(str_detect(token, 'race|whites|blacks')), 
+                  intelligence = any(str_detect(token, 'intelligence|iq') & 
+                                         token != 'emotional_intelligence')) |> 
+        ungroup() |> 
+        filter(race|intelligence) |> 
+        mutate(type = case_when(race & !intelligence ~ 'race', 
+                                !race & intelligence ~ 'intelligence',
+                                race & intelligence ~ 'both', 
+                                TRUE ~ NA_character_),
+               type = fct_relevel(type, 'race', 'both', 'intelligence'))
+    
+    ## Create dataframes and 5-year running averages
+    dataf = topics |> 
+        group_by(k, type) |> 
+        summarize(topics = list(topic)) |> 
+        rowwise() |> 
+        mutate(dataf = list(count_plot(model, name, exp, 
+                                       k, topics, 
+                                       threshold = .5,
+                                       plot = FALSE))) |> 
+        ungroup() |> 
+        hoist(.col = 'dataf', 
+              'topic', 'container.title', 'year', 'gamma', 'gamma_sm') |> 
+        select(-dataf, -topics) |> 
+        unnest_longer(c(topic, container.title, year, gamma, gamma_sm))
+    
+    if (!plot) {
+        return(dataf)
+    }
+    ggplot(dataf, 
+           aes(year, color = container.title, group = container.title)) +
+        facet_grid2(rows = vars(k),
+                    cols = vars(type, topic),
+                    scales = 'free', independent = 'all',
+                    switch = 'y',
+                    strip = strip_nested(by_layer_x = TRUE, 
+                                         background_x = list(element_rect(linewidth = 1), NULL), 
+                                         background_y = list(element_rect(linewidth = 1))),
+                    drop = TRUE) +
+        ## The rest is just copy-pasted from count_plot()
+        geom_line(aes(y = gamma_sm), linewidth = 1.25, color = 'black') +
+        geom_line(aes(y = gamma), alpha = .5) +
+        geom_line(aes(y = gamma_sm), linewidth = 1) +
+        scale_x_continuous(breaks = scales::pretty_breaks(n = 3)) +
+        scale_y_continuous(breaks = scales::pretty_breaks(n = 3), 
+                           name = 'article count') +
+        scale_color_viridis_d(option = 'D',
+                              name = '') +
+        theme_minimal() +
+        theme(legend.position = 'bottom') +
+        labs(caption = glue('{name} vocabulary'))
+}
+# foo = big_grid(model_files['sm'], exp_files['sm'], 'small')
+# foo
+# ggsave(here(out_dir, '08_grid_test.pdf'), height = 10, width = 14)
+list(list('sm', 'small', 10), 
+     list('md', 'medium', 13), 
+     list('lg', 'large', 18)) |> 
+    walk(~ {big_grid(model_files[.x[[1]]], exp_files[.x[[1]]], .x[[2]]) %>% 
+             ggsave(here(out_dir, glue('08_grid_{.x[[1]]}.pdf')), 
+                    height = 10, width = .x[[3]]*1.4, plot = .)}, 
+         .progress = TRUE)
+
+    
