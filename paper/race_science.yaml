@@ -89,6 +89,41 @@ references:
   title-short: The Retreat of Scientific Racism
   type: book
 
+- id: BatesonCorpseWearisomeDebate2002
+  abstract: >-
+    <p>**The Blank Slate** The Modern Denial of Human Nature. Steven Pinker.
+    Viking, New York, 2002. 527 pp. $27.95. ISBN 0-670-03151-8.</p><p>Pinker
+    describes his latest book for a popular audience as an argument for a "truly
+    honest science of human nature, one that would take into account both
+    instinct and choice as well as the deep inherent structures of the
+    mind."</p>
+  accessed:
+    - year: 2020
+      month: 12
+      day: 17
+  author:
+    - family: Bateson
+      given: Patrick
+  citation-key: BatesonCorpseWearisomeDebate2002
+  container-title: Science
+  DOI: 10.1126/science.1075989
+  ISSN: 0036-8075, 1095-9203
+  issue: '5590'
+  issued:
+    - year: 2002
+      month: 9
+      day: 27
+  language: en
+  license: © 2002 American Association for the Advancement of Science
+  page: 2212-2213
+  publisher: American Association for the Advancement of Science
+  section: Books
+  source: science.sciencemag.org
+  title: The Corpse of a Wearisome Debate
+  type: article-journal
+  URL: https://science.sciencemag.org/content/297/5590/2212.1
+  volume: '297'
+
 - id: BeagleholeRaceQuestion1950
   accessed:
     - year: 2022

@@ -112,7 +112,7 @@ We identified 16 researchers who had received funding from Pioneer; 14 of these 
 | | | |
 |:-----|-----:|:----|
 | Thomas J. Bouchard, Jr. | psychology | |
-| Brunetto Chiarelli | anthropology? | |
+| Brunetto Chiarelli | anthropology | |
 | Hans Eysenck | psychology | |
 | Robert Gordon | sociology | |
 | Linda Gottfredson | psychology | |
@@ -130,22 +130,41 @@ We identified 16 researchers who had received funding from Pioneer; 14 of these 
 
 Table: Pioneer-funded researchers.  Either identified in *[cite]* or named on Pioneer's website, along with identified discipline and WoS author search result counts. 
 
-![Journals publishing 6 or more Pioneer-funded researchers, WoS author search results *[date coverage]*](img/wos_results.png){width="4.76in" height="2.6in"}
+![Journals publishing 6 or more Pioneer-funded researchers, Web of Science author search results *[date coverage]*](img/wos_results.png){width="4.76in" height="2.6in"}
 
-Figure *[fig]* shows that, while MQ is on this list of "Pioneer-publishing" journals, a number of mainstream journals are more prominent: *Personality and Individual Differences* (PID), *Intelligence* (I), *Behavior Genetics* (BG), and *Psychological Reports* (PR).  In addition, only psychologist Richard Lynn appears to have published heavily in MQ.  Lynn has been an assistant editor of MQ since 1979 *[check this: https://rationalwiki.org/wiki/Mankind_Quarterly]* and president of PF since the death of psychologist J. Phillippe Rushton in 2012 *[cite]*.  By contrast, a number of Pioneer-funded researchers have published in PID, I, and to a lesser degree BG: Bouchard, Eysenck, Jensen, Rushton, Vernon, and also Lynn.  
+Figure *[fig]* shows that, while MQ is among the "Pioneer-publishing" journals, a number of mainstream journals are more prominent: *Personality and Individual Differences* (PID), *Intelligence* (I), *Behavior Genetics* (BG), and *Psychological Reports* (PR).  In addition, only psychologist Richard Lynn appears to have published heavily in MQ.  Lynn has been an assistant editor of MQ since 1979 *[check this: https://rationalwiki.org/wiki/Mankind_Quarterly]* and president of PF since the death of psychologist J. Phillippe Rushton in 2012 *[cite]*.  By contrast, a number of Pioneer-funded researchers have published in PID, I, and to a lesser degree BG: Bouchard, Eysenck, Jensen, Rushton, Vernon, and also Lynn.  
 
-PID was founded in 1980, with Eysenck as editor-in-chief and an editorial board including Jensen and Lynn. In the inaugural editorial, Eysenck identified "studies of the genetic determinants of individual differences in the areas of personality and intelligence" as one of the journal's eight major areas of interest.  Eysenck remained editor-in-chief until his death in 1997.  In 2005 the editorial board still included Jensen and Lynn. PID was first published by Pergamon Press, a mainstream academic press, and today is published by Elsevier.  According to the Scimago Journal Rankings, based on Scopus citation data, in 2022 PID had an H-index of 193, #29 in Psychology, and a citation index of 5.27, #24 in Psychology.  
+*Personality and Individual Differences* (PID) was founded in 1980, with Eysenck as editor-in-chief and an editorial board including Jensen and Lynn. In the inaugural editorial, Eysenck identified "studies of the genetic determinants of individual differences in the areas of personality and intelligence" as one of the journal's eight major areas of interest.  Eysenck remained editor-in-chief until his death in 1997.  In 2005 the editorial board still included Jensen and Lynn. PID was first published by Pergamon Press, a mainstream academic press, and today is published by Elsevier.  According to the Scimago Journal Rankings, based on Scopus citation data, in 2022 PID had an H-index of 193, #29 in Psychology (Miscellaneous), and a 2-year citation index (impact factor) of 5.27, #24 in Psychology (Miscellaneous).  
 
-*[similar para on I]*
-
-*[segue to topic model analysis]*
+*Intelligence* (I) was founded in 1977, with psychologist Douglas Detterman as editor-in-chief from the founding until 2016.  Lloyd Humphreys was on the editorial board starting from 1977; by 1990 he had been joined by Jensen and Philip Vernon.  Richard Lynn joined the editorial board sometime between 1998 and 2002.  (Archive copies of the I editorial board page are not available from the journal's website from 1999 through 2001.)  I has been criticized for including Lynn and Gerhard Meisenberg on its editorial board until July-August 2018 \cite{SainiSuperiorReturnRace2019}.  Meisenberg is also connected with the Pioneer Fund *[director?]*, and was editor-in-chief of MQ in 2015-18 *[check these]*.  I is published by Elsevier.  According to the Scimago Journal Rankings, based on Scopus citation data, in 2022 I had an H-index of 103, #32 in Experimental and Cognitive Psychology, and a 2-year citation index (impact factor) of 3.05, #31 in Experimental and Cognitive Psychology.  
 
 
 # Topic model analysis
 
+The fact that Pioneer-funded researchers published heavily in two mainstream psychology journals does not tell us anything about the content of their publications or the findings of their research.  We assembled a full-text corpus of articles published in MQ, PID, I, BG, PR, and Behavior and Brain Sciences (BBS) between 1960-2010 and used topic modeling to identify topics discussing race, intelligence, and both.  *[tables: Ns for each article, topic model parameters; figs: articles by pub over time, topic heatmaps, Silge plots, race-intelligence-both grids]*
+
+We focus here on three topics identified in one of the 24 fitted topic models *[composite fig: topics over time + Silge plots]*.  In this model, topic 07 is strongly associated with MQ:  MQ published dozens of articles in this topic each year, and no other journal ever published more than a handful, with most other journals publishing none in a given year.  The Silge plot contains racial terms (`races`, `whites` and potentially `europe`, `africa`, and `india`) as well as `book`, likely reflecting the fact that MQ published a number of book reviews while the psychology journals did not. 
+
+*[switch 05 with 22; or add together 05, 22, 35, 38?]*
+Topic 05 is strongly associated with I and PID in the same way.  The Silge plot contains the names of two Pioneer-funded researchers, `jensen` and `vernon`, but no racial terms.  (Three other topics only associated with mainstream intelligence journals and terms were also identified by this topic model. Topic 22 )  The Silge plot for topic 24, by contrast, suggests a topic focused squarely on race and intelligence, with multiple racial terms (`whites`, `blacks`, `racial_differences`, `races`) and the names of three prominent Pioneer-funded researchers, `jensen`, `lynn`, and `rushton`.  Qualitative review of the top 121 papers in this topic (those with $gamma > 0.97$) confirmed that this topic has high precision for race science discourse, with *[x% (n/121)]* classified as race science discourse by the authors.  
+
+In a given year, most papers in topic 24 are published in mainstream journals, not MQ.  Jensen's "How Much Can We Boost IQ and Scholastic Achievement?" \cite{JensenHowMuchCan1969} is published in 1969 in Harvard Educational Review (not included in this study), and the time series suggests an increase in articles in topic 24 in both PS and MQ (the only two journals in our corpus that were active at the time).  MQ shows another sharp increase in the late 1970s, around the time Lynn was brought on as assistant editor, *[confirming the claim that Lynn shifted MQ's focus to intelligence research]*.  PID publishes multiple papers in topic 24 almost immediately after it is founded, with I showing a more gradual increase between the mid-1970s and mid-1990s.  
+
+Notably, BG published very few articles in this topic.  Outside of the field itself, behavior genetics is strongly associated with race science by both other academics and the general public *[cites/ev]*.  Panofsky \cite{PanofskyMisbehavingScienceControversy2014} argues that, prior to Jensen's 1969 paper, behavior genetics emphasized the study of non-human animals and intentionally avoided associations with eugenics and public controversy more generally.  In response to Jensen, critics such as Lewontin offered broad critiques of behavior genetics as such, and behavior geneticists in turn adopted a radical conception of academic freedom (without any sense of responsibility for the social implications of academic research) and a siege or wartime mentality, as demonstrated by Sandra Scarr's 1986 presidential address to the Behavior Genetics Association (BGA) \cite{ScarrThreeCheersBehavior1987}.  Scarr's address coincided with the period between 1970-1990 when BG published articles in topic 24.  
+
+However, Glayde Whitney's 1995 BGA presidential address was published in MQ rather than BG.  According to Whitney, BG's editor refused to publish the address and the BGA Executive Committee (except for Whitney himself) voted to "issue an official statement of denouncement" of the address; though we were unable to find any such a statement, and Panofsky reports that "nothing official was done to Whitney."  In his address, Whitney criticized "the Marxist-Lysenkoist denial of genetics"; quoted Peter Brimelow — a white nationalist and later founder of the racist and xenophobic website VDARE — defining "racist" as "anyone who is winning an argument with a liberal"; and proposed as a "reasonable scientific hypothesis" that differences in murder rates between countries and cities was caused by racial genetic differences in intelligence, empathy, aggression, and impulsivity.  
+
+The topic model analysis and the case of Whitney's address suggest that, by the 1990s, behavior genetics had begun to distance itself from race science.  *[https://link.springer.com/search?use-oscar-shared-search=true&sortBy=newestFirst&dateTo=2010&sortOrder=newestFirst&facet-journal-id=10519&content-type=Article&query=race+intelligence&date=custom&dateFrom=&date-facet-mode=between&facet-start-year=1972&previous-start-year=1972&facet-end-year=2010&previous-end-year=2023]*  
+
+A disciplinary history of behavior genetics published in 2010 \cite{McGueEndBehavioralGenetics2010} acknowledges the historical association with eugenics, but does not mention Jensen and other race science controversies since World War II. Instead postwar behavior genetics is portrayed as an endeavor to counterbalance the hegemony of the "Blank Slate," the supposedly widespread view that genetic differences play no role in explaining individual differences \cite{BatesonCorpseWearisomeDebate2002}. 
+
+These findings for *Behavior Genetics* complicate at least the popular association of behavior genetics with race science, if not Panofsky's more nuanced analysis.  
 
 
 
+
+
+*[for discussion: the possibility for white supremacist appropriation, ie, race science done by scientists who are not themselves scientific racists: CarlsonQuantifyingContextualizingImpact2020; probably some reviews of Paige Harden; O'Connor and Weatherall]*
 
 
 *[max ~50 refs]*
