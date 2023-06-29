@@ -35,6 +35,14 @@ meta_df = open_dataset(here('data', '01_metadata')) |>
 source(here('R', 'phrases.R'))
 phrases_ar = phrases()
 
+## Build article URLs; used by spreadsheet
+make_url = function(article_id) {
+    start = str_trunc(article_id, 4, side = 'right', ellipsis = '')
+    if_else(start == '10.1',
+            str_c('https://dx.doi.org/', article_id), 
+            str_c('https://www.unz.com/print/MankindQuarterly/Contents/?Period=', start))
+}
+
 ## Workhorse function, generates visualization for a 
 ## single model (vocab x k)
 process_k = function(k, 
@@ -82,10 +90,12 @@ process_k = function(k,
             mutate(authors = map_chr(authors, 
                                      ~ {. |> 
                                              pull(author) |> 
-                                             str_c(collapse = '; ')})) |> 
+                                             str_c(collapse = '; ')}), 
+                   url = make_url(article_id)) |> 
             select(topic, gamma, article_id, 
                    container.title, year, 
-                   title, phrases, authors) |> 
+                   authors, 
+                   title, phrases, url) |> 
             group_split(topic) |> 
             walk2(spreadsheet, 
                   ~ write_xlsx(.x, 
