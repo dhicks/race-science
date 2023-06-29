@@ -173,32 +173,54 @@ md_tmf = read_rds(model_files['md'])
 md_exp = read_exp(exp_files['md'])
 
 ## Similar trends for low, medium, and high threshold
-count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V05'), .25)
-plot_50 = count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V05'), .50)
+count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V22'), .25)
+plot_50 = count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V22'), .50)
 plot_50
-count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V05'), .80)
+count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V22'), .80)
 
 ## Direct labelled version of plot_50
 jr_labels = tribble(
     ~ topic, ~ container.title, ~ label, ~ date, ~ y,
-    'V05', 'Personality and Individual Differences', 'Person. & Indiv. Diff.', 1970, 10,
-    'V05', 'Intelligence', 'Intelligence', 1973, 7,
+    'V22', 'Personality and Individual Differences', 'Person. & Indiv. Diff.', 1985, 13,
+    'V22', 'Intelligence', 'Intelligence', 1985, 10,
     'V07', 'Mankind Quarterly', 'Mankind Quarterly', 1995, 30, 
     'V24', 'Psychological Reports', 'Psychological Reports', 1997, 8
 )
 
-plot_50 +
+time_gg = plot_50 +
     geom_label(aes(x = date, y = y, label = label, 
                    fill = container.title), 
                color = 'black', size = 3,
                data = jr_labels)
+time_gg
+
+# ggsave(here(out_dir, '08_focal_topics.png'), 
+#        plot = time_gg,
+#        height = 5, width = 9, bg = 'white')
+
+silge_gg = tidy(md_tmf, matrix = 'beta', k = 40) |> 
+    filter(topic %in% c('V07', 'V22', 'V24')) |> 
+    group_by(topic) |> 
+    top_n(15, beta) |> 
+    arrange(topic, desc(beta)) |> 
+    mutate(token = reorder_within(token, beta, topic)) |> 
+    ggplot(aes(token, beta)) +
+    geom_point() +
+    geom_linerange(aes(ymax = beta), ymin = 0) +
+    coord_flip() +
+    scale_x_reordered() + 
+    labs(y = 'β') +
+    facet_wrap(vars(topic), scales = 'free')
+silge_gg
+
+# silge_gg / time_gg +
+#     plot_layout()
+
+cowplot::plot_grid(silge_gg, time_gg, ncol = 1, align = 'v', 
+                   rel_heights = c(.7, 1))
 
 ggsave(here(out_dir, '08_focal_topics.png'), 
-       height = 5, width = 9, bg = 'white')
-
-## "Error in `[.data.frame`(d, sc$aesthetics) : undefined columns selected"
-# plotly::ggplotly(p = plot_50)
-
+       height = 3*3, width = 4*3, bg = 'white')
 
 ## Big grid ----
 big_grid = function(model_file, exp_file, name, plot = TRUE) {

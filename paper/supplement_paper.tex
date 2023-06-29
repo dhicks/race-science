@@ -237,8 +237,8 @@ Quarterly} documents.
 
 All together, \emph{{[}corpus summary, total and by journal; table{]}}
 
-\hypertarget{data-preparation}{%
-\subsection*{Data preparation}\label{data-preparation}}
+\hypertarget{text-preparation}{%
+\subsection*{Text preparation}\label{text-preparation}}
 
 After document retrieval and text extraction, we pre-processed the text
 using the \texttt{spaCy} NLP (natural language processing) Python
@@ -272,8 +272,27 @@ therefore more efficient.
 After noun phrase extraction, the corpus comprised \emph{{[}tokens{]}}
 of \emph{{[}distinct noun phrases{]}}.
 
+\hypertarget{data-and-code-availability}{%
+\subsubsection*{Data and code
+availability}\label{data-and-code-availability}}
+
+Document metadata retrieved from Crossref does not appear to be covered
+by any copyright or other intellectual property restrictions. However,
+due to copyright restrictions, we are unable to make document fulltext
+or Web of Science search results publicly available. Code for the corpus
+assembly and text preparation steps described above is available by
+request.
+
+The public analysis repository,
+\url{https://github.com/dhicks/race-science} \emph{{[}DOI{]}}, includes
+document metadata and documentwise counts of NLP-extracted noun phrases
+(``document-term matrices''), along with code to reproduce the analysis
+of the following sections. \emph{{[}repo readme: requires R 4.1.2; rig
+(\url{https://github.com/r-lib/rig/}) for managing multiple R
+installations{]}}
+
 \hypertarget{vocabulary-selection}{%
-\subsubsection*{Vocabulary selection}\label{vocabulary-selection}}
+\subsection*{Vocabulary selection}\label{vocabulary-selection}}
 
 We took an information-theoretic approach to vocabulary selection.
 Consider a game in which I draw a document from the corpus, then a
@@ -359,14 +378,15 @@ phrases) from each topic in each model, with \(n\) generally ranging
 between 5 and 15 as we explored the models. \emph{{[}tables + Silge
 plots{]}}
 
-We also adapted the ``discursive space'' analysis proposed by
-\emph{{[}Hicks 2021?{]}}. This analysis combines the Hellinger distance
-between topic-document distributions --- capturing how ``far apart'' two
-documents are --- with dimensional reduction techniques used for data
-visualization. This produces a two-dimensional visualization of
-individual documents, arranged so that documents with similar topic
-distributions are visually clustered and visually distinct from
-documents with different topic distributions. \emph{{[}availability{]}}
+\emph{{[}drop{]}} We also adapted the ``discursive space'' analysis
+proposed by \emph{{[}Hicks 2021?{]}}. This analysis combines the
+Hellinger distance between topic-document distributions --- capturing
+how ``far apart'' two documents are --- with dimensional reduction
+techniques used for data visualization. This produces a two-dimensional
+visualization of individual documents, arranged so that documents with
+similar topic distributions are visually clustered and visually distinct
+from documents with different topic distributions.
+\emph{{[}availability{]}}
 
 Specifically, for each fitted topic model, we extracted topic-document
 distributions for each document and calculated pairwise Hellinger
@@ -395,6 +415,8 @@ highly-weighted terms for the given document.
 \hypertarget{topic-quality-assessment}{%
 \subsubsection*{Topic quality
 assessment}\label{topic-quality-assessment}}
+
+\emph{{[}rewrite{]}}
 
 We next conducted a topic quality check of topic 19 from the medium
 vocabulary, \(k=30\) model. Keyword and inspection of the UMAP

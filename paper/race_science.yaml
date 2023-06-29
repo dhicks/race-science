@@ -572,6 +572,39 @@ references:
   URL: https://onlinelibrary.wiley.com/doi/abs/10.1111/evo.14449
   volume: '76'
 
+- id: DeaEvolvingSocialPurpose2021
+  abstract: >-
+    , ABSTRACT:, In the face of the increasing substitution of free speech for
+    academic freedom, I argue for the distinctiveness and irreplaceability of
+    the latter. Academic freedom has evolved alongside universities in order to
+    support the important social purpose universities serve. Having limned this
+    evolution, I compare academic freedom and free speech. This comparison
+    reveals freedom of expression to be an individual freedom, and academic
+    freedom to be a group-differentiated freedom with a social purpose. I argue
+    that the social purpose of academic freedom behooves an inclusive approach
+    to group differentiation.
+  accessed:
+    - year: 2023
+      month: 6
+      day: 29
+  author:
+    - family: Dea
+      given: Shannon
+  citation-key: DeaEvolvingSocialPurpose2021
+  container-title: Kennedy Institute of Ethics Journal
+  DOI: 10.1353/ken.2021.0012
+  ISSN: 1086-3249
+  issue: '2'
+  issued:
+    - year: 2021
+  page: 199-222
+  publisher: Johns Hopkins University Press
+  source: Project MUSE
+  title: The Evolving Social Purpose of Academic Freedom
+  type: article-journal
+  URL: https://muse.jhu.edu/pub/1/article/794831
+  volume: '31'
+
 - id: DownesEarlyHistoryHeritability2021
   abstract: >-
     Fisher’s 1918 paper accomplished two distinct goals: unifying discrete
@@ -1138,6 +1171,35 @@ references:
   URL: https://doi.org/10.1177/0959354319883943
   volume: '30'
 
+- id: HennWhyDNANo2021
+  abstract: A review of Kathryn Paige Harden’s “The Genetic Lottery.”
+  accessed:
+    - year: 2021
+      month: 9
+      day: 22
+  author:
+    - family: Henn
+      given: Brenna M.
+    - family: Merchant
+      given: Emily Klancher
+    - family: O’Connor
+      given: Anne
+    - family: Rulli
+      given: Tina
+  citation-key: HennWhyDNANo2021
+  container-title: Los Angeles Review of Books
+  issued:
+    - year: 2021
+      month: 9
+      day: 21
+  title: >-
+    Why DNA Is No Key to Social Equality: On Kathryn Paige Harden’s “The Genetic
+    Lottery”
+  title-short: Why DNA Is No Key to Social Equality
+  type: webpage
+  URL: >-
+    https://www.lareviewofbooks.org/article/why-dna-is-no-key-to-social-equality-on-kathryn-paige-hardens-the-genetic-lottery/
+
 - id: HumanGeneticistsCurb
   abstract: >-
     Field still struggles with how to accurately describe populations, study
@@ -1532,6 +1594,58 @@ references:
   title: Joy Brennan on Twitter
   type: webpage
   URL: https://twitter.com/joycbrennan/status/1492197126415261700
+
+- id: KaplanGaltonQuincunxProbabilistic2021
+  abstract: >-
+    In what sense are associations between particular markers and complex
+    behaviors made by genome-wide association studies (GWAS) and related
+    techniques discoveries of, or entries into the study of, the causes of those
+    behaviors? In this paper, we argue that when applied to individuals, the
+    kinds of probabilistic ‘causes’ of complex traits that GWAS-style studies
+    can point towards do not provide the kind of causal information that is
+    useful for generating explanations; they do not, in other words, point
+    towards useful explanations of why particular individuals have the traits
+    that they do. We develop an analogy centered around Galton's “Quincunx”
+    machine; while each pin might be associated with outcomes of a certain sort,
+    in any particular trial, that pin might be entirely bypassed even if the
+    ball eventually comes to rest in the box most strongly associated with that
+    pin. Indeed, in any particular trial, the actual outcome of a ball hitting a
+    pin might be the opposite of what is usually expected. While we might find
+    particular pins associated with outcomes in the aggregate, these
+    associations will not provide causally relevant information for
+    understanding individual outcomes. In a similar way, the complexities of
+    development likely render impossible any moves from population-level
+    statistical associations between genetic markers and complex behaviors to an
+    understanding of the causal processes by which individuals come to have the
+    traits that they in fact have.
+  accessed:
+    - year: 2021
+      month: 5
+      day: 29
+  author:
+    - family: Kaplan
+      given: Jonathan Michael
+    - family: Turkheimer
+      given: Eric
+  citation-key: KaplanGaltonQuincunxProbabilistic2021
+  container-title: Studies in History and Philosophy of Science Part A
+  container-title-short: Studies in History and Philosophy of Science Part A
+  DOI: 10.1016/j.shpsa.2021.04.001
+  ISSN: 0039-3681
+  issued:
+    - year: 2021
+      month: 8
+      day: 1
+  language: en
+  page: 60-69
+  source: ScienceDirect
+  title: >-
+    Galton's Quincunx: Probabilistic causation in developmental behavior
+    genetics
+  title-short: Galton's Quincunx
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0039368121000455
+  volume: '88'
 
 - id: KaplanGouldMortonRedux2015
   abstract: "Lewis et\_al. (2011) attempted to restore the reputation of Samuel George Morton, a 19th century physician who reported on the skull sizes of different folk-races. Whereas Gould (1978) claimed that Morton's conclusions were invalid because they reflected unconscious bias, Lewis et\_al. alleged that Morton's findings were, in fact, supported, and Gould's analysis biased. We take strong exception to Lewis et\_al.’s thesis that Morton was “right.” We maintain that Gould was right to reject Morton's analysis as inappropriate and misleading, but wrong to believe that a more appropriate analysis was available. Lewis et\_al. fail to recognize that there is, given the dataset available, no appropriate way to answer any of the plausibly interesting questions about the “populations” in question (which in many cases are not populations in any biologically meaningful sense). We challenge the premise shared by both Gould and Lewis et\_al. that Morton's confused data can be used to draw any meaningful conclusions. This, we argue, reveals the importance of properly focusing on the questions asked, rather than more narrowly on the data gathered."
@@ -2049,6 +2163,49 @@ references:
   URL: https://www.sciencedirect.com/science/article/pii/S0039368122000632
   volume: '93'
 
+- id: McGueEndBehavioralGenetics2010
+  abstract: >-
+    Although genetic models were in the ascendance within psychology during the
+    early 20th century, the association of early behavioral genetic research
+    with the eugenics movement served to discredit the field in the eyes of
+    many. Twin and adoption studies throughout the latter half of the 20th
+    century helped to reestablish the importance of behavioral genetic models
+    and set the stage for the current focus of the field on developing and
+    testing models of gene-environment interplay. Research findings on
+    developmental behavioral genetic research, gene-environment interaction, and
+    the use of behavioral genetic models to test causal hypotheses are used to
+    highlight the contributions of contemporary behavioral genetic research to
+    psychological research. It is argued that future efforts to investigate
+    models of gene-environment interplay will depend heavily on the field’s
+    ability to identify the specific genetic variants that contribute to
+    individual differences in behavior. The anticipated yield from genome-wide
+    association studies gives much reason to be optimistic about the future
+    vitality of behavior genetics.
+  accessed:
+    - year: 2023
+      month: 6
+      day: 28
+  author:
+    - family: McGue
+      given: Matt
+  citation-key: McGueEndBehavioralGenetics2010
+  container-title: Behavior Genetics
+  container-title-short: Behav Genet
+  DOI: 10.1007/s10519-010-9354-0
+  ISSN: 1573-3297
+  issue: '3'
+  issued:
+    - year: 2010
+      month: 5
+      day: 1
+  language: en
+  page: 284-296
+  source: Springer Link
+  title: The End of Behavioral Genetics?
+  type: article-journal
+  URL: https://doi.org/10.1007/s10519-010-9354-0
+  volume: '40'
+
 - id: Md20852AmericanSocietyHuman2020
   abstract: >-
     Realizing the benefits of human genetics and genomics research for people
@@ -2087,6 +2244,62 @@ references:
   title: Coming of Age in Samoa
   type: book
 
+- id: MehlerBeyondismRaymondCattell1997
+  abstract: >-
+    A significant confusion has arisen out of the mass of work done on the
+    history of eugenics in the last two decades. Early scholars of the subject
+    treated eugenics as a marginalized or obsolete movement of the radical
+    right. Subsequent research has shown that eugenic ideas were adopted in
+    diverse national settings by very different groups, including — among others
+    — liberals, communists and Catholics, as well as radical rightists. This
+    complexity is sometimes taken to mean that eugenics has no special
+    ideological associations, that it is historically and potentially a beast of
+    a thousand heads. It is not. Although people of varied ideological
+    commitments have been attracted to eugenics, ideologues of the radical
+    right, and above all interwar fascists, have been uniquely and centrally
+    involved in its development. Fascism and the radical right are also complex
+    entities, but for all the heterogeneity of both eugenics and fascism, the
+    special historical relationship between the two cannot be ignored. This
+    relationship is exemplified in the work of the influential psychologist,
+    Raymond B. Cattell. Cattell was an early supporter of German national
+    socialism and his work should be understood in the context of interwar
+    fascism. The new religious movement that he founded, ‘Beyondism’, is a
+    neo-fascist contrivance. Cattell now promulgates ideas that he formulated
+    within a demimonde of radical eugenists and neo-fascists that includes such
+    associates as Revilo Oliver, Roger Pearson, Wilmot Robertson and Robert K.
+    Graham. These ideas and Cattell's role in the history of eugenics deserve
+    deeper analysis than they have hitherto received. Far from being of merely
+    antiquarian interest, his work currently encourages the propagation of
+    radical eugenist ideology. It is unconscionable for scholars to permit these
+    ideas to go unchallenged, and indeed honored and emulated by a new
+    generation of ideologues and academicians whose work helps to dignify the
+    most destructive political ideas of the twentieth century.
+  accessed:
+    - year: 2023
+      month: 6
+      day: 29
+  author:
+    - family: Mehler
+      given: Barry
+  citation-key: MehlerBeyondismRaymondCattell1997
+  container-title: Genetica
+  container-title-short: Genetica
+  DOI: 10.1007/BF02259519
+  ISSN: 1573-6857
+  issue: '2'
+  issued:
+    - year: 1997
+      month: 6
+      day: 1
+  language: en
+  page: 153-163
+  source: Springer Link
+  title: 'Beyondism: Raymond B. Cattell and the new eugenics'
+  title-short: Beyondism
+  type: article-journal
+  URL: https://doi.org/10.1007/BF02259519
+  volume: '99'
+
 - id: MehlerFoundationFascismNew1989
   abstract: >-
     J. Philippe Rushton recently gained widespread publicity in North America
@@ -2120,6 +2333,87 @@ references:
   URL: https://doi.org/10.1080/0031322X.1989.9970026
   volume: '23'
 
+- id: MeyerWrestlingSocialBehavioral2023
+  abstract: >-
+    In this consensus report by a diverse group of academics who conduct and/or
+    are concerned about social and behavioral genomics (SBG) research, the
+    authors recount the often-ugly history of scientific attempts to understand
+    the genetic contributions to human behaviors and social outcomes. They then
+    describe what the current science—including genomewide association studies
+    and polygenic indexes—can and cannot tell us, as well as its risks and
+    potential benefits. They conclude with a discussion of responsible behavior
+    in the context of SBG research. SBG research that compares individuals
+    within a group according to a “sensitive” phenotype requires extra attention
+    to responsible conduct and to responsible communication about the research
+    and its findings. SBG research (1) on sensitive phenotypes that (2) compares
+    two or more groups defined by (a) race, (b) ethnicity, or (c) genetic
+    ancestry (where genetic ancestry could easily be misunderstood as race or
+    ethnicity) requires a compelling justification to be conducted, funded, or
+    published. All authors agree that this justification at least requires a
+    convincing argument that a study's design could yield scientifically valid
+    results; some authors would additionally require the study to have a
+    socially favorable risk-benefit profile.
+  accessed:
+    - year: 2023
+      month: 5
+      day: 1
+  author:
+    - family: Meyer
+      given: Michelle N.
+    - family: Appelbaum
+      given: Paul S.
+    - family: Benjamin
+      given: Daniel J.
+    - family: Callier
+      given: Shawneequa L.
+    - family: Comfort
+      given: Nathaniel
+    - family: Conley
+      given: Dalton
+    - family: Freese
+      given: Jeremy
+    - family: Garrison
+      given: Nanibaa' A.
+    - family: Hammonds
+      given: Evelynn M.
+    - family: Harden
+      given: K. Paige
+    - family: Lee
+      given: Sandra Soo-Jin
+    - family: Martin
+      given: Alicia R.
+    - family: Martschenko
+      given: Daphne Oluwaseun
+    - family: Neale
+      given: Benjamin M.
+    - family: Palmer
+      given: Rohan H. C.
+    - family: Tabery
+      given: James
+    - family: Turkheimer
+      given: Eric
+    - family: Turley
+      given: Patrick
+    - family: Parens
+      given: Erik
+  citation-key: MeyerWrestlingSocialBehavioral2023
+  container-title: Hastings Center Report
+  DOI: 10.1002/hast.1477
+  ISSN: 1552-146X
+  issue: S1
+  issued:
+    - year: 2023
+  language: en
+  page: S2-S49
+  source: Wiley Online Library
+  title: >-
+    Wrestling with Social and Behavioral Genomics: Risks, Potential Benefits,
+    and Ethical Responsibility
+  title-short: Wrestling with Social and Behavioral Genomics
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/hast.1477
+  volume: '53'
+
 - id: MillerPioneerFundBankrolling1994
   accessed:
     - year: 2021
@@ -2142,6 +2436,19 @@ references:
   title-short: The Pioneer Fund
   type: article-journal
   URL: https://www.jstor.org/stable/2962466
+
+- id: MillLiberty1862
+  author:
+    - family: Mill
+      given: John Start
+  citation-key: MillLiberty1862
+  issued:
+    - year: 1862
+  number-of-pages: '68'
+  publisher: John W. Parker and Son
+  title: On Liberty
+  type: book
+  URL: http://books.google.com/books?id=9xARAAAAYAAJ
 
 - id: NathanCofnasProblemIsnThat2021
   accessed:
@@ -2974,6 +3281,33 @@ references:
   type: article-magazine
   URL: https://slate.com/technology/2007/11/liberal-creationism.html
 
+- id: ScarrThreeCheersBehavior1987
+  accessed:
+    - year: 2023
+      month: 6
+      day: 28
+  author:
+    - family: Scarr
+      given: Sandra
+  citation-key: ScarrThreeCheersBehavior1987
+  container-title: Behavior Genetics
+  container-title-short: Behav Genet
+  DOI: 10.1007/BF01065502
+  ISSN: 1573-3297
+  issue: '3'
+  issued:
+    - year: 1987
+      month: 5
+      day: 1
+  language: en
+  page: 219-228
+  source: Springer Link
+  title: 'Three cheers for behavior genetics: Winning the war and losing our identity'
+  title-short: Three cheers for behavior genetics
+  type: article-journal
+  URL: https://doi.org/10.1007/BF01065502
+  volume: '17'
+
 - id: SchafferScientificRacismAgain2007
   abstract: >-
     Biologist and botanist Reginald Gates is mainly remembered as a staunch
@@ -3260,6 +3594,40 @@ references:
   title: Aaron Panofsky - How “Unscientific” Ideas about Race Contribute to...
   type: motion_picture
   URL: https://www.youtube.com/watch?v=ftxYl5zybNw
+
+- id: WeatherallHowBeatScience2018
+  abstract: >-
+    Abstract.  In their recent book, Naomi Oreskes and Erik Conway ([2010])
+    describe the ‘tobacco strategy’, which was used by the tobacco industry to
+    inﬂuence poli
+  accessed:
+    - year: 2018
+      month: 8
+      day: 24
+  author:
+    - family: Weatherall
+      given: James Owen
+    - family: O’Connor
+      given: Cailin
+    - family: Bruner
+      given: Justin P.
+  citation-key: WeatherallHowBeatScience2018
+  container-title: The British Journal for the Philosophy of Science
+  container-title-short: Br J Philos Sci
+  DOI: 10.1093/bjps/axy062
+  issued:
+    - year: 2018
+      month: 8
+      day: 23
+  language: en
+  source: academic.oup.com
+  title: >-
+    How to Beat Science and Inﬂuence People: Policy-Makers and Propaganda in
+    Epistemic Networks
+  title-short: How to Beat Science and Inﬂuence People
+  type: article-journal
+  URL: >-
+    https://academic.oup.com/bjps/advance-article/doi/10.1093/bjps/axy062/5078455
 
 - id: WeinbergPhilosophyJournalHosts2022
   abstract: "Have Jews insinuated themselves into positions of power and influence in politics and culture because they are innately gifted with higher IQs, or is it also because they are ethnocentric and hypocritical networkers good at using non-Jews in their self-serving mission of “transforming America contrary to white interests”? Race science and/or conspiracy theory? This—pardon the editorializing—outrageous question is currently under discussion in the pages of the academic philosophy journal Philosophia. Welcome to 2022. January 1st saw the online publication of “The ‘Default Hypothesis’ Fails to Explain Jewish Influence” by Kevin MacDonald, who is described on Wikipedia as an “anti-Semitic conspiracy theorist, white supremacist, and retired professor of evolutionary psychology.” MacDonald’s 32-page article is a response to a piece by Nathan Cofnas, “The Anti-Jewish Narrative,” that Philosophia\_published last February, and which is one of a series of pieces in which Cofnas critiques McDonald. Both MacDonald and Cofnas are preoccupied with the question: “Did Jews create liberal multiculturalism to advance their ethnic interests?” (Cofnas, p.1332). Cofnas’s take on that issue is ultimately based on his claim that “Jews are overrepresented in all intellectual movements and activities that are not overtly anti-Semitic primarily because they have high mean IQs” (Cofnas, p.1331). This is part of his view that there is “legitimate science on race differences” (Cofnas, p. 1332) in regard to intelligence (previously). Cofnas characterizes MacDonald as claiming that “intelligent, ethnocentric Jews created liberal intellectual and political movements to promote Jewish interests at the expense of gentiles” (Cofnas, pp. 1330-31). MacDonald posits ethnocentric “ethnic networking” (MacDonald, p.2), “Jewish hypocrisy” (p.9), “Jewish activism” (throughout), and efforts to “recruit gentiles as ‘window dressing’ to conceal the extent of Jewish dominance” (p.3) in leftwing organizations, among other things, as elements of the Jewish conspiracy. MacDonald also takes up the question of whether Jews should be welcomed by white supremacists. Here is his answer, which I reproduce as a screenshot for those who might otherwise be incredulous that an academic journal published these words: Did I mention that\_Philosophia‘s subtitle is “Philosophical Quarterly of Israel“? One might wonder to what extent Cofnas and MacDonald consider the publication of their articles in an Israel-based journal evidence against the presumptions of their debate. Philosophia\_is edited by Asa Kasher (Tel Aviv)..."
