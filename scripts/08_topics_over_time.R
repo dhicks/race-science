@@ -6,7 +6,8 @@ theme_set(theme_bw())
 library(tmfast)
 library(here)
 library(arrow)
-library(patchwork)
+# library(patchwork)
+library(cowplot)
 library(glue)
 library(ggh4x)
 
@@ -173,10 +174,13 @@ md_tmf = read_rds(model_files['md'])
 md_exp = read_exp(exp_files['md'])
 
 ## Similar trends for low, medium, and high threshold
-count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V22'), .25)
 plot_50 = count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V22'), .50)
-plot_50
-count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V22'), .80)
+if (interactive()) {
+    count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V22'), .25)
+    # plot_50 = count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V22'), .50)
+    plot_50
+    count_plot(md_tmf, 'medium', md_exp, 40, c('V07', 'V24', 'V22'), .80)
+}
 
 ## Direct labelled version of plot_50
 jr_labels = tribble(
@@ -192,7 +196,7 @@ time_gg = plot_50 +
                    fill = container.title), 
                color = 'black', size = 3,
                data = jr_labels)
-time_gg
+if (interactive()) time_gg
 
 # ggsave(here(out_dir, '08_focal_topics.png'), 
 #        plot = time_gg,
@@ -211,19 +215,23 @@ silge_gg = tidy(md_tmf, matrix = 'beta', k = 40) |>
     scale_x_reordered() + 
     labs(y = 'β') +
     facet_wrap(vars(topic), scales = 'free')
-silge_gg
+if (interactive()) silge_gg
 
 # silge_gg / time_gg +
 #     plot_layout()
 
-cowplot::plot_grid(silge_gg, time_gg, ncol = 1, align = 'v', 
+focal_topics_gg = plot_grid(silge_gg, time_gg, ncol = 1, align = 'v', 
                    rel_heights = c(.7, 1))
+if (interactive()) focal_topics_gg
 
 ggsave(here(out_dir, '08_focal_topics.png'), 
+       plot = focal_topics_gg,
        height = 3*3, width = 4*3, bg = 'white')
 
 ## Big grid ----
-big_grid = function(model_file, exp_file, name, plot = TRUE) {
+big_grid = function(model_file, exp_file, name, plot = TRUE, verbose = TRUE) {
+    if (verbose) message(glue('{name} vocabulary'))
+    
     model = read_rds(model_file)
     exp = read_exp(exp_file)
     
@@ -244,6 +252,7 @@ big_grid = function(model_file, exp_file, name, plot = TRUE) {
                                 race & intelligence ~ 'both', 
                                 TRUE ~ NA_character_),
                type = fct_relevel(type, 'race', 'both', 'intelligence'))
+    if (verbose) message(glue('{nrow(topics)} topics of interest'))
     
     ## Create dataframes and 5-year running averages
     dataf = topics |> 
@@ -289,12 +298,22 @@ big_grid = function(model_file, exp_file, name, plot = TRUE) {
 # foo = big_grid(model_files['sm'], exp_files['sm'], 'small')
 # foo
 # ggsave(here(out_dir, '08_grid_test.pdf'), height = 10, width = 14)
-list(list('sm', 'small', 10), 
-     list('md', 'medium', 13), 
-     list('lg', 'large', 18)) |> 
-    walk(~ {big_grid(model_files[.x[[1]]], exp_files[.x[[1]]], .x[[2]]) %>% 
-             ggsave(here(out_dir, glue('08_grid_{.x[[1]]}.pdf')), 
-                    height = 10, width = .x[[3]]*1.4, plot = .)}, 
-         .progress = TRUE)
 
-    
+grid_wrapper = function(model, name, width) {
+    big_grid(model_files[model], exp_files[model], name) %>%
+        ggsave(here(out_dir, glue('08_grid_{model}.pdf')), 
+               plot = ., 
+               height = 10, width = width * 1.4)
+}
+
+tribble(~ model, ~ name, ~ width, 
+        'sm', 'small', 10, 
+        'md', 'medium', 13, 
+        'lg', 'large', 18) |> 
+    pwalk(grid_wrapper, .progress = TRUE)
+    # walk(~ {big_grid(model_files[.x[[1]]], exp_files[.x[[1]]], .x[[2]]) %>% 
+    #         ggsave(here(out_dir, glue('08_grid_{.x[[1]]}.pdf')), 
+    #                plot = .,
+    #                height = 10, width = .x[[3]]*1.4)}, 
+    #      .progress = TRUE)
+

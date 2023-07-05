@@ -1,3 +1,4 @@
+## This script generates static visualizations using the UMAP embeddings from script 07.  Because these visualizations are no longer used in the analysis workflow, this script is not triggered by `make all`.  
 renv::load(here::here())
 library(tidyverse)
 theme_set(theme_minimal())

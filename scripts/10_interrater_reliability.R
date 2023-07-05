@@ -1,3 +1,4 @@
+renv::load(here::here())
 library(tidyverse)
 library(readxl)
 library(irr)
@@ -6,7 +7,7 @@ library(here)
 data_dir = here('data')
 out_dir = here('out')
 
-data_el = read_xlsx(here(data_dir, '07_md_40_V24 -EL.xlsx')) |> 
+data_el = read_xlsx(here(data_dir, '07_md_40_V24-EL.xlsx')) |> 
     filter(!is.na(race_science_discourse)) |> 
     rename(race_discourse_el = race_science_discourse, 
            notes_el = notes) |> 
@@ -51,7 +52,7 @@ kappa2(data[,c('race_discourse_djh','race_discourse_el')],
        "unweighted")
 ## Bennett, Alpert and Goldstein's S
 ## 0.90
-(2*agree(data[,c('race_discourse_djh','race_discourse_el')])$value/100 - 1) / (2-1)
+(2 * agree(data[,c('race_discourse_djh','race_discourse_el')])$value/100 - 1) / (2-1)
 
 
 data |> 

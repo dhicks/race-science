@@ -67,16 +67,30 @@ $(target06): 06_hellinger_betas.R \
 	rscript 06_hellinger_betas.R
 
 ## Script 07: Interactive UMAP visualization, plus UMAP embeddings and QC spreadsheet
+## UMAP embeddings were removed from this workflow.  Use the section below if re-enabling them. 
+## -----------------------------------
+# .PHONY: umap
+# target07 := $(out)/07_lg_40.html
+# umap := $(target07)
+# $(target07): 07_umap_interactive.R \
+#              $(meta) \
+#              $(phrases) \
+#              $(models) \
+#              $(exponents)
+# # 	rscript 07_umap_interactive.R --force
+# 	@echo "UMAP embeddings may need to be recalculated. Run rscript 07_umap_interactive.R --force"; exit 1
+## -----------------------------------
+## Now we only generate the QC spreadsheet
 .PHONY: umap
-target07 := $(out)/07_lg_40.html
-umap := $(target07)
+umap:
+	@echo "UMAP embeddings not calculated in this version of workflow."; exit 1
+target07 := $(out)/07_md_40_V24.xlsx
 $(target07): 07_umap_interactive.R \
              $(meta) \
              $(phrases) \
              $(models) \
              $(exponents)
-# 	rscript 07_umap_interactive.R --force
-	@echo "UMAP embeddings may need to be recalculated. Run rscript 07_umap_interactive.R --force"; exit 1
+	rscript 07_umap_interactive.R
 
 ## Script 08: Occurrence of topics over time by journal
 target08 := $(out)/08_grid_lg.pdf
@@ -95,6 +109,13 @@ $(target09): 09_umap_static.R \
              $(exponents) \
              $(umap)
 	rscript 09_umap_static.R
+	
+## Script 10: Interrater reliability checks for the QC spreadsheet from script 07
+target10 := 10_interrater_reliability.html
+$(target10): 10_interrater_reliability.R \
+             $(data)/07_md_40_V24-EL.xlsx \
+             $(data)/07_md_40_V24-DJH.xlsx
+	rscript -e "rmarkdown::render('$<')"
 
 
-pipe: $(target02) $(target05) $(target06) $(target07) $(target08) $(target09)
+pipe: $(target02) $(target05) $(target06) $(target07) $(target08) $(target10)
