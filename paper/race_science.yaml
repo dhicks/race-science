@@ -1317,7 +1317,7 @@ references:
   license: © 2020 The Author(s)
   publisher: 'SAGE PublicationsSage CA: Los Angeles, CA'
   source: journals.sagepub.com
-  title: 'The Mythical Taboo on Race and Intelligence:'
+  title: The Mythical Taboo on Race and Intelligence
   title-short: The Mythical Taboo on Race and Intelligence
   type: article-journal
   URL: https://journals.sagepub.com/eprint/UC8HG8URH2WQWVIWN5AG/full
@@ -2824,6 +2824,51 @@ references:
   URL: >-
     https://www.thehastingscenter.org/will-sociogenomics-reduce-social-inequality/
 
+- id: PigliucciWhatAreWe2013
+  abstract: >-
+    Discussions about the biological bases (or lack thereof) of the concept of
+    race in the human species seem to be never ending. One of the latest rounds
+    is represented by a paper by Neven Sesardic, which attempts to build a
+    strong scientific case for the existence of human races, based on genetic,
+    morphometric and behavioral characteristics, as well as on a thorough
+    critique of opposing positions. In this paper I show that Sesardic’s
+    critique falls far short of the goal, and that his positive case is
+    exceedingly thin. I do this through a combination of analysis of the actual
+    scientific findings invoked by Sesardic and of some philosophical unpacking
+    of his conceptual analysis, drawing on a dual professional background as an
+    evolutionary biologist and a philosopher of science.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 7
+  author:
+    - family: Pigliucci
+      given: Massimo
+  citation-key: PigliucciWhatAreWe2013
+  container-title: >-
+    Studies in History and Philosophy of Science Part C: Studies in History and
+    Philosophy of Biological and Biomedical Sciences
+  container-title-short: >-
+    Studies in History and Philosophy of Science Part C: Studies in History and
+    Philosophy of Biological and Biomedical Sciences
+  DOI: 10.1016/j.shpsc.2013.04.008
+  ISSN: 1369-8486
+  issue: '3'
+  issued:
+    - year: 2013
+      month: 9
+      day: 1
+  language: en
+  page: 272-277
+  source: ScienceDirect
+  title: >-
+    What are we to make of the concept of race?: Thoughts of a
+    philosopher–scientist
+  title-short: What are we to make of the concept of race?
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S1369848613000447
+  volume: '44'
+
 - id: PinkerGroupsGenes2006
   abstract: >-
     The lessons of the Ashkenazim.
@@ -3141,6 +3186,32 @@ references:
   type: article-journal
   URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/bies.202100204
   volume: '43'
+
+- id: RosemanTroublesomeReflectionRacism2014
+  accessed:
+    - year: 2023
+      month: 7
+      day: 7
+  author:
+    - family: Roseman
+      given: Charles C.
+  citation-key: RosemanTroublesomeReflectionRacism2014
+  container-title: Human Biology
+  DOI: 10.13110/humanbiology.92.3.06
+  ISSN: 1534-6617
+  issue: '3'
+  issued:
+    - year: 2014
+  page: 233-239
+  publisher: Wayne State University Press
+  source: Project MUSE
+  title: >-
+    Troublesome Reflection: Racism as the Blind Spot in the Scientific Critique
+    of Race
+  title-short: Troublesome Reflection
+  type: article-journal
+  URL: https://muse.jhu.edu/pub/27/article/577444
+  volume: '86'
 
 - id: RosenbergGeneticStructureHuman2002
   abstract: >-

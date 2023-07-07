@@ -57,6 +57,7 @@ List of Supplementary Materials
 *[hey you should read this paper]*
 
 *[incorporate def'ns]*
+
 scientific racism 
  ~ purporting to justify racial inequality and colonialism by appealing to the epistemic authority of science
  
@@ -65,6 +66,9 @@ race science
  
 race science discourse
  ~ treating race science as a legitimate area of scientific research; this includes methodological critiques of race science and empirical tests that falsify race science hypotheses
+
+- pre-20th century history of race concepts and race science
+- expansion and contraction of racialized terms over time
 
 
 # Race science 1910-1960
@@ -103,6 +107,8 @@ In the landmark case *Brown v Board of Education of Topeka* (1954), the US Supre
 In the context of *Brown*, MQ was created as what contemporary scholars call an "echo chamber" \cite{FernandezPintoKnowBetterNot2017}, a favorable venue for race scientists to publish their views, on the grounds that an "equalitarian dogma" created a censorious "taboo" against their research in mainstream publications \cite{TuckerFundingScientificRacism2002, JacksonMythicalTabooRace2020}.  Historians, philosophers, and sociologists of science have shown that echo chambers have been a key part of the "tobacco strategy," used by numerous regulated industries — most infamously tobacco, but also fossil fuels and chemical manufacturing, among others — to "manufacture doubt" and delay regulation to protect public and environmental health *[cites]*.  
 
 In light of the origins of MQ, the significant attention paid to the journal by historians of scientific racism, and contemporary research on the "tobacco strategy," it is surprising that MQ did not play a significant role in nurturing race science.  
+
+
 
 
 # *Mankind Quarterly* and Pioneer-funded researchers
@@ -179,8 +185,14 @@ research, even when these effects involve deliberate misinterpretation.*[Douglas
 
 *[engagement dilemma: technical critiques can legitimize]*
 
+*[limitation: colorblind racism (Bonilla-Silva) creates coding ambiguities]*
 
-*[this probably goes too far even for a discussion section]*
+*[limitation: false negatives (race science papers that don't appear in V24) are possible if, eg, they use many terms related to twin studies of heritability and thereby appear in V03]*
+
+
+
+
+*[replace w/: WinstonWhyMainstreamResearch2020: race science as a community project of psychology(?).  radical academic freedom is a tool used to defend race science PigliucciWhatAreWe2013, RosemanTroublesomeReflectionRacism2014, LarsenMoreProvocativeLess2020.  an important part of how these mainstream journals function as race science echo chambers.]*
 
 Proponents of a strong conception of academic freedom often point to chapter 2 of philosopher John Stuart Mill's *On Liberty* \cite{MillLiberty1862}, "Of the Liberty of Thought and Discussion."  However, in chapter 1 of the same book, Mill states the Harm Principle as the overall thesis of his book: "The only end for which people are entitled, individually or collectively, to interfere with the liberty of action of any of their number is self-protection. The only purpose for which power can be rightfully exercised over any member of a civilized community, against his will, is to prevent harm to others." Even for Mill, free speech and free inquiry are appropriately restrained when the ideas in question will harm others.  
 
@@ -197,6 +209,8 @@ Using agent-based models, Weatherall et al.\cite{WeatherallHowBeatScience2018} s
 
 *[for discussion: the possibility for white supremacist appropriation, ie, race science done by scientists who are not themselves scientific racists: CarlsonQuantifyingContextualizingImpact2020; probably some reviews of Paige Harden; O'Connor and Weatherall]*
 
+
+*[what can science do? Posselt, /Equity in Science/]*
 
 *[max ~50 refs]*
 
