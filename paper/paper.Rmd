@@ -18,11 +18,17 @@ bibliography: "references.bib"
 output: 
   # https://github.com/rstudio/rticles/pull/486
   # skeleton: <https://github.com/christopherkenny/rticles/tree/master/inst/rmarkdown/templates/science>
-  rticles::science_article:
-      keep_tex: true
-      move_figures: false
-      draft: false
-      number_sections: false
+  # rticles::science_article:
+  #   keep_tex: true
+  #    move_figures: false
+  #    draft: false
+  #    number_sections: false
+  bookdown::pdf_book:
+    base_format: rticles::science_article
+    keep_tex: true
+    move_figures: false
+    draft: false
+    number_sections: false
 ---
 
 <!-- 
@@ -113,9 +119,7 @@ In light of the origins of MQ, the significant attention paid to the journal by 
 
 # *Mankind Quarterly* and Pioneer-funded researchers
 
-*[for xref: https://bookdown.org/yihui/bookdown/a-single-document.html]*
-
-We identified 16 researchers who had received funding from Pioneer; 14 of these researchers had profiles in the Web of Science (WoS) author search *[table + WoS pub coucnt]*, allowing us identify 13 WoS-indexed journals that had published 6 or more of these authors.
+We identified 16 researchers who had received funding from Pioneer; 14 of these researchers had profiles in the Web of Science (WoS) author search *[table + WoS pub coucnt]*, allowing us identify 13 WoS-indexed journals that had published 6 or more of these authors. See Table \@ref(tab:researchers). 
 
 | | | |
 |:-----|-----:|:----|
@@ -136,11 +140,11 @@ We identified 16 researchers who had received funding from Pioneer; 14 of these 
 | Philip A. Vernon | psychology | |
 | Daniel Vining, Jr. | demography | |
 
-Table: Pioneer-funded researchers.  Either identified in *[cite]* or named on Pioneer's website, along with identified discipline and WoS author search result counts. 
+Table: (\#tab:researchers) Pioneer-funded researchers.  Either identified in *[cite]* or named on Pioneer's website, along with identified discipline and WoS author search result counts. 
 
-![Journals publishing 6 or more Pioneer-funded researchers, Web of Science author search results *[date coverage]*](img/wos_results.png){width="4.76in" height="2.6in"}
+![Journals publishing 6 or more Pioneer-funded researchers, Web of Science author search results *[date coverage]* (\#fig:wos)](img/wos_results.png){width="4.76in" height="2.6in"}
 
-Figure *[fig]* shows that, while MQ is among the "Pioneer-publishing" journals, a number of mainstream journals are more prominent: *Personality and Individual Differences* (PID), *Intelligence* (I), *Behavior Genetics* (BG), and *Psychological Reports* (PR).  In addition, only psychologist Richard Lynn appears to have published heavily in MQ.  Lynn has been an assistant editor of MQ since 1979 *[check this: https://rationalwiki.org/wiki/Mankind_Quarterly]* and president of PF since the death of psychologist J. Phillippe Rushton in 2012 *[cite]*.  By contrast, a number of Pioneer-funded researchers have published in PID, I, and to a lesser degree BG: Bouchard, Eysenck, Jensen, Rushton, Vernon, and also Lynn.  
+Figure \@ref(fig:wos) shows that, while MQ is among the "Pioneer-publishing" journals, a number of mainstream journals are more prominent: *Personality and Individual Differences* (PID), *Intelligence* (I), *Behavior Genetics* (BG), and *Psychological Reports* (PR).  In addition, only psychologist Richard Lynn appears to have published heavily in MQ.  Lynn has been an assistant editor of MQ since 1979 *[check this: https://rationalwiki.org/wiki/Mankind_Quarterly]* and president of PF since the death of psychologist J. Phillippe Rushton in 2012 *[cite]*.  By contrast, a number of Pioneer-funded researchers have published in PID, I, and to a lesser degree BG: Bouchard, Eysenck, Jensen, Rushton, Vernon, and also Lynn.  
 
 *Personality and Individual Differences* (PID) was founded in 1980, with Eysenck as editor-in-chief and an editorial board including Jensen and Lynn. In the inaugural editorial, Eysenck identified "studies of the genetic determinants of individual differences in the areas of personality and intelligence" as one of the journal's eight major areas of interest.  Eysenck remained editor-in-chief until his death in 1997.  In 2005 the editorial board still included Jensen and Lynn. PID was first published by Pergamon Press, a mainstream academic press, and today is published by Elsevier.  According to the Scimago Journal Rankings, based on Scopus citation data, in 2022 PID had an H-index of 193, #29 in Psychology (Miscellaneous), and a 2-year citation index (impact factor) of 5.27, #24 in Psychology (Miscellaneous).  
 
@@ -165,11 +169,13 @@ Notably, BG published very few articles in this topic.  Outside of the field its
 
 However, Glayde Whitney's 1995 BGA presidential address was published in MQ rather than BG.  According to Whitney, BG's editor refused to publish the address and the BGA Executive Committee (except for Whitney himself) voted to "issue an official statement of denouncement" of the address; though we were unable to find any such a statement, and Panofsky reports that "nothing official was done to Whitney."  In his address, Whitney criticized "the Marxist-Lysenkoist denial of genetics"; quoted Peter Brimelow — a white nationalist and later founder of the racist and xenophobic website VDARE — defining "racist" as "anyone who is winning an argument with a liberal"; and proposed as a "reasonable scientific hypothesis" that differences in murder rates between countries and cities was caused by racial genetic differences in intelligence, empathy, aggression, and impulsivity.  
 
-The topic model analysis and the case of Whitney's address suggest that, by the 1990s, behavior genetics had at least somewhat distanced itself from race science.  *[https://link.springer.com/search?use-oscar-shared-search=true&sortBy=newestFirst&dateTo=2010&sortOrder=newestFirst&facet-journal-id=10519&content-type=Article&query=race+intelligence&date=custom&dateFrom=&date-facet-mode=between&facet-start-year=1972&previous-start-year=1972&facet-end-year=2010&previous-end-year=2023]*  
+The topic model analysis and the case of Whitney's address suggest that, by the 1990s, behavior genetics had at least somewhat distanced itself from race science, though perhaps without repudiating it.  *[https://link.springer.com/search?use-oscar-shared-search=true&sortBy=newestFirst&dateTo=2010&sortOrder=newestFirst&facet-journal-id=10519&content-type=Article&query=race+intelligence&date=custom&dateFrom=&date-facet-mode=between&facet-start-year=1972&previous-start-year=1972&facet-end-year=2010&previous-end-year=2023]*  
 
-A disciplinary history of behavior genetics published in 2010 \cite{McGueEndBehavioralGenetics2010} acknowledges the historical association with eugenics, but does not mention Jensen and other race science controversies since World War II. Instead postwar behavior genetics is portrayed as an endeavor to counterbalance the hegemony of the "Blank Slate," the supposedly widespread view that genetic differences play no role in explaining individual differences \cite{BatesonCorpseWearisomeDebate2002}. 
+To check this interpretation, we ran an independent search for documents with the keywords "race" and "intelligence" published in BG from 1972 to 2020, using Springer's journal search website.  This search returned 125 documents.  33 were presentation abstracts from meetings of the Behavior Genetics Association; we did not examine these further.  14 of the remaining documents were published since 2010 (after the scope of the primary study).  Among these, one obituary and two papers celebrated the work of John Loehlin, a prominent race-and-intelligence researcher who had been Director of the American Eugenics Society from 1968-1972 *[http://link.springer.com/article/10.1007/s10519-020-10024-w; http://link.springer.com/article/10.1007/s10519-014-9687-1; http://link.springer.com/article/10.1007/s10519-014-9673-7]*.  Another was a retrospective of the work of Lindon Eaves, a geneticist who made at least one notable contribution to debates on the Scarr-Rowe hypothesis (interactions between heritability, race, and class).  None of these 14 documents reported any studies of racial differences.  
 
-These findings for *Behavior Genetics* complicate at least the popular association of behavior genetics with race science, if not Panofsky's more nuanced analysis.  
+28 documents in this sample were published between 1990 and 2010.  One was an obituary of Jerry Hirsch, a critic of hereditarianism in general and Jensen in particular *[http://link.springer.com/article/10.1007/s10519-008-9231-2]*, and another was an obituary of David Rowe *[http://link.springer.com/article/10.1023/A%3A1026122928868]*.  Only 2 of these 28 documents reported race differences of any kind: one examining at interactions among race, sex, and heritability for adolescent BMI (Body Mass Index, used as a measure of overweight/obesity) *[http://link.springer.com/article/10.1023/A%3A1021619329904]*; and the other at interactions among race, family history of alcoholism, and visuospatial performance *[http://link.springer.com/article/10.1007/BF02197241]*.  Finally, Philip Vernon — one of the Pioneer-funded scientists we identified earlier — published a critical review of a book that attempted to address hereditarianism, the Flynn effect, race-and-intelligence research, and some related issues.  
+
+This supplemental review provides additional support for the interpretation that behavior genetics had distanced itself from race science by the 1990s.  Notably, this review brought our attention to a disciplinary history of behavior genetics published in 2010 \cite{McGueEndBehavioralGenetics2010}, which acknowledges the historical association with eugenics but does not mention Jensen and other race science controversies since World War II. Instead postwar behavior genetics is portrayed as an endeavor to counterbalance the hegemony of the "Blank Slate," the supposedly widespread view that genetic differences play no role in explaining individual differences \cite{BatesonCorpseWearisomeDebate2002}. And none of the three documents celebrating Loehlin noted his postwar involvement in the eugenics movement.  None of the documents examined in this supplemental review explicitly repudiate race science.  Behavior geneticists seem to typically adopt a posture of objectivity and technical rigor, downplaying the extent of the field's involvement in race science in the past. 
 
 
 
@@ -185,7 +191,7 @@ research, even when these effects involve deliberate misinterpretation.*[Douglas
 
 *[engagement dilemma: technical critiques can legitimize]*
 
-*[limitation: colorblind racism (Bonilla-Silva) creates coding ambiguities]*
+*[limitation: colorblind racism (Bonilla-Silva; WinstonWhyMainstreamResearch2020) creates coding ambiguities]*
 
 *[limitation: false negatives (race science papers that don't appear in V24) are possible if, eg, they use many terms related to twin studies of heritability and thereby appear in V03]*
 
