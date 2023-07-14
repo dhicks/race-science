@@ -54,31 +54,6 @@
 \makesavenoteenv{longtable}
 
 % Pandoc citation processing
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-% for Pandoc 2.8 to 2.10.1
-\newenvironment{cslreferences}%
-  {}%
-  {\par}
-% For Pandoc 2.11+
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
-  \fi
- }%
- {}
-\usepackage{calc} % for calculating minipage widths
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 
 
@@ -256,27 +231,5 @@ For the first round of review, both authors worked independently, dichotomously 
 We agreed that, for all three categories of papers, there was reasonable ambiguity about whether they should be classified as race science discourse. These papers either do not explicitly mention race, or do so with just a brief mention of the ``race and intelligence controversy.'' On the other hand, they either contribute to or legitimatize areas of research that are deeply entangled with race science, and might thereby contribute to public perceptions of a legitimate scientific debate about race and intelligence.
 
 Based on this qualitative review, we judged that the topic model approach was sufficiently sensitive (low ``false positive'' rate) in identifying race science discourse.
-
-\hypertarget{refs}{}
-\begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-BarkanRetreatScientificRacism1992}{}}%
-Barkan, Elazar. 1992. \emph{The {Retreat} of {Scientific Racism}: {Changing Concepts} of {Race} in {Britain} and the {United States Between} the {World Wars}}. {Cambridge University Press}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-BeagleholeRaceQuestion1950}{}}%
-Beaglehole, Ernest, Juan Comas, L. A. Costa Pinto, Franklin Frazier, Morris Ginsberg, Humayun Kabir, Claude Levi-Strauss, and Ashley Montagu. 1950. {``The {Race Question}.''} \emph{UNESCO and Its Programme} 1 (3).
-
-\leavevmode\vadjust pre{\hypertarget{ref-BrattainRaceRacismAntiracism2007}{}}%
-Brattain, M. 2007. {``Race, {Racism}, and {Antiracism}: {UNESCO} and the {Politics} of {Presenting Science} to the {Postwar Public}.''} \emph{The American Historical Review} 112 (5): 1386--1413. \url{https://doi.org/10.1086/ahr.112.5.1386}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-MeadComingAgeSamoa1928}{}}%
-Mead, Margaret. 1928. \emph{Coming of {Age} in {Samoa}}. {New York}: {William Morrow and Company}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-MehlerFoundationFascismNew1989}{}}%
-Mehler, Barry. 1989. {``Foundation for Fascism: {The} New Eugenics Movement in the {United States}.''} \emph{Patterns of Prejudice} 23 (4): 17--25. \url{https://doi.org/10.1080/0031322X.1989.9970026}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-SlobodianUnequalMindHow2023}{}}%
-Slobodian, Quinn. 2023. {``The {Unequal Mind}: {How Charles Murray} and {Neoliberal Think Tanks Revived IQ}.''} \emph{Capitalism: A Journal of History and Economics} 4 (1): 73--108.
-
-\end{CSLReferences}
 
 \end{document}

@@ -41,6 +41,52 @@ references:
   type: article-journal
   URL: http://journals.upress.ufl.edu/fa/article/view/1659
 
+- id: AlderferScienceNonsciencePsychologists2003
+  abstract: >-
+    To serve racially diverse clients effectively, professional psychologists
+    should understand the range of scientific and social forces shaping their
+    own and their clients' lives. A manifestation of such forces, the 1994
+    publication of R. J. Herrnstein and C. Murray's The Bell Curve: Intelligence
+    and Class Structure in American Life was an attempt to influence both
+    psychological knowledge and U.S. politics. This article analyzes the book
+    and 5 psychologist authors' responses to it. The responses fell far short of
+    providing a critical analysis of the book's racially biased argument and did
+    little to reduce the misleading picture of race and IQ that the book
+    promulgated. Scrutinizing the whole book--especially connections among
+    scientific knowledge, proposed policy, and professional practice with
+    attention to the "code logic" used--will enable practitioners to recognize
+    and change subtle aspects of racial dynamics that occur in their work.
+    (PsycINFO Database Record (c) 2016 APA, all rights reserved) (Source:
+    journal abstract)
+  accessed:
+    - year: 2023
+      month: 7
+      day: 13
+  author:
+    - family: Alderfer
+      given: Clayton P.
+  citation-key: AlderferScienceNonsciencePsychologists2003
+  container-title: 'Professional Psychology: Research and Practice'
+  DOI: 10.1037/0735-7028.34.3.287
+  event-place: Washington, US
+  ISSN: 0735-7028
+  issue: '3'
+  issued:
+    - year: 2003
+      month: 6
+  language: English
+  license: © 2003, American Psychological Association
+  note: (US)
+  number-of-pages: 287-293
+  page: 287-293
+  publisher: American Psychological Association
+  publisher-place: Washington, US
+  source: ProQuest
+  title: The science and nonscience of psychologists' responses to The Bell Curve
+  type: article-journal
+  URL: https://www.proquest.com/docview/614394458/abstract/1E39EC9EF9504072PQ/1
+  volume: '34'
+
 - id: ArthurJensen
   abstract: >-
     Arthur Jensen was arguably the father of modern academic racism. For over 40
@@ -156,6 +202,82 @@ references:
   type: article-journal
   URL: https://unesdoc.unesco.org/ark:/48223/pf0000128291
   volume: '1'
+
+- id: BermanReducedVisuospatialPerformance1995
+  abstract: >-
+    Previous studies suggest a reduced dopaminergic function in subjects with
+    the A1 (minor) allele of the D2 dopamine receptor (DRD2) gene. To explore
+    influences on visuospatial ability as a function of the DRD2 gene, 182
+    alcohol- and other drug-naive sons (age 10–14) of active alcoholic,
+    recovered alcoholic, and nonalcoholic fathers were administered a
+    visuospatial task (Benton's Judgment of Line Orientation Test) which makes
+    minimal motoric/verbal demands. Visuospatial scores were lower for boys with
+    the A1 allele and for sons of active alcoholics. A1-allele boys made more
+    errors than A2 boys on all 11 of the template lines, with the effect being
+    largest for the rightmost presentations. In contrast, the effect of family
+    history for alcoholism was strongest on both right and left midquadrant
+    presentations. Moreover, separate analyses of the two types of errors
+    produced allele but not family history of alcoholism effects when the two
+    lines were misjudged as farther apart than they actually were and family
+    history but not allele effects where the two lines were misjudged as closer
+    together. These results suggest that polymorphism of the DRD2 gene and
+    family history of alcoholism are dissociable determinants of visuospatial
+    ability and that visuospatial defects previously observed in alcoholics may,
+    in part, be antecedent to their drinking behavior.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 13
+  author:
+    - family: Berman
+      given: Steven M.
+    - family: Noble
+      given: Ernest P.
+  citation-key: BermanReducedVisuospatialPerformance1995
+  container-title: Behavior Genetics
+  container-title-short: Behav Genet
+  DOI: 10.1007/BF02197241
+  ISSN: 1573-3297
+  issue: '1'
+  issued:
+    - year: 1995
+      month: 1
+      day: 1
+  language: en
+  page: 45-58
+  source: Springer Link
+  title: >-
+    Reduced visuospatial performance in children with the D2 dopamine receptor
+    A1 allele
+  type: article-journal
+  URL: https://doi.org/10.1007/BF02197241
+  volume: '25'
+
+- id: BhakthavatsalamVirtueEpistemologicalApproach2021
+  abstract: "We argue for a virtue epistemological approach to the demarcation problem, for we think that\_such an approach makes sense from the perspective of an ameliorative epistemology. We argue that sustained and consistent pseudoscientific beliefs and attitudes call for an explanation in terms of underlying epistemic vices, and that remedying them calls for charging the relevant people with vice, but in a responsible and sensitive way. We exemplify some common epistemic vices associated with pseudoscientific beliefs through the case of Feng Shui. We then discuss the value of incorporating pseudoscience in science education and advocate teaching students to identify epistemic virtues and vices in scientific and pseudoscientific practices. We argue for an education focused on epistemic character building and cultivating epistemically virtuous students from early on. This will lead them to become good epistemic agents, in general, and careful (producers and) consumers of science and pseudoscience in particular."
+  accessed:
+    - year: 2021
+      month: 9
+      day: 30
+  author:
+    - family: Bhakthavatsalam
+      given: Sindhuja
+    - family: Sun
+      given: Weimin
+  citation-key: BhakthavatsalamVirtueEpistemologicalApproach2021
+  container-title: Science & Education
+  container-title-short: Sci & Educ
+  DOI: 10.1007/s11191-021-00256-5
+  ISSN: 1573-1901
+  issued:
+    - year: 2021
+      month: 8
+      day: 29
+  language: en
+  source: Springer Link
+  title: A Virtue Epistemological Approach to the Demarcation Problem
+  type: article-journal
+  URL: https://doi.org/10.1007/s11191-021-00256-5
 
 - id: BirdNoSupportHereditarian2021
   abstract: >-
@@ -936,6 +1058,52 @@ references:
   type: article-journal
   URL: https://doi.org/10.1177/17456916211017498
 
+- id: GillbornSoftlySoftlyGenetics2016
+  abstract: >-
+    Crude and dangerous ideas about the genetic heritability of intelligence,
+    and a supposed biological basis for the Black/White achievement gap, are
+    alive and well inside the education policy process but taking new and more
+    subtle forms. Drawing on Critical Race Theory, the paper analyses recent
+    hereditarian writing, in the UK and the USA, and highlight a strategy that I
+    term racial inexplicitness; this allows hereditarian advocates to adopt a
+    colorblind façade that presents their work as new, exciting and full of
+    promise for all of society. The paper is in two parts: the first exposes the
+    racism that lies hidden in the small print of the new geneism, where wildly
+    misleading assertions about genetic influences on education are proclaimed
+    as scientific fact while race-conscious critics are dismissed as ignorant
+    ideologues. The second part of the paper sets out critical facts about the
+    relevant science, including the difference between the mythic and real
+    meaning of heritability; fundamental problems with the methodology of twin
+    studies; the little-known history of IQ test score manipulation; and the
+    continuing use of a stylistic approach that Howard Gardner characterized as
+    ‘scholarly brinkmanship’.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 14
+  author:
+    - family: Gillborn
+      given: David
+  citation-key: GillbornSoftlySoftlyGenetics2016
+  container-title: Journal of Education Policy
+  DOI: 10.1080/02680939.2016.1139189
+  ISSN: 0268-0939
+  issue: '4'
+  issued:
+    - year: 2016
+      month: 7
+      day: 3
+  page: 365-388
+  publisher: Routledge
+  source: Taylor and Francis+NEJM
+  title: >-
+    Softly, softly: genetics, intelligence and the hidden racism of the new
+    geneism
+  title-short: Softly, softly
+  type: article-journal
+  URL: https://doi.org/10.1080/02680939.2016.1139189
+  volume: '31'
+
 - id: GouldMismeasureManRevised1996
   abstract: "The definitive refutation to the argument of The Bell Curve. When published in 1981, The Mismeasure of Man was immediately hailed as a masterwork, the ringing answer to those who would classify people, rank them according to their supposed genetic gifts and limits. And yet the idea of innate limits—of biology as destiny—dies hard, as witness the attention devoted to\_The Bell Curve, whose arguments are here so effectively anticipated and thoroughly undermined by Stephen Jay Gould. In this edition Dr. Gould has written a substantial new introduction telling how and why he wrote the book and tracing the subsequent history of the controversy on innateness right through The Bell Curve. Further, he has added five essays on questions of The Bell Curve in particular and on race, racism, and biological determinism in general. These additions strengthen the book's claim to be, as Leo J. Kamin of Princeton University has said, \"a major contribution toward deflating pseudo-biological 'explanations' of our present social woes.\""
   author:
@@ -1488,6 +1656,64 @@ references:
   title-short: Social Scientists for Social Justice
   type: book
 
+- id: JacobsonGeneticSharedEnvironmental1998
+  abstract: >-
+    The present study uses a behavioral genetic design to investigate the
+    genetic and environmental influences on variation in adolescent body mass
+    index (BMI) and to determine whether the relative influences of genetic and
+    environmental factors on variation in BMI are similar across racial groups
+    and sexes. Data for the present study come from the National Longitudinal
+    Study on Adolescent Health (Add Health), a large, nationally representative
+    study of adolescent health and health-related behaviors. The Add Health
+    sample contains a subset of sibling pairs that differs in levels of genetic
+    relatedness, making it well suited for behavioral genetics analyses. The
+    present study examines whether genetic and environmental influences on
+    adolescent BMI are the same for males and females and for Black and White
+    adolescents. Results indicate that genetic factors contribute substantially
+    to individual differences in adolescent BMI, explaining between 45 and 85%
+    of the variance in BMI. Furthermore, based on an analysis of opposite-sex
+    sibling pairs, the genes that influence variation in adolescent BMI are
+    similar for males and females. However, the relative importance of genetic
+    and environmental influences on variation in BMI differs for males and
+    females and for Blacks and Whites. Although parameter estimates could be
+    constrained to be equal for Black and White males, they could not be
+    constrained to be equal for Black and White females. Moreover, the
+    best-fitting model for Black females was an ADE model, for White females it
+    was an ACE model, and for males it was an AE model. Thus, shared
+    environmental influences are significant for White female adolescents, but
+    not for Black females or males. Likewise, nonadditive genetic influences are
+    indicated for Black females, but not for White females or males.
+    Implications of these results are discussed.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 13
+  author:
+    - family: Jacobson
+      given: Kristen C.
+    - family: Rowe
+      given: David C.
+  citation-key: JacobsonGeneticSharedEnvironmental1998
+  container-title: Behavior Genetics
+  container-title-short: Behav Genet
+  DOI: 10.1023/A:1021619329904
+  ISSN: 1573-3297
+  issue: '4'
+  issued:
+    - year: 1998
+      month: 7
+      day: 1
+  language: en
+  page: 265-278
+  source: Springer Link
+  title: >-
+    Genetic and Shared Environmental Influences on Adolescent BMI: Interactions
+    with Race and Sex
+  title-short: Genetic and Shared Environmental Influences on Adolescent BMI
+  type: article-journal
+  URL: https://doi.org/10.1023/A:1021619329904
+  volume: '28'
+
 - id: JamiesonEchoChamberRush2008
   author:
     - family: Jamieson
@@ -1533,6 +1759,29 @@ references:
   type: article-journal
   URL: http://www.hepgjournals.org/doi/abs/10.17763/haer.39.1.l3u15956627424k7
   volume: '39'
+
+- id: JohnLoehlin19262020
+  accessed:
+    - year: 2023
+      month: 7
+      day: 13
+  citation-key: JohnLoehlin19262020
+  container-title: Behavior Genetics
+  container-title-short: Behav Genet
+  DOI: 10.1007/s10519-020-10024-w
+  ISSN: 1573-3297
+  issue: '6'
+  issued:
+    - year: 2020
+      month: 11
+      day: 1
+  language: en
+  page: 385-386
+  source: Springer Link
+  title: John C. Loehlin (1926–2020)
+  type: article-journal
+  URL: https://doi.org/10.1007/s10519-020-10024-w
+  volume: '50'
 
 - id: JosephReevaluation1990Minnesota2022
   abstract: >-
@@ -2624,6 +2873,36 @@ references:
   URL: https://www.sciencedirect.com/science/article/pii/S0160932715200622
   volume: '39'
 
+- id: OgbunugaforDNABasketballBirthday2022
+  accessed:
+    - year: 2023
+      month: 7
+      day: 13
+  author:
+    - family: Ogbunugafor
+      given: C. Brandon
+  citation-key: OgbunugaforDNABasketballBirthday2022
+  container-title: American Journal of Biological Anthropology
+  DOI: 10.1002/ajpa.24599
+  ISSN: 2692-7691
+  issue: '3'
+  issued:
+    - year: 2022
+  language: en
+  license: >-
+    © 2022 The Author. American Journal of Biological Anthropology published by
+    Wiley Periodicals LLC.
+  page: 501-504
+  source: Wiley Online Library
+  title: >-
+    DNA, basketball, and birthday luck. A review of The genetic lottery: Why DNA
+    matters for social equality. By Kathryn Paige Harden, 2021, US: Princeton
+    University Press. 312 pp. ISBN: 9780691190808 (Hardcover)
+  title-short: DNA, basketball, and birthday luck. A review of The genetic lottery
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/ajpa.24599
+  volume: '179'
+
 - id: OreskesMerchantsDoubtHow2011
   abstract: >-
     The U.S. scientific community has long led the world in research on such
@@ -2908,6 +3187,74 @@ references:
   type: report
   URL: https://www.geneticsandsociety.org/sites/default/files/complete_PTGC.pdf
 
+- id: PlominCelebratingCenturyResearch2023
+  abstract: >-
+    A century after the first twin and adoption studies of behavior in the
+    1920s, this review looks back on the journey and celebrates milestones in
+    behavioral genetic research. After a whistle-stop tour of early quantitative
+    genetic research and the parallel journey of molecular genetics, the
+    travelogue focuses on the last fifty years. Just as quantitative genetic
+    discoveries were beginning to slow down in the 1990s, molecular genetics
+    made it possible to assess DNA variation directly. From a rocky start with
+    candidate gene association research, by 2005 the technological advance of
+    DNA microarrays enabled genome-wide association studies, which have
+    successfully identified some of the DNA variants that contribute to the
+    ubiquitous heritability of behavioral traits. The ability to aggregate the
+    effects of thousands of DNA variants in polygenic scores has created a DNA
+    revolution in the behavioral sciences by making it possible to use DNA to
+    predict individual differences in behavior from early in life.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 13
+  author:
+    - family: Plomin
+      given: Robert
+  citation-key: PlominCelebratingCenturyResearch2023
+  container-title: Behavior Genetics
+  container-title-short: Behav Genet
+  DOI: 10.1007/s10519-023-10132-3
+  ISSN: 1573-3297
+  issue: '2'
+  issued:
+    - year: 2023
+      month: 3
+      day: 1
+  language: en
+  page: 75-84
+  source: Springer Link
+  title: Celebrating a Century of Research in Behavioral Genetics
+  type: article-journal
+  URL: https://doi.org/10.1007/s10519-023-10132-3
+  volume: '53'
+
+- id: PlominGenotypeEnvironmentCorrelationEra2014
+  abstract: "One of John Loehlin’s many contributions to the field of behavioral genetics involves gene-environment (GE) correlation. The empirical base for GE correlation was research showing that environmental measures are nearly as heritable as behavioral measures and that genetic factors mediate correlations between environment and behavior. Attempts to identify genes responsible for these phenomena will come up against the ‘missing heritability’ problem that plagues DNA research on complex traits throughout the life sciences. However, DNA can also be used for quantitative genetic analyses of unrelated individuals (Genome-wide\_Complex Trait Analysis, GCTA) to investigate genetic influence on environmental measures and their behavioral correlates. A novel feature of GCTA is that it enables genetic analysis of family-level environments (e.g., parental socioeconomic status) and school-level environments (e.g., teaching quality) that cannot be investigated using within-family designs such as the twin method. An important implication of GE correlation is its shift from a passive model of the environment imposed on individuals to an active model in which individuals actively create their own experiences in part on the basis of their genetic propensities."
+  accessed:
+    - year: 2023
+      month: 7
+      day: 13
+  author:
+    - family: Plomin
+      given: Robert
+  citation-key: PlominGenotypeEnvironmentCorrelationEra2014
+  container-title: Behavior Genetics
+  container-title-short: Behav Genet
+  DOI: 10.1007/s10519-014-9673-7
+  ISSN: 1573-3297
+  issue: '6'
+  issued:
+    - year: 2014
+      month: 11
+      day: 1
+  language: en
+  page: 629-638
+  source: Springer Link
+  title: Genotype-Environment Correlation in the Era of DNA
+  type: article-journal
+  URL: https://doi.org/10.1007/s10519-014-9673-7
+  volume: '44'
+
 - id: PronczukRacistResearcherExposed2022
   abstract: >-
     The work of Michael Woodley, a Briton who was cited by the teenager who
@@ -3095,6 +3442,38 @@ references:
   URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/hast.499
   volume: '45'
 
+- id: RodgersObituaryDavidChristian2003
+  accessed:
+    - year: 2023
+      month: 7
+      day: 13
+  author:
+    - family: Rodgers
+      given: Joseph Lee
+    - family: Jacobson
+      given: Kristen
+    - family: Oord
+      given: Edwin
+      non-dropping-particle: van den
+  citation-key: RodgersObituaryDavidChristian2003
+  container-title: Behavior Genetics
+  container-title-short: Behav Genet
+  DOI: 10.1023/A:1026122928868
+  ISSN: 1573-3297
+  issue: '6'
+  issued:
+    - year: 2003
+      month: 11
+      day: 1
+  language: en
+  page: 627-628
+  source: Springer Link
+  title: 'Obituary: David Christian Rowe'
+  title-short: Obituary
+  type: article-journal
+  URL: https://doi.org/10.1023/A:1026122928868
+  volume: '33'
+
 - id: RoheVintageFactorAnalysis2020
   abstract: >-
     Psychologists developed Multiple Factor Analysis to decompose multivariate
@@ -3265,6 +3644,33 @@ references:
   URL: https://science.sciencemag.org/content/298/5602/2381
   volume: '298'
 
+- id: RoubertouxJerryHirsch202008
+  accessed:
+    - year: 2023
+      month: 7
+      day: 13
+  author:
+    - family: Roubertoux
+      given: Pierre L.
+  citation-key: RoubertouxJerryHirsch202008
+  container-title: Behavior Genetics
+  container-title-short: Behav Genet
+  DOI: 10.1007/s10519-008-9231-2
+  ISSN: 1573-3297
+  issue: '6'
+  issued:
+    - year: 2008
+      month: 11
+      day: 1
+  language: en
+  page: 561-564
+  source: Springer Link
+  title: 'Jerry Hirsch (20 September 1922–3 May 2008): A Tribute'
+  title-short: Jerry Hirsch (20 September 1922–3 May 2008)
+  type: article-journal
+  URL: https://doi.org/10.1007/s10519-008-9231-2
+  volume: '38'
+
 - id: SainiDraperMillionsPhilanthropic2022
   abstract: >-
     Wickliffe Draper spent his inheritance helping to skew the science of human
@@ -3351,6 +3757,49 @@ references:
   title: "Liberal\_Creationism"
   type: article-magazine
   URL: https://slate.com/technology/2007/11/liberal-creationism.html
+
+- id: SaulDogwhistlesPoliticalManipulation2018
+  abstract: >-
+    This essay explores the speech act of dogwhistling (sometimes referred to as
+    ‘using coded language’). Dogwhistles may be overt or covert, and within each
+    of these categories may be intentional or unintentional. Dogwhistles are a
+    powerful form of political speech, allowing people to be manipulated in ways
+    they would resist if the manipulation was carried outmore openly—often
+    drawing on racist attitudes that are consciously rejected. If philosophers
+    focus only on content expressed or otherwise consciously conveyed they may
+    miss what is most powerful and pernicious in the speech of political
+    culture. This essay is a call to start paying attention to these more covert
+    speech acts, and a first attempt at beginning to theorize them. It argues
+    that dogwhistles present a complex and interesting case for the philosopher
+    of language, and explores their implications for democratic politics.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 14
+  author:
+    - family: Saul
+      given: Jennifer
+  citation-key: SaulDogwhistlesPoliticalManipulation2018
+  container-title: New Work on Speech Acts
+  DOI: 10.1093/oso/9780198738831.003.0013
+  editor:
+    - family: Fogal
+      given: Daniel
+    - family: Harris
+      given: Daniel W.
+    - family: Moss
+      given: Matt
+  ISBN: 978-0-19-873883-1
+  issued:
+    - year: 2018
+      month: 7
+      day: 19
+  page: '0'
+  publisher: Oxford University Press
+  source: Silverchair
+  title: Dogwhistles, Political Manipulation, and Philosophy of Language
+  type: chapter
+  URL: https://doi.org/10.1093/oso/9780198738831.003.0013
 
 - id: ScarrThreeCheersBehavior1987
   accessed:
@@ -3475,6 +3924,27 @@ references:
   type: article-magazine
   URL: https://www.nybooks.com/daily/2022/02/05/ideology-as-biology/
 
+- id: SilgeTopicModeling2017
+  citation-key: SilgeTopicModeling2017
+  container-author:
+    - family: Silge
+      given: Julia
+    - family: Robinson
+      given: David
+  container-title: 'Text Mining with R: A Tidy Approach'
+  ISBN: 978-1-4919-8160-3
+  issued:
+    - year: 2017
+      month: 6
+      day: 12
+  language: en
+  page: ch. 6
+  publisher: O'Reilly Media, Inc.
+  source: Google Books
+  title: Topic Modeling
+  type: chapter
+  URL: https://www.tidytextmining.com/topicmodeling.html
+
 - id: SlobodianUnequalMindHow2023
   abstract: >-
     An instant bestseller, The Bell Curve (1994) by Richard J. Herrnstein and
@@ -3580,6 +4050,63 @@ references:
   URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/hast.492
   volume: '45'
 
+- id: TrahanFlynnEffectMetaanalysis2014
+  abstract: >-
+    The “Flynn effect” refers to the observed rise in IQ scores over time,
+    resulting in norms obsolescence. Although the Flynn effect is widely
+    accepted, most approaches to estimating it have relied upon “scorecard”
+    approaches that make estimates of its magnitude and error of measurement
+    controversial and prevent determination of factors that moderate the Flynn
+    effect across different IQ tests. We conducted a meta-analysis to determine
+    the magnitude of the Flynn effect with a higher degree of precision, to
+    determine the error of measurement, and to assess the impact of several
+    moderator variables on the mean effect size. Across 285 studies (N = 14,031)
+    since 1951 with administrations of two intelligence tests with different
+    normative bases, the meta-analytic mean was 2.31, 95% CI [1.99, 2.64],
+    standard score points per decade. The mean effect size for 53 comparisons (N
+    = 3,951) (excluding three atypical studies that inflate the estimates)
+    involving modern (since 1972) Stanford-Binet and Wechsler IQ tests (2.93,
+    95% CI [2.3, 3.5], IQ points per decade) was comparable to previous
+    estimates of about 3 points per decade, but not consistent with the
+    hypothesis that the Flynn effect is diminishing. For modern tests, study
+    sample (larger increases for validation research samples vs. test
+    standardization samples) and order of administration explained unique
+    variance in the Flynn effect, but age and ability level were not significant
+    moderators. These results supported previous estimates of the Flynn effect
+    and its robustness across different age groups, measures, samples, and
+    levels of performance.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 14
+  author:
+    - family: Trahan
+      given: Lisa
+    - family: Stuebing
+      given: Karla K.
+    - family: Hiscock
+      given: Merril K.
+    - family: Fletcher
+      given: Jack M.
+  citation-key: TrahanFlynnEffectMetaanalysis2014
+  container-title: Psychological bulletin
+  container-title-short: Psychol Bull
+  DOI: 10.1037/a0037173
+  ISSN: 0033-2909
+  issue: '5'
+  issued:
+    - year: 2014
+      month: 9
+  page: 1332-1360
+  PMCID: PMC4152423
+  PMID: '24979188'
+  source: PubMed Central
+  title: 'The Flynn Effect: A Meta-analysis'
+  title-short: The Flynn Effect
+  type: article-journal
+  URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4152423/
+  volume: '140'
+
 - id: TuckerBankrollingRacismScience2001
   abstract: >-
     Founded by Wickliffe Preston Draper in 1937, the Pioneer Fund has long been
@@ -3665,6 +4192,34 @@ references:
   title: Aaron Panofsky - How “Unscientific” Ideas about Race Contribute to...
   type: motion_picture
   URL: https://www.youtube.com/watch?v=ftxYl5zybNw
+
+- id: WaldmanIntroductionFestschriftJohn2014
+  accessed:
+    - year: 2023
+      month: 7
+      day: 13
+  author:
+    - family: Waldman
+      given: Irwin
+    - family: Turkheimer
+      given: Eric
+  citation-key: WaldmanIntroductionFestschriftJohn2014
+  container-title: Behavior Genetics
+  container-title-short: Behav Genet
+  DOI: 10.1007/s10519-014-9687-1
+  ISSN: 1573-3297
+  issue: '6'
+  issued:
+    - year: 2014
+      month: 11
+      day: 1
+  language: en
+  page: 547-548
+  source: Springer Link
+  title: Introduction to a Festschrift for John Loehlin
+  type: article-journal
+  URL: https://doi.org/10.1007/s10519-014-9687-1
+  volume: '44'
 
 - id: WeatherallHowBeatScience2018
   abstract: >-
