@@ -226,6 +226,23 @@ More recently, philosopher Shannon Dea \cite{DeaEvolvingSocialPurpose2021} has a
 
 Advocates of research on genetics and intelligence — both anti-racist liberals and race scientists — claim this work will lead to social benefits.  This reflects a recognition that the purpose of academic freedom is to promote the common good, rather than merely satisfy an individual's curiosity.  But the promised benefits are either vague or do not actually require understanding the genetics of intelligence.\cite{KaplanGaltonQuincunxProbabilistic2021, CoopLotteryLuckLegacy2022}  
 
+[EL notes on academic freedom as simply one value in science:
+
+Other ethical values that guide scientific research have been institutionalized via documents such as The Belmont Report. Principle values described in The Belmont Report are intended as guides and regulations of scientific researchers' behavior so as not to infringe on the rights or liberties of human study volunteers. This report was written in response to revelations in the 1970s of the Tuskegee Syphilis Study, wherein researchers at the CDC and HHS lied to participants - all of whom were impoversiehd black men - about the nature of the study and whether or not they had tested positive for syphilis, coerced their participation with extravagant compensation, and refused to allow men infected with syphilis to be treated at all. The Belmont Report outlines values guiding scientific research that focus on respect for persons, beneficence, and justice: 
+Respect for persons - informed consent, participants are individuals with agency. 
+Beneficience - very much like Hippocratic "do no harm" or, if harm is unavoidable, the potential harms are outweighed by the benefits of research. 
+Justice - no population should disproportionately bear the burdens of being investigated scientifically; do not sample merely from convenient populations; when advances are made due to public funds (e.g. taxpayer money) the products of such advances are not restricted only to those who can afford them.
+
+How does race science research square against these other values in scientific research? Are participants ever honestly informed that they are (or were, in the case of a debriefing form) being evaluated to see which demographics are superior/inferior to which other ones? Granted, the Belmont Report is US-specific, but comparable other documents, regulations, or laws exist around the world that promote similar values. e.g. The Declaration of Helsinki states that the pursuit of knowledge cannot be used to trample on the rights of research participants.
+
+Maybe brief discussion of Mertonian Norms? Seems that race science research violates the norms of Universalism, Disinterestedness, and Organized Skepticism. Granted, most of the scientific community in practice violates all of the norms pretty frequently, so maybe this isn't a strong point to include.
+
+Recently published paper by Zivony et al in PLOS Computational Biology - "Ten simple rules for socially responsible science" - The authors call out a variety of biases in research (extreme male brain hypothesis of autism; face recognition software trained only on white faces; race differences in test scores) as failing to appropriately limit inferences based on the research's design or failing to properly ground their research in social theory or relevant historical context.
+
+Random oOther thought: academic freedom doesn't mean being free from criticism of one's methods, intentions, or theoretical starting point. Unless someone is calling for an academic policy that forbids race science as an academic area of inquiry, talk of academic freedom is non sequitor. Pointing out flaws in research and concluding the research is therefore wasted time/resources is not a threat to academic freedom. No one has forbidden research on geocentrism, but we've recognized for a few centuries now that it's a waste of time to pursue that line of inquiry.
+
+]
+
 -->
 
 
