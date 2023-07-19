@@ -1,15 +1,17 @@
 renv::load(here::here())
- library(tidyverse)
+library(tidyverse)
 theme_set(theme_minimal())
+library(ggrepel)
 library(arrow)
 
 library(here)
 
 data_dir = here('data')
+out_dir = here('out')
 
 ## Load metadata ----
 meta_ar = open_dataset(here(data_dir, '01_metadata'))
-    # collect()
+# collect()
 
 nrow(meta_ar)
 
@@ -27,12 +29,62 @@ phrases_ar = phrases()
 # phrases_ar = read_csv(here(data_dir, '01_phrases.csv'))
 
 ## Descriptive plots ----
-meta_ar |>
+## Counts by journal ----
+count_df = meta_ar |>
     count(container.title, year) |>
+    collect()
+
+label_df = count_df |> 
+    group_by(container.title) |> 
+    slice_max(n, n = 1) |> 
+    mutate(container.title = str_wrap(container.title, width = 25))
+
+ggplot(count_df, 
+       aes(year, n, color = container.title, group = container.title)) +
+    geom_line(size = 1.25, color = 'black') +
+    geom_line(size = 1) +
+    geom_label_repel(
+        data = label_df, 
+        mapping = aes(fill = container.title, 
+                      label = container.title), 
+        hjust = 0, nudge_y = 20,
+        xlim = c(1960, 2100), direction = 'x',
+        color = 'black', alpha = .9) +
+    scale_color_viridis_d(guide = 'none', 
+                          aesthetics = c('fill', 'color')) +
+    # scale_y_sqrt() +
+    coord_cartesian(clip = 'off') +
+    theme(plot.margin = margin(t = 10, r = 50, b = 10, l = 10))
+
+ggsave(here(out_dir, '02_count.png'), 
+       width = 4.76, height = 3/4 * 4.76, scale = 1.75,
+       bg = 'white')
+
+meta_ar |> 
+    group_by(container.title) |> 
+    summarize(n = n(), 
+          start = min(year), 
+          end = max(year)) |> 
+    rename(journal = container.title) |> 
     collect() |>
-    ggplot(aes(year, n, color = container.title, group = container.title)) +
-    geom_line() +
-    geom_point()
+    knitr::kable(caption = '(\\#tab:counts) Document counts, by journal, and years included in the corpus.') |> 
+    write_lines(here(out_dir, '02_tab_counts.md'))
+
+
+## Phrases ----
+## Total corpus size: 43M tokens
+phrases_ar |> 
+    pull(n) |> 
+    sum() |> 
+    format(big.mark = ',')
+
+## Distinct phrases: 6M
+phrases_ar |> 
+    select(phrase) |> 
+    distinct() |> 
+    collect() |> 
+    nrow() |> 
+    format(big.mark = ',')
 
 phrases_ar |>
     head(500) |>
@@ -76,7 +128,7 @@ combined = phrases_ar |>
 
 ggplot(combined, 
        aes(year, total_phrases, 
-               color = container.title, group = container.title)) +
+           color = container.title, group = container.title)) +
     geom_line() +
     scale_y_log10()
 

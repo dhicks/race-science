@@ -203,6 +203,32 @@ references:
   URL: https://unesdoc.unesco.org/ark:/48223/pf0000128291
   volume: '1'
 
+- id: BenoitSpacyrWrapperSpaCy2020
+  abstract: An R wrapper to the 'Python' 'spaCy' 'NLP' library, from <http://spacy.io>.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 19
+  author:
+    - family: Benoit
+      given: Kenneth
+    - family: Matsuo
+      given: Akitaka
+    - family: Council  (ERC-2011-StG 283794-QUANTESS)
+      given: European Research
+  citation-key: BenoitSpacyrWrapperSpaCy2020
+  issued:
+    - year: 2020
+      month: 3
+      day: 4
+  license: GPL-3
+  source: R-Packages
+  title: 'spacyr: Wrapper to the ''spaCy'' ''NLP'' Library'
+  title-short: spacyr
+  type: software
+  URL: https://cran.r-project.org/web/packages/spacyr/index.html
+  version: 1.2.1
+
 - id: BermanReducedVisuospatialPerformance1995
   abstract: >-
     Previous studies suggest a reduced dopaminergic function in subjects with
@@ -618,6 +644,41 @@ references:
   type: webpage
   URL: https://twitter.com/RVAwonk/status/1571716342297796610
 
+- id: ChamberlainRcrossrefClientVarious2019
+  abstract: >-
+    Client for various 'CrossRef' 'APIs', including 'metadata' search with their
+    old and newer search 'APIs', get 'citations' in various formats (including
+    'bibtex', 'citeproc-json', 'rdf-xml', etc.), convert 'DOIs' to 'PMIDs', and
+    'vice versa', get citations for 'DOIs', and get links to full text of
+    articles when available.
+  accessed:
+    - year: 2019
+      month: 8
+      day: 15
+  author:
+    - family: Chamberlain
+      given: Scott
+    - family: Zhu
+      given: Hao
+    - family: Jahn
+      given: Najko
+    - family: Boettiger
+      given: Carl
+    - family: Ram
+      given: Karthik
+  citation-key: ChamberlainRcrossrefClientVarious2019
+  issued:
+    - year: 2019
+      month: 5
+      day: 4
+  license: MIT + file LICENSE
+  source: R-Packages
+  title: 'rcrossref: Client for Various ''CrossRef'' ''APIs'''
+  title-short: rcrossref
+  type: software
+  URL: https://cran.r-project.org/package=rcrossref
+  version: 0.9.2
+
 - id: CofnasResearchGroupDifferences2019
   abstract: >-
     In a very short time, it is likely that we will identify many of the genetic
@@ -1008,6 +1069,60 @@ references:
   URL: https://sciencetechnologystudies.journal.fi/article/view/61030
   volume: '30'
 
+- id: FlynnEvidenceRushtonGenetic1998
+  accessed:
+    - year: 2023
+      month: 7
+      day: 19
+  author:
+    - family: Flynn
+      given: James R.
+  citation-key: FlynnEvidenceRushtonGenetic1998
+  container-title: Personality and Individual Differences
+  container-title-short: Personality and Individual Differences
+  DOI: 10.1016/S0191-8869(98)00149-4
+  ISSN: 0191-8869
+  issue: '2'
+  issued:
+    - year: 1998
+      month: 1
+      day: 11
+  language: en
+  page: 373-379
+  source: ScienceDirect
+  title: >-
+    Evidence against Rushton: The genetic loading of WISC-R subtests and the
+    causes of between-group IQ differences
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0191886998001494
+  volume: '26'
+
+- id: FlynnReplyRushtonGang1998
+  accessed:
+    - year: 2023
+      month: 7
+      day: 19
+  author:
+    - family: Flynn
+      given: James R.
+  citation-key: FlynnReplyRushtonGang1998
+  container-title: Personality and Individual Differences
+  container-title-short: Personality and Individual Differences
+  DOI: 10.1016/S0191-8869(98)00147-0
+  ISSN: 0191-8869
+  issue: '2'
+  issued:
+    - year: 1998
+      month: 1
+      day: 11
+  language: en
+  page: 391-393
+  source: ScienceDirect
+  title: 'Reply to Rushton: A gang of gs overpowers factor analysis'
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0191886998001470
+  volume: '26'
+
 - id: GiangrandeRaceEthnicityScarrRowe2021
   abstract: >-
     In 2020, Pesta et al. published an article entitled “Racial and Ethnic Group
@@ -1367,6 +1482,48 @@ references:
   type: webpage
   URL: >-
     https://www.lareviewofbooks.org/article/why-dna-is-no-key-to-social-equality-on-kathryn-paige-hardens-the-genetic-lottery/
+
+- id: HicksProductivityInterdisciplinaryImpacts2021
+  abstract: >-
+    Organized Research Units (ORUs) are nondepartmental units utilized by U.S.
+    research universities to support interdisciplinary research initiatives,
+    among other goals. This study examined the impacts of ORUs at one large
+    public research university, the University of California, Davis (UC Davis),
+    using a large corpus of journal article metadata and abstracts for both
+    faculty affiliated with UCD ORUs and a comparison set of other faculty.
+    Using regression analysis, I find that ORUs appeared to increase the number
+    of coauthors of affiliated faculty, but did not appear to directly affect
+    publication or citation counts. Next, I frame interdisciplinarity in terms
+    of a notion of discursive space, and use a topic model approach to situate
+    researchers within this discursive space. The evidence generally indicates
+    that ORUs promoted multidisciplinarity rather than interdisciplinarity. In
+    the conclusion, drawing on work in philosophy of science on inter- and
+    multidisciplinarity, I argue that multidisciplinarity is not necessarily
+    inferior to interdisciplinarity.
+  accessed:
+    - year: 2021
+      month: 8
+      day: 25
+  author:
+    - family: Hicks
+      given: Daniel J.
+  citation-key: HicksProductivityInterdisciplinaryImpacts2021
+  container-title: Quantitative Science Studies
+  container-title-short: Quantitative Science Studies
+  DOI: 10.1162/qss_a_00150
+  ISSN: 2641-3337
+  issue: '3'
+  issued:
+    - year: 2021
+      month: 11
+      day: 5
+  license: All rights reserved
+  page: 990-1022
+  source: Silverchair
+  title: Productivity and interdisciplinary impacts of Organized Research Units
+  type: article-journal
+  URL: https://doi.org/10.1162/qss_a_00150
+  volume: '2'
 
 - id: HumanGeneticistsCurb
   abstract: >-
@@ -2903,6 +3060,31 @@ references:
   URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/ajpa.24599
   volume: '179'
 
+- id: OomsPdftoolsTextExtraction2023
+  abstract: >-
+    Utilities based on 'libpoppler' for extracting text, fonts, attachments and
+    metadata from a PDF file. Also supports high quality rendering of PDF
+    documents into PNG, JPEG, TIFF format, or into raw bitmap vectors for
+    further processing in R.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 19
+  author:
+    - family: Ooms
+      given: Jeroen
+  citation-key: OomsPdftoolsTextExtraction2023
+  issued:
+    - year: 2023
+      month: 2
+      day: 7
+  license: MIT + file LICENSE
+  source: R-Packages
+  title: 'pdftools: Text Extraction, Rendering and Converting of PDF Documents'
+  title-short: pdftools
+  type: article-journal
+  URL: https://cran.r-project.org/web/packages/pdftools/index.html
+
 - id: OreskesMerchantsDoubtHow2011
   abstract: >-
     The U.S. scientific community has long led the world in research on such
@@ -3306,6 +3488,55 @@ references:
   type: post-weblog
   URL: https://magazine.scienceforthepeople.org/online/spread-this-like-wildfire/
 
+- id: RichardsonArrowIntegrationApache2023
+  abstract: >-
+    'Apache' 'Arrow' <https://arrow.apache.org/> is a cross-language development
+    platform for in-memory data. It specifies a standardized
+    language-independent columnar memory format for flat and hierarchical data,
+    organized for efficient analytic operations on modern hardware. This package
+    provides an interface to the 'Arrow C++' library.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 19
+  author:
+    - family: Richardson
+      given: Neal
+    - family: Cook
+      given: Ian
+    - family: Crane
+      given: Nic
+    - family: Dunnington
+      given: Dewey
+    - family: François
+      given: Romain
+    - family: Keane
+      given: Jonathan
+    - family: Moldovan-Grünfeld
+      given: Dragoș
+    - family: Ooms
+      given: Jeroen
+    - family: Luraschi
+      given: Javier
+    - family: Werner
+      given: Karl Dunkle
+    - family: Wong
+      given: Jeffrey
+    - family: Arrow
+      given: Apache
+  citation-key: RichardsonArrowIntegrationApache2023
+  issued:
+    - year: 2023
+      month: 7
+      day: 18
+  license: Apache License (≥ 2.0)
+  source: R-Packages
+  title: 'arrow: Integration to ''Apache'' ''Arrow'''
+  title-short: arrow
+  type: software
+  URL: https://cloud.r-project.org/web/packages/arrow/index.html
+  version: 12.0.1.1
+
 - id: RichardsonPostgenomicsPerspectivesBiology2015
   call-number: QH445.2 .P678 2015
   citation-key: RichardsonPostgenomicsPerspectivesBiology2015
@@ -3671,6 +3902,34 @@ references:
   URL: https://doi.org/10.1007/s10519-008-9231-2
   volume: '38'
 
+- id: RushtonSecularGainsIQ1998
+  accessed:
+    - year: 2023
+      month: 7
+      day: 19
+  author:
+    - family: Rushton
+      given: J. Philippe
+  citation-key: RushtonSecularGainsIQ1998
+  container-title: Personality and Individual Differences
+  container-title-short: Personality and Individual Differences
+  DOI: 10.1016/S0191-8869(98)00148-2
+  ISSN: 0191-8869
+  issue: '2'
+  issued:
+    - year: 1998
+      month: 1
+      day: 11
+  language: en
+  page: 381-389
+  source: ScienceDirect
+  title: >-
+    Secular gains in IQ not related to the g factor and inbreeding depression –
+    unlike Black-White differences: A reply to Flynn
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0191886998001482
+  volume: '26'
+
 - id: SainiDraperMillionsPhilanthropic2022
   abstract: >-
     Wickliffe Draper spent his inheritance helping to skew the science of human
@@ -3899,6 +4158,34 @@ references:
   URL: http://link.springer.com/10.1023/B:MESC.0000023263.09462.6c
   volume: '13'
 
+- id: SclafaniCorrelationCausationStudy1981
+  abstract: >-
+    //static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0140525X0000042X/resource/name/firstPage-S0140525X0000042Xa.jpg
+  accessed:
+    - year: 2023
+      month: 7
+      day: 19
+  author:
+    - family: Sclafani
+      given: Anthony
+  citation-key: SclafaniCorrelationCausationStudy1981
+  container-title: Behavioral and Brain Sciences
+  DOI: 10.1017/S0140525X0000042X
+  ISSN: 1469-1825, 0140-525X
+  issue: '4'
+  issued:
+    - year: 1981
+      month: 12
+  language: en
+  page: 590-591
+  publisher: Cambridge University Press
+  source: Cambridge University Press
+  title: Correlation and causation in the study of feeding behavior
+  type: article-journal
+  URL: >-
+    https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/correlation-and-causation-in-the-study-of-feeding-behavior/3676C8ED390E68736B88B7868828779D
+  volume: '4'
+
 - id: SepkoskiIdeologyBiology2022
   abstract: >-
     E. O. Wilson corresponded for years with a notorious proponent of race
@@ -3983,6 +4270,28 @@ references:
   type: article-journal
   URL: https://muse.jhu.edu/pub/56/article/899272
   volume: '4'
+
+- id: SpaCyIndustrialstrengthNatural2018
+  accessed:
+    - year: 2018
+      month: 3
+      day: 14
+  citation-key: SpaCyIndustrialstrengthNatural2018
+  genre: Python
+  issued:
+    - year: 2018
+      month: 3
+      day: 14
+  license: MIT
+  publisher: Explosion AI
+  source: GitHub
+  title: >-
+    spaCy: 💫 Industrial-strength Natural Language Processing (NLP) with Python
+    and Cython
+  title-short: spaCy
+  type: software
+  URL: https://github.com/explosion/spaCy
+  version: 2.0.3
 
 - id: StemwedelScienceMustNot
   abstract: >-
@@ -4193,6 +4502,43 @@ references:
   type: motion_picture
   URL: https://www.youtube.com/watch?v=ftxYl5zybNw
 
+- id: VohraApacheParquet2016
+  abstract: >-
+    Apache Parquet is an efficient, structured, column-oriented (also called
+    columnar storage), compressed, binary file format. Parquet supports several
+    compression codecs, including Snappy, GZIP, deflate, and BZIP2. Snappy is
+    the default. Structured file formats such as RCFile, Avro, SequenceFile, and
+    Parquet offer better performance with compression support, which reduces the
+    size of the data on the disk and consequently the I/O and CPU resources
+    required to deserialize data.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 19
+  author:
+    - family: Vohra
+      given: Deepak
+  citation-key: VohraApacheParquet2016
+  container-title: >-
+    Practical Hadoop Ecosystem: A Definitive Guide to Hadoop-Related Frameworks
+    and Tools
+  DOI: 10.1007/978-1-4842-2199-0_8
+  editor:
+    - family: Vohra
+      given: Deepak
+  event-place: Berkeley, CA
+  ISBN: 978-1-4842-2199-0
+  issued:
+    - year: 2016
+  language: en
+  page: 325-335
+  publisher: Apress
+  publisher-place: Berkeley, CA
+  source: Springer Link
+  title: Apache Parquet
+  type: chapter
+  URL: https://doi.org/10.1007/978-1-4842-2199-0_8
+
 - id: WaldmanIntroductionFestschriftJohn2014
   accessed:
     - year: 2023
@@ -4348,6 +4694,39 @@ references:
   type: article-journal
   URL: https://doi.org/10.1080/23801883.2022.2074509
   volume: '0'
+
+- id: WickhamXml2ParseXML2023
+  abstract: >-
+    Work with XML files using a simple, consistent interface. Built on top of
+    the 'libxml2' C library.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 19
+  author:
+    - family: Wickham
+      given: Hadley
+    - family: Hester
+      given: Jim
+    - family: Ooms
+      given: Jeroen
+    - family: RStudio
+      given: ''
+    - family: example)
+      given: R. Foundation (Copy of R.-project
+      dropping-particle: homepage cached as
+  citation-key: WickhamXml2ParseXML2023
+  issued:
+    - year: 2023
+      month: 7
+      day: 6
+  license: MIT + file LICENSE
+  source: R-Packages
+  title: 'xml2: Parse XML'
+  title-short: xml2
+  type: software
+  URL: https://cran.r-project.org/web/packages/xml2/index.html
+  version: 1.3.5
 
 - id: WillsAreClustersRaces2017
   author:

@@ -132,30 +132,59 @@ and Emilio Lobato
 \hypertarget{materials-and-methods}{%
 \section*{Materials and methods}\label{materials-and-methods}}
 
-\emph{{[}probably some introduction{]}}
-
 \hypertarget{corpus-assembly}{%
 \subsection*{Corpus assembly}\label{corpus-assembly}}
 
-Corpus assembly is summarized in figure \emph{{[}xref{]}}. The corpus was assembled in two parts, one for \emph{Mankind Quarterly} and the other for mainstream journals.
+\begin{figure}
+\centering
+\includegraphics[width=8in,height=6.1in]{img/dataset.png}
+\caption{Corpus assembly. (\#fig:corpus)}
+\end{figure}
 
-\emph{{[}figure{]}}
+Corpus assembly is summarized in figure @ref(fig:corpus). The corpus was assembled in two parts, one for \emph{Mankind Quarterly} and the other for mainstream journals.
 
 \hypertarget{mankind-quarterly}{%
 \subsubsection*{Mankind Quarterly}\label{mankind-quarterly}}
 
-An electronic archive of \emph{Mankind Quarterly}, from the first issue in \emph{{[}1969{]}} through 2004, is available for free on the open web from \emph{The Unz Review}, which has been characterized as a white nationalist website by the Southern Poverty Law Center \emph{{[}\url{https://www.splcenter.org/hatewatch/2021/01/19/meet-white-nationalist-organizer-who-spewed-hate-against-lawmakers}{]}}. Web scraping packages and techniques \emph{{[}which?{]}} were used to retrieve every PDF available in this archive. These PDFs were processed using the open-source OCR (optical character recognition) software \texttt{tesseract} and the R API \texttt{rtesseract} \emph{{[}cites{]}}. This stage of corpus assembly was conducted in Fall 2021.
+An electronic archive of \emph{Mankind Quarterly}, from the first issue in 1969 through 2004, is available for free on the open web at the white nationalist website \emph{The Unz Review}. The Python package Beautiful Soup (\url{https://www.crummy.com/software/BeautifulSoup/}, version not recorded) was used to retrieve every PDF available in this archive. Text was extracted using the R package \texttt{pdftools} \cite[3.0.1]{OomsPdftoolsTextExtraction2023}. This stage of corpus assembly was conducted in Fall 2021 with the assistance of Anthony Sainez.
 
 \hypertarget{mainstream-journals}{%
 \subsubsection*{Mainstream journals}\label{mainstream-journals}}
 
-To identify suitable mainstream journals for inclusion in the corpus, we first identified academic researchers who had been funded by the Pioneer Fund. Pioneer is an American non-profit organization founded in 1937 to fund eugenics research \emph{{[}cite{]}}. After the \emph{Brown v. Board of Education} ruling in 1954, Pioneer funded various segregationist efforts across the United States. \emph{{[}Shockley and Jensen{]}}. We reviewed a critical profile of Pioneer \emph{{[}cite{]}} as well as an archived page from the organization's own web site \emph{{[}cite{]}}, which together listed 16 researchers who had received Pioneer funds.
+To identify suitable mainstream journals for inclusion in the corpus, we first identified academic researchers who had been funded by the Pioneer Fund. Pioneer is an American non-profit organization founded in 1937 to fund eugenics research and propaganda \cite{TuckerFundingScientificRacism2002}. After the \emph{Brown v. Board of Education} ruling in 1954, Pioneer funded various segregationist efforts across the United States, including lectures on eugenics by Stanford physicist William Shockley \cite{JacksonScienceSegregationRace2005}. We reviewed a critical profile of Pioneer \cite{MillerPioneerFundBankrolling1994} as well as an archived page from the organization's own web site \url{https://web.archive.org/web/20130103005545/http://www.pioneerfund.org/Grantees.html}, which together listed 16 researchers who had received Pioneer funds.
 
 We then used the author search tool in Clarivate's Web of Science platform \emph{{[}url{]}}, retrieving publication lists for 14 researchers. These searches were conducted between 2021-09-24 and 2021-10-05 by DJH. After parsing these results, we counted how many of the 14 researchers had published in each journal. 13 journals had published 6 or more of the 14 Pioneer-funded researchers. We excluded \emph{Mankind Quarterly} (as already included) as well as \emph{Science} and \emph{Nature} (as too general) from further consideration in this side of the corpus. 3 journals published by the American Psychological Association (APA; \emph{American Psychologist}, \emph{Contemporary Psychology}, and \emph{Journal of Educational Psychology}) had to be excluded due to confusion over who could give us permission to use the archives for a text mining project, with both APA and ProQuest asserting that we needed to get permission from the other entity. \emph{European Journal of Personality}, published by SAGE, also had to be excluded because our institutional access only went back to 1999.
 
 The remaining 5 journals are all published by major academic publishers --- Elsevier, Springer, or Cambridge University Press --- and each item in the entire run of each journal has been assigned a DOI (digital object identifier) for archival purposes. We used the Crossref API and \texttt{rcrossref} R interface to this API \emph{{[}cite{]}} to retrieve metadata for each item published from 1960-2010 in each of these 6 journals. These metadata included item-level license information --- confirming that the text of each item could be used for text mining projects --- and a URL to an electronic version of the item. These URLs were used to retrieve an HTML or PDF version of each item, except for \emph{Personality and Individual Differences}. This journal has published a relatively large number of non-article documents, such as book reviews and commentaries, which are not available at the URL included in the Crossref metadata. (This is unfortunate, as it was not difficult to find highly relevant documents that we could not automatically retrieve and therefore excluded from our corpus \emph{{[}review{]}}.) Instead we used Elsevier's ScienceDirect API \emph{{[}url{]}} to search and retrieve all items from \emph{Personality and Individual Differences} that are available. PDFs were run through OCR and text extraction as necessary, as with the \emph{Mankind Quarterly} documents.
 
-All together, \emph{{[}corpus summary, total and by journal; table{]}}
+\emph{Behavioral and Brain Sciences} typically uses a target article + commentary format; in some cases there are dozens of commentaries for a single article. In the Crossref DOI metadata, each target article and individual commentary is given its own DOI, with no distinction between contribution types or metadata links between a commentary and the corresponding target article. But text is only available in aggregate PDFs that bundle together the target article and all of the commentaries. In a few cases this results in PDFs that are hundreds of pages long and might be linked from the Crossref metadata 30+ times. In addition, the retrieved PDFs are not perfectly identical, because Cambridge UP's servers add a timestamped watermark to each page. We attempted to contact Cambridge for assistance but did not receive a response. We ultimately used a series of ad hoc measures to mitigate text duplication. Approximately 100,000 documents of 1-2 pages long were excluded before PDF retrieval. After PDF retrieval and text extraction, the timestamped watermarks were removed using a regular expression and the text was hashed using SHA 256. Hashes were used to construct groups of duplicate documents, and a single document (whichever one happened to be first in the dataframe) was chosen from each hash group for inclusion in the corpus. It is plausible that some duplicates made it through this process: where the watermark overlapped with the text, the regular expression may have been unable to identify and remove the watermark (a false negative result), and this difference in the watermarks (not the text) would produce different hashes.
+
+\begin{figure}
+\centering
+\includegraphics[width=4.76in,height=2.6in]{img/02_count.png}
+\caption{Count of documents in the corpus, by journal and year. (\#fig:counts)}
+\end{figure}
+
+\begin{longtable}[]{@{}lrrr@{}}
+\caption{(\#tab:counts) Document counts, by journal, and years included in the corpus.}\tabularnewline
+\toprule
+journal & n & start & end \\
+\midrule
+\endfirsthead
+\toprule
+journal & n & start & end \\
+\midrule
+\endhead
+Behavior Genetics & 2268 & 1970 & 2010 \\
+Intelligence & 1237 & 1977 & 2010 \\
+Mankind Quarterly & 1821 & 1960 & 2004 \\
+Personality and Individual Differences & 7274 & 1980 & 2010 \\
+Psychological Reports & 21398 & 1960 & 2010 \\
+Behavioral and Brain Sciences & 898 & 1978 & 2010 \\
+\bottomrule
+\end{longtable}
+
+All together, the corpus includes 34,896 documents from 6 journals. See @ref(fig:counts) and @ref(tab:counts).
 
 \hypertarget{text-preparation}{%
 \subsection*{Text preparation}\label{text-preparation}}
