@@ -1173,6 +1173,47 @@ references:
   type: article-journal
   URL: https://doi.org/10.1177/17456916211017498
 
+- id: GignacGroupDifferencesEI2010
+  abstract: >-
+    The Genos Emotional Intelligence Inventory (Genos EI) was examined
+    psychometrically within a sample of Black (N=393) and White (N=393) South
+    African (SA) employees. Internal consistency reliabilities were relatively
+    high and similar across both Black and White samples, although there was a
+    trend for lower reliabilities in the Black sample. Overall, the Black and
+    White samples were associated with similar Genos EI means and standard
+    deviations. Based on the differential item functioning (DIF) analyses, three
+    of the 70 Genos EI items were found to be biased. However, the magnitude of
+    the bias was considered negligible based on the DIF plots. Results are
+    discussed in light of the small differences between Blacks and Whites on a
+    measure of self-reported EI. It is suggested that some published criteria
+    for evaluating practically significant DIF may be too conservative.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 20
+  author:
+    - family: Gignac
+      given: Gilles E.
+    - family: Ekermans
+      given: Gina
+  citation-key: GignacGroupDifferencesEI2010
+  container-title: Personality and Individual Differences
+  container-title-short: Personality and Individual Differences
+  DOI: 10.1016/j.paid.2010.05.039
+  ISSN: 0191-8869
+  issue: '6'
+  issued:
+    - year: 2010
+      month: 10
+      day: 1
+  language: en
+  page: 639-644
+  source: ScienceDirect
+  title: Group differences in EI within a sample of black and white South Africans
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0191886910002862
+  volume: '49'
+
 - id: GillbornSoftlySoftlyGenetics2016
   abstract: >-
     Crude and dangerous ideas about the genetic heritability of intelligence,
@@ -1524,6 +1565,34 @@ references:
   type: article-journal
   URL: https://doi.org/10.1162/qss_a_00150
   volume: '2'
+
+- id: HicksTmfastFitsTopic2023
+  abstract: >-
+    tmfast is an R package for fitting topic models using a fast algorithm based
+    on partial PCA and the varimax rotation. After providing mathematical
+    background to the method, we present two examples, using a simulated corpus
+    and aggregated works of a selection of authors from the long nineteenth
+    century, and compare the quality of the fitted models to a standard topic
+    modeling package.
+  accessed:
+    - year: 2023
+      month: 5
+      day: 3
+  author:
+    - family: Hicks
+      given: Daniel J.
+  citation-key: HicksTmfastFitsTopic2023
+  issued:
+    - year: 2023
+      month: 5
+      day: 2
+  license: All rights reserved
+  number: arXiv:2305.01535
+  publisher: arXiv
+  source: arXiv.org
+  title: tmfast fits topic models fast
+  type: article
+  URL: http://arxiv.org/abs/2305.01535
 
 - id: HumanGeneticistsCurb
   abstract: >-
@@ -2568,6 +2637,48 @@ references:
   type: article-journal
   URL: https://www.sciencedirect.com/science/article/pii/S0039368122000632
   volume: '93'
+
+- id: McDanielEstimatingStateIQ2006
+  abstract: >-
+    The purpose of this study is threefold. First, an estimate of state IQ is
+    derived and its strengths and limitations are considered. To that end, an
+    indicator of downward bias in estimating state IQ is provided. Two
+    preliminary causal models are offered that predict state IQ. These models
+    were found to be highly predictive of state IQ, yielding multiple R's of
+    0.83 and 0.89. Second, the extent to which state IQ predicts state outcome
+    variables (e.g., gross state product, health, violent crime, and government
+    effectiveness) is estimated. State IQ shows positive correlations with gross
+    state product, health, and government effectiveness and negative
+    correlations with violent crime. These results are consistent with the
+    extent to which IQ predicts outcomes at the level of the individual. Third,
+    a research agenda is provided for improving estimates of state IQ,
+    identifying factors that cause differences in state IQ, and delineating the
+    role of IQ in predicting important variables.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 20
+  author:
+    - family: McDaniel
+      given: Michael A.
+  citation-key: McDanielEstimatingStateIQ2006
+  container-title: Intelligence
+  container-title-short: Intelligence
+  DOI: 10.1016/j.intell.2006.08.007
+  ISSN: 0160-2896
+  issue: '6'
+  issued:
+    - year: 2006
+      month: 11
+      day: 1
+  language: en
+  page: 607-619
+  source: ScienceDirect
+  title: 'Estimating state IQ: Measurement challenges and preliminary correlates'
+  title-short: Estimating state IQ
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0160289606001061
+  volume: '34'
 
 - id: McGueEndBehavioralGenetics2010
   abstract: >-
@@ -3673,6 +3784,39 @@ references:
   URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/hast.499
   volume: '45'
 
+- id: RobertsStmPackageStructural2019
+  abstract: >-
+    This paper demonstrates how to use the R package stm for structural topic
+    modeling. The structural topic model allows researchers to flexibly estimate
+    a topic model that includes document-level metadata. Estimation is
+    accomplished through a fast variational approximation. The stm package
+    provides many useful features, including rich ways to explore topics,
+    estimate uncertainty, and visualize quantities of interest.
+  author:
+    - family: Roberts
+      given: Margaret E
+    - family: Stewart
+      given: Brandon M
+    - family: Tingley
+      given: Dustin
+  citation-key: RobertsStmPackageStructural2019
+  container-title: Journal of Statistical Software
+  DOI: 10.18637/jss.v091.i02
+  ISSN: 1548-7660
+  issued:
+    - year: 2019
+      month: 10
+      day: 31
+  language: en
+  license: Copyright (c) 2019 Margaret E. Roberts, Brandon M. Stewart, Dustin Tingley
+  page: 1-40
+  source: www.jstatsoft.org
+  title: 'stm: An R Package for Structural Topic Models'
+  title-short: stm
+  type: article-journal
+  URL: https://doi.org/10.18637/jss.v091.i02
+  volume: '91'
+
 - id: RodgersObituaryDavidChristian2003
   accessed:
     - year: 2023
@@ -4286,7 +4430,7 @@ references:
   publisher: Explosion AI
   source: GitHub
   title: >-
-    spaCy: 💫 Industrial-strength Natural Language Processing (NLP) with Python
+    spaCy:  Industrial-strength Natural Language Processing (NLP) with Python
     and Cython
   title-short: spaCy
   type: software

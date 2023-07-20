@@ -41,17 +41,17 @@ data |>
                  values_to = 'race_discourse') |> 
     ggplot(aes(idx, rater, fill = race_discourse)) +
     geom_tile()
-## "false positive" rate is 8.3%; 5% non-consensus
+## "false positive" rate is 8.3%; 1.7% non-consensus
 count(data, race_discourse_djh, race_discourse_el) |> 
     mutate(share = n / sum(n))
 
-## 95% agreement
+## 98% agreement
 agree(data[,c('race_discourse_djh','race_discourse_el')])
-## kappa 0.74
+## kappa 0.86
 kappa2(data[,c('race_discourse_djh','race_discourse_el')], 
        "unweighted")
 ## Bennett, Alpert and Goldstein's S
-## 0.90
+## 0.95
 (2 * agree(data[,c('race_discourse_djh','race_discourse_el')])$value/100 - 1) / (2-1)
 
 
