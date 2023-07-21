@@ -203,6 +203,26 @@ references:
   URL: https://unesdoc.unesco.org/ark:/48223/pf0000128291
   volume: '1'
 
+- id: BeirichPioneerFundAssets2013
+  accessed:
+    - year: 2023
+      month: 7
+      day: 21
+  author:
+    - family: Beirich
+      given: Heidi
+  citation-key: BeirichPioneerFundAssets2013
+  container-title: Southern Poverty Law Center
+  issued:
+    - year: 2013
+      month: 10
+      day: 22
+  language: en
+  title: Pioneer Fund Assets Divided; New Leadership Appointed
+  type: webpage
+  URL: >-
+    https://www.splcenter.org/hatewatch/2013/10/22/pioneer-fund-assets-divided-new-leadership-appointed
+
 - id: BenoitSpacyrWrapperSpaCy2020
   abstract: An R wrapper to the 'Python' 'spaCy' 'NLP' library, from <http://spacy.io>.
   accessed:
@@ -356,6 +376,30 @@ references:
   type: article-journal
   URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/ajpa.24216
   volume: '175'
+
+- id: BlockIQHeritabilityInequality1974a
+  accessed:
+    - year: 2021
+      month: 11
+      day: 14
+  author:
+    - family: Block
+      given: N. J.
+    - family: Dworkin
+      given: Gerald
+  citation-key: BlockIQHeritabilityInequality1974a
+  container-title: Philosophy & Public Affairs
+  ISSN: 0048-3915
+  issue: '1'
+  issued:
+    - year: 1974
+  page: 40-99
+  publisher: Wiley
+  source: JSTOR
+  title: IQ, Heritability and Inequality, Part 2
+  type: article-journal
+  URL: https://www.jstor.org/stable/2265104
+  volume: '4'
 
 - id: BogenSavingPhenomena1988
   accessed:
@@ -788,6 +832,23 @@ references:
   URL: https://muse.jhu.edu/pub/1/article/794831
   volume: '31'
 
+- id: DouglasSciencePolicyValuefree2009
+  author:
+    - family: Douglas
+      given: Heather E.
+  call-number: Q175.5 .D68 2009
+  citation-key: DouglasSciencePolicyValuefree2009
+  event-place: Pittsburgh, Pa
+  ISBN: 978-0-8229-6026-3
+  issued:
+    - year: 2009
+  number-of-pages: '210'
+  publisher: University of Pittsburgh Press
+  publisher-place: Pittsburgh, Pa
+  source: Library of Congress ISBN
+  title: Science, policy, and the value-free ideal
+  type: book
+
 - id: DownesEarlyHistoryHeritability2021
   abstract: >-
     Fisher’s 1918 paper accomplished two distinct goals: unifying discrete
@@ -1123,6 +1184,44 @@ references:
   URL: https://www.sciencedirect.com/science/article/pii/S0191886998001470
   volume: '26'
 
+- id: FuentesAAPAStatementRace2019
+  accessed:
+    - year: 2023
+      month: 7
+      day: 21
+  author:
+    - family: Fuentes
+      given: Agustín
+    - family: Ackermann
+      given: Rebecca Rogers
+    - family: Athreya
+      given: Sheela
+    - family: Bolnick
+      given: Deborah
+    - family: Lasisi
+      given: Tina
+    - family: Lee
+      given: Sang-Hee
+    - family: McLean
+      given: Shay-Akil
+    - family: Nelson
+      given: Robin
+  citation-key: FuentesAAPAStatementRace2019
+  container-title: American Journal of Physical Anthropology
+  DOI: 10.1002/ajpa.23882
+  ISSN: 1096-8644
+  issue: '3'
+  issued:
+    - year: 2019
+  language: en
+  license: © 2019 Wiley Periodicals, Inc.
+  page: 400-402
+  source: Wiley Online Library
+  title: AAPA Statement on Race and Racism
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/ajpa.23882
+  volume: '169'
+
 - id: GiangrandeRaceEthnicityScarrRowe2021
   abstract: >-
     In 2020, Pesta et al. published an article entitled “Racial and Ethnic Group
@@ -1448,6 +1547,47 @@ references:
   type: article
   URL: https://www.biorxiv.org/content/10.1101/598532v1
 
+- id: HavstadSensationalScienceArchaic2021
+  abstract: >-
+    More than a decade of exacting scientific research involving paleontological
+    fragments and ancient DNA has lately produced a series of pronouncements
+    about a purportedly novel population of archaic hominins dubbed “the
+    Denisova.” The science involved in these matters is both technically
+    stunning and, socially, at times a bit reckless. Here I discuss the
+    responsibilities which scientists incur when they make inductively risky
+    pronouncements about the different relative contributions by Denisovans to
+    genomes of members of apparent subpopulations of current humans (i.e., the
+    so-called “races”). This science is sensational: it is science which
+    empirically speculates, to the public delight’s and entertainment, about
+    scintillating topics such as when humans evolved, where we came from, and
+    who else we were having sex with during our early hominin history. An
+    initial characterization of sensational science emerges from my discussion
+    of the case, as well as a diagnosis of an interactive phenomenon termed
+    amplified inductive risk.
+  accessed:
+    - year: 2022
+      month: 3
+      day: 12
+  author:
+    - family: Havstad
+      given: Joyce C.
+  citation-key: HavstadSensationalScienceArchaic2021
+  container-title: Canadian Journal of Philosophy
+  DOI: 10.1017/can.2021.15
+  ISSN: 0045-5091, 1911-0820
+  issued:
+    - year: 2021
+      month: 7
+      day: 22
+  language: en
+  page: 1-26
+  publisher: Cambridge University Press
+  source: Cambridge University Press
+  title: Sensational Science, Archaic Hominin Genetics, and Amplified Inductive Risk
+  type: article-journal
+  URL: >-
+    https://www.cambridge.org/core/journals/canadian-journal-of-philosophy/article/sensational-science-archaic-hominin-genetics-and-amplified-inductive-risk/80675A1A574D9BD78A6B7ECA045DC2AC
+
 - id: HeldEpistemicViolencePsychological2020
   abstract: >-
     A primary target of Indigenous psychologists and critical psychologists is
@@ -1651,6 +1791,52 @@ references:
   title: Arthur Jensen’s Racist Eugenics
   type: post-weblog
   URL: https://altrightorigins.com/2020/07/06/jensen-white-nationalist/
+
+- id: JacksonFacingOurHistory2023
+  abstract: >-
+    This report is the product of a major year-long initiative to acknowledge
+    and reckon with past injustice, as well as progress toward justice, within
+    the American Society of Human Genetics (ASHG) and the broader ﬁeld of human
+    genetics. Approved by the ASHG Board of Directors and launched in 2021, the
+    initiative was sparked by the social and racial reckonings in 2020. The ASHG
+    Bboard of Directors asked ASHG to acknowledge and provide examples of how
+    human genetics theories and knowledge ‘‘have been used to feed and justify
+    racism, eugenics, and other systemic forms of injustice, and to focus
+    speciﬁcally on examples of ASHG’s role in fostering or failing to rebuke
+    harms and on steps the Society could take to address ﬁndings.’’ The
+    initiative was undertaken with support and input from an expert panel of
+    human geneticists, historians, clinician-scientists, equity scholars, and
+    social scientists and included a research and environmental scan, four
+    expert panel meetings, and a community dialogue as its main activities.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 21
+  author:
+    - family: Jackson
+      given: Chazeman S.
+    - family: Turner
+      given: Daria
+    - family: June
+      given: Maya
+    - family: Miller
+      given: Mona V.
+  citation-key: JacksonFacingOurHistory2023
+  container-title: The American Journal of Human Genetics
+  container-title-short: The American Journal of Human Genetics
+  DOI: 10.1016/j.ajhg.2023.02.005
+  ISSN: '00029297'
+  issue: '3'
+  issued:
+    - year: 2023
+      month: 3
+  language: en
+  page: 377-395
+  source: DOI.org (Crossref)
+  title: Facing Our History—Building an Equitable Future
+  type: article-journal
+  URL: https://linkinghub.elsevier.com/retrieve/pii/S0002929723000496
+  volume: '110'
 
 - id: JacksonJr.ArthurJensenEvolutionary2022
   abstract: >-
@@ -1960,6 +2146,58 @@ references:
   title-short: Echo chamber
   type: book
 
+- id: JasnyEmpiricalExaminationEcho2015
+  abstract: >-
+    Diverse methods have been applied to understand why science continues to be
+    debated within the climate policy domain. A number of studies have presented
+    the notion of the ‘echo chamber’ to model and explain information flows
+    across an array of social settings, finding disproportionate connections
+    among ideologically similar political communicators. This paper builds on
+    these findings to provide a more formal operationalization of the components
+    of echo chambers. We then empirically test their utility using survey data
+    collected from the community of political elites engaged in the contentious
+    issue of climate politics in the United States. Our survey period coincides
+    with the most active and contentious period in the history of US climate
+    policy, when legislation regulating carbon dioxide emissions had passed
+    through the House of Representatives and was being considered in the Senate.
+    We use exponential random graph (ERG) modelling to demonstrate that both the
+    homogeneity of information (the echo) and multi-path information
+    transmission (the chamber) play significant roles in policy communication.
+    We demonstrate that the intersection of these components creates echo
+    chambers in the climate policy network. These results lead to some important
+    conclusions about climate politics, as well as the relationship between
+    science communication and policymaking at the elite level more generally.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 21
+  author:
+    - family: Jasny
+      given: Lorien
+    - family: Waggle
+      given: Joseph
+    - family: Fisher
+      given: Dana R.
+  citation-key: JasnyEmpiricalExaminationEcho2015
+  container-title: Nature Climate Change
+  container-title-short: Nature Clim Change
+  DOI: 10.1038/nclimate2666
+  ISSN: 1758-6798
+  issue: '8'
+  issued:
+    - year: 2015
+      month: 8
+  language: en
+  license: 2015 Springer Nature Limited
+  number: '8'
+  page: 782-786
+  publisher: Nature Publishing Group
+  source: www.nature.com
+  title: An empirical examination of echo chambers in US climate policy networks
+  type: article-journal
+  URL: https://www.nature.com/articles/nclimate2666
+  volume: '5'
+
 - id: JensenHowMuchCan1969
   abstract: >-
     Arthur Jensen argues that the failure of recent compensatory education
@@ -2245,6 +2483,67 @@ references:
   title-short: Anti-racist genomics
   type: motion_picture
   URL: https://www.youtube.com/watch?v=eiGYum9LxYY
+
+- id: KitcherArgumentFreeInquiry1997
+  accessed:
+    - year: 2022
+      month: 1
+      day: 19
+  author:
+    - family: Kitcher
+      given: Philip
+  citation-key: KitcherArgumentFreeInquiry1997
+  container-title: Noûs
+  ISSN: 0029-4624
+  issue: '3'
+  issued:
+    - year: 1997
+  page: 279-306
+  publisher: Wiley
+  source: JSTOR
+  title: An Argument About Free Inquiry
+  type: article-journal
+  URL: https://www.jstor.org/stable/2216207
+  volume: '31'
+
+- id: KouranyShouldKnowledgeBe2016
+  abstract: >-
+    For centuries scientists have claimed that women are intellectually inferior
+    to men and blacks are inferior to whites. Although these claims have been
+    contested and corrected for centuries, they still continue to be made.
+    Meanwhile, scientists have documented the harm done to women and blacks by
+    the publication of such claims. Can anything be done to improve this
+    situation? Freedom of research is universally recognized to be of first-rate
+    importance. Yet, constraints on that freedom are also universally
+    recognized. I consider three of these constraints and argue for tighter
+    restrictions on race- and gender-related cognitive differences research on
+    their basis.
+  accessed:
+    - year: 2016
+      month: 11
+      day: 19
+  author:
+    - family: Kourany
+      given: Janet A.
+  citation-key: KouranyShouldKnowledgeBe2016
+  container-title: Philosophy of Science
+  container-title-short: Philosophy of Science
+  DOI: 10.1086/687863
+  ISSN: 0031-8248
+  issue: '5'
+  issued:
+    - year: 2016
+      month: 6
+      day: 16
+  page: 779-790
+  source: journals.uchicago.edu.proxy1.lib.uwo.ca (Atypon)
+  title: >-
+    Should Some Knowledge Be Forbidden? The Case of Cognitive Differences
+    Research
+  title-short: Should Some Knowledge Be Forbidden?
+  type: article-journal
+  URL: http://www.journals.uchicago.edu.proxy1.lib.uwo.ca/doi/abs/10.1086/687863
+  volume: '83'
 
 - id: LaFraniereVeryHarmfulLack2022
   abstract: >-
