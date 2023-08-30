@@ -5301,9 +5301,6 @@ references:
     - family: Winston
       given: Andrew S.
   citation-key: WinstonScientificRacismNorth2020
-  container-author:
-    - family: Winston
-      given: Andrew S.
   container-title: Oxford Research Encyclopedia of Psychology
   DOI: 10.1093/acrefore/9780190236557.013.516
   ISBN: 978-0-19-023655-7
@@ -5445,4 +5442,47 @@ references:
   title: By association
   type: post-weblog
   URL: https://www.molecularecologist.com/2022/01/27/by-association/
+
+- id: ZigerellUSPublicPerceptions2021
+  abstract: >-
+    Intelligence quotient (IQ) is a common measure of intelligence that
+    associates with many important life outcomes. Research over several decades
+    has indicated that the average IQ test score among Black Americans is lower
+    than the average IQ test score among White Americans, but in weighted
+    results from a national nonprobability survey, only about 41% of US adults
+    indicated awareness of this IQ gap. Results from a follow-up convenience
+    survey indicated that, in the aggregate, White participants’ rating of White
+    Americans’ average IQ and average intelligence is higher than Blacks
+    Americans’ average IQ test score and average intelligence and was not driven
+    by White participants’ belief in a universal White intellectual superiority.
+    These and other results could have implications regarding the US public’s
+    perceptions about the reasons for Black/White inequality and implications
+    for the use of intelligence stereotype scales as measures of racial
+    prejudice.
+  accessed:
+    - year: 2023
+      month: 7
+      day: 13
+  author:
+    - family: Zigerell
+      given: LJ
+  citation-key: ZigerellUSPublicPerceptions2021
+  container-title: Political Studies Review
+  DOI: 10.1177/1478929920917843
+  ISSN: 1478-9299
+  issue: '4'
+  issued:
+    - year: 2021
+      month: 11
+      day: 1
+  language: en
+  page: 591-606
+  publisher: SAGE Publications
+  source: SAGE Journals
+  title: >-
+    US Public Perceptions of an Intelligence Quotient Test Score Gap Between
+    Black Americans and White Americans
+  type: article-journal
+  URL: https://doi.org/10.1177/1478929920917843
+  volume: '19'
 ...
