@@ -11,7 +11,7 @@ paper:
 talk: 
 	@echo "build talk/slides"
 	cd $(TALK_DIR); $(MAKE)
-	
+
 pipe: 
 	@echo "pipe"
 	cd $(SCRIPTS_WD); $(MAKE)

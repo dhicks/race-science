@@ -14,7 +14,7 @@ abstract: |
   *[structured]*
 acknowledgements: |
   *[strutured]* Thanks to Emily Merchant and John Jackson for some initial discussions that helped clarify the scope of the project and identify some key resources related to the Pioneer Fund and *Mankind Quarterly*.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles.  EL's work on this project was supported by UC Merced.  DH's work on this project was not supported by any specific funding. 
-bibliography: "references.bib"
+# bibliography: "references.bib"
 output: 
   # https://github.com/rstudio/rticles/pull/486
   # skeleton: <https://github.com/christopherkenny/rticles/tree/master/inst/rmarkdown/templates/science>
@@ -336,3 +336,5 @@ The phenomenon of colorblind racism is closed related to ambiguities that cannot
 
 
 \clearpage
+
+\bibliography{references.bib,refs-manual.bib}

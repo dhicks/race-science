@@ -8,3 +8,11 @@ paper.pdf: paper.Rmd \
 .PHONY: wc
 wc: 
 	pdftotext paper.pdf - | wc -w
+
+.PHONY: clean
+clean:
+	latexmk -C
+
+.PHONY: aux
+aux: 
+	latexmk -pdf
