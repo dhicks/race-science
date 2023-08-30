@@ -1,48 +1,25 @@
-# Project Template #
+---
+title: "Mainstreaming Race Science"
+author: "Daniel J. Hicks, Emilio Lobato"
+email: <dhicks4@ucmerced.edu>
+---
 
-This repository contains a template for my projects.  
+This repository contains the preprocessed analysis data and code for the paper "Mainstreaming Race Science" by Daniel J. Hicks and Emilio Lobato.  
 
+Reproducing this analysis requires [R](https://cran.r-project.org/index.html) version 4.1 and [renv version 0.15.2](https://cran.r-project.org/src/contrib/Archive/renv/).  We also recommend using GNU make, which should be installed automatically with the OS on Unix-based systems (including macOS and Linux).  
 
-## Folder Structure ##
-- `scripts`: Scripts that conduct the analysis pipeline, from data collection (if appropriate) through cleaning to analysis
+Once these prerequisites are installed: 
 
-- `data`: Data files, both raw data and intermediate data files created by the pipeline scripts
+1. In R, install [`tmfast` version 0.0.0.2023-04-15](https://github.com/dhicks/tmfast/releases/tag/0.0.0.2023-04-15)
+    - From the command line, this can be done using `devtools` using `Rscript -e "devtools::install_github('dhicks/tmfast@0.0.0.2023-04-15')"`. 
+    - This step will install the package used for vocabulary selection and topic modeling. 
 
-- `plots`: Plots and other figures created by the pipeline scripts
-	- Alternative: `output` if the project creates several tables or other outputs
+2. In R, from the top folder of the project, run `renv::restore()`
+    - From the command line, this can be done using `Rscript -e "renv::restore()"`. 
+    - This step will install all dependencies for the entire analysis pipeline, using the versions used in the original analysis. 
+    - Note that this may require compiling packages from source, which can take a significant amount of time. 
 
-- `R`: R files containing utility functions used repeatedly in the analysis pipeline
-	- Load in scripts using `devtools::load_all('..')`
-	- Requires valid `DESCRIPTION`
-
-- `paper`: Files used to generate the paper
-	- `paper.md` containing the paper body
-		- Alternative: `paper.Rmd` for an Rmarkdown version
-	- `header.yaml` containing some nice typesetting
-	- `bib` file should be placed in the top level, for use by both paper and talk
-	- The project makefile should copy/rename figures from `plots` to `paper`
-
-- `talk`: Files used to generate the talk/slides
-	
-
-## File Naming ##
-Files in `scripts`, `data`, and `plots` should generally use a sequential naming convention:  
-
-- Scripts in `scripts` should have filenames starting with `01_`:
-	- `01_scrape.R`
-	- `02_parse.R`
-	- `03_eda.R`, and so on
-	
-- Data and plot files (`data` and `plots`) should use a parallel naming convention:  
-	- `00_` indicates raw data (produced or gathered outside of the pipeline in `scripts`)
-	- `01_` indicates plots and intermediate data files produced by script number `01`, and so on
-	
-
-## Infrastructure Files ##
-- `Makefile` should include the following targets: 
-	- `all`: pipe, talk, and paper
-	- `pipe`: `make` the analysis pipeline
-	- `clean`: clean intermediate files from `data` and `plots`
-	
-- `DESCRIPTION`: Required for the minimal valid package structure expected by `devtools::load_all()`
-	- See <http://www.hep.by/gnu/r-patched/r-exts/R-exts_4.html>
+3. Run the analysis scripts in the `scripts` folder in numerical order.  
+    - If GNU make is installed, this can be done from the command line using `make` or `make pipe` in either the top-level folder or the `scripts` folder. 
+    
+4. Optional: Recreating the manuscript has further prerequisites.  See the README in the `paper` folder. 

@@ -13,7 +13,11 @@ corresponding_author: "Corresponding author: Daniel J. Hicks, dhicks4@ucmerced.e
 abstract: |
   *[structured]*
 acknowledgements: |
-  *[strutured]* Thanks to Emily Merchant and John Jackson for some initial discussions that helped clarify the scope of the project and identify some key resources related to the Pioneer Fund and *Mankind Quarterly*.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles.  EL's work on this project was supported by UC Merced.  DH's work on this project was not supported by any specific funding. 
+  | Thanks to Emily Merchant and John Jackson for some initial discussions that helped clarify the scope of the project and identify some key resources related to the Pioneer Fund and *Mankind Quarterly*.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles. 
+  | **Funding:** EL's work on this project was partially supported by UC Merced.  DH's work on this project was not supported by any specific funding. 
+  | **Author contributions:** DJH (conceptualization, data curation, formal analysis, investigation, methodology, project administration, software, validation, visualization, writing-original draft, writing-review & editing); EL (conceptualization, methodology, software, validation, visualization, writing-original draft, writing-review & editing)
+  | **Competing interests:** The authors have no competing interests to declare. 
+  | **Data and materials availability:** Web of Science search results and article fulltext are not publicly available due to intellectual property restrictions.  Preprocessed analysis data (document-term counts and article metadata) and analysis scripts are available at *[doi]*. 
 # bibliography: "references.bib"
 output: 
   # https://github.com/rstudio/rticles/pull/486
@@ -52,6 +56,8 @@ List of Supplementary Materials
 
 -->
 
+
+FUNDING: EL's work on this project was partially funded by UC Merced.  No other specific funding was used for this project.  AUTHOR CONTRIBUTIONS: 
 
 
 # Introduction {.unnumbered}
@@ -196,6 +202,13 @@ Random oOther thought: academic freedom doesn't mean being free from criticism o
 
 
 \clearpage
+
+# References and Notes {.unnumbered}
+
+\bibliography{references.bib,refs-manual.bib}
+
+
+\clearpage
 \pagenumbering{arabic}
 \renewcommand*{\thepage}{\thesection.\arabic{page}}
 \appendix
@@ -329,6 +342,6 @@ Techniques such as topic modeling may be able to account for discursive shifts f
 The phenomenon of colorblind racism is closely related to ambiguities that cannot be resolved even by human coders familiar with the broader cultural context.  Two relevant examples are the "Flynn effect," a secular increase in intelligence test scores noted by philosopher James Flynn; and studies of "national IQ," exemplified by the work of Richard Lynn.  The Flynn effect implies that environmental factors can create group differences in IQ that are comparable to Black-White differences, and thus directly challenges claims that the racial differences are biological.  Using methods widely regarded as ad hoc, cherry-picking, and generally unreliable, Lynn and collaborators have claimed that national IQ averages are correlated with national GDP.  Both the Flynn effect and "national IQ" are strongly associated with race-and-intelligence discourse in the US cultural context.  But scientific journal articles on these topics may not include any racial language at all.  For example, a meta-analysis of the Flynn effect does not discuss racial differences or use terms such as "White" or "Black" outside the reference list \cite{TrahanFlynnEffectMetaanalysis2014}.  Should such articles be coded as race science discourse?  We expect that even readers who accept our definitions of race science and race science discourse will reasonably disagree on how to answer this question.  Topic models, of course, are not even capable of representing this essential ambiguity.  
 
 
-\clearpage
 
-\bibliography{references.bib,refs-manual.bib}
+
+
