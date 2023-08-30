@@ -66,9 +66,6 @@ The distinction between scientific racism and race science allows us to bracket 
 
 
 
-
-
-
 # Scientific racism, eugenics, and *Brown* {.unnumbered}
 
 Histories of scientific racism in the twentieth century have often emphasized the Pioneer Fund and the parascholarly journal *Mankind Quarterly* (MQ) \cite{
@@ -149,14 +146,6 @@ The topic model analysis suggests that by the 1990s, behavior genetics may have 
 
 Instead, our results suggest that psychology has been the dominant discipline in which the race science echo chamber is being maintained. This may be the result of racial essentialization being maintained more easily in a discipline like psychology than in other disciplines that contribute to behavior genetics, like genetics and anthropology. The typical practitioners in psychology do not have the degree of formal education about, and therefore knowledge of, relevant underlying genetic and anthropological research that has led many professional organizations in genetics and anthropology to formally reject the claim of race as meaningful biological concept \cite{anthropology1996aapa, american2018ashg}, undermining the core assumption necessary for race science to exist. As described by Winston, however, "[s]ince the 1990s, scientific racism has evolved in ways that sidestep or blunt the charge of essentialist categorization" (p. 427, \cite{WinstonWhyMainstreamResearch2020}), such as shifting the rhetoric away from race to concepts such as "national IQ" that are deployed to preserve an essentialist categorization of different human populations. Professional psychological organizations routinely publish statements rejecting racism or acknowledging psychology's complicity in systemic racism \cite{american2021apology, aps2021statement}, but stop short of rejecting race as a meaningful biological categorization of people, allowing for race science research to be smuggled into psychology and given the appearance of continued scientific legitimacy.
 
-<!-- Among both academics and the general public, the field of behavior genetics is strongly associated with race science, and specifically race-and-intelligence research.  It's therefore notably that BG published very few articles in any race-and-intelligence topic identified by any of the 24 topic models.  Panofsky \cite{PanofskyMisbehavingScienceControversy2014} argues that, prior to Jensen's 1969 paper, behavior genetics emphasized the study of non-human animals and intentionally avoided associations with eugenics and public controversy more generally.  In response to Jensen, critics such as Lewontin offered broad critiques of behavior genetics as such, and behavior geneticists in turn adopted a radical conception of academic freedom (without any sense of responsibility for the social implications of academic research) and a siege or wartime mentality, as demonstrated by Sandra Scarr's 1986 presidential address to the Behavior Genetics Association (BGA) \cite{ScarrThreeCheersBehavior1987}.  Scarr's address coincided with the period between 1970-1990 when BG published articles in topic 24 (including Scarr's address itself).  -->
-
-<!-- However, Glayde Whitney's 1995 BGA presidential address was published in MQ rather than BG.  According to Whitney, BG's editor refused to publish the address and the BGA Executive Committee (except for Whitney himself) voted to "issue an official statement of denouncement" of the address; though we were unable to find any such a statement, and Panofsky reports that "nothing official was done to Whitney."  In his address, Whitney criticized "the Marxist-Lysenkoist denial of genetics"; quoted Peter Brimelow — a white nationalist and later founder of the racist and xenophobic website VDARE — defining "racist" as "anyone who is winning an argument with a liberal"; and proposed as a "reasonable scientific hypothesis" that differences in murder rates between countries and cities was caused by racial genetic differences in intelligence, empathy, aggression, and impulsivity.   -->
-
-<!-- The topic model analysis and the case of Whitney's address suggest that, by the 1990s, behavior genetics may have somewhat distanced itself from race science, though perhaps without directly repudiating it \cite{GillbornSoftlySoftlyGenetics2016, HennWhyDNANo2021}.   -->
-
-<!-- This interpretation was given additional support by a supplemental review of BG using Springer's journal search website; see supplemental text \@ref(bg).  This review also brought to our attention two disciplinary histories of behavior genetics, one published in McGue in 2010 \cite{McGueEndBehavioralGenetics2010} and the other by Plomin in 2023 \cite{PlominCelebratingCenturyResearch2023}.  McGue acknowledges the historical association with eugenics but does not mention Jensen and other race science controversies since World War II. Instead postwar behavior genetics is portrayed as an endeavor to counterbalance the hegemony of the "Blank Slate," the supposedly widespread view that genetic differences play no role in explaining individual differences \cite{BatesonCorpseWearisomeDebate2002}.  Plomin briefly mentions the controversies surrounding Jensen's 1969 paper and later *The Bell Curve*, writing that Jensen's work was controversial because he "touched on ethnic differences"; though ultimately Plomin reassures the reader that "by the 1990s, quantitative genetic research had convinced most scientists of the importance of genetics for behavioral traits, including intelligence."  All together, behavior geneticists acknowledge but then downplay the extent of the field's involvement in race science in the past, portraying themselves as models of scientific objectivity and technical rigor, while displacing the source of race science controversies on to external, "politically-motivated," and "irrational" actors.   -->
-
 
 # Discussion {.unnumbered}
 
@@ -211,7 +200,6 @@ Random oOther thought: academic freedom doesn't mean being free from criticism o
 *[what can science do? Posselt, /Equity in Science/]*
 
 *[max ~50 refs]*
-
 
 
 \clearpage
@@ -348,4 +336,3 @@ The phenomenon of colorblind racism is closed related to ambiguities that cannot
 
 
 \clearpage
-
