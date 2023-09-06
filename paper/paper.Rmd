@@ -32,6 +32,9 @@ output:
     move_figures: false
     draft: true
     number_sections: true
+header-includes:
+  - \usepackage{lineno}
+  - \linenumbers
 ---
 
 <!-- 
