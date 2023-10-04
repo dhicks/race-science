@@ -67,7 +67,7 @@ List of Supplementary Materials
 
 # Introduction {.unnumbered}
 
-By the end of the Second World War, a combination of technical developments in anthropology and genetics, along with revelations of Nazi atrocities, had led most members of the scientific community to reject attempts to scientifically justify racial inequalities and colonialism \cite{BarkanRetreatScientificRacism1992}.  But eugenic thinking and scientific racism persisted throughout the second half of the twentieth century, and recent work has found that white supremacists continue to attempt to use scientific research to justify racial violence \cite{DusterBackdoorEugenics2003, PanofskyHowWhiteNationalists2021}.  
+By the end of the Second World War, a combination of technical developments in anthropology and genetics, along with revelations of Nazi atrocities, had led most members of the scientific community to reject attempts to scientifically justify racial inequalities and colonialism \cite{BarkanRetreatScientificRacism1992}.  But eugenic thinking and scientific racism persisted throughout the second half of the twentieth century, and recent work has found that white supremacists continue to attempt to use scientific research to justify racial violence \cite{DusterBackdoorEugenics2003, PanofskyHowWhiteNationalists2021, PronczukRacistResearcherExposed2022}.  
 
 The aim of the study reported here was to trace race science in the scholarly and parascholarly literature, examining the ways that fringe ideas can present themselves as legitimate scholarly inquiry.  
 
