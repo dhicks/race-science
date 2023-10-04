@@ -428,6 +428,43 @@ references:
   URL: http://www.jstor.org/stable/2185445
   volume: '97'
 
+- id: Bonilla-SilvaRacismRacistsColorBlind2006
+  abstract: >-
+    The first edition of this best-selling book showed that alongside the subtle
+    forms of discrimination typical of the post-Civil Rights era, new powerful
+    ideology of 'color-blind racism' has emerged. Bonilla-Silva documented how
+    beneath the rhetorical maze of contemporary racial discourse lies a
+    full-blown arsenal of arguments, phrases, and stories that whites use to
+    account for and ultimately justify racial inequities. In the new edition
+    Bonilla-Silva has added a chapter dealing with the future of racial
+    stratification in America that goes beyond the white / black dichotomy. He
+    argues that the U.S. is developing a more complex and apparently 'plural'
+    racial order that will mimic Latin American patterns of racial
+    stratification. Another new chapter addresses a variety of questions from
+    readers of the first edition. And he has updated the book throughout with
+    new information, data, and references where appropriate. The book ends with
+    a new Postscript, 'What is to be Done (For Real?)'. As in the highly
+    acclaimed first edition, Bonilla-Silva continues to challenge color-blind
+    thinking.
+  author:
+    - family: Bonilla-Silva
+      given: Eduardo
+  citation-key: Bonilla-SilvaRacismRacistsColorBlind2006
+  ISBN: 978-0-7425-6881-5
+  issued:
+    - year: 2006
+      month: 8
+      day: 3
+  language: en
+  number-of-pages: '596'
+  publisher: Rowman & Littlefield Publishers
+  source: Google Books
+  title: >-
+    Racism without Racists: Color-Blind Racism and the Persistence of Racial
+    Inequality in the United States
+  title-short: Racism without Racists
+  type: book
+
 - id: BrattainRaceRacismAntiracism2007
   accessed:
     - year: 2022
@@ -4600,6 +4637,46 @@ references:
   type: article-journal
   URL: http://link.springer.com/10.1023/B:MESC.0000023263.09462.6c
   volume: '13'
+
+- id: SchroederLimitsDemocratizingScience2022
+  abstract: >-
+    Scientists are frequently called upon to “democratize” science, by bringing
+    the public into scientific research. One appealing point for public
+    involvement concerns the nonepistemic values involved in science. Suppose,
+    though, a scientist invites the public to participate in making such
+    value-laden determinations but finds that the public holds values the
+    scientist considers morally unacceptable. Does the argument for
+    democratizing science commit the scientist to accepting the public’s
+    objectionable values, or may she veto them? I argue that there are a limited
+    set of cases in which scientists can, consistently with a commitment to
+    democratized science, set aside the public’s judgments.
+  accessed:
+    - year: 2023
+      month: 6
+      day: 7
+  author:
+    - family: Schroeder
+      given: S. Andrew
+  citation-key: SchroederLimitsDemocratizingScience2022
+  container-title: Philosophy of Science
+  DOI: 10.1017/psa.2022.54
+  ISSN: 0031-8248, 1539-767X
+  issue: '5'
+  issued:
+    - year: 2022
+      month: 12
+  language: en
+  page: 1034-1043
+  publisher: Cambridge University Press
+  source: Cambridge University Press
+  title: >-
+    The Limits of Democratizing Science: When Scientists Should Ignore the
+    Public
+  title-short: The Limits of Democratizing Science
+  type: article-journal
+  URL: >-
+    https://www.cambridge.org/core/journals/philosophy-of-science/article/limits-of-democratizing-science-when-scientists-should-ignore-the-public/0722C3510F730BA972AAC17FE53CFFE8
+  volume: '89'
 
 - id: SclafaniCorrelationCausationStudy1981
   abstract: >-
