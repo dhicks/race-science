@@ -18,8 +18,8 @@ abstract: |
 
 acknowledgements: |
   | Thanks to Emily Merchant and John Jackson for some initial discussions that helped clarify the scope of the project and identify some key resources related to the Pioneer Fund and *Mankind Quarterly*.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles.  Thanks to Kevin Bird, John Jackson, and Manuela Fernández Pinto for comments on a draft of this paper. 
-  | **Funding:** EL's work on this project was partially supported by UC Merced.  DJH's work on this project was not supported by any specific funding. 
-  | **Author contributions:** DJH (conceptualization, data curation, formal analysis, investigation, methodology, project administration, software, validation, visualization, writing-original draft, writing-review & editing); EL (conceptualization, methodology, software, validation, visualization, writing-original draft, writing-review & editing)
+  | **Funding:** EJCL's work on this project was partially supported by UC Merced.  DJH's work on this project was not supported by any specific funding. 
+  | **Author contributions:** DJH (conceptualization, data curation, formal analysis, investigation, methodology, project administration, software, validation, visualization, writing-original draft, writing-review & editing); EJCL (conceptualization, methodology, software, validation, visualization, writing-original draft, writing-review & editing)
   | **Competing interests:** The authors have no competing interests to declare. 
   | **Data and materials availability:** Web of Science search results and article fulltext are not publicly available due to intellectual property restrictions.  Preprocessed analysis data (document-term counts and article metadata) and analysis scripts are available at *[doi]*. 
 # bibliography: references.bib, refs-manual.bib
