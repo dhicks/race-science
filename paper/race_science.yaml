@@ -5215,6 +5215,54 @@ references:
   URL: https://doi.org/10.1080/23801883.2022.2074509
   volume: '0'
 
+- id: WenzelRetributiveRestorativeJustice2008
+  abstract: >-
+    The emergence of restorative justice as an alternative model to Western,
+    court-based criminal justice may have important implications for the
+    psychology of justice. It is proposed that two different notions of justice
+    affect responses to rule-breaking: restorative and retributive justice.
+    Retributive justice essentially refers to the repair of justice through
+    unilateral imposition of punishment, whereas restorative justice means the
+    repair of justice through reaffirming a shared value-consensus in a
+    bilateral process. Among the symbolic implications of transgressions,
+    concerns about status and power are primarily related to retributive justice
+    and concerns about shared values are primarily related to restorative
+    justice. At the core of these processes, however, lies the parties’
+    construal of their identity relation, specifically whether or not
+    respondents perceive to share an identity with the offender. The specific
+    case of intergroup transgressions is discussed, as are implications for
+    future research on restoring a sense of justice after rule-breaking.
+  accessed:
+    - year: 2023
+      month: 10
+      day: 20
+  author:
+    - family: Wenzel
+      given: Michael
+    - family: Okimoto
+      given: Tyler G.
+    - family: Feather
+      given: Norman T.
+    - family: Platow
+      given: Michael J.
+  citation-key: WenzelRetributiveRestorativeJustice2008
+  container-title: Law and Human Behavior
+  container-title-short: Law Hum Behav
+  DOI: 10.1007/s10979-007-9116-6
+  ISSN: 1573-661X
+  issue: '5'
+  issued:
+    - year: 2008
+      month: 10
+      day: 1
+  language: en
+  page: 375-389
+  source: Springer Link
+  title: Retributive and Restorative Justice
+  type: article-journal
+  URL: https://doi.org/10.1007/s10979-007-9116-6
+  volume: '32'
+
 - id: WickhamXml2ParseXML2023
   abstract: >-
     Work with XML files using a simple, consistent interface. Built on top of
@@ -5499,6 +5547,33 @@ references:
   type: article-journal
   URL: http://link.springer.com/article/10.1007/s11229-009-9618-5
   volume: '182'
+
+- id: WormerRestorativeJustice2013
+  abstract: >-
+    "Restorative Justice" published on  by NASW Press and Oxford University
+    Press.
+  accessed:
+    - year: 2023
+      month: 10
+      day: 20
+  author:
+    - family: Wormer
+      given: Katherine
+      dropping-particle: van
+  citation-key: WormerRestorativeJustice2013
+  container-title: Encyclopedia of Social Work
+  DOI: 10.1093/acrefore/9780199975839.013.345
+  ISBN: 978-0-19-997583-9
+  issued:
+    - year: 2013
+      month: 6
+      day: 11
+  language: en
+  source: oxfordre.com
+  title: Restorative Justice
+  type: chapter
+  URL: >-
+    https://oxfordre.com/socialwork/display/10.1093/acrefore/9780199975839.001.0001/acrefore-9780199975839-e-345
 
 - id: YoderAssociation2022
   abstract: "(Flickr: Eugene Zemlyanskiy) I grew up in the Mennonite Church, a sort of next-level Protestant Christian tradition. (In cartoonish brief:\_Ulrich Zwingli\_rebelled against the Roman Cathol…"
