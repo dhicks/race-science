@@ -16,12 +16,12 @@ abstract: |
   | **Results:** Our analysis found two distinguishable lines of race science discourse.  One is strongly associated with *Mankind Quarterly*, while the other — emphasizing race and intelligence — is strongly associated with mainstream psychology journals, especially *Intelligence* and *Personality and Individual Differences*.  
   | **Conclusion:** Psychology, and especially intelligence research, has played a significant role in mainstreaming race science. 
 
-acknowledgements: |
-  | Thanks to Emily Merchant and John Jackson for some initial discussions that helped clarify the scope of the project and identify some key resources related to the Pioneer Fund and *Mankind Quarterly*.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles.  Thanks to Kevin Bird, John Jackson, and Manuela Fernández Pinto for comments on a draft of this paper. 
-  | **Funding:** EJCL's work on this project was partially supported by UC Merced.  DJH's work on this project was not supported by any specific funding. 
-  | **Author contributions:** DJH (conceptualization, data curation, formal analysis, investigation, methodology, project administration, software, validation, visualization, writing-original draft, writing-review & editing); EJCL (conceptualization, methodology, software, validation, visualization, writing-original draft, writing-review & editing)
-  | **Competing interests:** The authors have no competing interests to declare. 
-  | **Data and materials availability:** Web of Science search results and article fulltext are not publicly available due to intellectual property restrictions.  Preprocessed analysis data (document-term counts and article metadata) and analysis scripts are available at *[doi]*. 
+# acknowledgements: |
+#   | Thanks to Emily Merchant and John Jackson for some initial discussions that helped clarify the scope of the project and identify some key resources related to the Pioneer Fund and *Mankind Quarterly*.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles.  Thanks to Kevin Bird, John Jackson, and Manuela Fernández Pinto for comments on a draft of this paper. 
+#   | **Funding:** EJCL's work on this project was partially supported by UC Merced.  DJH's work on this project was not supported by any specific funding. 
+#   | **Author contributions:** DJH (conceptualization, data curation, formal analysis, investigation, methodology, project administration, software, validation, visualization, writing-original draft, writing-review & editing); EJCL (conceptualization, methodology, software, validation, visualization, writing-original draft, writing-review & editing)
+#   | **Competing interests:** The authors have no competing interests to declare. 
+#   | **Data and materials availability:** Web of Science search results and article fulltext are not publicly available due to intellectual property restrictions.  Preprocessed analysis data (document-term counts and article metadata) and analysis scripts are available at *[doi]*. 
 # bibliography: references.bib, refs-manual.bib
 output: 
   # https://github.com/rstudio/rticles/pull/486
@@ -176,14 +176,20 @@ How should psychologists exercise these responsibilities?  We believe restorativ
 
 
 
-<!-- 
 \clearpage
 
 # References and Notes {.unnumbered}
 
 \bibliographystyle{Science}
 \bibliography{references.bib, refs-manual.bib}
- -->
+
+| 
+| Thanks to Emily Merchant and John Jackson for some initial discussions that helped clarify the scope of the project and identify some key resources related to the Pioneer Fund and *Mankind Quarterly*.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles.  Thanks to Kevin Bird, John Jackson, and Manuela Fernández Pinto for comments on a draft of this paper. 
+| **Funding:** EJCL's work on this project was partially supported by UC Merced.  DJH's work on this project was not supported by any specific funding. 
+| **Author contributions:** DJH (conceptualization, data curation, formal analysis, investigation, methodology, project administration, software, validation, visualization, writing-original draft, writing-review & editing); EJCL (conceptualization, methodology, software, validation, visualization, writing-original draft, writing-review & editing)
+| **Competing interests:** The authors have no competing interests to declare. 
+| **Data and materials availability:** Web of Science search results and article fulltext are not publicly available due to intellectual property restrictions.  Preprocessed analysis data (document-term counts and article metadata) and analysis scripts are available at *[doi]*. 
+
 
 \clearpage
 \pagenumbering{arabic}
@@ -330,6 +336,7 @@ Techniques such as topic modeling may be able to account for discursive shifts f
 The phenomenon of color-blind racism is closely related to ambiguities that cannot be resolved even by human coders familiar with the broader cultural context.  Two relevant examples are the "Flynn effect," a secular increase in intelligence test scores noted by philosopher James Flynn; and studies of "national IQ," exemplified by the work of Richard Lynn.  The Flynn effect implies that environmental factors can create group differences in IQ that are comparable to Black-White differences, and thus directly challenges claims that the racial differences are biological.  Using methods widely regarded as ad hoc, cherry-picking, and generally unreliable, Lynn and collaborators have claimed that national IQ averages are correlated with national GDP.  Both the Flynn effect and "national IQ" are strongly associated with race-and-intelligence discourse in the US cultural context.  But scientific journal articles on these topics may not include any racial language at all.  For example, a meta-analysis of the Flynn effect does not discuss racial differences or use terms such as "White" or "Black" outside the reference list \cite{TrahanFlynnEffectMetaanalysis2014}.  Should such articles be coded as race science discourse?  We expect that even readers who accept our definitions of race science and race science discourse will reasonably disagree on how to answer this question.  Topic models, of course, are not even capable of representing this essential ambiguity.  
 
 
+<!-- 
 \clearpage
 
 # References and Notes {.unnumbered}
@@ -337,4 +344,5 @@ The phenomenon of color-blind racism is closely related to ambiguities that cann
 \bibliographystyle{Science}
 \bibliography{references.bib, refs-manual.bib}
 
+ -->
 
