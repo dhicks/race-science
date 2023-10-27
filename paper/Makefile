@@ -1,9 +1,10 @@
 all: pdf wc
 
 pdf: paper.pdf
-paper.pdf: paper.Rmd \
+paper.pdf: paper.qmd \
            references.bib
-	Rscript -e "rmarkdown::render('paper.Rmd')"
+# 	Rscript -e "rmarkdown::render('paper.Rmd')"
+	quarto render paper.qmd
 
 .PHONY: wc
 wc: 

@@ -2,65 +2,42 @@
 title: "Mainstreaming Race Science"
 authors:
   - name: "Daniel J. Hicks"
-    affiliation: 1
-    corresponding_author: true
+    email: "dhicks4@ucmerced.edu"
+    affiliations: 
+      - id: ucm
+        name: "University of California, Merced"
+        city: "Merced"
+        state: "CA, USA"
+    corresponding: true
   - name: "Emilio J. C. Lobato"
-    affiliation: 1
-address:
-  - code: 1
-    address: "University of California, Merced"
-corresponding_author: "Corresponding author: Daniel J. Hicks, dhicks4@ucmerced.edu."
+    affiliations:
+      - ref: ucm
 abstract: |
   | **Background:** While anthropologists and human geneticists have long rejected the biological race concept, both social movements and prominent researchers have purported to justify racial inequality and colonialism by appealing to the epistemic authority of science. 
   | **Methods:** Bibliometric and text mining methods were used to trace the appearance of race science discourse in both mainstream scientific journals and the parascholarly journal *Mankind Quarterly* from 1960 to 2010. 
   | **Results:** Our analysis found two distinguishable lines of race science discourse.  One is strongly associated with *Mankind Quarterly*, while the other — emphasizing race and intelligence — is strongly associated with mainstream psychology journals, especially *Intelligence* and *Personality and Individual Differences*.  
   | **Conclusion:** Psychology, and especially intelligence research, has played a significant role in mainstreaming race science. 
 
-# acknowledgements: |
-#   | Thanks to Emily Merchant and John Jackson for some initial discussions that helped clarify the scope of the project and identify some key resources related to the Pioneer Fund and *Mankind Quarterly*.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles.  Thanks to Kevin Bird, John Jackson, and Manuela Fernández Pinto for comments on a draft of this paper. 
-#   | **Funding:** EJCL's work on this project was partially supported by UC Merced.  DJH's work on this project was not supported by any specific funding. 
-#   | **Author contributions:** DJH (conceptualization, data curation, formal analysis, investigation, methodology, project administration, software, validation, visualization, writing-original draft, writing-review & editing); EJCL (conceptualization, methodology, software, validation, visualization, writing-original draft, writing-review & editing)
-#   | **Competing interests:** The authors have no competing interests to declare. 
-#   | **Data and materials availability:** Web of Science search results and article fulltext are not publicly available due to intellectual property restrictions.  Preprocessed analysis data (document-term counts and article metadata) and analysis scripts are available at *[doi]*. 
-# bibliography: references.bib, refs-manual.bib
-output: 
-  # https://github.com/rstudio/rticles/pull/486
-  # skeleton: <https://github.com/christopherkenny/rticles/tree/master/inst/rmarkdown/templates/science>
-  bookdown::pdf_book:
-    base_format: rticles::science_article
+acknowledgements: |
+  | Thanks to Emily Merchant and John Jackson for some initial discussions that helped clarify the scope of the project and identify some key resources related to the Pioneer Fund and *Mankind Quarterly*.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles.  Thanks to Kevin Bird, John Jackson, and Manuela Fernández Pinto for comments on a draft of this paper. 
+  | **Funding:** EJCL's work on this project was partially supported by UC Merced.  DJH's work on this project was not supported by any specific funding. 
+  | **Author contributions:** DJH (conceptualization, data curation, formal analysis, investigation, methodology, project administration, software, validation, visualization, writing-original draft, writing-review & editing); EJCL (conceptualization, methodology, software, validation, visualization, writing-original draft, writing-review & editing)
+  | **Competing interests:** The authors have no competing interests to declare. 
+  | **Data and materials availability:** Web of Science search results and article fulltext are not publicly available due to intellectual property restrictions.  Preprocessed analysis data (document-term counts and article metadata) and analysis scripts are available at *[doi]*. 
+
+bibliography: [references.bib, refs-manual.bib]
+
+format: 
+  elsevier-pdf:
+    journal: 
+      name: "journal"
     keep_tex: true
-    move_figures: false
-    draft: true
-    number_sections: true
-    latex_engine: 'xelatex'
-header-includes:
-  - \usepackage{lineno}
-  - \linenumbers
+    latex_engine: "xelatex"
+
+# header-includes:
+#  - \usepackage{lineno}
+#  - \linenumbers
 ---
-
-<!-- 
-Science submission instructions
-
-General information: Research Articles
-<https://www.science.org/content/page/science-information-authors>
-- 5 printed pages in the journal
-- 2000 to 3000 words of main text, in addition to an abstract, 3 to 5 display items (figures or tables) with brief legends, about 50 main-text references, and a structured acknowledgments section
-- main text should be divided into sections with brief subheadings
-- Materials and Methods should be included in supplementary materials and should be followed by additional data and figures needed to support the paper’s conclusions
-- All data must be available in either the main text or the supplementary materials, or must be deposited at a publicly accessible repository and cited in the paper.
-
-Initial submission
-<https://www.science.org/content/page/instructions-preparing-initial-manuscript>
-- Title: 96 characters
-- Authors
-- Affiliations:
-- One Sentence Summary: 125 characters
-- Main Text:  The introduction should provide sufficient background information to make the article intelligible to readers in other disciplines and sufficient context so that the significance of the experimental findings is clear. Technical terms should be defined.
-- References and Notes: There should be a single reference list that combines references cited in the main paper as well as those cited in the supplementary materials, and each reference should appear only once in the list. 
-List of Supplementary Materials
-- The width of figures, when printed, will usually be 5.7 cm (2.24 inches or 1 column), 12.1 cm (4.76 inches or 2 columns), or 18.4 cm (7.24 inches or 3 columns).
-
--->
 
 | 
 | **One sentence summary:** Bibliometric and text mining analysis indicate that race science discourse appeared in mainstream psychology journals throughout the second half of the twentieth century.  
