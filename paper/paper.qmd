@@ -1,17 +1,17 @@
 ---
 title: "Race Science in Mainstream Psychology, 1960-2010"
-authors:
-  - name: "Daniel J. Hicks"
-    email: "dhicks4@ucmerced.edu"
-    affiliations: 
-      - id: ucm
-        name: "University of California, Merced"
-        city: "Merced"
-        country: "CA, USA"
-    corresponding: true
-  - name: "Emilio J. C. Lobato"
-    affiliations:
-      - ref: ucm
+# authors:
+#   - name: "Daniel J. Hicks"
+#     email: "dhicks4@ucmerced.edu"
+#     affiliations: 
+#       - id: ucm
+#         name: "University of California, Merced"
+#         city: "Merced"
+#         country: "CA, USA"
+#     corresponding: true
+#   - name: "Emilio J. C. Lobato"
+#     affiliations:
+#       - ref: ucm
 abstract: |
   | While anthropologists and human geneticists have long rejected the biological race concept, both social movements and prominent researchers have purported to justify racial inequality and colonialism by appealing to the epistemic authority of science.
   In this study, bibliometric and text mining methods were used to trace the appearance of race science discourse in both mainstream behavioral science journals and the parascholarly journal *Mankind Quarterly* from 1960 to 2010. 
@@ -201,7 +201,7 @@ An electronic archive of *Mankind Quarterly*, from the first issue in 1969 throu
 
 To identify suitable mainstream journals for inclusion in the corpus, we first identified academic researchers who had been funded by the Pioneer Fund.  Pioneer is an American non-profit organization founded in 1937 to fund eugenics research and propaganda [@TuckerFundingScientificRacism2002].  After the *Brown v. Board of Education* ruling in 1954, Pioneer funded various segregationist efforts across the United States, including lectures on eugenics by Stanford physicist William Shockley [@JacksonScienceSegregationRace2005].  We reviewed a critical profile of Pioneer [@MillerPioneerFundBankrolling1994] as well as an archived page from the organization's own web site (<https://web.archive.org/web/20130103005545/http://www.pioneerfund.org/Grantees.html>), which together listed 16 researchers who had received Pioneer funds.  
 
-We then used the author search tool in Clarivate's Web of Science platform (<https://www.webofscience.com/wos/author/search>), retrieving publication lists for 14 researchers.  These searches were conducted between 2021-09-24 and 2021-10-05 by DJH.  After parsing these results, we counted how many of the 14 researchers had published in each journal.  Thirteen journals had published 6 or more of the 14 Pioneer-funded researchers.  We excluded *Mankind Quarterly* (as already included) as well as *Science* and *Nature* (as too general) from further consideration in this side of the corpus.  Three journals published by the American Psychological Association (APA; *American Psychologist*, *Contemporary Psychology*, and *Journal of Educational Psychology*) had to be excluded due to confusion over who could give us permission to use the archives for a text mining project, with both APA and ProQuest asserting that we needed to get permission from the other entity.  *European Journal of Personality*, published by SAGE, also had to be excluded because our institutional access only went back to 1999.  
+We then used the author search tool in Clarivate's Web of Science platform (<https://www.webofscience.com/wos/author/search>), retrieving publication lists for 14 researchers.  These searches were conducted between 2021-09-24 and 2021-10-05 by *[AUTHOR 1]*.  After parsing these results, we counted how many of the 14 researchers had published in each journal.  Thirteen journals had published 6 or more of the 14 Pioneer-funded researchers.  We excluded *Mankind Quarterly* (as already included) as well as *Science* and *Nature* (as too general) from further consideration in this side of the corpus.  Three journals published by the American Psychological Association (APA; *American Psychologist*, *Contemporary Psychology*, and *Journal of Educational Psychology*) had to be excluded due to confusion over who could give us permission to use the archives for a text mining project, with both APA and ProQuest asserting that we needed to get permission from the other entity.  *European Journal of Personality*, published by SAGE, also had to be excluded because our institutional access only went back to 1999.  
 
 The remaining 5 journals are all published by major academic publishers — Elsevier, Springer, or Cambridge University Press — and each item in the entire run of each journal has been assigned a DOI (digital object identifier) for archival purposes.  We used the Crossref API and `rcrossref` R interface to this API [@ChamberlainRcrossrefClientVarious2019 version 1.1.0.99] to retrieve metadata for each item published from 1960-2010 in each of these journals.  These metadata included item-level license information — confirming that the text of each item could be used for text mining projects — and a URL to an electronic version of the item.  These URLs were used to retrieve a XML or PDF version of each item, except for *Personality and Individual Differences*.  This journal has published a relatively large number of non-article documents, such as book reviews and commentaries, that are not available at the URL included in the Crossref metadata.  (This is unfortunate, as it was not difficult to find highly relevant documents that we could not automatically retrieve and therefore had to be excluded from our corpus.  One set of examples is an exchange between Rushton and Flynn on the Flynn effect [@FlynnEvidenceRushtonGenetic1998; @RushtonSecularGainsIQ1998; @FlynnReplyRushtonGang1998].)  Instead we used Elsevier's ScienceDirect API (<https://dev.elsevier.com/>) to independently search and retrieve all available items from *Personality and Individual Differences*.  This stage of corpus assembly was conducted between 2021-11 and 2022-05.  
 
@@ -240,7 +240,7 @@ After noun phrase extraction, the corpus comprised 43,162,055 total tokens of 6,
 
 Document metadata retrieved from Crossref does not appear to be covered by any copyright or other intellectual property restrictions.  However, due to copyright restrictions, we are unable to make document fulltext or Web of Science search results publicly available.  Code for the corpus assembly and text preparation steps described above is available by request. 
 
-The public analysis repository, <https://github.com/dhicks/race-science> *[DOI]*, includes document metadata and documentwise counts of NLP-extracted noun phrases ("document-term matrices"), along with code to reproduce the analysis of the following sections. 
+The public analysis repository, <!-- <https://github.com/dhicks/race-science> --> *[URL and DOI will go here]*, includes document metadata and documentwise counts of NLP-extracted noun phrases ("document-term matrices"), along with code to reproduce the analysis of the following sections. 
 
 
 ## Vocabulary selection
@@ -256,7 +256,7 @@ A common rule of thumb in topic modeling is that the vocabulary should have abou
 
 ## Topic modeling
 
-To fit topic models, we followed the approach proposed by Rohe and Zeng [@RoheVintageFactorAnalysis2020], which uses varimax-rotated partial principal components instead of the variational inference methods used by standard topic model packages such as `stm` [@RobertsStmPackageStructural2019].  This novel approach was implemented in the R package `tmfast` [@HicksTmfastFitsTopic2023].  We conducted a simulation study of `tmfast`, which found that it was significantly faster and only slightly less accurate at reconstructing known word-topic and topic-document distributions, compared to `stm` [@HicksTmfastFitsTopic2023].  
+To fit topic models, we followed the approach proposed by Rohe and Zeng [@RoheVintageFactorAnalysis2020], which uses varimax-rotated partial principal components instead of the variational inference methods used by standard topic model packages such as `stm` [@RobertsStmPackageStructural2019].  This novel approach was implemented in the R package *[redacted for anonymous review]* <!-- `tmfast` [@HicksTmfastFitsTopic2023] -->.  <!-- We conducted a simulation study of `tmfast`, which found that it was significantly faster and only slightly less accurate at reconstructing known word-topic and topic-document distributions, compared to `stm` [@HicksTmfastFitsTopic2023].   -->
 
 Topic models were fit for all three vocabularies (large, medium, and small) with $k = 5, 10, 20, ..., 70$ (number of topics), resulting in a total of $24 = 3 \times 8$ models. 
 

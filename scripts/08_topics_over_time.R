@@ -236,11 +236,11 @@ big_grid = function(model_file, exp_file, name, plot = TRUE, verbose = TRUE) {
     exp = read_exp(exp_file)
     
     ## Identify topics of interest: 
-    ## race and/or intelligence keywords in top 10 terms
+    ## race and/or intelligence keywords in top 15 terms
     topics = tidy_all(model) |> 
         filter(k > 5) |> 
         group_by(k, topic) |> 
-        top_n(10, beta) |> 
+        top_n(15, beta) |> 
         arrange(k, topic, beta) |> 
         summarize(race = any(str_detect(token, 'race|whites|blacks')), 
                   intelligence = any(str_detect(token, 'intelligence|iq') & 
