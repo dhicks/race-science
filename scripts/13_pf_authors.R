@@ -42,8 +42,9 @@ this_exp = exp_files[this_vocab] |>
     read_exp()
 
 gamma_df = tidy_all(this_model, 
-                    matrix = 'gamma', 
-                    exponent = this_exp) |> 
+                    matrix = 'gamma') |> 
+    group_split(k) |> 
+    map2_dfr(this_exp, ~ renorm(.x, document, gamma, .y)) |> 
     inner_join(meta_df, 
                by = c('document' = 'article_id'), 
                multiple = 'all')
@@ -72,10 +73,31 @@ ggplot(gamma_df, aes(topic, document, fill = gamma)) +
 
 gamma_df |> 
     filter(k == 40) |> 
+    ggplot(aes(topic, document, fill = gamma)) +
+    geom_raster() +
+    geom_vline(xintercept = c(10, 20, 30, 40) + .5,
+               color = 'black') +
+    facet_wrap(vars(pf_author), 
+               scale = 'free', 
+               labeller = label_wrap_gen(width = 15), 
+               # space = 'free_y'
+    ) +
+    scale_x_discrete(breaks = c('V10', 'V20', 'V30', 'V40')) +
+    scale_y_discrete(breaks = NULL,
+                     name = '') +
+    scale_fill_viridis_c(option = 'viridis', direction = 1) +
+    theme_minimal() +
+    theme(axis.ticks.x = element_line(),
+          legend.position = 'bottom',
+          plot.margin = margin(r = 10))
+
+gamma_df |> 
+    filter(k == 40) |> 
+    mutate(author_count = n(), .by = pf_author) |> 
     ggplot(aes(topic, gamma, group = document)) +
+    geom_line(aes(alpha = 1/author_count), show.legend = FALSE) +
     geom_vline(xintercept = c('V07', 'V22', 'V24'), 
-               color = 'blue', alpha = .5) +
-    geom_line(alpha = .2) +
+               color = 'blue', alpha = 1) +
     facet_wrap(vars(pf_author)) +
     scale_x_discrete(breaks = c('V10', 'V20', 'V30'))
 
@@ -96,6 +118,25 @@ gamma_df |>
     filter(k == 40) |> 
     group_by(pf_author, document) |> 
     filter(gamma == max(gamma)) |> 
+    group_by(pf_author) |> 
+    count(topic) |> 
+    complete(topic = {1:40 |> 
+            str_pad(2, pad = '0') %>% 
+            str_c('V', .)}, 
+            fill = list(n = 0L)) |> 
+    ggplot(aes(topic, n)) +
+    geom_vline(xintercept = c('V07', 'V22', 'V24'), 
+               color = 'blue', alpha = .5) +
+    geom_col() +
+    facet_wrap(vars(pf_author), 
+               scales = 'free_y') +
+    scale_x_discrete(breaks = c('V10', 'V20', 'V30', 'V40'))
+
+## Document threshold count ----
+gamma_df |> 
+    filter(k == 40) |> 
+    group_by(pf_author, document) |> 
+    filter(gamma > .5) |> 
     group_by(pf_author) |> 
     count(topic) |> 
     complete(topic = {1:40 |> 

@@ -37,6 +37,7 @@ format:
     latex_engine: "xelatex"
     number-sections: false
     link-citations: true
+    mathspec: true
     
 crossref:
   fig-prefix: ""
@@ -44,10 +45,10 @@ crossref:
 # header-includes:
 #  - \usepackage{lineno}
 #  - \linenumbers
+
+execute:
+  cache: true
 ---
-
-<!-- NHB submission guidelines: <https://www.nature.com/nathumbehav/submission-guidelines> -->
-
 
 <!-- # Introduction {.unnumbered} -->
 
@@ -261,6 +262,10 @@ To fit topic models, we followed the approach proposed by Rohe and Zeng [@RoheVi
 Topic models were fit for all three vocabularies (large, medium, and small) with $k = 5, 10, 20, ..., 70$ (number of topics), resulting in a total of $24 = 3 \times 8$ models. 
 
 Following the approach of [@HicksProductivityInterdisciplinaryImpacts2021], we did not attempt to identify a unique best fitted model for further analysis.  While the manuscript text focuses on the medium vocabulary, $k=40$ model as the "median" among the 24 fitted models, we compare and contrast findings from this model with those from the other models.  
+
+### Proof of concept
+
+{{< include ../scripts/11-proof-of-concept.qmd >}}
 
 
 ### Topic model interpretation and quality assessment

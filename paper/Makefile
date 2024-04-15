@@ -2,7 +2,8 @@ all: pdf wc
 
 pdf: paper.pdf
 paper.pdf: paper.qmd \
-           references.bib
+           references.bib \
+           ../scripts/11-proof-of-concept.qmd
 # 	Rscript -e "rmarkdown::render('paper.Rmd')"
 	quarto render paper.qmd
 
