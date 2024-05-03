@@ -708,6 +708,65 @@ references:
     https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000860
   volume: '18'
 
+- id: CarlsonSpreadThisWildfire2022
+  abstract: >-
+    The mass shooting in Buffalo of May 2022 was sparked by a long history of
+    racialist ideology and weaponized science. What is to be done?
+  accessed:
+    - year: 2022
+      month: 9
+      day: 26
+  author:
+    - family: Carlson
+      given: Jedidiah
+  citation-key: CarlsonSpreadThisWildfire2022
+  container-title: Science for the People Magazine
+  issued:
+    - year: 2022
+      month: 9
+      day: 26
+  language: en-US
+  title: Spread This Like Wildfire!
+  type: post-weblog
+  URL: https://magazine.scienceforthepeople.org/online/spread-this-like-wildfire/
+
+- id: CarlTabooRemainsResponding2024
+  abstract: >-
+    Jackson Jr. and Winston (2021) claim there is no taboo against research on
+    race and intelligence. We argue, to the contrary, that there is a taboo
+    against such research. We begin by addressing Jackson Jr. and Winston's
+    arguments concerning expert surveys, as well as their criticisms of our
+    published database of controversies. We then provide additional evidence of
+    the taboo, and explain why it would be expected given the features of
+    academic social science in Western countries. We also point out that Jackson
+    Jr. and Winston's paper exemplifies the very taboo they claim does not
+    exist.
+  accessed:
+    - year: 2024
+      month: 1
+      day: 8
+  author:
+    - family: Carl
+      given: Noah
+    - family: Woodley of Menie
+      given: Michael A.
+  citation-key: CarlTabooRemainsResponding2024
+  container-title: Intelligence
+  container-title-short: Intelligence
+  DOI: 10.1016/j.intell.2023.101806
+  ISSN: 0160-2896
+  issued:
+    - year: 2024
+      month: 1
+      day: 1
+  page: '101806'
+  source: ScienceDirect
+  title: 'The taboo remains: Responding to a critical commentary'
+  title-short: The taboo remains
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0160289623000879
+  volume: '102'
+
 - id: CarolineOrrBueno
   abstract: >-
     “Re. Last night’s #TrumpRally: While often taking on the appearance of
@@ -3912,28 +3971,6 @@ references:
   type: article-newspaper
   URL: >-
     https://www.nytimes.com/2022/06/09/world/europe/michael-woodley-buffalo-shooting.html
-
-- id: PublishingSpreadThisWildfire2022
-  abstract: >-
-    The mass shooting in Buffalo of May 2022 was sparked by a long history of
-    racialist ideology and weaponized science. What is to be done?
-  accessed:
-    - year: 2022
-      month: 9
-      day: 26
-  author:
-    - family: Publishing
-      given: SftP
-  citation-key: PublishingSpreadThisWildfire2022
-  container-title: Science for the People Magazine
-  issued:
-    - year: 2022
-      month: 9
-      day: 26
-  language: en-US
-  title: Spread This Like Wildfire! • SftP Magazine
-  type: post-weblog
-  URL: https://magazine.scienceforthepeople.org/online/spread-this-like-wildfire/
 
 - id: RichardsonArrowIntegrationApache2023
   abstract: >-

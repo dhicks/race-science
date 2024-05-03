@@ -1,0 +1,276 @@
+---
+title: "How to choose words to do things with"
+author: Dan Hicks
+output:
+    html_document:
+        code_folding: show
+        toc: true
+        toc_float: true
+---
+
+After extracting text from the documents in our corpus, we typically want to work with a small subset of tokens (text units).  Extremely common terms, like "it" and "she," don't carry much information; and similarly with misspelled words or OCR errors.  Identifying the subset of tokens to use in further analysis is called *vocabulary selection*.  This document will discuss the problems with the widely-used TF-IDF method for vocabulary selection, then present my information-theoretic alternative.  
+
+# Setup #
+
+We'll use a small part of the combined race science corpus, with 50 articles from each of the 5 journals.  
+
+```{r, setup, echo = 'hide', results = 'hide', message = FALSE, warning = FALSE}
+library(tidyverse)
+theme_set(theme_bw())
+library(tidytext)
+
+library(arrow)
+library(here)
+
+data_dir = here('data')
+```
+```{r, load-data}
+meta_ar = open_dataset(here(data_dir, '01_metadata'))
+
+set.seed(2022-02-14)
+subset_meta = meta_ar |> 
+    group_by(container.title) |> 
+    collect() |> 
+    slice_sample(n = 50)
+
+count(subset_meta, container.title)
+
+subset_phr = open_dataset(here(data_dir, '00_phrases')) |> 
+    filter(article_id %in% subset_meta$article_id) |> 
+    collect()
+```
+```{r}
+subset_meta
+subset_phr
+```
+
+# TF-IDF #
+
+TF-IDF stands for *token frequency*-*inverse document frequency*.  Token frequency is the relative occurrence of the given token in the given document; inverse document frequency is the log ratio of documents in the corpus to documents that contain the token.  TF-IDF is the product of these two.  TF-IDF is widely used for vocabulary selection in text mining, and [has a one-liner in the `tidytext` package](https://www.tidytextmining.com/tfidf.html).  
+
+```{r, tf-idf}
+bind_tf_idf(subset_phr, phrase, article_id, n) |> 
+    arrange(desc(tf_idf))
+```
+
+This example demonstrates two problems with TF-IDF.  First, the TF-IDF value is associated with a token *in a document*, not a token across the entire corpus.  After calculating TF-IDF scores, a common next step is to keep the top $n$ tokens for each document.  Suppose a token $t$ appears in the top $n$ tokens for document 1, and as the $n+1$th token in documents $2, 3, \ldots, k$.  Token $t$ would be eliminated in the other documents, as though it never occurred in them at all.  So $t$ would be in the analysis vocabulary — but only for document 1.  This creates a weird discretization, and it's not hard to imagine that it might lead to artifacts.  
+
+The second problem is that, when taken across the entire corpus, TF-IDF favors rare terms from short documents.  Here's the entire text of [`10.1023/a:1017357211509`](https://link.springer.com/content/pdf/10.1023/A:1017357211509.pdf), which has the top-scoring token according to TF-IDF, `john_k_hewitt`:  
+
+> The editors of Behavior Genetics are pleased to
+> announce that John K. Hewitt, University of Colorado,
+> Boulder, assumed the position of Executive Editor of
+> the journal in July 2001. He is now receiving new
+> manuscripts for the journal. Contributors should send
+> manuscripts to [mailing address]
+
+This document only has a few noun phrases, so `john_k_hewitt` has a high term frequency; and the idf score indicates that it appears in only one documents in the (small) corpus: 
+```{r}
+nrow(subset_meta)/exp(5.5214609)
+```
+
+
+# The document guessing game #
+
+To develop a better approach, suppose we played a game where I pick a document from the corpus, and you had to guess which one I picked.  I give you a clue: a single token from the document.  Highly informative tokens would be ones that significantly narrowed down the possible documents.  We can express this quantitatively using [Kullback-Leibler divergence](https://en.wikipedia.org/wiki/Kl-divergence) or *KL divergence*, a measure of "distance" between two probability distributions.  
+
+Let $P$ and $Q$ be two (discrete) probability distributions on the same space $X$.  The KL divergence from $Q$ to $P$ is defined as
+$$ D_{KL}(P || Q) = \sum_{x \in X} P(x) \log \left( \frac{P(x)}{Q(x)} \right) $$
+KL divergence is also called *information gain*, and in this sense is interpreted as the increase in information (decrease in entropy) when we move from $Q$ to $P$. 
+
+(Note that KL divergence is asymmetric, with $D(P||Q) \neq D(Q||P)$.  KL divergence isn't a [metric](https://en.wikipedia.org/wiki/Metric_(mathematics)), and doesn't have other properties we usually associate with distance.)
+
+
+```{r}
+subset_phr |> 
+    filter(phrase == 'evolution') |> 
+    ggplot(aes(article_id, n)) +
+    geom_col() +
+    scale_x_discrete(breaks = NULL)
+```
+
+To use KL divergence with our document guessing game, let $Q$ be the uniform distribution across the $N$ documents in the corpus: $Q(d) = \frac{1}{N}$ for all documents $d$.  Then, given a token $t$, let $P_t(d) = Pr(d | t)$ be the share of all occurrences of token $t$ (across all documents) that appear in document $d$.  For example, if $t$ occurs 5 times in $d$ and 25 times across the entire corpus, then $P(d) = 5/25 = 0.2$.  In our game, suppose I pick the document uniformly at random from the corpus, then pick the token uniformly at random from all token occurrences in that document (so that common tokens are more likely to be picked than uncomon ones).  Then KL divergence tells us how informative $t$ is.  
+\begin{align*}
+D_{KL}(P_t || Q) &= \sum_{x \in X} P_t(x) \log \left( \frac{P_t(x)}{Q(x)} \right) \\
+      &= \sum P_t(x) \left(\log P_t(x) - \log \frac{1}{N}\right) \\
+      &= \left[ \sum P_t(x) \log P_t(x) \right] + \left[\log N \sum P_t(x)\right] \\
+      &= [-H(P)] + [\log N] \\
+      &= \log N - H(P)
+\end{align*}
+where $H$ is the (Shannon) entropy of $P$.  
+
+To translate this into R, first let's calculate $P_t(d)$. 
+```{r}
+subset_phr |> 
+    group_by(phrase) |> 
+    mutate(p = n/sum(n)) |> 
+    select(article_id, phrase, n, p) |> 
+    filter(phrase == 'evolution')
+```
+
+Next we extend this to calculate $H(P_t)$ and information gain, which we represent as $\Delta H$. 
+```{r}
+max_H = log2(nrow(subset_meta))
+
+H_df = subset_phr |> 
+    group_by(phrase) |> 
+    mutate(p = n/sum(n),
+           H_term = -p*log2(p)) |> 
+    summarize(H = sum(H_term)) |> 
+    mutate(delta_H = max_H - H) |> 
+    arrange(desc(delta_H))
+
+head(H_df, 20)
+
+H_df |> 
+    filter(phrase == 'evolution')
+```
+
+Whoops, lots of garbage.  The highest information gain comes from tokens that only appear in a single document.  They're maximally informative in our game, but are semantically meaningless and don't correspond to topics that occur across the corpus. Filtering to $H > 0$ eliminates unique tokens, and initially seems to help.  
+
+```{r}
+H_df |> 
+    filter(H > 0) |> 
+    head(20)
+```
+
+But these terms still only appear in *approximately* one document.  
+
+```{r}
+subset_phr |> 
+    filter(phrase %in% c('solms', 'dreaming', 'grodzinsky')) |> 
+    arrange(phrase, desc(n))
+```
+
+
+# `ndH` #
+
+KL divergence plays a role similar to IDF:  tokens that only occur in a few documents generally have high KL divergence as well as high IDF.  We need to balance this "selectivity" with a measure of how frequently tokens appear across the corpus.  This will be analogous to TF; but instead of counting within each document, we'll use the total number of occurrences across the corpus.  To get this frequency count on the same scale as entropy, we'll take its log.  I refer to the resulting measure as $\log n \Delta H$ or `ndH`.  
+
+```{r}
+ndH_df = subset_phr |> 
+    group_by(phrase) |> 
+    mutate(p = n/sum(n),
+           H_term = -p*log2(p)) |> 
+    summarize(n = sum(n), 
+              H = sum(H_term)) |> 
+    filter(H > 0) |> 
+    mutate(delta_H = max_H - H, 
+           ndH = log2(n)*delta_H) |> 
+    arrange(desc(ndH))
+
+head(ndH_df, 20)
+```
+
+This looks good at first, and in previous text mining projects it's done well.  But notice how many of the top terms have to do with sleep?  Let's plot frequency counts for the top 25 terms.  We'll put the frequencies on a square root scale, so it's easier to see both large and small-but-nonzero values. 
+
+```{r, fig.width = 10, fig.height = 8, out.width = "100%"}
+terms_ndH = ndH_df |> 
+    pull(phrase) |> 
+    magrittr::extract(1:25)
+
+subset_phr |> 
+    filter(phrase %in% terms_ndH) |> 
+    left_join(subset_meta, by = 'article_id') |> 
+    ggplot(aes(article_id, n, fill = container.title)) +
+    geom_col() +
+    facet_wrap(vars(phrase), scales = 'free_x') +
+    scale_x_discrete(breaks = NULL) +
+    scale_y_sqrt() +
+    coord_flip() +
+    theme(axis.text.y=element_blank())
+```
+
+Because the *Behavioral and Brain Science* articles (actually, collections of articles + commentaries) are so long, tokens that occur in just a few of these articles can still have large frequencies.  The high-`ndH` tokens come from this weird little corner of the distribution of tokens.  
+
+```{r}
+ggplot(ndH_df, aes(log2(n), delta_H)) +
+    geom_bin_2d(bins = 40) +
+    stat_function(fun = \(x) 55/x, xlim = c(6, 13)) +
+    scale_fill_viridis_c(trans = 'log10')
+```
+
+
+# Changing the game #
+
+Consider what the two terms in the construction of `ndH` are supposed to be doing.  Frequency is supposed to pick out tokens that occur widely across the corpus, while information gain is supposed to pick out tokens that are distinctive to different documents.  But, because the *Behavior and Brain Sciences* documents are so long, their distinctive tokens also end up with a high frequency.  To balance this out, we can adjust information gain, penalizing tokens that come from larger documents.  
+
+We do this by changing the background conditions of the game.  Suppose I pick the document not uniformly at random, but instead in proportion to length.  Then you'll gain more information from tokens that come from shorter (less likely) documents.  
+
+More formally, let $R(d) = n_d / \alpha$, where $n_d$ is the total number of tokens in document $d$ and $\alpha = \sum_d n_d$ is the total number of tokens across the entire corpus.  We then calculate information gain for token $t$ using $P_t$ and KL divergence, but from $R$ instead of $Q$.  
+$$ D_{KL}(P_t || R) = \sum_{d} P_t(d) \log \left( \frac{P_t(d)}{R(d)} \right) $$
+I don't think this one simplifies nicely, so we'll just use the right-hand side directly in the calculation.  
+
+First we need to calculate $R(d)$. 
+```{r}
+r_df = subset_phr |> 
+    group_by(article_id) |> 
+    summarize(len = sum(n)) |> 
+    mutate(alpha = sum(len), 
+           r = len/alpha)
+
+r_df
+
+r_df |> 
+    left_join(subset_meta, by = 'article_id') |> 
+    ggplot(aes(len, r, color = container.title)) +
+    geom_point() +
+    scale_x_log10() +
+    scale_y_log10()
+```
+
+Then we calculate the divergence and, as with `ndH`, multiply by log frequency.  
+```{r}
+d_df = subset_phr |> 
+    left_join(r_df, by = 'article_id') |> 
+    group_by(phrase) |> 
+    mutate(p = n/sum(n), 
+           H_term = - p * log2(p),
+           d_term = p * log2(p / r)) |> 
+    summarize(n = sum(n), 
+              H = sum(H_term),
+              delta_H = max_H - H,
+              d = sum(d_term)) |> 
+    filter(H > 0) |> 
+    mutate(nd = log2(n)*d) |> 
+    arrange(desc(nd))
+
+head(d_df, 20)
+```
+
+The plot of these two components doesn't have the weird peninsula in the upper-right.  Instead the highest values come from combining moderate information gain with moderate frequency, which is probably what we want. 
+
+```{r}
+ggplot(d_df, aes(log2(n), d)) +
+    geom_bin_2d(bins = 40) +
+    stat_function(fun = \(x) 40/x, xlim = c(3, 13)) +
+    scale_fill_viridis_c(trans = 'log10')
+```
+
+We can also compare $\Delta H$ to information gain from $R$.  They're correlated; but high $\Delta H$ corresponds to a wide range of values with this new information gain calculation.  Distinctive terms from large documents are nudged down, while distinctive terms from small documents are nudged up.  
+```{r}
+ggplot(d_df, aes(delta_H, d)) +
+    geom_bin_2d(bins = 40) +
+    stat_function(fun = identity) +
+    scale_fill_viridis_c(trans = 'log10')
+```
+
+
+Plotting frequencies of the top 25 terms indicates that this approach is picking out terms from across the different journals in the corpus.  They also appear to correspond to different topics, rather than the excess emphasis on sleep and dreaming that we got using `ndH`.  
+
+```{r, fig.width = 10, fig.height = 8, out.width = "100%"}
+terms_nd = d_df |> 
+    pull(phrase) |> 
+    magrittr::extract(1:25)
+
+subset_phr |> 
+    filter(phrase %in% terms_nd) |> 
+    left_join(subset_meta, by = 'article_id') |> 
+    ggplot(aes(article_id, n, fill = container.title)) +
+    geom_col() +
+    facet_wrap(vars(phrase), scales = 'free_x') +
+    scale_x_discrete(breaks = NULL) +
+    scale_y_sqrt() +
+    coord_flip() +
+    theme(axis.text.y=element_blank())
+```

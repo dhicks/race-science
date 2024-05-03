@@ -4,14 +4,15 @@ authors:
   - name: "Daniel J. Hicks"
     email: "dhicks4@ucmerced.edu"
     affiliations: 
-      - id: ucm
+      - id: a
         name: "University of California, Merced"
         city: "Merced"
         country: "CA, USA"
     corresponding: true
   - name: "Emilio J. C. Lobato"
     affiliations:
-      - ref: ucm
+      - ref: a
+
 abstract: |
   | While anthropologists and human geneticists have long rejected the biological race concept, both social movements and prominent researchers have purported to justify racial inequality and colonialism by appealing to the epistemic authority of science.
   In this study, bibliometric and text mining methods were used to trace the appearance of race science discourse in both mainstream behavioral science journals and the parascholarly journal *Mankind Quarterly* from 1960 to 2010. 
@@ -26,17 +27,19 @@ acknowledgements: |
   | **Data and materials availability:** Web of Science search results and article fulltext are not publicly available due to intellectual property restrictions.  Preprocessed analysis data (document-term counts and article metadata) and analysis scripts are available at *[doi]*. 
 
 bibliography: [references.bib, refs-manual.bib]
-cite-method: "citeproc"
-csl: "nature-no-superscript.csl"
+# cite-method: "citeproc"
+# csl: "nature-no-superscript.csl"
 
 format: 
-  elsevier-pdf:
-    journal: 
-      name: "journal"
+  pnas-pdf:
     keep_tex: true
     latex_engine: "xelatex"
-    number-sections: false
     link-citations: true
+    mathspec: true
+    classoption:
+      - twocolumn
+      - twoside
+    fig.env: "figure*"
     
 crossref:
   fig-prefix: ""
@@ -44,10 +47,47 @@ crossref:
 # header-includes:
 #  - \usepackage{lineno}
 #  - \linenumbers
+
+execute:
+  cache: true
 ---
 
-<!-- NHB submission guidelines: <https://www.nature.com/nathumbehav/submission-guidelines> -->
+<!-- 
+PNAS guidelines
+Research Report/Direct Submission: The preferred length of these articles is 6 pages, but PNAS allows articles up to a maximum of 12 pages. A standard 6-page article is approximately 4,000 words, 50 references, and 4 medium-size graphical elements (i.e., figures and tables).
 
+
+- a manuscript file (in any format) including the following:
+    title page (title, author list, classification, keywords)
+    abstract
+    significance statement
+    main text
+    references
+    figures or tables with appropriate legends (may be uploaded separately)
+    SI files (may be uploaded separately)
+- contact and competing interest information for all authors
+- data sharing plans (for all data, documentation, and code used in analysis)
+- funding information and whether an open access license has been selected
+- list of appropriate Editorial Board members, NAS members, and qualified reviewers (minimum of three each) who are experts in the paper's scientific area. (A brief justification for suggested reviewers is welcome, particularly for interdisciplinary papers)
+
+- revised submission will require track changes version
+
+figure sizes: 
+Small: approximately 9 cm x 6 cm
+Medium: approximately 11 cm x 11 cm
+Large: approximately 18 cm x 22 cm
+
+ -->
+ 
+*[TODO: 
+- NHB reviews todo
+- sort git tree
+- reorganize into PNAS ms + SI
+- check cite formatting
+- copy updated plots? 
+- abstract formatting
+- figure sizes
+]*
 
 <!-- # Introduction {.unnumbered} -->
 
@@ -86,6 +126,7 @@ In light of the scientific racist origins of Pioneer and MQ, and the significant
 
 We identified 16 researchers who had received funding from Pioneer; 14 of these researchers had profiles in the Web of Science (WoS) author search, allowing us to identify 13 WoS-indexed journals that had published 6 or more of these authors. See @tbl-researchers and figure @fig-wos. 
 
+\onecolumn
 
 | | | |
 |:-----|-----:|----:|
@@ -108,7 +149,9 @@ We identified 16 researchers who had received funding from Pioneer; 14 of these 
 
 Table: Pioneer-funded researchers.  Either identified in [@MillerPioneerFundBankrolling1994] or named on an archive copy of Pioneer's website, along with birth and death dates from Wikipedia, attributed discipline, and WoS author search result counts.  Brunetto Chiarelli does not have a Wikipedia page.  {#tbl-researchers}
 
-![Journals publishing 6 or more Pioneer-funded researchers, Web of Science author search results.](img/wos_results.png){#fig-wos width="4.76in" height="2.6in"}
+\twocolumn
+
+![Journals publishing 6 or more Pioneer-funded researchers, Web of Science author search results.](img/wos_results.png){#fig-wos width="4.76in" height="2.6in" fig-env="figure*"}
 
 Figure @fig-wos shows that, while MQ is among the "Pioneer-publishing" journals, a number of mainstream journals are more prominent: *Personality and Individual Differences* (PID), *Intelligence* (Int), *Behavior Genetics* (BG), and *Psychological Reports* (PR).  In addition, only psychologist Richard Lynn appears to have published heavily in MQ.  Lynn became an assistant editor of MQ in 1979 (vol. XX, Nos. 1 & 2) and is listed as editor-in-chief on MQ's current website as of 2023-07-21.  He was also president of Pioneer from the death of psychologist J. Phillippe Rushton in 2012 [@BeirichPioneerFundAssets2013] until his own death in 2023.  By contrast, a number of Pioneer-funded researchers have published a significant number of papers in PID, Int, and to a lesser degree BG: Bouchard, Eysenck, Jensen, Rushton, Vernon, and also Lynn.  
 
@@ -121,7 +164,7 @@ Figure @fig-wos shows that, while MQ is among the "Pioneer-publishing" journals,
 
 The fact that Pioneer-funded researchers published heavily in two mainstream psychology journals does not tell us anything about the content of their publications or the claims of their research.  We assembled a full-text corpus of articles published in MQ, PID, Int, BG, PR, and Behavior and Brain Sciences (BBS) between 1960-2010 and used topic modeling to identify topics discussing race, intelligence, and both.  (See the materials and methods for a discussion of some important limitations with this corpus: journals published by the American Psychological Association could not be included, BBS bundles focus articles and commentaries together in a way that confounds simple document counts, and an unknown number of relevant documents in PID could not be included.) 
 
-![Silge plots [@SilgeTopicModeling2017] and smoothed time series for three focal topics.  Top row: top 15 terms by $\beta$ (term-topic distribution) for each topic.  Bottom row: count of articles associated with each topic, by journal and year.  Article counts use a threshold approach, with $\gamma$ (topic-document distribution) greater than 0.5.  Thin lines give annual values, thick lines give 5-year running averages.  Because *Behavior Genetics* and *Behavioral and Brain Sciences* are not prominent in any panel, neither is given a direct label.](img/focal_topics.png){#fig-focal width="4.76in" height="3.57in"}
+![Silge plots [@SilgeTopicModeling2017] and smoothed time series for three focal topics.  Top row: top 15 terms by $\beta$ (term-topic distribution) for each topic.  Bottom row: count of articles associated with each topic, by journal and year.  Article counts use a threshold approach, with $\gamma$ (topic-document distribution) greater than 0.5.  Thin lines give annual values, thick lines give 5-year running averages.  Because *Behavior Genetics* and *Behavioral and Brain Sciences* are not prominent in any panel, neither is given a direct label.](img/focal_topics.png){#fig-focal width="4.76in" height="3.57in" fig-env="figure*"}
 
 Figure @fig-focal and this discussion focuses on three topics identified in one of the 24 fitted topic models; see figures [@fig-gamma-lg; @fig-gamma-md; @fig-gamma-sm; @fig-silge-lg; @fig-silge-md; @fig-silge-sm] for all topics from all models, and figures [@fig-grid-lg; @fig-grid-md; @fig-grid-sm] for selected topics from all models.  In the focal model, topic 07 is strongly associated with MQ:  MQ published dozens of articles in this topic each year, and no other journal ever published more than a handful.  The "Silge plot," showing the top 15 terms in the topic [@SilgeTopicModeling2017], contains a number of racial terms (`races`, `whites`, `negroes` and potentially `europe`, `africa`, `india`, and `japan`); as well as `book`, likely reflecting the fact that MQ published a number of book reviews, while the mainstream journals either did not publish book reviews or these were not available for the corpus. 
 
@@ -188,7 +231,7 @@ How should psychologists exercise these responsibilities?  We believe restorativ
 
 ## Corpus assembly
 
-![Corpus assembly.](img/dataset.png){#fig-corpus width="120%"}
+![Corpus assembly.](img/dataset.png){#fig-corpus width="120%" fig-env="figure*"}
 
 Corpus assembly is summarized in figure @fig-corpus.  The corpus was assembled in two parts, one for *Mankind Quarterly* and the other for mainstream journals.  
 
@@ -201,7 +244,7 @@ An electronic archive of *Mankind Quarterly*, from the first issue in 1969 throu
 
 To identify suitable mainstream journals for inclusion in the corpus, we first identified academic researchers who had been funded by the Pioneer Fund.  Pioneer is an American non-profit organization founded in 1937 to fund eugenics research and propaganda [@TuckerFundingScientificRacism2002].  After the *Brown v. Board of Education* ruling in 1954, Pioneer funded various segregationist efforts across the United States, including lectures on eugenics by Stanford physicist William Shockley [@JacksonScienceSegregationRace2005].  We reviewed a critical profile of Pioneer [@MillerPioneerFundBankrolling1994] as well as an archived page from the organization's own web site (<https://web.archive.org/web/20130103005545/http://www.pioneerfund.org/Grantees.html>), which together listed 16 researchers who had received Pioneer funds.  
 
-We then used the author search tool in Clarivate's Web of Science platform (<https://www.webofscience.com/wos/author/search>), retrieving publication lists for 14 researchers.  These searches were conducted between 2021-09-24 and 2021-10-05 by DJH.  After parsing these results, we counted how many of the 14 researchers had published in each journal.  Thirteen journals had published 6 or more of the 14 Pioneer-funded researchers.  We excluded *Mankind Quarterly* (as already included) as well as *Science* and *Nature* (as too general) from further consideration in this side of the corpus.  Three journals published by the American Psychological Association (APA; *American Psychologist*, *Contemporary Psychology*, and *Journal of Educational Psychology*) had to be excluded due to confusion over who could give us permission to use the archives for a text mining project, with both APA and ProQuest asserting that we needed to get permission from the other entity.  *European Journal of Personality*, published by SAGE, also had to be excluded because our institutional access only went back to 1999.  
+We then used the author search tool in Clarivate's Web of Science platform (<https://www.webofscience.com/wos/author/search>), retrieving publication lists for 14 researchers.  These searches were conducted between 2021-09-24 and 2021-10-05 by *[AUTHOR 1]*.  After parsing these results, we counted how many of the 14 researchers had published in each journal.  Thirteen journals had published 6 or more of the 14 Pioneer-funded researchers.  We excluded *Mankind Quarterly* (as already included) as well as *Science* and *Nature* (as too general) from further consideration in this side of the corpus.  Three journals published by the American Psychological Association (APA; *American Psychologist*, *Contemporary Psychology*, and *Journal of Educational Psychology*) had to be excluded due to confusion over who could give us permission to use the archives for a text mining project, with both APA and ProQuest asserting that we needed to get permission from the other entity.  *European Journal of Personality*, published by SAGE, also had to be excluded because our institutional access only went back to 1999.  
 
 The remaining 5 journals are all published by major academic publishers — Elsevier, Springer, or Cambridge University Press — and each item in the entire run of each journal has been assigned a DOI (digital object identifier) for archival purposes.  We used the Crossref API and `rcrossref` R interface to this API [@ChamberlainRcrossrefClientVarious2019 version 1.1.0.99] to retrieve metadata for each item published from 1960-2010 in each of these journals.  These metadata included item-level license information — confirming that the text of each item could be used for text mining projects — and a URL to an electronic version of the item.  These URLs were used to retrieve a XML or PDF version of each item, except for *Personality and Individual Differences*.  This journal has published a relatively large number of non-article documents, such as book reviews and commentaries, that are not available at the URL included in the Crossref metadata.  (This is unfortunate, as it was not difficult to find highly relevant documents that we could not automatically retrieve and therefore had to be excluded from our corpus.  One set of examples is an exchange between Rushton and Flynn on the Flynn effect [@FlynnEvidenceRushtonGenetic1998; @RushtonSecularGainsIQ1998; @FlynnReplyRushtonGang1998].)  Instead we used Elsevier's ScienceDirect API (<https://dev.elsevier.com/>) to independently search and retrieve all available items from *Personality and Individual Differences*.  This stage of corpus assembly was conducted between 2021-11 and 2022-05.  
 
@@ -209,8 +252,9 @@ The remaining 5 journals are all published by major academic publishers — Else
 
 After XML/PDF versions were retrieved, text was extracted using either the `xml2` package [@WickhamXml2ParseXML2023] or `pdftools`.  Figure @fig-counts and @tbl-counts show the number of fulltext documents included in the corpus.  All together, the corpus includes 34,896 documents from 6 journals.  
 
-![Count of documents in the corpus, by journal and year.](img/02_count.png){#fig-counts width="4.76in" height="3.6in"}
+![Count of documents in the corpus, by journal and year.](img/02_count.png){#fig-counts width="11cm" height="11cm" fig-env="figure*"}
 
+\onecolumn
 
 Table: Document counts, by journal, and years included in the corpus. {#tbl-counts}
 
@@ -223,6 +267,7 @@ Table: Document counts, by journal, and years included in the corpus. {#tbl-coun
 |Psychological Reports                  | 21398|  1960| 2010|
 |Behavioral and Brain Sciences          |   898|  1978| 2010|
 
+\twocolumn
 
 
 
@@ -240,7 +285,7 @@ After noun phrase extraction, the corpus comprised 43,162,055 total tokens of 6,
 
 Document metadata retrieved from Crossref does not appear to be covered by any copyright or other intellectual property restrictions.  However, due to copyright restrictions, we are unable to make document fulltext or Web of Science search results publicly available.  Code for the corpus assembly and text preparation steps described above is available by request. 
 
-The public analysis repository, <https://github.com/dhicks/race-science> *[DOI]*, includes document metadata and documentwise counts of NLP-extracted noun phrases ("document-term matrices"), along with code to reproduce the analysis of the following sections. 
+The public analysis repository, <!-- <https://github.com/dhicks/race-science> --> *[URL and DOI will go here]*, includes document metadata and documentwise counts of NLP-extracted noun phrases ("document-term matrices"), along with code to reproduce the analysis of the following sections. 
 
 
 ## Vocabulary selection
@@ -256,11 +301,15 @@ A common rule of thumb in topic modeling is that the vocabulary should have abou
 
 ## Topic modeling
 
-To fit topic models, we followed the approach proposed by Rohe and Zeng [@RoheVintageFactorAnalysis2020], which uses varimax-rotated partial principal components instead of the variational inference methods used by standard topic model packages such as `stm` [@RobertsStmPackageStructural2019].  This novel approach was implemented in the R package `tmfast` [@HicksTmfastFitsTopic2023].  We conducted a simulation study of `tmfast`, which found that it was significantly faster and only slightly less accurate at reconstructing known word-topic and topic-document distributions, compared to `stm` [@HicksTmfastFitsTopic2023].  
+To fit topic models, we followed the approach proposed by Rohe and Zeng [@RoheVintageFactorAnalysis2020], which uses varimax-rotated partial principal components instead of the variational inference methods used by standard topic model packages such as `stm` [@RobertsStmPackageStructural2019].  This novel approach was implemented in the R package *[redacted for anonymous review]* <!-- `tmfast` [@HicksTmfastFitsTopic2023] -->.  <!-- We conducted a simulation study of `tmfast`, which found that it was significantly faster and only slightly less accurate at reconstructing known word-topic and topic-document distributions, compared to `stm` [@HicksTmfastFitsTopic2023].   -->
 
 Topic models were fit for all three vocabularies (large, medium, and small) with $k = 5, 10, 20, ..., 70$ (number of topics), resulting in a total of $24 = 3 \times 8$ models. 
 
 Following the approach of [@HicksProductivityInterdisciplinaryImpacts2021], we did not attempt to identify a unique best fitted model for further analysis.  While the manuscript text focuses on the medium vocabulary, $k=40$ model as the "median" among the 24 fitted models, we compare and contrast findings from this model with those from the other models.  
+
+### Proof of concept
+
+<!-- {{< include ../scripts/11-proof-of-concept.qmd >}} -->
 
 
 ### Topic model interpretation and quality assessment
@@ -283,6 +332,16 @@ For the first round of review, both authors worked independently,  dichotomously
 The 3 non-consensus documents reflected essential ambiguity in the operationalization of race science discourse.  One is a table of contents from a 1980 issue of Int; arguably this document should have been excluded as irrelevant front matter, but arguably it legitimizes the research published in the issue.  The second case is a paper on racial differences in emotional intelligence that was classified as race science discourse by one author, while the other author felt it was more focused on psychometrics [@GignacGroupDifferencesEI2010].  And a 1990 article in MQ (<https://www.unz.com/print/MankindQuarterly-1990q3-00108/>) proposed to offer an economic explanation for crime.  While it has a few pages connecting race/ethnicity to both crime and poverty, it ultimately focuses on unemployment and alcohol sales, rather than race, as the key predictors of crime.  
 
 Based on this qualitative review, we judged that the topic model approach was sufficiently sensitive (low "false positive" rate) in identifying race science discourse.  However, "false negatives" are still possible, as some documents that human readers would classify as race science discourse might have been associated with other topics.  
+
+### STM robustness check
+
+As a robustness check, we compared the `tmfast` results with a topic model fit using `STM`, a widely used package for topic modeling in R *[cite]*.  Using the medium vocabulary, $k=40$, and a relaxed convergence threshold (`1e-4` compared to the default `1e-5`), fitting a single `STM` model took approximately 20 minutes.  This was approximately two orders of magnitude slower than `tmfast`.  And, unlike `tmfast`, `STM` can only fit a single value of $k$ at a time.  We therefore only fit this one `STM` model.  
+
+*[xref]* shows four topics extracted from the `STM` model, automatically identified by the use of race keywords, intelligence keywords, or both, among the top 15 terms.  As in the `tmfast` analysis, the "race only" topic is almost exclusive to MQ; the "race and intelligence" topic emerges in mainstream journals before appearing in both the mainstream and MQ; and there are distinctive "intelligence only" topics.  Compare *[xref]*.  One notable difference between these results is the role of PR in publishing race and intelligence.  
+
+![](img/12-stm.png){fig-env="figure*"}
+
+### *[author analysis]*
 
 
 ## Supplemental analysis of *Behavior Genetics* {#sec-bg}

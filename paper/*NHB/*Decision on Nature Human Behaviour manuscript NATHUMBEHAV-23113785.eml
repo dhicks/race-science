@@ -1,0 +1,571 @@
+Received: from SJ2PR06MB9527.namprd06.prod.outlook.com (2603:10b6:a03:556::14)
+ by CY4PR0601MB3604.namprd06.prod.outlook.com with HTTPS; Fri, 15 Mar 2024
+ 16:54:50 +0000
+Received: from BN9PR03CA0197.namprd03.prod.outlook.com (2603:10b6:408:f9::22)
+ by SJ2PR06MB9527.namprd06.prod.outlook.com (2603:10b6:a03:556::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7386.18; Fri, 15 Mar
+ 2024 16:54:46 +0000
+Received: from BN2PEPF000044AB.namprd04.prod.outlook.com
+ (2603:10b6:408:f9:cafe::8d) by BN9PR03CA0197.outlook.office365.com
+ (2603:10b6:408:f9::22) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7386.18 via Frontend
+ Transport; Fri, 15 Mar 2024 16:54:46 +0000
+Authentication-Results: spf=pass (sender IP is 199.168.14.54)
+ smtp.mailfrom=us.nature.com; dkim=pass (signature was verified)
+ header.d=nature.com;dmarc=pass action=none
+ header.from=us.nature.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of us.nature.com designates
+ 199.168.14.54 as permitted sender) receiver=protection.outlook.com;
+ client-ip=199.168.14.54; helo=hermes1-rst.springernature.com; pr=C
+Received: from hermes1-rst.springernature.com (199.168.14.54) by
+ BN2PEPF000044AB.mail.protection.outlook.com (10.167.243.106) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7386.12 via Frontend Transport; Fri, 15 Mar 2024 16:54:45 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+  d=nature.com; s=i062020me;
+  h=content-transfer-encoding:mime-version:date:message-id:
+   to:subject:from:reply-to;
+  bh=bXs/qtlbobdhiDn47gDG6jhvoYfKIlJ5mFcLRoPo42k=;
+  b=XYps/DTeW1nc2IGlYna0R+yayjBMMIJrkA1Q26i99OteE33jzGJny/qS
+   mY1xfv4MzmeMzBya6PoHgkG7ZW1xvJodOH4cjPBe4isDSPZhj7FCUmF8T
+   A2bAhu9VPeVd06QcFvQwTDHQkLgWarBBL8W9Fm7lISAbXJnIbu11EMTos
+   XDtkDqFZ/hs5/uLAkM4iN85rUvrrhxOSfHqwwZO/0I2wdwsUewPYXeMfQ
+   68yEK/6AS8GikEvYxwZyURCKtKQ9E67YnKswQlmKqNiAkyfndg7yqAmSJ
+   5Zbh/fHtKmjNFUbNpjS7kSjCcLwlTbFUtTv0SP2j4FFANwAKIc0KF8vY+
+   A==;
+IronPort-HdrOrdr: =?us-ascii?q?A9a23=3A9sKYb6MMCiRQc8BcTtKjsMiBIKoaSvp037BN?=
+ =?us-ascii?q?7S1MoH1uHvBw+PrOoB12726QtN9zYh4dcK67WJVoKEm0nfUe3WB2B8bHYOCMgh?=
+ =?us-ascii?q?rLEGgN1/qA/9SZIUPDytI=3D?=
+Received: from hermes6-dord.springernature.com ([10.0.1.122])
+  by Hermes1-am1-int.macmillan.com with ESMTP; 15 Mar 2024 17:54:42 +0100
+Received: from unknown (HELO smtp1) ([192.168.11.168])
+  by hermes6-dord.springernature.com with ESMTP; 17 Mar 2014 04:01:47 +0000
+Received: from localhost.localdomain (mts-ejp-www3.springernature.com [192.168.11.63])
+	by smtp1 (Postfix) with ESMTP id 562E0118023C;
+	Fri, 15 Mar 2024 12:54:42 -0400 (EDT)
+Content-Transfer-Encoding: binary
+Content-Type: multipart/alternative; boundary="_----------=_17105216822388024"; charset="UTF-8"
+X-Mailer: MIME::Lite 3.030 (F2.85; T2.17; A2.20; B3.15; Q3.13)
+Date: Fri, 15 Mar 2024 12:54:42 -0400
+Message-Id: <16171052168211@mts-ejp-www3.nature.com.nature.com>
+To: dhicks4@ucmerced.edu
+Subject: Decision on Nature Human Behaviour manuscript NATHUMBEHAV-23113785
+From: aisha.bradshaw@us.nature.com
+Reply-To: aisha.bradshaw@us.nature.com
+Return-Path: aisha.bradshaw@us.nature.com
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Mar 2024 16:54:45.7952
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 691de0db-018e-4930-51f4-08dc45109e55
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: f4dfe9a3-ca78-4998-b7a7-e6d0692eace6:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BN2PEPF000044AB:EE_|SJ2PR06MB9527:EE_|CY4PR0601MB3604:EE_
+X-MS-Exchange-Organization-AuthSource:
+ BN2PEPF000044AB.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 691de0db-018e-4930-51f4-08dc45109e55
+X-MS-Exchange-AtpMessageProperties: SA
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:199.168.14.54;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:hermes1-rst.springernature.com;PTR:hermes1-rst.springernature.com;CAT:NONE;SFS:(13230031);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Mar 2024 16:54:45.7640
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 691de0db-018e-4930-51f4-08dc45109e55
+X-MS-Exchange-CrossTenant-Id: f4dfe9a3-ca78-4998-b7a7-e6d0692eace6
+X-MS-Exchange-CrossTenant-AuthSource:
+ BN2PEPF000044AB.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ2PR06MB9527
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.5428036
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7386.010
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?Windows-1252?Q?xyqN8L2TIMomudB5yc14k6v5JtTPsWVRTfWpur6AjC5jmNgV9QwjJp+I?=
+ =?Windows-1252?Q?/cRWBTfUcl+70n8R6O0G614L+JOE2xio9fmcOskQeWVh7wSq/65lX2XN?=
+ =?Windows-1252?Q?AJHFA7/4UH2PX8ZjaAl+MG4SqgjoFxhRbgEF0TBHBrPC1MR9iyg0wEeR?=
+ =?Windows-1252?Q?QtLDOy/M74KZs57fw9OVxRA06hVUnzjCV7VKz2fqN/IdztN/TcRuk36k?=
+ =?Windows-1252?Q?8CmgG+d/vtqzv6wiM/GBUnzW+4mXCAdwBtYB4V8KVq3j4vJkOWgPP2VK?=
+ =?Windows-1252?Q?SO0bzpQ6VNeT/LkcMZ7J9DFAwuRejc3Wi9zXQ9aIvkFgsIHTFdf5k8Hi?=
+ =?Windows-1252?Q?uBGbmxk9kfjTY55WUAK3Oy5LVCAG1SW80r//jjcvEzaeS9wt70qbN+fA?=
+ =?Windows-1252?Q?UdB7Ah6RJab+Ib1OKK3HeOmAnxxlJaLflgjh60qDP93kqFYRRgN2EUOU?=
+ =?Windows-1252?Q?rLRi43ypb+S+DVy9YtJiAMiqUx6Cgq8Vbk5bkx2QNNWfgbVs91pSUd7u?=
+ =?Windows-1252?Q?tM8btNdlDtBwZACIk3KHLhKBVjtZsH6D9vO6RyAR0L5xnfla/EOqlm3M?=
+ =?Windows-1252?Q?Kxe8fxtXK7HduFvNI7bC+qIoP06SA+lCFg6UUdZuhJjUuzMRN0VIonSB?=
+ =?Windows-1252?Q?QYJSlOBMNIxt6iaVpSom9zb2O9Oau28sEV3mjl4HmAg3Fz7GgvtX5Qcf?=
+ =?Windows-1252?Q?tClY0S9biPalBpSZMVBUHcWjCN46AZSpRqrqQ84eOxt1Eq9FWjEEkU8e?=
+ =?Windows-1252?Q?J+LMeRDK6MHJu9iV2QDGAW1Pmz4RBF+qbxfJLmdciiR0CjJgsZSToHyd?=
+ =?Windows-1252?Q?9qt3nf1IHWVLqWKTDVT+/Or8dv7p94t3myfMiWQW0WiaSWv5VGzeew4C?=
+ =?Windows-1252?Q?Wj2z/NEJp0KhJVNOKzHerM3Qk7CsrYg/rA5uj6ARQDNyTyJx3B1e3BtL?=
+ =?Windows-1252?Q?/taDEy1GeGw8lgERKhzF0cHy8i45UbrAMFcChWj8kOT4+bo5bnbis25+?=
+ =?Windows-1252?Q?tzS+q9OYXnxDn0ogFa49fPfNluXA1In4hFXXyuIPMxklNKWAxZxOoXD/?=
+ =?Windows-1252?Q?v82/HHxwklKGOvjJUISrTimSZLyxxcaXlWJ0bu75Ov0qlVFHSFc/iAOw?=
+ =?Windows-1252?Q?dPjE9P7kwwtSd3ucnpI7efGzkB7cZ05c1sX8ddyReJbmu1U3DsaP9Two?=
+ =?Windows-1252?Q?3yasf9mxYPz8o8xlV3lYz1K1vgcepdA0Cy5+7G2tH42Dd0TdP8KbAN0P?=
+ =?Windows-1252?Q?Z7+MCXH0AjHqXb0X1gJjTIa8mmOi5tLqHq561vKmVb7bt85UYaIJWMiE?=
+ =?Windows-1252?Q?nH3QpMc4sPMYuk8kz4FlcF/YuhrLf/ABtFB01ytbfFxERJy0xCfK4ZZQ?=
+ =?Windows-1252?Q?5u8WZ2cJiC+dOOnWpodM69Xl84tO1mSUrOYekv/VVpa0ufIOufoFI0RF?=
+ =?Windows-1252?Q?GZMYx/GxXTNZC2W00LAdONGAiRdspt2moUD1GCYYR7MbNHRbt+HrigLP?=
+ =?Windows-1252?Q?ncVok2DUYMnuaYN1GKlv21EmoO/vK61v9eh63LUBe8GhTNS8LzyJ8TeW?=
+ =?Windows-1252?Q?93T7vA1inOrYIey1qayJ4k8i9bspIiN22XLHewI/hy/5ph9l6uoXkbqW?=
+ =?Windows-1252?Q?DkgAcr1Vf/Md/TVGXl0IDLvqMwXabGJy9sexlLXpByRXqnb9uNLm+JMO?=
+ =?Windows-1252?Q?5aejDFqIGzYY1cLEuLRQKQO4ileGzSZBqtM3hVKlSIjeGgaKtMtHuA8P?=
+ =?Windows-1252?Q?PeIeoYQ0JfyZyioaQlHL1LpU+OVIHk2ns2d7VoeoakUT6BcX+y+tcscD?=
+ =?Windows-1252?Q?mxbYYakJTGtvKgxEM9pGEuM8qTecmwB9EJoL6mmQKl0r71NGSHpaXV8V?=
+ =?Windows-1252?Q?8TnJGliTwMwcs82OtECv/zTwV6MGPZ5tDi4890/2oMxsEAxHh/TZwQ9o?=
+ =?Windows-1252?Q?A9t27/OWBMeSyTiJB57ZSRyo61Zitbk8EGK53fW3N1YakjwKFHcZZ/cc?=
+ =?Windows-1252?Q?F8Nv2zFAo8fclfhJ2O2O52BbDyjOtjFZzsxHdhyOcvFcIVXfKt4=3D?=
+MIME-Version: 1.0
+
+--_----------=_17105216822388024
+Content-Disposition: inline
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+15th March 2024                 
+           
+      
+Dear Professor Hicks,  
+
+Thank you once again for your manuscript, entitled "Race Science in Mainstream Psychology, 1960-2010," and for your patience during the peer review process. I sincerely apologize for the delay in sending a decision on your manuscript.       
+          
+Your manuscript has now been evaluated by 2 reviewers, whose comments are included at the end of this letter. We also recruited a third reviewer, but unfortunately they have not yet returned comments. If we do receive feedback from this reviewer in the future, we will share it with you.  
+
+In the light of the advice of our reviewers, I regret that we cannot offer to publish your manuscript in Nature Human Behaviour. While the reviewers find your work of some interest, they raise concerns about the strength of the conclusions that can be drawn at this stage and the appropriateness of the technical approach. We feel that these reservations are sufficiently important as to preclude publication of this work in Nature Human Behaviour. (Please note that although we appreciate Reviewer 2's points about the extensive use of race and ethnicity in the biological sciences, our own understanding is also that geneticists have rejected the existence of a biological basis for race, instead considering it to be a sociocultural construct, not to be confused with ancestry, which can be biologically determined. Although race/ethnicity is still being used as a proxy for ancestry, it does not have a biological basis.)
+
+I am sorry that we cannot be more positive on this occasion but hope that you will find our reviewers' comments helpful when preparing your paper for submission elsewhere.                   
+      
+Sincerely,           
+Aisha
+                   
+Aisha Bradshaw, PhD
+Senior Editor
+Nature Human Behaviour      
+           
+
+Reviewer expertise:
+
+Reviewer #1: topic modelling, philosophy of science
+
+Reviewer #2: psychology
+
+Reviewer #3: did not return comments
+   
+           
+Reviewers' Comments:  
+ 
+Reviewer #1:
+Remarks to the Author:
+   Very interesting topic modeling perspective on race science discourse. Yet my initial enthusiasm was undercut by what I consider to be a number of problematic points. 
+
+(1) First, the framing of the research question should be improved. Though the authors carefully distinguish between 'scientific racism', 'race science', and 'race science discourse&#x2019; (p.1), there tends to be some slippage about considering race science discourse as though it is always supportive of race science in the rest of the manuscript. Yet it seems at least conceivable that 'race science discourse&#x2019; might in some cases be about debunking race science.
+
+The specific research question of the paper would benefit from being more precisely framed in such a way that the methods appear suited to provide some answers to it. Currently, the research question is formulated as the hypothesis (H) whether race science ideas originated in MQ and from there were disseminated to mainstream publications (p.2). The conclusion is that the results (R) do not support this hypothesis, and instead support the thesis (T) that mainstream journals provided a venue for a distinct form of race science based on intelligence research and originating outside of MQ&#x2019;.
+
+To this aim, the authors first identify 14 authors funded by Pioneer (a fund known to support race science) and target 6 journals in which these authors published the most (MQ and 5 &#x2018;mainstream journals&#x2019;). Then topic models were fitted to the publications of these journals from the 1960s till 2000s (roughly). A &#x2018;median&#x2019; model (k=40, medium sized vocabulary) was retained for analysis and 3 topics were extracted: topic 7 was found to be present in MQ documents and associated with race terms; topic 22 was found to be associated with Int and PID and interpreted to be about general intelligence research; topic 24 was found to be present in PR and others and interpreted as race science discourse mixing race and intelligence. 
+
+Having unpacked the argument, it is unclear how this approach could have supported such a hypothesis as (H). It would be good to explain which types of results would have been expected in this respect. 
+
+On the other hand, it would also be good to explain in which respect the results differ from these expectations, and how they instead support (T). To this aim, it would need to be shown that there is no genealogical link so to speak between papers in MQ (about race science) and those in mainstream journals (about race science discourse), neither in terms of ideas nor in terms of references. The paper falls short of establishing such specific claims. 
+
+Yet, the results could be argued to provide support for a weaker claim, namely the descriptive claim that there is one race topic specific to MQ, and one race topic specific to the mainstream journals (and with different trends).
+
+But can we say so? It now all depends on how one interprets the topics. 
+
+(2) This leads me to a second comment. To interpret the topics, the authors look at the top 10 terms (p.5-6). We would recommend to also examine 10-20 random texts from the top-100 texts for each topic, and spend much more time unpacking the ideas covered by each topic. This would help provide a better justification to the labeling of the topics. 
+
+(3) Third, examining the topic top-words raises questions both about topic interpretation and about the methods. For instance, a key worry for topic 7 is the presence of &#x2018;book&#x2019; as top term. Could it be that the algorithm attributed that specific topic to many MQ papers simply because of the presence of the phrase &#x2018;book review&#x2019; or &#x2018;book&#x2019; in the text, since we learn that book reviews were left in the corpus? Other top words for topic 7 include: europe africa religion death races india whites god mankind. What does this mean in terms of thematic coverage? Furthermore, Fig ED2, for MQ at k=40, shows that topic 7 is present in the vast majority of MQ documents. This is puzzling. 
+
+The topic distribution for MQ raises doubts on the model itself. Is it really the case that the vast majority of documents in MQ talk about the same thing? Or is it an artifact of the methods? While more diversified topic distributions are found for PID and PR, topic distributions for BG, BBS, Int appear skewed towards just a few topics: Is this due to the limited number of topics that the published content actually addresses, or to a problem of methods?
+
+Something quite strange also is the distribution of beta values for top-words: for several topics, the top-word has a very high value while the following 9 words are at 0 or near (see V8, V12, V15, V19, V20, V27, V32, V38). This raises a worry that the algorithm seems to be picking out specific contrasting terms, though not necessarily those terms that might shed light on the actual themes addressed in the different documents.
+
+The presence of ill-formed topics, as is often inevitable in topic models, here hints at possible issues with corpus cleaning - see in particular topics V18 and V30 (with top-words as: mail issid board temperament directors london_se5 mailing_address official_journal mail phone japan 81 individual_di...erences europe fax elsevier_customer_service_department). A lot of abbreviations have also been kept and are found across several topics. Could it be that cleaning issues affected the topic model and produced these journal-specific topic attributions?  
+
+The trick is that not much is said about the topic modeling algorithm, neither in terms of inner workings nor in terms of relative performance compared to well-established models (LDA, STM). The authors should indicate references where their algorithm has been tested. Alternatively, they could also run a simple LDA and/or STM for k=40 and compare results. 
+
+(4) Note that it would be interesting to check the thematic content of the publications of the 14 Pioneer authors: if they have a high content of topics 7, 22, 24 (and if these topics are well interpreted) then this would be a neat point to mention. On the other hand, if this is not the case, then this might indicate that the theme of these authors do not concern race science discourse (which would run against the premise that led to their choice in the first place) or that the methods do not work as expected.
+
+(5) Note that when presenting their results, the authors should use the same scale across diagrams: In ED-5, please use the same max value for all Silge plots. In ED-2, use the same line thickness per document (so as to show, possibly, effects due to journal sizes in the corpus). Most importantly, in Fig. 2 please use the same horizontal and vertical scales across topics. This matters since V24 seems to concern about 5 documents per year over about 700 documents yearly, while V7 tops at 90 (but goes down drastically over time). This raises questions about the significance of the topics in the overall corpus. This point should at least be discussed, as should the temporal evolution of the topics.
+
+Note that some of the reported values on Fig. 2 are different from those reported in Fig. ED-5: for topic V7, the beta value for &#x2018;book&#x2019; is 0.008 whereas in ED-5, its value is about 0.25; for topic V22, &#x2018;cattell&#x2019; has a beta value of 0.0065 compared to 0.2 in ED5; same issue for V24.
+
+(6) A final comment concerns the discussion section. Most of this section is extraneous to the reported research. Though the discussed material is interesting, it does not really address the discussion points worth having about the data and methods, and about the findings. 
+
+Two other more minor points:
+- The authors propose an &#x2018;ensemble analysis&#x2019; covering 24 models, yet those 24 models are never analyzed in detail nor (comparatively) mobilized in the course of the paper. Instead, the results focus on one model. So why not simply say so and drop the other models?
+- The Methods section is after Results and Discussion. I don&#x2019;t know if this is required by the journal, but it&#x2019;s a pain. Why not simply follow the IMRAD structure?
+
+
+
+Reviewer #2:
+Remarks to the Author:
+   I am going to recommend against publication in NHB, on grounds that (a) the paper seems to me to be out of step with how race is dealt with in contemporary science, and (b) the paper&#x2019;s analyses are not consistent with its claim that mainstream psychology research has promoted race science discourse.  
+Because of current practices in behavioural and medical science and genetics, I met with surprise the first line of the abstract, which says that &#x201C;human geneticists have long rejected the biological race concept.&#x201D;  Today, the term race has all but gone out of use in the academy, but the basic concept is still referred to using terms such as ethnicity, ancestry, or sometimes geneology. Journal editors routinely ask authors to specify the numbers and percentages of research samples by race/ethnicity/ancestry (I do not do this in my original submissions, but I am then asked to do this in revisions). The American Psychological Association has just this month introduced its APA Style Journal Article Reporting Standards for Race, Ethnicity, and Culture. Funding agencies such as the UK MRC and US NIH require annual reporting of research participants by race/ethnicity/ancestry, providing table templates with labels including American Indian, Asian, Black White, Pacific 
+Islander. Funders require that samples represent these groups, or provide justification why they are not represented. Publication titles crow about comparisons of these groups, for example in the field of DNAmethylation in relation to behaviour or mental health. Genomics projects tend to include covariate controls for what are called &#x201C;principal components&#x201D; which are groupings of research participants by genetic or epigenetic markers, frequently reflecting race/ethnicity/ancestry (there is controversy emerging about these analyses, but it is on technical grounds, not an objection to using genomic data to quantify ancestry). 
+I wondered if the strategy to select scientists and journals for the bibliometric and text-mining work was appropriate. This strategy resulted in choosing scientists on the basis of having been funded by Pioneer. Most of them are now deceased or emeritus, and their Pioneer-funded work occurred decades ago. I get that they were used as a starting seed for the bibliometric analysis, but it wasn&#x2019;t clear to me how the paper insured that the themes of these authors are still being discussed, particularly by today&#x2019;s mainstream psychologists. (I am shocked that my psychology PhD students have never heard of Arthur Jensen or Stephen J Gould, and don&#x2019;t know what The Bell Curve was. They know nothing of the history of race in behavioural science.)
+I asked myself if the reason the paper might seem to me to be outdated is that the bibliometric corpus of data studied ended in 2010. That is not so long ago, but it was well before the George Floyd incident and the Black Lives Matter movement, events which changed discourse in society and in science. This made me wonder if the race-science discourse studied in this paper is representative of today&#x2019;s situation. Had the paper been presented as an historical study, this would have made more sense to me. 
+The paper talks about &#x201C;mainstream psychology&#x201D; and uses this term in its title, but the bibliometric analysis did not include journals that I would consider in the mainstream of psychology. Journals from the multi-journal stables of the American Psychological Association or the Association for Psychology Science are not featured. Those two societies have memberships in the tens of thousands and represent most research psychologists. Most of the paper&#x2019;s focus is on Personality and Individual Differences (impact factor 4, from the International Society for the Study of Individual Differences) and Intelligence (impact factor 3, from the International Society for Intelligence Research). I have attended the meetings of these 2 societies in recent years, because I was asked to speak, and I found the meetings were attended by something on the order of only 50-100 researchers. This doesn&#x2019;t meet my definition of &#x201C;mainstream.&#x201D; 
+It seems that the authors are concerned about race-science discourse that is on the internet, where trolls us old research to justify racist claims. This is indeed an important concern. I share it. But what they study is words taken from the pages of scientific journals, not from the internet. 
+Overall, my impression is that the paper doesn&#x2019;t make its case that psychology has played a significant role in mainstreaming race science or race science discourse. As this is the stated central aim of the paper, for me, it missed the mark.
+
+
+
+Reviewer #3:
+Did not return comments
+     
+    
+   
+
+***
+ 
+**Following suitable revisions, you may want to consider transferring your manuscript. Although we cannot offer to publish your manuscript, I suggest that you consider Humanities and Social Sciences Communications as a suitable venue for this work. To transfer your manuscript, please use our &lt;a href="https://mts-nathumbehav.nature.com/cgi-bin/main.plex?el=A2Co7JtA1A2qql5X2A9ftdwafKtgCOR1pIuYmRRviN7AZ"&gt;manuscript transfer portal&lt;/a&gt;. You will not have to re-supply manuscript metadata and files, unless you wish to make modifications. For more information, please see our &lt;a href="http://www.nature.com/authors/author_resources/transfer_manuscripts.html?WT.mc_id=EMI_NPG_1511_AUTHORTRANSF&WT.ec_id=AUTHOR"&gt;manuscript transfer FAQ&lt;/a&gt; page.
+
+<p><p>This email has been sent through the Springer Nature Tracking System NY-610A-NPG&MTS<br><br><em>Confidentiality Statement:<br><br>This e-mail is confidential and subject to copyright. Any unauthorised use or disclosure of its contents is prohibited. If you have received this email in error please notify our Manuscript Tracking System Helpdesk team at <a href="http://platformsupport.nature.com ">http://platformsupport.nature.com </a>. <p>Details of the confidentiality and pre-publicity policy may be found here <a href="http://www.nature.com/authors/policies/confidentiality.html">http://www.nature.com/authors/policies/confidentiality.html</a> </em><p><a href="http://www.nature.com/info/privacy.html">Privacy Policy</a> | <a href="https://mts-nathumbehav.nature.com">Update Profile</a>
+
+DISCLAIMER: This e-mail is confidential and should not be used by anyone who is not the original intended recipient. If you have received this e-mail in error please inform the sender and delete it from your mailbox or any other storage mechanism. Springer Nature Limited does not accept liability for any statements made which are clearly the sender's own and not expressly made on behalf of Springer Nature Ltd or one of their agents.
+Please note that Springer Nature Limited and their agents and affiliates do not accept any responsibility for viruses or malware that may be contained in this e-mail or its attachments and it is your responsibility to scan the e-mail and attachments (if any).
+Springer Nature Ltd. Registered office: The Campus, 4 Crinan Street, London, N1 9XW. Registered Number: 00785998 England.
+
+--_----------=_17105216822388024
+Content-Disposition: inline
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGhlYWQ+DQo8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LVR5cGUiIGNvbnRlbnQ9InRl
+eHQvaHRtbDsgY2hhcnNldD11cy1hc2NpaSI+CjxtZXRhIG5hbWU9IkF1dGhvciIgY29udGVudD0i
+a28iPgo8bWV0YSBuYW1lPSJHRU5FUkFUT1IiIGNvbnRlbnQ9Ik1vemlsbGEvNC43IFtlbl0gKFdp
+bk5UOyBJKSBbTmV0c2NhcGVdIj4KPC9oZWFkPgo8Ym9keSB0ZXh0PSIjMDAwMDAwIiBiZ2NvbG9y
+PSIjRkZGRkZGIiBsaW5rPSIjRkYwMDAwIiB2bGluaz0iI0NDMDAwMCIgYWxpbms9IiNGRjAwMDAi
+PgoKMTV0aCBNYXJjaCAyMDI0ICAgICAgICAgICAgICAgICA8YnI+CiAgICAgICAgICAgPGJyPgog
+ICAgICA8YnI+CkRlYXIgUHJvZmVzc29yIEhpY2tzLCAgPGJyPgo8YnI+ClRoYW5rIHlvdSBvbmNl
+IGFnYWluIGZvciB5b3VyIG1hbnVzY3JpcHQsIGVudGl0bGVkICZxdW90O1JhY2UgU2NpZW5jZSBp
+biBNYWluc3RyZWFtIFBzeWNob2xvZ3ksIDE5NjAtMjAxMCwmcXVvdDsgYW5kIGZvciB5b3VyIHBh
+dGllbmNlIGR1cmluZyB0aGUgcGVlciByZXZpZXcgcHJvY2Vzcy4gSSBzaW5jZXJlbHkgYXBvbG9n
+aXplIGZvciB0aGUgZGVsYXkgaW4gc2VuZGluZyBhIGRlY2lzaW9uIG9uIHlvdXIgbWFudXNjcmlw
+dC4gICAgICAgPGJyPgogICAgICAgICAgPGJyPgpZb3VyIG1hbnVzY3JpcHQgaGFzIG5vdyBiZWVu
+IGV2YWx1YXRlZCBieSAyIHJldmlld2Vycywgd2hvc2UgY29tbWVudHMgYXJlIGluY2x1ZGVkIGF0
+IHRoZSBlbmQgb2YgdGhpcyBsZXR0ZXIuIFdlIGFsc28gcmVjcnVpdGVkIGEgdGhpcmQgcmV2aWV3
+ZXIsIGJ1dCB1bmZvcnR1bmF0ZWx5IHRoZXkgaGF2ZSBub3QgeWV0IHJldHVybmVkIGNvbW1lbnRz
+LiBJZiB3ZSBkbyByZWNlaXZlIGZlZWRiYWNrIGZyb20gdGhpcyByZXZpZXdlciBpbiB0aGUgZnV0
+dXJlLCB3ZSB3aWxsIHNoYXJlIGl0IHdpdGggeW91LiAgPGJyPgo8YnI+CkluIHRoZSBsaWdodCBv
+ZiB0aGUgYWR2aWNlIG9mIG91ciByZXZpZXdlcnMsIEkgcmVncmV0IHRoYXQgd2UgY2Fubm90IG9m
+ZmVyIHRvIHB1Ymxpc2ggeW91ciBtYW51c2NyaXB0IGluIE5hdHVyZSBIdW1hbiBCZWhhdmlvdXIu
+IFdoaWxlIHRoZSByZXZpZXdlcnMgZmluZCB5b3VyIHdvcmsgb2Ygc29tZSBpbnRlcmVzdCwgdGhl
+eSByYWlzZSBjb25jZXJucyBhYm91dCB0aGUgc3RyZW5ndGggb2YgdGhlIGNvbmNsdXNpb25zIHRo
+YXQgY2FuIGJlIGRyYXduIGF0IHRoaXMgc3RhZ2UgYW5kIHRoZSBhcHByb3ByaWF0ZW5lc3Mgb2Yg
+dGhlIHRlY2huaWNhbCBhcHByb2FjaC4gV2UgZmVlbCB0aGF0IHRoZXNlIHJlc2VydmF0aW9ucyBh
+cmUgc3VmZmljaWVudGx5IGltcG9ydGFudCBhcyB0byBwcmVjbHVkZSBwdWJsaWNhdGlvbiBvZiB0
+aGlzIHdvcmsgaW4gTmF0dXJlIEh1bWFuIEJlaGF2aW91ci4gKFBsZWFzZSBub3RlIHRoYXQgYWx0
+aG91Z2ggd2UgYXBwcmVjaWF0ZSBSZXZpZXdlciAyJ3MgcG9pbnRzIGFib3V0IHRoZSBleHRlbnNp
+dmUgdXNlIG9mIHJhY2UgYW5kIGV0aG5pY2l0eSBpbiB0aGUgYmlvbG9naWNhbCBzY2llbmNlcywg
+b3VyIG93biB1bmRlcnN0YW5kaW5nIGlzIGFsc28gdGhhdCBnZW5ldGljaXN0cyBoYXZlIHJlamVj
+dGVkIHRoZSBleGlzdGVuY2Ugb2YgYSBiaW9sb2dpY2FsIGJhc2lzIGZvciByYWNlLCBpbnN0ZWFk
+IGNvbnNpZGVyaW5nIGl0IHRvIGJlIGEgc29jaW9jdWx0dXJhbCBjb25zdHJ1Y3QsIG5vdCB0byBi
+ZSBjb25mdXNlZCB3aXRoIGFuY2VzdHJ5LCB3aGljaCBjYW4gYmUgYmlvbG9naWNhbGx5IGRldGVy
+bWluZWQuIEFsdGhvdWdoIHJhY2UvZXRobmljaXR5IGlzIHN0aWxsIGJlaW5nIHVzZWQgYXMgYSBw
+cm94eSBmb3IgYW5jZXN0cnksIGl0IGRvZXMgbm90IGhhdmUgYSBiaW9sb2dpY2FsIGJhc2lzLik8
+YnI+Cjxicj4KSSBhbSBzb3JyeSB0aGF0IHdlIGNhbm5vdCBiZSBtb3JlIHBvc2l0aXZlIG9uIHRo
+aXMgb2NjYXNpb24gYnV0IGhvcGUgdGhhdCB5b3Ugd2lsbCBmaW5kIG91ciByZXZpZXdlcnMnIGNv
+bW1lbnRzIGhlbHBmdWwgd2hlbiBwcmVwYXJpbmcgeW91ciBwYXBlciBmb3Igc3VibWlzc2lvbiBl
+bHNld2hlcmUuICAgICAgICAgICAgICAgICAgIDxicj4KICAgICAgPGJyPgpTaW5jZXJlbHksICAg
+ICAgICAgICA8YnI+CkFpc2hhPGJyPgogICAgICAgICAgICAgICAgICAgPGJyPgpBaXNoYSBCcmFk
+c2hhdywgUGhEPGJyPgpTZW5pb3IgRWRpdG9yPGJyPgpOYXR1cmUgSHVtYW4gQmVoYXZpb3VyICAg
+ICAgPGJyPgogICAgICAgICAgIDxicj4KPGJyPgpSZXZpZXdlciBleHBlcnRpc2U6PGJyPgo8YnI+
+ClJldmlld2VyICMxOiB0b3BpYyBtb2RlbGxpbmcsIHBoaWxvc29waHkgb2Ygc2NpZW5jZTxicj4K
+PGJyPgpSZXZpZXdlciAjMjogcHN5Y2hvbG9neTxicj4KPGJyPgpSZXZpZXdlciAjMzogZGlkIG5v
+dCByZXR1cm4gY29tbWVudHM8YnI+CiAgIDxicj4KICAgICAgICAgICA8YnI+ClJldmlld2Vycycg
+Q29tbWVudHM6ICA8YnI+CiA8YnI+ClJldmlld2VyICMxOjxicj4KUmVtYXJrcyB0byB0aGUgQXV0
+aG9yOjxicj4KICAgVmVyeSBpbnRlcmVzdGluZyB0b3BpYyBtb2RlbGluZyBwZXJzcGVjdGl2ZSBv
+biByYWNlIHNjaWVuY2UgZGlzY291cnNlLiBZZXQgbXkgaW5pdGlhbCBlbnRodXNpYXNtIHdhcyB1
+bmRlcmN1dCBieSB3aGF0IEkgY29uc2lkZXIgdG8gYmUgYSBudW1iZXIgb2YgcHJvYmxlbWF0aWMg
+cG9pbnRzLiA8YnI+Cjxicj4KKDEpIEZpcnN0LCB0aGUgZnJhbWluZyBvZiB0aGUgcmVzZWFyY2gg
+cXVlc3Rpb24gc2hvdWxkIGJlIGltcHJvdmVkLiBUaG91Z2ggdGhlIGF1dGhvcnMgY2FyZWZ1bGx5
+IGRpc3Rpbmd1aXNoIGJldHdlZW4gJ3NjaWVudGlmaWMgcmFjaXNtJywgJ3JhY2Ugc2NpZW5jZScs
+IGFuZCAncmFjZSBzY2llbmNlIGRpc2NvdXJzZSYjODIxNzsgKHAuMSksIHRoZXJlIHRlbmRzIHRv
+IGJlIHNvbWUgc2xpcHBhZ2UgYWJvdXQgY29uc2lkZXJpbmcgcmFjZSBzY2llbmNlIGRpc2NvdXJz
+ZSBhcyB0aG91Z2ggaXQgaXMgYWx3YXlzIHN1cHBvcnRpdmUgb2YgcmFjZSBzY2llbmNlIGluIHRo
+ZSByZXN0IG9mIHRoZSBtYW51c2NyaXB0LiBZZXQgaXQgc2VlbXMgYXQgbGVhc3QgY29uY2VpdmFi
+bGUgdGhhdCAncmFjZSBzY2llbmNlIGRpc2NvdXJzZSYjODIxNzsgbWlnaHQgaW4gc29tZSBjYXNl
+cyBiZSBhYm91dCBkZWJ1bmtpbmcgcmFjZSBzY2llbmNlLjxicj4KPGJyPgpUaGUgc3BlY2lmaWMg
+cmVzZWFyY2ggcXVlc3Rpb24gb2YgdGhlIHBhcGVyIHdvdWxkIGJlbmVmaXQgZnJvbSBiZWluZyBt
+b3JlIHByZWNpc2VseSBmcmFtZWQgaW4gc3VjaCBhIHdheSB0aGF0IHRoZSBtZXRob2RzIGFwcGVh
+ciBzdWl0ZWQgdG8gcHJvdmlkZSBzb21lIGFuc3dlcnMgdG8gaXQuIEN1cnJlbnRseSwgdGhlIHJl
+c2VhcmNoIHF1ZXN0aW9uIGlzIGZvcm11bGF0ZWQgYXMgdGhlIGh5cG90aGVzaXMgKEgpIHdoZXRo
+ZXIgcmFjZSBzY2llbmNlIGlkZWFzIG9yaWdpbmF0ZWQgaW4gTVEgYW5kIGZyb20gdGhlcmUgd2Vy
+ZSBkaXNzZW1pbmF0ZWQgdG8gbWFpbnN0cmVhbSBwdWJsaWNhdGlvbnMgKHAuMikuIFRoZSBjb25j
+bHVzaW9uIGlzIHRoYXQgdGhlIHJlc3VsdHMgKFIpIGRvIG5vdCBzdXBwb3J0IHRoaXMgaHlwb3Ro
+ZXNpcywgYW5kIGluc3RlYWQgc3VwcG9ydCB0aGUgdGhlc2lzIChUKSB0aGF0IG1haW5zdHJlYW0g
+am91cm5hbHMgcHJvdmlkZWQgYSB2ZW51ZSBmb3IgYSBkaXN0aW5jdCBmb3JtIG9mIHJhY2Ugc2Np
+ZW5jZSBiYXNlZCBvbiBpbnRlbGxpZ2VuY2UgcmVzZWFyY2ggYW5kIG9yaWdpbmF0aW5nIG91dHNp
+ZGUgb2YgTVEmIzgyMTc7Ljxicj4KPGJyPgpUbyB0aGlzIGFpbSwgdGhlIGF1dGhvcnMgZmlyc3Qg
+aWRlbnRpZnkgMTQgYXV0aG9ycyBmdW5kZWQgYnkgUGlvbmVlciAoYSBmdW5kIGtub3duIHRvIHN1
+cHBvcnQgcmFjZSBzY2llbmNlKSBhbmQgdGFyZ2V0IDYgam91cm5hbHMgaW4gd2hpY2ggdGhlc2Ug
+YXV0aG9ycyBwdWJsaXNoZWQgdGhlIG1vc3QgKE1RIGFuZCA1ICYjODIxNjttYWluc3RyZWFtIGpv
+dXJuYWxzJiM4MjE3OykuIFRoZW4gdG9waWMgbW9kZWxzIHdlcmUgZml0dGVkIHRvIHRoZSBwdWJs
+aWNhdGlvbnMgb2YgdGhlc2Ugam91cm5hbHMgZnJvbSB0aGUgMTk2MHMgdGlsbCAyMDAwcyAocm91
+Z2hseSkuIEEgJiM4MjE2O21lZGlhbiYjODIxNzsgbW9kZWwgKGs9NDAsIG1lZGl1bSBzaXplZCB2
+b2NhYnVsYXJ5KSB3YXMgcmV0YWluZWQgZm9yIGFuYWx5c2lzIGFuZCAzIHRvcGljcyB3ZXJlIGV4
+dHJhY3RlZDogdG9waWMgNyB3YXMgZm91bmQgdG8gYmUgcHJlc2VudCBpbiBNUSBkb2N1bWVudHMg
+YW5kIGFzc29jaWF0ZWQgd2l0aCByYWNlIHRlcm1zOyB0b3BpYyAyMiB3YXMgZm91bmQgdG8gYmUg
+YXNzb2NpYXRlZCB3aXRoIEludCBhbmQgUElEIGFuZCBpbnRlcnByZXRlZCB0byBiZSBhYm91dCBn
+ZW5lcmFsIGludGVsbGlnZW5jZSByZXNlYXJjaDsgdG9waWMgMjQgd2FzIGZvdW5kIHRvIGJlIHBy
+ZXNlbnQgaW4gUFIgYW5kIG90aGVycyBhbmQgaW50ZXJwcmV0ZWQgYXMgcmFjZSBzY2llbmNlIGRp
+c2NvdXJzZSBtaXhpbmcgcmFjZSBhbmQgaW50ZWxsaWdlbmNlLiA8YnI+Cjxicj4KSGF2aW5nIHVu
+cGFja2VkIHRoZSBhcmd1bWVudCwgaXQgaXMgdW5jbGVhciBob3cgdGhpcyBhcHByb2FjaCBjb3Vs
+ZCBoYXZlIHN1cHBvcnRlZCBzdWNoIGEgaHlwb3RoZXNpcyBhcyAoSCkuIEl0IHdvdWxkIGJlIGdv
+b2QgdG8gZXhwbGFpbiB3aGljaCB0eXBlcyBvZiByZXN1bHRzIHdvdWxkIGhhdmUgYmVlbiBleHBl
+Y3RlZCBpbiB0aGlzIHJlc3BlY3QuIDxicj4KPGJyPgpPbiB0aGUgb3RoZXIgaGFuZCwgaXQgd291
+bGQgYWxzbyBiZSBnb29kIHRvIGV4cGxhaW4gaW4gd2hpY2ggcmVzcGVjdCB0aGUgcmVzdWx0cyBk
+aWZmZXIgZnJvbSB0aGVzZSBleHBlY3RhdGlvbnMsIGFuZCBob3cgdGhleSBpbnN0ZWFkIHN1cHBv
+cnQgKFQpLiBUbyB0aGlzIGFpbSwgaXQgd291bGQgbmVlZCB0byBiZSBzaG93biB0aGF0IHRoZXJl
+IGlzIG5vIGdlbmVhbG9naWNhbCBsaW5rIHNvIHRvIHNwZWFrIGJldHdlZW4gcGFwZXJzIGluIE1R
+IChhYm91dCByYWNlIHNjaWVuY2UpIGFuZCB0aG9zZSBpbiBtYWluc3RyZWFtIGpvdXJuYWxzIChh
+Ym91dCByYWNlIHNjaWVuY2UgZGlzY291cnNlKSwgbmVpdGhlciBpbiB0ZXJtcyBvZiBpZGVhcyBu
+b3IgaW4gdGVybXMgb2YgcmVmZXJlbmNlcy4gVGhlIHBhcGVyIGZhbGxzIHNob3J0IG9mIGVzdGFi
+bGlzaGluZyBzdWNoIHNwZWNpZmljIGNsYWltcy4gPGJyPgo8YnI+CllldCwgdGhlIHJlc3VsdHMg
+Y291bGQgYmUgYXJndWVkIHRvIHByb3ZpZGUgc3VwcG9ydCBmb3IgYSB3ZWFrZXIgY2xhaW0sIG5h
+bWVseSB0aGUgZGVzY3JpcHRpdmUgY2xhaW0gdGhhdCB0aGVyZSBpcyBvbmUgcmFjZSB0b3BpYyBz
+cGVjaWZpYyB0byBNUSwgYW5kIG9uZSByYWNlIHRvcGljIHNwZWNpZmljIHRvIHRoZSBtYWluc3Ry
+ZWFtIGpvdXJuYWxzIChhbmQgd2l0aCBkaWZmZXJlbnQgdHJlbmRzKS48YnI+Cjxicj4KQnV0IGNh
+biB3ZSBzYXkgc28/IEl0IG5vdyBhbGwgZGVwZW5kcyBvbiBob3cgb25lIGludGVycHJldHMgdGhl
+IHRvcGljcy4gPGJyPgo8YnI+CigyKSBUaGlzIGxlYWRzIG1lIHRvIGEgc2Vjb25kIGNvbW1lbnQu
+IFRvIGludGVycHJldCB0aGUgdG9waWNzLCB0aGUgYXV0aG9ycyBsb29rIGF0IHRoZSB0b3AgMTAg
+dGVybXMgKHAuNS02KS4gV2Ugd291bGQgcmVjb21tZW5kIHRvIGFsc28gZXhhbWluZSAxMC0yMCBy
+YW5kb20gdGV4dHMgZnJvbSB0aGUgdG9wLTEwMCB0ZXh0cyBmb3IgZWFjaCB0b3BpYywgYW5kIHNw
+ZW5kIG11Y2ggbW9yZSB0aW1lIHVucGFja2luZyB0aGUgaWRlYXMgY292ZXJlZCBieSBlYWNoIHRv
+cGljLiBUaGlzIHdvdWxkIGhlbHAgcHJvdmlkZSBhIGJldHRlciBqdXN0aWZpY2F0aW9uIHRvIHRo
+ZSBsYWJlbGluZyBvZiB0aGUgdG9waWNzLiA8YnI+Cjxicj4KKDMpIFRoaXJkLCBleGFtaW5pbmcg
+dGhlIHRvcGljIHRvcC13b3JkcyByYWlzZXMgcXVlc3Rpb25zIGJvdGggYWJvdXQgdG9waWMgaW50
+ZXJwcmV0YXRpb24gYW5kIGFib3V0IHRoZSBtZXRob2RzLiBGb3IgaW5zdGFuY2UsIGEga2V5IHdv
+cnJ5IGZvciB0b3BpYyA3IGlzIHRoZSBwcmVzZW5jZSBvZiAmIzgyMTY7Ym9vayYjODIxNzsgYXMg
+dG9wIHRlcm0uIENvdWxkIGl0IGJlIHRoYXQgdGhlIGFsZ29yaXRobSBhdHRyaWJ1dGVkIHRoYXQg
+c3BlY2lmaWMgdG9waWMgdG8gbWFueSBNUSBwYXBlcnMgc2ltcGx5IGJlY2F1c2Ugb2YgdGhlIHBy
+ZXNlbmNlIG9mIHRoZSBwaHJhc2UgJiM4MjE2O2Jvb2sgcmV2aWV3JiM4MjE3OyBvciAmIzgyMTY7
+Ym9vayYjODIxNzsgaW4gdGhlIHRleHQsIHNpbmNlIHdlIGxlYXJuIHRoYXQgYm9vayByZXZpZXdz
+IHdlcmUgbGVmdCBpbiB0aGUgY29ycHVzPyBPdGhlciB0b3Agd29yZHMgZm9yIHRvcGljIDcgaW5j
+bHVkZTogZXVyb3BlIGFmcmljYSByZWxpZ2lvbiBkZWF0aCByYWNlcyBpbmRpYSB3aGl0ZXMgZ29k
+IG1hbmtpbmQuIFdoYXQgZG9lcyB0aGlzIG1lYW4gaW4gdGVybXMgb2YgdGhlbWF0aWMgY292ZXJh
+Z2U/IEZ1cnRoZXJtb3JlLCBGaWcgRUQyLCBmb3IgTVEgYXQgaz00MCwgc2hvd3MgdGhhdCB0b3Bp
+YyA3IGlzIHByZXNlbnQgaW4gdGhlIHZhc3QgbWFqb3JpdHkgb2YgTVEgZG9jdW1lbnRzLiBUaGlz
+IGlzIHB1enpsaW5nLiA8YnI+Cjxicj4KVGhlIHRvcGljIGRpc3RyaWJ1dGlvbiBmb3IgTVEgcmFp
+c2VzIGRvdWJ0cyBvbiB0aGUgbW9kZWwgaXRzZWxmLiBJcyBpdCByZWFsbHkgdGhlIGNhc2UgdGhh
+dCB0aGUgdmFzdCBtYWpvcml0eSBvZiBkb2N1bWVudHMgaW4gTVEgdGFsayBhYm91dCB0aGUgc2Ft
+ZSB0aGluZz8gT3IgaXMgaXQgYW4gYXJ0aWZhY3Qgb2YgdGhlIG1ldGhvZHM/IFdoaWxlIG1vcmUg
+ZGl2ZXJzaWZpZWQgdG9waWMgZGlzdHJpYnV0aW9ucyBhcmUgZm91bmQgZm9yIFBJRCBhbmQgUFIs
+IHRvcGljIGRpc3RyaWJ1dGlvbnMgZm9yIEJHLCBCQlMsIEludCBhcHBlYXIgc2tld2VkIHRvd2Fy
+ZHMganVzdCBhIGZldyB0b3BpY3M6IElzIHRoaXMgZHVlIHRvIHRoZSBsaW1pdGVkIG51bWJlciBv
+ZiB0b3BpY3MgdGhhdCB0aGUgcHVibGlzaGVkIGNvbnRlbnQgYWN0dWFsbHkgYWRkcmVzc2VzLCBv
+ciB0byBhIHByb2JsZW0gb2YgbWV0aG9kcz88YnI+Cjxicj4KU29tZXRoaW5nIHF1aXRlIHN0cmFu
+Z2UgYWxzbyBpcyB0aGUgZGlzdHJpYnV0aW9uIG9mIGJldGEgdmFsdWVzIGZvciB0b3Atd29yZHM6
+IGZvciBzZXZlcmFsIHRvcGljcywgdGhlIHRvcC13b3JkIGhhcyBhIHZlcnkgaGlnaCB2YWx1ZSB3
+aGlsZSB0aGUgZm9sbG93aW5nIDkgd29yZHMgYXJlIGF0IDAgb3IgbmVhciAoc2VlIFY4LCBWMTIs
+IFYxNSwgVjE5LCBWMjAsIFYyNywgVjMyLCBWMzgpLiBUaGlzIHJhaXNlcyBhIHdvcnJ5IHRoYXQg
+dGhlIGFsZ29yaXRobSBzZWVtcyB0byBiZSBwaWNraW5nIG91dCBzcGVjaWZpYyBjb250cmFzdGlu
+ZyB0ZXJtcywgdGhvdWdoIG5vdCBuZWNlc3NhcmlseSB0aG9zZSB0ZXJtcyB0aGF0IG1pZ2h0IHNo
+ZWQgbGlnaHQgb24gdGhlIGFjdHVhbCB0aGVtZXMgYWRkcmVzc2VkIGluIHRoZSBkaWZmZXJlbnQg
+ZG9jdW1lbnRzLjxicj4KPGJyPgpUaGUgcHJlc2VuY2Ugb2YgaWxsLWZvcm1lZCB0b3BpY3MsIGFz
+IGlzIG9mdGVuIGluZXZpdGFibGUgaW4gdG9waWMgbW9kZWxzLCBoZXJlIGhpbnRzIGF0IHBvc3Np
+YmxlIGlzc3VlcyB3aXRoIGNvcnB1cyBjbGVhbmluZyAtIHNlZSBpbiBwYXJ0aWN1bGFyIHRvcGlj
+cyBWMTggYW5kIFYzMCAod2l0aCB0b3Atd29yZHMgYXM6IG1haWwgaXNzaWQgYm9hcmQgdGVtcGVy
+YW1lbnQgZGlyZWN0b3JzIGxvbmRvbl9zZTUgbWFpbGluZ19hZGRyZXNzIG9mZmljaWFsX2pvdXJu
+YWwgbWFpbCBwaG9uZSBqYXBhbiA4MSBpbmRpdmlkdWFsX2RpLi4uZXJlbmNlcyBldXJvcGUgZmF4
+IGVsc2V2aWVyX2N1c3RvbWVyX3NlcnZpY2VfZGVwYXJ0bWVudCkuIEEgbG90IG9mIGFiYnJldmlh
+dGlvbnMgaGF2ZSBhbHNvIGJlZW4ga2VwdCBhbmQgYXJlIGZvdW5kIGFjcm9zcyBzZXZlcmFsIHRv
+cGljcy4gQ291bGQgaXQgYmUgdGhhdCBjbGVhbmluZyBpc3N1ZXMgYWZmZWN0ZWQgdGhlIHRvcGlj
+IG1vZGVsIGFuZCBwcm9kdWNlZCB0aGVzZSBqb3VybmFsLXNwZWNpZmljIHRvcGljIGF0dHJpYnV0
+aW9ucz8gIDxicj4KPGJyPgpUaGUgdHJpY2sgaXMgdGhhdCBub3QgbXVjaCBpcyBzYWlkIGFib3V0
+IHRoZSB0b3BpYyBtb2RlbGluZyBhbGdvcml0aG0sIG5laXRoZXIgaW4gdGVybXMgb2YgaW5uZXIg
+d29ya2luZ3Mgbm9yIGluIHRlcm1zIG9mIHJlbGF0aXZlIHBlcmZvcm1hbmNlIGNvbXBhcmVkIHRv
+IHdlbGwtZXN0YWJsaXNoZWQgbW9kZWxzIChMREEsIFNUTSkuIFRoZSBhdXRob3JzIHNob3VsZCBp
+bmRpY2F0ZSByZWZlcmVuY2VzIHdoZXJlIHRoZWlyIGFsZ29yaXRobSBoYXMgYmVlbiB0ZXN0ZWQu
+IEFsdGVybmF0aXZlbHksIHRoZXkgY291bGQgYWxzbyBydW4gYSBzaW1wbGUgTERBIGFuZC9vciBT
+VE0gZm9yIGs9NDAgYW5kIGNvbXBhcmUgcmVzdWx0cy4gPGJyPgo8YnI+Cig0KSBOb3RlIHRoYXQg
+aXQgd291bGQgYmUgaW50ZXJlc3RpbmcgdG8gY2hlY2sgdGhlIHRoZW1hdGljIGNvbnRlbnQgb2Yg
+dGhlIHB1YmxpY2F0aW9ucyBvZiB0aGUgMTQgUGlvbmVlciBhdXRob3JzOiBpZiB0aGV5IGhhdmUg
+YSBoaWdoIGNvbnRlbnQgb2YgdG9waWNzIDcsIDIyLCAyNCAoYW5kIGlmIHRoZXNlIHRvcGljcyBh
+cmUgd2VsbCBpbnRlcnByZXRlZCkgdGhlbiB0aGlzIHdvdWxkIGJlIGEgbmVhdCBwb2ludCB0byBt
+ZW50aW9uLiBPbiB0aGUgb3RoZXIgaGFuZCwgaWYgdGhpcyBpcyBub3QgdGhlIGNhc2UsIHRoZW4g
+dGhpcyBtaWdodCBpbmRpY2F0ZSB0aGF0IHRoZSB0aGVtZSBvZiB0aGVzZSBhdXRob3JzIGRvIG5v
+dCBjb25jZXJuIHJhY2Ugc2NpZW5jZSBkaXNjb3Vyc2UgKHdoaWNoIHdvdWxkIHJ1biBhZ2FpbnN0
+IHRoZSBwcmVtaXNlIHRoYXQgbGVkIHRvIHRoZWlyIGNob2ljZSBpbiB0aGUgZmlyc3QgcGxhY2Up
+IG9yIHRoYXQgdGhlIG1ldGhvZHMgZG8gbm90IHdvcmsgYXMgZXhwZWN0ZWQuPGJyPgo8YnI+Cig1
+KSBOb3RlIHRoYXQgd2hlbiBwcmVzZW50aW5nIHRoZWlyIHJlc3VsdHMsIHRoZSBhdXRob3JzIHNo
+b3VsZCB1c2UgdGhlIHNhbWUgc2NhbGUgYWNyb3NzIGRpYWdyYW1zOiBJbiBFRC01LCBwbGVhc2Ug
+dXNlIHRoZSBzYW1lIG1heCB2YWx1ZSBmb3IgYWxsIFNpbGdlIHBsb3RzLiBJbiBFRC0yLCB1c2Ug
+dGhlIHNhbWUgbGluZSB0aGlja25lc3MgcGVyIGRvY3VtZW50IChzbyBhcyB0byBzaG93LCBwb3Nz
+aWJseSwgZWZmZWN0cyBkdWUgdG8gam91cm5hbCBzaXplcyBpbiB0aGUgY29ycHVzKS4gTW9zdCBp
+bXBvcnRhbnRseSwgaW4gRmlnLiAyIHBsZWFzZSB1c2UgdGhlIHNhbWUgaG9yaXpvbnRhbCBhbmQg
+dmVydGljYWwgc2NhbGVzIGFjcm9zcyB0b3BpY3MuIFRoaXMgbWF0dGVycyBzaW5jZSBWMjQgc2Vl
+bXMgdG8gY29uY2VybiBhYm91dCA1IGRvY3VtZW50cyBwZXIgeWVhciBvdmVyIGFib3V0IDcwMCBk
+b2N1bWVudHMgeWVhcmx5LCB3aGlsZSBWNyB0b3BzIGF0IDkwIChidXQgZ29lcyBkb3duIGRyYXN0
+aWNhbGx5IG92ZXIgdGltZSkuIFRoaXMgcmFpc2VzIHF1ZXN0aW9ucyBhYm91dCB0aGUgc2lnbmlm
+aWNhbmNlIG9mIHRoZSB0b3BpY3MgaW4gdGhlIG92ZXJhbGwgY29ycHVzLiBUaGlzIHBvaW50IHNo
+b3VsZCBhdCBsZWFzdCBiZSBkaXNjdXNzZWQsIGFzIHNob3VsZCB0aGUgdGVtcG9yYWwgZXZvbHV0
+aW9uIG9mIHRoZSB0b3BpY3MuPGJyPgo8YnI+Ck5vdGUgdGhhdCBzb21lIG9mIHRoZSByZXBvcnRl
+ZCB2YWx1ZXMgb24gRmlnLiAyIGFyZSBkaWZmZXJlbnQgZnJvbSB0aG9zZSByZXBvcnRlZCBpbiBG
+aWcuIEVELTU6IGZvciB0b3BpYyBWNywgdGhlIGJldGEgdmFsdWUgZm9yICYjODIxNjtib29rJiM4
+MjE3OyBpcyAwLjAwOCB3aGVyZWFzIGluIEVELTUsIGl0cyB2YWx1ZSBpcyBhYm91dCAwLjI1OyBm
+b3IgdG9waWMgVjIyLCAmIzgyMTY7Y2F0dGVsbCYjODIxNzsgaGFzIGEgYmV0YSB2YWx1ZSBvZiAw
+LjAwNjUgY29tcGFyZWQgdG8gMC4yIGluIEVENTsgc2FtZSBpc3N1ZSBmb3IgVjI0Ljxicj4KPGJy
+PgooNikgQSBmaW5hbCBjb21tZW50IGNvbmNlcm5zIHRoZSBkaXNjdXNzaW9uIHNlY3Rpb24uIE1v
+c3Qgb2YgdGhpcyBzZWN0aW9uIGlzIGV4dHJhbmVvdXMgdG8gdGhlIHJlcG9ydGVkIHJlc2VhcmNo
+LiBUaG91Z2ggdGhlIGRpc2N1c3NlZCBtYXRlcmlhbCBpcyBpbnRlcmVzdGluZywgaXQgZG9lcyBu
+b3QgcmVhbGx5IGFkZHJlc3MgdGhlIGRpc2N1c3Npb24gcG9pbnRzIHdvcnRoIGhhdmluZyBhYm91
+dCB0aGUgZGF0YSBhbmQgbWV0aG9kcywgYW5kIGFib3V0IHRoZSBmaW5kaW5ncy4gPGJyPgo8YnI+
+ClR3byBvdGhlciBtb3JlIG1pbm9yIHBvaW50czo8YnI+Ci0gVGhlIGF1dGhvcnMgcHJvcG9zZSBh
+biAmIzgyMTY7ZW5zZW1ibGUgYW5hbHlzaXMmIzgyMTc7IGNvdmVyaW5nIDI0IG1vZGVscywgeWV0
+IHRob3NlIDI0IG1vZGVscyBhcmUgbmV2ZXIgYW5hbHl6ZWQgaW4gZGV0YWlsIG5vciAoY29tcGFy
+YXRpdmVseSkgbW9iaWxpemVkIGluIHRoZSBjb3Vyc2Ugb2YgdGhlIHBhcGVyLiBJbnN0ZWFkLCB0
+aGUgcmVzdWx0cyBmb2N1cyBvbiBvbmUgbW9kZWwuIFNvIHdoeSBub3Qgc2ltcGx5IHNheSBzbyBh
+bmQgZHJvcCB0aGUgb3RoZXIgbW9kZWxzPzxicj4KLSBUaGUgTWV0aG9kcyBzZWN0aW9uIGlzIGFm
+dGVyIFJlc3VsdHMgYW5kIERpc2N1c3Npb24uIEkgZG9uJiM4MjE3O3Qga25vdyBpZiB0aGlzIGlz
+IHJlcXVpcmVkIGJ5IHRoZSBqb3VybmFsLCBidXQgaXQmIzgyMTc7cyBhIHBhaW4uIFdoeSBub3Qg
+c2ltcGx5IGZvbGxvdyB0aGUgSU1SQUQgc3RydWN0dXJlPzxicj4KPGJyPgo8YnI+Cjxicj4KUmV2
+aWV3ZXIgIzI6PGJyPgpSZW1hcmtzIHRvIHRoZSBBdXRob3I6PGJyPgogICBJIGFtIGdvaW5nIHRv
+IHJlY29tbWVuZCBhZ2FpbnN0IHB1YmxpY2F0aW9uIGluIE5IQiwgb24gZ3JvdW5kcyB0aGF0IChh
+KSB0aGUgcGFwZXIgc2VlbXMgdG8gbWUgdG8gYmUgb3V0IG9mIHN0ZXAgd2l0aCBob3cgcmFjZSBp
+cyBkZWFsdCB3aXRoIGluIGNvbnRlbXBvcmFyeSBzY2llbmNlLCBhbmQgKGIpIHRoZSBwYXBlciYj
+ODIxNztzIGFuYWx5c2VzIGFyZSBub3QgY29uc2lzdGVudCB3aXRoIGl0cyBjbGFpbSB0aGF0IG1h
+aW5zdHJlYW0gcHN5Y2hvbG9neSByZXNlYXJjaCBoYXMgcHJvbW90ZWQgcmFjZSBzY2llbmNlIGRp
+c2NvdXJzZS4gIDxicj4KQmVjYXVzZSBvZiBjdXJyZW50IHByYWN0aWNlcyBpbiBiZWhhdmlvdXJh
+bCBhbmQgbWVkaWNhbCBzY2llbmNlIGFuZCBnZW5ldGljcywgSSBtZXQgd2l0aCBzdXJwcmlzZSB0
+aGUgZmlyc3QgbGluZSBvZiB0aGUgYWJzdHJhY3QsIHdoaWNoIHNheXMgdGhhdCAmIzgyMjA7aHVt
+YW4gZ2VuZXRpY2lzdHMgaGF2ZSBsb25nIHJlamVjdGVkIHRoZSBiaW9sb2dpY2FsIHJhY2UgY29u
+Y2VwdC4mIzgyMjE7ICBUb2RheSwgdGhlIHRlcm0gcmFjZSBoYXMgYWxsIGJ1dCBnb25lIG91dCBv
+ZiB1c2UgaW4gdGhlIGFjYWRlbXksIGJ1dCB0aGUgYmFzaWMgY29uY2VwdCBpcyBzdGlsbCByZWZl
+cnJlZCB0byB1c2luZyB0ZXJtcyBzdWNoIGFzIGV0aG5pY2l0eSwgYW5jZXN0cnksIG9yIHNvbWV0
+aW1lcyBnZW5lb2xvZ3kuIEpvdXJuYWwgZWRpdG9ycyByb3V0aW5lbHkgYXNrIGF1dGhvcnMgdG8g
+c3BlY2lmeSB0aGUgbnVtYmVycyBhbmQgcGVyY2VudGFnZXMgb2YgcmVzZWFyY2ggc2FtcGxlcyBi
+eSByYWNlL2V0aG5pY2l0eS9hbmNlc3RyeSAoSSBkbyBub3QgZG8gdGhpcyBpbiBteSBvcmlnaW5h
+bCBzdWJtaXNzaW9ucywgYnV0IEkgYW0gdGhlbiBhc2tlZCB0byBkbyB0aGlzIGluIHJldmlzaW9u
+cykuIFRoZSBBbWVyaWNhbiBQc3ljaG9sb2dpY2FsIEFzc29jaWF0aW9uIGhhcyBqdXN0IHRoaXMg
+bW9udGggaW50cm9kdWNlZCBpdHMgQVBBIFN0eWxlIEpvdXJuYWwgQXJ0aWNsZSBSZXBvcnRpbmcg
+U3RhbmRhcmRzIGZvciBSYWNlLCBFdGhuaWNpdHksIGFuZCBDdWx0dXJlLiBGdW5kaW5nIGFnZW5j
+aWVzIHN1Y2ggYXMgdGhlIFVLIE1SQyBhbmQgVVMgTklIIHJlcXVpcmUgYW5udWFsIHJlcG9ydGlu
+ZyBvZiByZXNlYXJjaCBwYXJ0aWNpcGFudHMgYnkgcmFjZS9ldGhuaWNpdHkvYW5jZXN0cnksIHBy
+b3ZpZGluZyB0YWJsZSB0ZW1wbGF0ZXMgd2l0aCBsYWJlbHMgaW5jbHVkaW5nIEFtZXJpY2FuIElu
+ZGlhbiwgQXNpYW4sIEJsYWNrIFdoaXRlLCBQYWNpZmljIElzbGFuZGVyLiBGdW5kZXJzIHJlcXVp
+cmUgdGhhdCBzYW1wbGVzIHJlcHJlc2VudCB0aGVzZSBncm91cHMsIG9yIHByb3ZpZGUganVzdGlm
+aWNhdGlvbiB3aHkgdGhleSBhcmUgbm90IHJlcHJlc2VudGVkLiBQdWJsaWNhdGlvbiB0aXRsZXMg
+Y3JvdyBhYm91dCBjb21wYXJpc29ucyBvZiB0aGVzZSBncm91cHMsIGZvciBleGFtcGxlIGluIHRo
+ZSBmaWVsZCBvZiBETkFtZXRoeWxhdGlvbiBpbiByZWxhdGlvbiB0byBiZWhhdmlvdXIgb3IgbWVu
+dGFsIGhlYWx0aC4gR2Vub21pY3MgcHJvamVjdHMgdGVuZCB0byBpbmNsdWRlIGNvdmFyaWF0ZSBj
+b250cm9scyBmb3Igd2hhdCBhcmUgY2FsbGVkICYjODIyMDtwcmluY2lwYWwgY29tcG9uZW50cyYj
+ODIyMTsgd2hpY2ggYXJlIGdyb3VwaW5ncyBvZiByZXNlYXJjaCBwYXJ0aWNpcGFudHMgYnkgZ2Vu
+ZXRpYyBvciBlcGlnZW5ldGljIG1hcmtlcnMsIGZyZXF1ZW50bHkgcmVmbGVjdGluZyByYWNlL2V0
+aG5pY2l0eS9hbmNlc3RyeSAodGhlcmUgaXMgY29udHJvdmVyc3kgZW1lcmdpbmcgYWJvdXQgdGhl
+c2UgYW5hbHlzZXMsIGJ1dCBpdCBpcyBvbiB0ZWNobmljYWwgZ3JvdW5kcywgbm90IGFuIG9iamVj
+dGlvbiB0byB1c2luZyBnZW5vbWljIGRhdGEgdG8gcXVhbnRpZnkgYW5jZXN0cnkpLiA8YnI+Ckkg
+d29uZGVyZWQgaWYgdGhlIHN0cmF0ZWd5IHRvIHNlbGVjdCBzY2llbnRpc3RzIGFuZCBqb3VybmFs
+cyBmb3IgdGhlIGJpYmxpb21ldHJpYyBhbmQgdGV4dC1taW5pbmcgd29yayB3YXMgYXBwcm9wcmlh
+dGUuIFRoaXMgc3RyYXRlZ3kgcmVzdWx0ZWQgaW4gY2hvb3Npbmcgc2NpZW50aXN0cyBvbiB0aGUg
+YmFzaXMgb2YgaGF2aW5nIGJlZW4gZnVuZGVkIGJ5IFBpb25lZXIuIE1vc3Qgb2YgdGhlbSBhcmUg
+bm93IGRlY2Vhc2VkIG9yIGVtZXJpdHVzLCBhbmQgdGhlaXIgUGlvbmVlci1mdW5kZWQgd29yayBv
+Y2N1cnJlZCBkZWNhZGVzIGFnby4gSSBnZXQgdGhhdCB0aGV5IHdlcmUgdXNlZCBhcyBhIHN0YXJ0
+aW5nIHNlZWQgZm9yIHRoZSBiaWJsaW9tZXRyaWMgYW5hbHlzaXMsIGJ1dCBpdCB3YXNuJiM4MjE3
+O3QgY2xlYXIgdG8gbWUgaG93IHRoZSBwYXBlciBpbnN1cmVkIHRoYXQgdGhlIHRoZW1lcyBvZiB0
+aGVzZSBhdXRob3JzIGFyZSBzdGlsbCBiZWluZyBkaXNjdXNzZWQsIHBhcnRpY3VsYXJseSBieSB0
+b2RheSYjODIxNztzIG1haW5zdHJlYW0gcHN5Y2hvbG9naXN0cy4gKEkgYW0gc2hvY2tlZCB0aGF0
+IG15IHBzeWNob2xvZ3kgUGhEIHN0dWRlbnRzIGhhdmUgbmV2ZXIgaGVhcmQgb2YgQXJ0aHVyIEpl
+bnNlbiBvciBTdGVwaGVuIEogR291bGQsIGFuZCBkb24mIzgyMTc7dCBrbm93IHdoYXQgVGhlIEJl
+bGwgQ3VydmUgd2FzLiBUaGV5IGtub3cgbm90aGluZyBvZiB0aGUgaGlzdG9yeSBvZiByYWNlIGlu
+IGJlaGF2aW91cmFsIHNjaWVuY2UuKTxicj4KSSBhc2tlZCBteXNlbGYgaWYgdGhlIHJlYXNvbiB0
+aGUgcGFwZXIgbWlnaHQgc2VlbSB0byBtZSB0byBiZSBvdXRkYXRlZCBpcyB0aGF0IHRoZSBiaWJs
+aW9tZXRyaWMgY29ycHVzIG9mIGRhdGEgc3R1ZGllZCBlbmRlZCBpbiAyMDEwLiBUaGF0IGlzIG5v
+dCBzbyBsb25nIGFnbywgYnV0IGl0IHdhcyB3ZWxsIGJlZm9yZSB0aGUgR2VvcmdlIEZsb3lkIGlu
+Y2lkZW50IGFuZCB0aGUgQmxhY2sgTGl2ZXMgTWF0dGVyIG1vdmVtZW50LCBldmVudHMgd2hpY2gg
+Y2hhbmdlZCBkaXNjb3Vyc2UgaW4gc29jaWV0eSBhbmQgaW4gc2NpZW5jZS4gVGhpcyBtYWRlIG1l
+IHdvbmRlciBpZiB0aGUgcmFjZS1zY2llbmNlIGRpc2NvdXJzZSBzdHVkaWVkIGluIHRoaXMgcGFw
+ZXIgaXMgcmVwcmVzZW50YXRpdmUgb2YgdG9kYXkmIzgyMTc7cyBzaXR1YXRpb24uIEhhZCB0aGUg
+cGFwZXIgYmVlbiBwcmVzZW50ZWQgYXMgYW4gaGlzdG9yaWNhbCBzdHVkeSwgdGhpcyB3b3VsZCBo
+YXZlIG1hZGUgbW9yZSBzZW5zZSB0byBtZS4gPGJyPgpUaGUgcGFwZXIgdGFsa3MgYWJvdXQgJiM4
+MjIwO21haW5zdHJlYW0gcHN5Y2hvbG9neSYjODIyMTsgYW5kIHVzZXMgdGhpcyB0ZXJtIGluIGl0
+cyB0aXRsZSwgYnV0IHRoZSBiaWJsaW9tZXRyaWMgYW5hbHlzaXMgZGlkIG5vdCBpbmNsdWRlIGpv
+dXJuYWxzIHRoYXQgSSB3b3VsZCBjb25zaWRlciBpbiB0aGUgbWFpbnN0cmVhbSBvZiBwc3ljaG9s
+b2d5LiBKb3VybmFscyBmcm9tIHRoZSBtdWx0aS1qb3VybmFsIHN0YWJsZXMgb2YgdGhlIEFtZXJp
+Y2FuIFBzeWNob2xvZ2ljYWwgQXNzb2NpYXRpb24gb3IgdGhlIEFzc29jaWF0aW9uIGZvciBQc3lj
+aG9sb2d5IFNjaWVuY2UgYXJlIG5vdCBmZWF0dXJlZC4gVGhvc2UgdHdvIHNvY2lldGllcyBoYXZl
+IG1lbWJlcnNoaXBzIGluIHRoZSB0ZW5zIG9mIHRob3VzYW5kcyBhbmQgcmVwcmVzZW50IG1vc3Qg
+cmVzZWFyY2ggcHN5Y2hvbG9naXN0cy4gTW9zdCBvZiB0aGUgcGFwZXImIzgyMTc7cyBmb2N1cyBp
+cyBvbiBQZXJzb25hbGl0eSBhbmQgSW5kaXZpZHVhbCBEaWZmZXJlbmNlcyAoaW1wYWN0IGZhY3Rv
+ciA0LCBmcm9tIHRoZSBJbnRlcm5hdGlvbmFsIFNvY2lldHkgZm9yIHRoZSBTdHVkeSBvZiBJbmRp
+dmlkdWFsIERpZmZlcmVuY2VzKSBhbmQgSW50ZWxsaWdlbmNlIChpbXBhY3QgZmFjdG9yIDMsIGZy
+b20gdGhlIEludGVybmF0aW9uYWwgU29jaWV0eSBmb3IgSW50ZWxsaWdlbmNlIFJlc2VhcmNoKS4g
+SSBoYXZlIGF0dGVuZGVkIHRoZSBtZWV0aW5ncyBvZiB0aGVzZSAyIHNvY2lldGllcyBpbiByZWNl
+bnQgeWVhcnMsIGJlY2F1c2UgSSB3YXMgYXNrZWQgdG8gc3BlYWssIGFuZCBJIGZvdW5kIHRoZSBt
+ZWV0aW5ncyB3ZXJlIGF0dGVuZGVkIGJ5IHNvbWV0aGluZyBvbiB0aGUgb3JkZXIgb2Ygb25seSA1
+MC0xMDAgcmVzZWFyY2hlcnMuIFRoaXMgZG9lc24mIzgyMTc7dCBtZWV0IG15IGRlZmluaXRpb24g
+b2YgJiM4MjIwO21haW5zdHJlYW0uJiM4MjIxOyA8YnI+Ckl0IHNlZW1zIHRoYXQgdGhlIGF1dGhv
+cnMgYXJlIGNvbmNlcm5lZCBhYm91dCByYWNlLXNjaWVuY2UgZGlzY291cnNlIHRoYXQgaXMgb24g
+dGhlIGludGVybmV0LCB3aGVyZSB0cm9sbHMgdXMgb2xkIHJlc2VhcmNoIHRvIGp1c3RpZnkgcmFj
+aXN0IGNsYWltcy4gVGhpcyBpcyBpbmRlZWQgYW4gaW1wb3J0YW50IGNvbmNlcm4uIEkgc2hhcmUg
+aXQuIEJ1dCB3aGF0IHRoZXkgc3R1ZHkgaXMgd29yZHMgdGFrZW4gZnJvbSB0aGUgcGFnZXMgb2Yg
+c2NpZW50aWZpYyBqb3VybmFscywgbm90IGZyb20gdGhlIGludGVybmV0LiA8YnI+Ck92ZXJhbGws
+IG15IGltcHJlc3Npb24gaXMgdGhhdCB0aGUgcGFwZXIgZG9lc24mIzgyMTc7dCBtYWtlIGl0cyBj
+YXNlIHRoYXQgcHN5Y2hvbG9neSBoYXMgcGxheWVkIGEgc2lnbmlmaWNhbnQgcm9sZSBpbiBtYWlu
+c3RyZWFtaW5nIHJhY2Ugc2NpZW5jZSBvciByYWNlIHNjaWVuY2UgZGlzY291cnNlLiBBcyB0aGlz
+IGlzIHRoZSBzdGF0ZWQgY2VudHJhbCBhaW0gb2YgdGhlIHBhcGVyLCBmb3IgbWUsIGl0IG1pc3Nl
+ZCB0aGUgbWFyay48YnI+Cjxicj4KPGJyPgo8YnI+ClJldmlld2VyICMzOjxicj4KRGlkIG5vdCBy
+ZXR1cm4gY29tbWVudHM8YnI+CiAgICAgPGJyPgogICAgPGJyPgogICA8YnI+Cjxicj4KKioqPGJy
+PgogPGJyPgoqKkZvbGxvd2luZyBzdWl0YWJsZSByZXZpc2lvbnMsIHlvdSBtYXkgd2FudCB0byBj
+b25zaWRlciB0cmFuc2ZlcnJpbmcgeW91ciBtYW51c2NyaXB0LiBBbHRob3VnaCB3ZSBjYW5ub3Qg
+b2ZmZXIgdG8gcHVibGlzaCB5b3VyIG1hbnVzY3JpcHQsIEkgc3VnZ2VzdCB0aGF0IHlvdSBjb25z
+aWRlciBIdW1hbml0aWVzIGFuZCBTb2NpYWwgU2NpZW5jZXMgQ29tbXVuaWNhdGlvbnMgYXMgYSBz
+dWl0YWJsZSB2ZW51ZSBmb3IgdGhpcyB3b3JrLiBUbyB0cmFuc2ZlciB5b3VyIG1hbnVzY3JpcHQs
+IHBsZWFzZSB1c2Ugb3VyIDxhIGhyZWY9Imh0dHBzOi8vbXRzLW5hdGh1bWJlaGF2Lm5hdHVyZS5j
+b20vY2dpLWJpbi9tYWluLnBsZXg/ZWw9QTJDbzdKdEExQTJxcWw1WDJBOWZ0ZHdhZkt0Z0NPUjFw
+SXVZbVJSdmlON0FaIj5tYW51c2NyaXB0IHRyYW5zZmVyIHBvcnRhbDwvYT4uIFlvdSB3aWxsIG5v
+dCBoYXZlIHRvIHJlLXN1cHBseSBtYW51c2NyaXB0IG1ldGFkYXRhIGFuZCBmaWxlcywgdW5sZXNz
+IHlvdSB3aXNoIHRvIG1ha2UgbW9kaWZpY2F0aW9ucy4gRm9yIG1vcmUgaW5mb3JtYXRpb24sIHBs
+ZWFzZSBzZWUgb3VyIDxhIGhyZWY9Imh0dHA6Ly93d3cubmF0dXJlLmNvbS9hdXRob3JzL2F1dGhv
+cl9yZXNvdXJjZXMvdHJhbnNmZXJfbWFudXNjcmlwdHMuaHRtbD9XVC5tY19pZD1FTUlfTlBHXzE1
+MTFfQVVUSE9SVFJBTlNGJmFtcDtXVC5lY19pZD1BVVRIT1IiPm1hbnVzY3JpcHQgdHJhbnNmZXIg
+RkFRPC9hPiBwYWdlLjxicj4KPGJyPgo8cD48cD5UaGlzIGVtYWlsIGhhcyBiZWVuIHNlbnQgdGhy
+b3VnaCB0aGUgU3ByaW5nZXIgTmF0dXJlIFRyYWNraW5nIFN5c3RlbSBOWS02MTBBLU5QRyZhbXA7
+TVRTPGJyPjxicj48ZW0+Q29uZmlkZW50aWFsaXR5IFN0YXRlbWVudDo8YnI+PGJyPlRoaXMgZS1t
+YWlsIGlzIGNvbmZpZGVudGlhbCBhbmQgc3ViamVjdCB0byBjb3B5cmlnaHQuIEFueSB1bmF1dGhv
+cmlzZWQgdXNlIG9yIGRpc2Nsb3N1cmUgb2YgaXRzIGNvbnRlbnRzIGlzIHByb2hpYml0ZWQuIElm
+IHlvdSBoYXZlIHJlY2VpdmVkIHRoaXMgZW1haWwgaW4gZXJyb3IgcGxlYXNlIG5vdGlmeSBvdXIg
+TWFudXNjcmlwdCBUcmFja2luZyBTeXN0ZW0gSGVscGRlc2sgdGVhbSBhdCA8YSBocmVmPSJodHRw
+Oi8vcGxhdGZvcm1zdXBwb3J0Lm5hdHVyZS5jb20gIj48YSBocmVmPSJodHRwOi8vcGxhdGZvcm1z
+dXBwb3J0Lm5hdHVyZS5jb20iPmh0dHA6Ly9wbGF0Zm9ybXN1cHBvcnQubmF0dXJlLmNvbTwvYT4g
+PC9hPi4gPHA+RGV0YWlscyBvZiB0aGUgY29uZmlkZW50aWFsaXR5IGFuZCBwcmUtcHVibGljaXR5
+IHBvbGljeSBtYXkgYmUgZm91bmQgaGVyZSA8YSBocmVmPSJodHRwOi8vd3d3Lm5hdHVyZS5jb20v
+YXV0aG9ycy9wb2xpY2llcy9jb25maWRlbnRpYWxpdHkuaHRtbCI+PGEgaHJlZj0iaHR0cDovL3d3
+dy5uYXR1cmUuY29tL2F1dGhvcnMvcG9saWNpZXMvY29uZmlkZW50aWFsaXR5Lmh0bWwiPmh0dHA6
+Ly93d3cubmF0dXJlLmNvbS9hdXRob3JzL3BvbGljaWVzL2NvbmZpZGVudGlhbGl0eS5odG1sPC9h
+PjwvYT4gPC9lbT48cD48YSBocmVmPSJodHRwOi8vd3d3Lm5hdHVyZS5jb20vaW5mby9wcml2YWN5
+Lmh0bWwiPlByaXZhY3kgUG9saWN5PC9hPiB8IDxhIGhyZWY9Imh0dHBzOi8vbXRzLW5hdGh1bWJl
+aGF2Lm5hdHVyZS5jb20iPlVwZGF0ZSBQcm9maWxlPC9hPjxzcGFuIHN0eWxlPSJGT05ULVNJWkU6
+IDEycHg7IEZPTlQtRkFNSUxZOiBIZWx2ZXRpY2EiPjxicj48L3NwYW4+PHNwYW4gc3R5bGU9IkZP
+TlQtU0laRTogMTJweDsgRk9OVC1GQU1JTFk6IEhlbHZldGljYSI+RElTQ0xBSU1FUjogVGhpcyBl
+LW1haWwgaXMgY29uZmlkZW50aWFsIGFuZCBzaG91bGQgbm90IGJlIHVzZWQgYnkgYW55b25lIHdo
+byBpcyBub3QgdGhlIG9yaWdpbmFsIGludGVuZGVkIHJlY2lwaWVudC4gSWYgeW91IGhhdmUgcmVj
+ZWl2ZWQgdGhpcyBlLW1haWwgaW4gZXJyb3IgcGxlYXNlIGluZm9ybSB0aGUgc2VuZGVyIGFuZCBk
+ZWxldGUgaXQgZnJvbSB5b3VyIG1haWxib3ggb3IgYW55IG90aGVyIHN0b3JhZ2UgbWVjaGFuaXNt
+LiBTcHJpbmdlciBOYXR1cmUgTGltaXRlZCBkb2VzIG5vdCBhY2NlcHQgbGlhYmlsaXR5IGZvciBh
+bnkgc3RhdGVtZW50cyBtYWRlIHdoaWNoIGFyZSBjbGVhcmx5IHRoZSBzZW5kZXIncyBvd24gYW5k
+IG5vdCBleHByZXNzbHkgbWFkZSBvbiBiZWhhbGYgb2YmbmJzcDtTcHJpbmdlciBOYXR1cmUmbmJz
+cDtMdGQgb3Igb25lIG9mIHRoZWlyIGFnZW50cy48L3NwYW4+PGJyPjxzcGFuIHN0eWxlPSJGT05U
+LVNJWkU6IDEycHg7IEZPTlQtRkFNSUxZOiBIZWx2ZXRpY2EiPlBsZWFzZSBub3RlIHRoYXQgU3By
+aW5nZXIgTmF0dXJlIExpbWl0ZWQgYW5kIHRoZWlyIGFnZW50cyBhbmQgYWZmaWxpYXRlcyBkbyBu
+b3QgYWNjZXB0IGFueSByZXNwb25zaWJpbGl0eSBmb3IgdmlydXNlcyBvciBtYWx3YXJlIHRoYXQg
+bWF5IGJlIGNvbnRhaW5lZCBpbiB0aGlzIGUtbWFpbCBvciBpdHMgYXR0YWNobWVudHMgYW5kIGl0
+IGlzIHlvdXIgcmVzcG9uc2liaWxpdHkgdG8gc2NhbiB0aGUgZS1tYWlsIGFuZCBhdHRhY2htZW50
+cyAoaWYgYW55KS48YnI+PC9zcGFuPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTogSGVsdmV0aWNh
+OyI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogMTJweDsgbGluZS1oZWlnaHQ6IDE0cHg7Ij5TcHJp
+bmdlciBOYXR1cmUgTHRkLiBSZWdpc3RlcmVkIG9mZmljZTogVGhlIENhbXB1cywgNCBDcmluYW4g
+U3RyZWV0LCBMb25kb24sIE4xIDlYVy4gUmVnaXN0ZXJlZCBOdW1iZXI6IDAwNzg1OTk4Jm5ic3A7
+RW5nbGFuZC48L3NwYW4+PC9zcGFuPjwvYm9keT4KPC9odG1sPgo=
+
+--_----------=_17105216822388024--

@@ -29,22 +29,22 @@ hellinger_betas = function(model_file, name) {
     model = read_rds(model_file)
     
     ## Renormalization
-    message('Calculating renormalization exponents')
-    get_power = function(this_k, model) {
-        ee = expected_entropy(.1, this_k)
-        model |> 
-            tidy(this_k, 'beta') |> 
-            target_power(topic, beta, ee)
-    }
-    all_k = model$n
-    exponents = future_map_dbl(all_k, get_power, model, 
-                               .progress = TRUE)
+    # message('Calculating renormalization exponents')
+    # get_power = function(this_k, model) {
+    #     ee = expected_entropy(.1, this_k)
+    #     model |> 
+    #         tidy(this_k, 'beta') |> 
+    #         target_power(topic, beta, ee)
+    # }
+    # all_k = model$n
+    # exponents = future_map_dbl(all_k, get_power, model, 
+    #                            .progress = TRUE)
     # return(exponents)
     
     message('Extracting betas for Silge plots')
     betas = tidy_all(model) |> 
-        group_split(k) |> 
-        map2(exponents, ~ renorm(.x, topic, beta, .y))
+        group_split(k) # |>
+        # map2(exponents, ~ renorm(.x, topic, beta, .y))
     
     ## Silge plots
     betas |> 
