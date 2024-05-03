@@ -1,0 +1,24 @@
+This section uses simulated data to provide a proof-of-concept for our use of topic models to detect the "mainstreaming" of a marginalized topic.  
+
+```{r setup}
+#| message: false
+#| warning: false
+library(tidyverse)
+theme_set(theme_bw())
+library(tmfast)
+
+library(glue)
+library(tictoc)
+library(memoise)
+
+set.seed(2024-03-18)
+
+## Simulation parameters
+k = 20            ## total number of topics
+N = 100           ## papers per journal
+vocab = 1000      ## vocabulary size
+paper_size = 500  ## length of each paper
+
+paper_size
+```
+

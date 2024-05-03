@@ -1,8 +1,10 @@
+## This scripts fits a STM topic model, as a robustness check
 library(tidyverse)
 theme_set(theme_bw())
 library(stm)
 library(tidytext)
 library(ggh4x)
+library(cowplot)
 
 library(arrow)
 library(here)
@@ -29,6 +31,8 @@ phrases_mx = phrases() |>
 article_ids = rownames(phrases_mx)
 
 ## Fit topic model ----
+## per note below, fitting model is very slow, 
+## so we use a cache
 model_path = glue('12_stm_{vocab}_{k}.Rds') %>%
     here(data_dir, .)
 if (!file.exists(model_path)) {
@@ -306,6 +310,32 @@ big_grid = function(model, name, plot = TRUE, verbose = TRUE) {
         labs(caption = glue('{name} vocabulary'))
 }
 # debugonce(big_grid)
-big_grid(stm_fit, 'stm', plot = TRUE)
-ggsave(here('out', glue('12-grid-{Sys.time()}.png')), 
+grid_gg = big_grid(stm_fit, glue('stm-{vocab}-{k}'), plot = TRUE)
+grid_gg
+ggsave(here('out', glue('12-grid-stm.png')), 
        height = 4, width = 8, bg = 'white')
+
+## Combine w/ Silge plot
+focal_topics = c(16, 40, 9, 33)
+silge_gg = tidy(stm_fit, matrix = 'beta') |> 
+    filter(topic %in% focal_topics) |> 
+    mutate(topic = factor(topic, levels = focal_topics)) |> 
+    group_by(topic) |> 
+    top_n(15, beta) |> 
+    arrange(topic, desc(beta)) |> 
+    mutate(term = reorder_within(term, beta, topic)) |> 
+    ggplot(aes(term, beta)) +
+    geom_point() +
+    geom_linerange(aes(ymax = beta), ymin = 0) +
+    coord_flip() +
+    scale_x_reordered() + 
+    scale_y_continuous(name = 'β', 
+                       breaks = scales::pretty_breaks(3), 
+                       limits = c(0, NA)) +
+    facet_wrap(vars(topic), scales = 'free_y', nrow = 1)
+silge_gg
+
+plot_grid(silge_gg, grid_gg, ncol = 1, align = 'v', 
+          rel_heights = c(.7, 1))
+ggsave(here('out', glue('12-stm.png')), 
+       height = 6, width = 8, bg = 'white', scale = 1.5)

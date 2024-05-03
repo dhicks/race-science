@@ -1,0 +1,285 @@
+Received: from SA1PR06MB7990.namprd06.prod.outlook.com (2603:10b6:806:1d1::11)
+ by BYAPR06MB5720.namprd06.prod.outlook.com with HTTPS; Thu, 9 Nov 2023
+ 19:01:11 +0000
+Received: from CY8PR10CA0040.namprd10.prod.outlook.com (2603:10b6:930:4b::16)
+ by SA1PR06MB7990.namprd06.prod.outlook.com (2603:10b6:806:1d1::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6954.30; Thu, 9 Nov
+ 2023 19:01:10 +0000
+Received: from CY4PEPF0000EDD2.namprd03.prod.outlook.com
+ (2603:10b6:930:4b:cafe::56) by CY8PR10CA0040.outlook.office365.com
+ (2603:10b6:930:4b::16) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6977.19 via Frontend
+ Transport; Thu, 9 Nov 2023 19:01:09 +0000
+Authentication-Results: spf=pass (sender IP is 198.2.186.9)
+ smtp.mailfrom=mandrillapp.com; dkim=pass (signature was verified)
+ header.d=researchsquare.com;dmarc=pass action=none
+ header.from=researchsquare.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of mandrillapp.com
+ designates 198.2.186.9 as permitted sender) receiver=protection.outlook.com;
+ client-ip=198.2.186.9; helo=mail186-9.suw21.mandrillapp.com; pr=C
+Received: from mail186-9.suw21.mandrillapp.com (198.2.186.9) by
+ CY4PEPF0000EDD2.mail.protection.outlook.com (10.167.241.206) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6977.19 via Frontend Transport; Thu, 9 Nov 2023 19:01:09 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=researchsquare.com;
+	s=mandrill; t=1699556469; x=1699816969; i=info@researchsquare.com;
+	bh=b67WhvJjzz7voFUdkkikP6useYI7V466c2JTjrpBoZY=;
+	h=From:Subject:To:Feedback-ID:Message-Id:Date:MIME-Version:
+	 Content-Type:CC:Date:Subject:From;
+	b=Y1dDGcDKmeQt7VfsjAPnH5vtfNBNO7egjLABek6h8X+a2MubA/YWQAIEb7wmBcKGF
+	 KaDC7+OKqBo3tcNw0x42Df4GFEpM8GEKINEQRZhLyFaTcFEx4QnBmlA1Ef4/ycNAos
+	 ATG7urF37JxoHiqCfqoMhjAnrAkqPP9ledR5fQNw=
+Received: from pmta10.mandrill.prod.suw01.rsglab.com (localhost [127.0.0.1])
+	by mail186-9.suw21.mandrillapp.com (Mailchimp) with ESMTP id 4SRBBF24f8zK5w1Mw
+	for <dhicks4@ucmerced.edu>; Thu,  9 Nov 2023 19:01:09 +0000 (GMT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com;
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1699556469; h=from :
+ subject : to : message-id : date : mime-version : content-type : from
+ : x-mandrill-user : list-unsubscribe;
+ bh=b67WhvJjzz7voFUdkkikP6useYI7V466c2JTjrpBoZY=;
+ b=V3Oq/g7HHQs0BFzDTpt7pCGPBXcEbopgAV7NdG/gwxTa86Zagnc6SFTLuBc/K+1uNUV+z
+ HbGQBHd49aQQ1JeESJQBHBuqbotRSBxyVFlnpsSCnO3bSvMx3GKEzy+qAWT4FtxNS9SzyRe
+ sWcw74yO8/CPxdHzmpxyf+sLG0nJZYU=
+From: Research Square <info@researchsquare.com>
+Subject: =?utf-8?Q?Track=20the=20status=20of=20your=20submission=20to=20Nature=20Human=20Behaviour?=
+Received: from [52.4.4.57] by mandrillapp.com id b7a8643868d04824bb3df6e7926db06c; Thu, 09 Nov 2023 19:01:09 +0000
+To: "Dr. Daniel Hicks" <dhicks4@ucmerced.edu>
+X-Native-Encoded: 1
+X-Report-Abuse: =?UTF-8?Q?Please=20forward=20a=20copy=20of=20this=20message,=20including=20all=20headers,=20to=20abuse@mandrill.com.=20You=20can=20also=20report=20abuse=20here:=20https://mandrillapp.com/contact/abuse=3Fid=3D31114617.b7a8643868d04824bb3df6e7926db06c?=
+X-Mandrill-User: md_31114617
+Feedback-ID: 31114617:31114617.20231109:md
+Message-Id: <31114617.20231109190109.654d2c753d7192.56462051@mail186-9.suw21.mandrillapp.com>
+Date: Thu, 09 Nov 2023 19:01:09 +0000
+Content-Type: multipart/alternative; boundary="_av-EnycwMwChBPLa-Yn_pKTzQ"
+Return-Path:
+ bounce-md_31114617.654d2c75.v1-b7a8643868d04824bb3df6e7926db06c@mandrillapp.com
+X-MS-Exchange-Organization-ExpirationStartTime: 09 Nov 2023 19:01:09.9019
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 8b948873-912d-4fd0-e882-08dbe1563c59
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: f4dfe9a3-ca78-4998-b7a7-e6d0692eace6:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ CY4PEPF0000EDD2:EE_|SA1PR06MB7990:EE_|BYAPR06MB5720:EE_
+X-MS-Exchange-Organization-AuthSource:
+ CY4PEPF0000EDD2.namprd03.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 8b948873-912d-4fd0-e882-08dbe1563c59
+X-MS-Exchange-AtpMessageProperties: SA
+X-MS-Exchange-Organization-SCL: -1
+X-MS-Exchange-Organization-BypassFocusedInbox: true
+X-Microsoft-Antispam: BCL:4;
+X-Forefront-Antispam-Report:
+ CIP:198.2.186.9;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKN;H:mail186-9.suw21.mandrillapp.com;PTR:mail186-9.suw21.mandrillapp.com;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 09 Nov 2023 19:01:09.7769
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 8b948873-912d-4fd0-e882-08dbe1563c59
+X-MS-Exchange-CrossTenant-Id: f4dfe9a3-ca78-4998-b7a7-e6d0692eace6
+X-MS-Exchange-CrossTenant-AuthSource:
+ CY4PEPF0000EDD2.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR06MB7990
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.9937899
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6977.019
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?SWk0UlF5VWdQNktTdE9PSHBUeUEzWnEvamU0ays2TU1RZlN4MTVtTkk2aEk2?=
+ =?utf-8?B?M0NEbHc3VEI0UnZ0M29GK2V2WDVzdTNUcjVzK1RDWk9RY25mRGZqbGlXL1gx?=
+ =?utf-8?B?dDNXS0d3M1I4eGd4eWR0N3F0c3EwY25XOFBJSjdOWUxTMEZwdFpJRXJJVkJL?=
+ =?utf-8?B?NmFzSkxzbWtKSi9KeHdJRGNuTXNaS0tUWURsUytIaFNuMk13QnJxNS80bWI2?=
+ =?utf-8?B?ZzJKVXZKOXA5VjRIQ05uMGU1UnRheVZPMGl4WlcxYXBwam9hbjl0aG1uK0tu?=
+ =?utf-8?B?QSs3Y2FzMGwzbjdIbEJkK3BOelE4V0JyN0p5KzlmTFdyZmxKbkNFWWp4enBT?=
+ =?utf-8?B?L2tXNVFaeFFJVU9wQWxLYzB3NVBTMjZVcERJeWpXbGFMTzNuWXpQVWxWM0Nh?=
+ =?utf-8?B?bGR2b1kyUC9GYkluVHBOUlYxYXRjdGRTZlJFcjExVGMrTnppQ3NrNHl4NVEz?=
+ =?utf-8?B?RGh3RUZNWFJPUWxHa3UvcXViZXRBZ1N0VGxLY2dRMjB3aGswV1JHSGIzM2Iw?=
+ =?utf-8?B?RytsWkJLb3Q5ckNYUXhldm5OWTZxc2prTGVSMURTZjlkeWVFa3FhMU1tNFoy?=
+ =?utf-8?B?R2I3UWJ1WWVadzVpZUJKd1E4N3dCNWw5Z09kQ1ZpSEtyUm8rYUJXSFgxOEFC?=
+ =?utf-8?B?WjJNTkdtVTRNeVp6bDhEdWpKS2ErSzRJWU5rMWZENjltV0VxRk9NdDlZWkhl?=
+ =?utf-8?B?Q2hCdk83WlB3SzIyY2x6K3pQYm1hYXlZc0FMbEhxeEpxQkcvbXBrU1dmcW9a?=
+ =?utf-8?B?N09BNmdnVVNpVzJPUk1EY0FEbkRZNE51TzVXOGY5TW9ZNklSdmlFSVZjZWIz?=
+ =?utf-8?B?YXN0S2cwQ2ZqUDV6SERMRUZqUDl0aE5nMC8reU56ekR1Lzc3aVpHSEZaSWVX?=
+ =?utf-8?B?Y0V0SjUrWldpd3JUbmFUS3RDRng1RmVpVmQwMzNYbUZnQ3gvQXdlZjJDNHlx?=
+ =?utf-8?B?eGxJQ1QvTzE5RkpYQmVxdytGdXg1NGpXS0NvNTVRUjJselFMOVRjR2JJSUMx?=
+ =?utf-8?B?WGNLUGxiUTNFa2JYV1UxOExNZHBXc09jNmNhd1VCbEhsTTFzUmsrRDFQNi9U?=
+ =?utf-8?B?enBsNEFNS1U3b0EyUER6WjdFUE5VakczUk1FVGFHL3RCWWMySS9NM2Y2ZHp6?=
+ =?utf-8?B?aVpFTHh4bG1vWExJOHpUNHZXT3JjRExwcW12bEpJNjVpejdpUW9qNEtQdGk4?=
+ =?utf-8?B?c3JIWEZFV3VCNzEzTEU4elA0c2NFYXFvUEh4SmU1UmpLYmJqd1pjaTRXbm9X?=
+ =?utf-8?B?eTFXT2J1STlSMmZNN0F2M3NaZGE2SVlFTnBSZXpHa1UvNFM1eEkyRG1BTTRX?=
+ =?utf-8?B?MmsrZHhRa21NMEo3eURxckhGNzBZVUhWZ3hHSHZ5YUdlNnp2REk2SzBST3Qz?=
+ =?utf-8?B?MkQ3L0labmZpWXlDQXp2V0czeHh3alQwRnRadHkvVDNOSkJQdm0zUDFlbUsw?=
+ =?utf-8?B?WnZ6MlZ1cDY5aXJ5dHMrMDd4L2lYT0gvUzdBTkpqemhVa1dKMXJNTmUreHBZ?=
+ =?utf-8?B?M3h0NVk5U1RIcDYrREFrd3NXTWlLN0tacHJlR1JqaEpndWhHc2ZwT3ZaaCtT?=
+ =?utf-8?B?QWlocitJYmNEaHRsS093NUszT3RaSFd6NzB0YTNlcklDRlYvRjdydTE5RUJJ?=
+ =?utf-8?B?b0cra3FOQ3RrdHQ3cnpiRVVkbHN6L0FzV3lPWFJWbnpkUFhzbWpDR1NtQnpz?=
+ =?utf-8?B?bjF4N2t6YTUzblJyZlpYVzgvVk9lNnVjc3lrdFNXblg5QzNJaUNTUVpRYTdS?=
+ =?utf-8?B?eUtGME9ZTHAvQmV4YS95RHk1TXBmZFl1YWNnQUlxYVhYUkc3Tll1RWpkNk5T?=
+ =?utf-8?B?QUhrWVhRUW5mdGJlTzlHTGJtQTdWSVF2YzZXT1NYWEJBdllrd3VudGZhdGtY?=
+ =?utf-8?B?dDgzK3E0dVBXTlZ5VS9wanA2UFExTGh5UWtxQjhkYkh6eVplWEM4OTFoekdT?=
+ =?utf-8?B?Y0ZLem92OTJ0eWNjY1ZVcVlyZjltR3lkVVhoSnZGeDBXRXZnY25iNWNNWGh2?=
+ =?utf-8?B?WXgrTWQwU1NWdlVtYkVOTG4wZjhNcVl0dU95cnd1bm5ENkJ1ZnN0L2E5U3NH?=
+ =?utf-8?B?ZFRLNXZzRXNXQ2Q0empib3c3My9waEN3c0ZxOGhaSEFtUmd1ZGs0RjFoT0du?=
+ =?utf-8?B?blhmTGxmb2RWU0ZMSk5ndm8xTjRWMnhadVNqUXlBWTRONXhRSUxoa2tvbGhU?=
+ =?utf-8?B?dGE0V2VUVW9CdnVOMlh0blJQQ2xETnAxREVWQUFINlAweEdZaWFtMzZZYVJr?=
+ =?utf-8?B?VWZiM2ZxQVZMVWRTbXFuWmUzOUpOY21zL2VibFRkbnN0NWVHWk1ZT3Jxa1dS?=
+ =?utf-8?B?cVRDNGdoc0VMU01OcXBhdHIxamdsRUxIaUNocHY0ZUs3MXhrdkZYTG5WWTc1?=
+ =?utf-8?B?SWI5Y2NhUUVSOUN6blcvT3MyUnlETkZ5NW1qZGp1NVk5SEdzM1lvWGJhU0U4?=
+ =?utf-8?B?bkNYZVllMnRtczFEYktzZXR0MTBqOHM4aldFRG1HbkdsajFRQjBPOXVPWkRI?=
+ =?utf-8?B?ckQ5NktGOTYxbTc5R3JZYU14TGVML2ptR2I4MTZVNFFzUlk0dzIwV0ZmRzRh?=
+ =?utf-8?B?UVpPUUlMZDJlMXZmVVlHdHluWFZHUmFrTmdpQmx4YWhSMy9FZXlxSEM2RUha?=
+ =?utf-8?B?ZC9IbFQ5b08vZnNPUmR0SFFuU2REeWE0OGpBTU9lOEJwVk50dlp5bE1nSzRU?=
+ =?utf-8?B?c1E5N21WUTdMd2tvOEtQYXJXaEo3aVo3V0FSb2EzbElkdUFsOVg4eGFJTGw4?=
+ =?utf-8?B?ZS9hNlNPY2oxSjd5TTFScVNmbHU0UG5NVXNyaVREeHVyM25jY2xPVU9jU2x2?=
+ =?utf-8?Q?z2rh0Lk6DUtq/F4xz5lTSDCUYNBHF3CVwWpcjermpa?=
+MIME-Version: 1.0
+
+--_av-EnycwMwChBPLa-Yn_pKTzQ
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Dear Dr. Daniel Hicks,
+
+Congratulations on your manuscript submission to Nature Human Behaviour. In=
+ partnership with Springer Nature, Research Square provides a private dashb=
+oard where you can track the status of your manuscript =E2=80=9CRace Scienc=
+e in Mainstream Psychology, 1960-2010=E2=80=9D that is under consideration =
+at Nature Human Behaviour. To access your dashboard and start tracking the =
+progress of your manuscript through the peer review process, please log in =
+to your account:
+
+Log in to your account (https://www.researchsquare.com/create-password?key=
+=3D654d2c751e6814.36092512/8e6eeb52-23fe-41d7-9980-4323bb7988ca)
+
+Although you chose not to share your manuscript as a preprint when you subm=
+itted it to the journal, you can still do so through your dashboard. Prepri=
+nts are given a DOI and posted permanently online on Research Square, allow=
+ing for more collaboration opportunities, earlier citations, and community =
+comments. If you are interested in this option, log in via the link above a=
+nd then select "Post My Preprint".
+
+Please note that the peer review process, including all editorial communica=
+tions, will continue through the journal where you submitted your manuscrip=
+t. All queries about the peer review process should be directed to the jour=
+nal or to orsupport@springernature.com.
+
+If you have any questions or feedback, visit our Help Center (https://help.=
+researchsquare.com/hc/en-us) or contact us (https://help.researchsquare.com=
+/hc/en-us/requests/new).
+
+Sincerely,
+The Research Square Team
+
+Research Square https://www.researchsquare.com/
+A preprint platform that makes research communication faster, fairer, and m=
+ore useful.
+
+This email has been sent to dhicks4@ucmerced.edu by Research Square.
+Privacy policy https://www.researchsquare.com/legal/privacy
+Contact us https://www.researchsquare.com/contact
+Research Square Platform, LLC is a company registered in the United States =
+under Federal Employer Identification Number (FEIN) 82-4431595 with its reg=
+istered office at 601 West Main Street, Durham, NC, USA
+=C2=A9 2022 Research Square Platform, LLC. All rights reserved.
+
+Title: Race Science in Mainstream Psychology, 1960-2010
+RSID: rs-3586706
+
+--_av-EnycwMwChBPLa-Yn_pKTzQ
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><p=
+>Dear Dr. Daniel Hicks,</p>
+
+<p>Congratulations on your manuscript submission to Nature Human Behaviour.=
+ In partnership with Springer Nature,&nbsp;<a href=3D"http://t.researchsqua=
+re.com/track/click/31114617/www.researchsquare.com?p=3DeyJzIjoid2lvS3F1blAt=
+b0JVNDhpMXVJTXJQcldKZ1hZIiwidiI6MSwicCI6IntcInVcIjozMTExNDYxNyxcInZcIjoxLFw=
+idXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3LnJlc2VhcmNoc3F1YXJlLmNvbVwiLFwiaWRcIjpcIm=
+I3YTg2NDM4NjhkMDQ4MjRiYjNkZjZlNzkyNmRiMDZjXCIsXCJ1cmxfaWRzXCI6W1wiNDdmZWU4O=
+GY0OTk0NDM3YThhYTJhNDVjZTg3NjE0NDU0NmFjMTFkN1wiXX0ifQ">Research Square</a> =
+provides a private dashboard where you can track the status of your manuscr=
+ipt =E2=80=9CRace Science in Mainstream Psychology, 1960-2010=E2=80=9D that=
+ is under consideration at Nature Human Behaviour. To access your dashboard=
+ and start tracking the progress of your manuscript through the peer review=
+ process, please log in to your account:</p>
+<p><br></p>
+<p align=3D"center"><a href=3D"http://t.researchsquare.com/track/click/3111=
+4617/www.researchsquare.com?p=3DeyJzIjoiZTdYbVFkLWNEbElPOTRvc3ZZOG9peHJrSHA=
+0IiwidiI6MSwicCI6IntcInVcIjozMTExNDYxNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXF=
+wvXFxcL3d3dy5yZXNlYXJjaHNxdWFyZS5jb21cXFwvbG9naW5cIixcImlkXCI6XCJiN2E4NjQzO=
+DY4ZDA0ODI0YmIzZGY2ZTc5MjZkYjA2Y1wiLFwidXJsX2lkc1wiOltcIjI3NDY5OWE5YjZjMDlj=
+Y2VlZGJmM2FmMjA3ODE4NTc1MDM0ODRkNTVcIl19In0">Log in to your account</a></p>
+<p><br></p>
+<p>Although you chose not to share your manuscript as a preprint when you s=
+ubmitted it to the journal, you can still do so through your dashboard. Pre=
+prints are given a DOI and posted permanently online on Research Square, al=
+lowing for more collaboration opportunities, earlier citations, and communi=
+ty comments. If you are interested in this option, log in via the link abov=
+e and then select &quot;Post My Preprint&quot;.</p>
+<p><br></p>
+<p>Please note that the peer review process, including all editorial commun=
+ications, will continue through the journal where you submitted your manusc=
+ript. All queries about the peer review process should be directed to the j=
+ournal or to&nbsp;<a href=3D"mailto:orsupport@springernature.com">orsupport=
+@springernature.com</a>.</p>
+<p><br></p>
+<p>If you have any questions or feedback,&nbsp;<a href=3D"http://t.research=
+square.com/track/click/31114617/help.researchsquare.com?p=3DeyJzIjoiX2x0ZjB=
+tRmRlY0NfMUh4dTRzWWhhcG1wVTc4IiwidiI6MSwicCI6IntcInVcIjozMTExNDYxNyxcInZcIj=
+oxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2hlbHAucmVzZWFyY2hzcXVhcmUuY29tXFxcL2hjX=
+FxcL2VuLXVzXCIsXCJpZFwiOlwiYjdhODY0Mzg2OGQwNDgyNGJiM2RmNmU3OTI2ZGIwNmNcIixc=
+InVybF9pZHNcIjpbXCIxNzg0OTY0MTc5YWQ4NWE5MjhmZTcwYjRlZGRjNzBjMjI2NTI0ZjJkXCJ=
+dfSJ9">visit our Help Center</a> or&nbsp;<a href=3D"http://t.researchsquare=
+.com/track/click/31114617/help.researchsquare.com?p=3DeyJzIjoiMkNjZl9HY3JyN=
+VJvSmh0WkhMd05aUXU2Q2swIiwidiI6MSwicCI6IntcInVcIjozMTExNDYxNyxcInZcIjoxLFwi=
+dXJsXCI6XCJodHRwczpcXFwvXFxcL2hlbHAucmVzZWFyY2hzcXVhcmUuY29tXFxcL2hjXFxcL2V=
+uLXVzXFxcL3JlcXVlc3RzXFxcL25ld1wiLFwiaWRcIjpcImI3YTg2NDM4NjhkMDQ4MjRiYjNkZj=
+ZlNzkyNmRiMDZjXCIsXCJ1cmxfaWRzXCI6W1wiYTUzNjBiOTRjZmJkZjg4MzcyOGI0MzgxZjhhN=
+zM1YWYyOTAwYzVkZFwiXX0ifQ">contact us</a>.</p>
+
+<p>Sincerely,</p>
+The Research Square Team<br>
+
+<a href=3D"http://t.researchsquare.com/track/click/31114617/www.researchsqu=
+are.com?p=3DeyJzIjoiNENyRHU2a0FhQlZaSzV4MG1SdlJZVU9IX2c4IiwidiI6MSwicCI6Int=
+cInVcIjozMTExNDYxNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3d3dy5yZXNlYX=
+JjaHNxdWFyZS5jb21cXFwvXCIsXCJpZFwiOlwiYjdhODY0Mzg2OGQwNDgyNGJiM2RmNmU3OTI2Z=
+GIwNmNcIixcInVybF9pZHNcIjpbXCI5ZjBiZTBlOTcwNzM5ODhmM2VhZTgxZTI4MmRiODAwOWMz=
+N2NhZTcyXCJdfSJ9">Research Square</a><br>
+<i>A preprint platform that makes research communication faster, fairer, an=
+d more useful.</i>
+
+<p>This email has been sent to dhicks4@ucmerced.edu by Research Square.<br>=
+   =20
+<a href=3D"http://t.researchsquare.com/track/click/31114617/www.researchsqu=
+are.com?p=3DeyJzIjoiOEFuQVU4azN2RDgyNzZjWDZGWFNzM0dDOVJnIiwidiI6MSwicCI6Int=
+cInVcIjozMTExNDYxNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3d3dy5yZXNlYX=
+JjaHNxdWFyZS5jb21cXFwvbGVnYWxcXFwvcHJpdmFjeVwiLFwiaWRcIjpcImI3YTg2NDM4NjhkM=
+DQ4MjRiYjNkZjZlNzkyNmRiMDZjXCIsXCJ1cmxfaWRzXCI6W1wiOGZiYjJiOWZiZjdhZDBjMzBm=
+ZGU1MDcwNDBkZWQ0NTdhZDQxZmZlOFwiXX0ifQ">Privacy policy</a><br>   =20
+<a href=3D"http://t.researchsquare.com/track/click/31114617/www.researchsqu=
+are.com?p=3DeyJzIjoiNlBBNDRpMEY0RGZTaEVaY0lwS3JPdVE2bmk0IiwidiI6MSwicCI6Int=
+cInVcIjozMTExNDYxNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3d3dy5yZXNlYX=
+JjaHNxdWFyZS5jb21cXFwvY29udGFjdFwiLFwiaWRcIjpcImI3YTg2NDM4NjhkMDQ4MjRiYjNkZ=
+jZlNzkyNmRiMDZjXCIsXCJ1cmxfaWRzXCI6W1wiYjBhNDI0MzNmYzZiYWZkZjdhMjA1YTYyYzI3=
+ZWNmZmNkZjQ2ZDBlZVwiXX0ifQ">Contact us</a><br>   =20
+Research Square Platform, LLC is a company registered in the United States =
+under Federal Employer Identification Number (FEIN) 82-4431595 with its reg=
+istered office at 601 West Main Street, Durham, NC, USA<br>   =20
+=C2=A9 2022 Research Square Platform, LLC. All rights reserved.</p>=20
+
+<p><small>Title: Race Science in Mainstream Psychology, 1960-2010</small></=
+p>
+<p><small>RSID: rs-3586706</small></p><img src=3D"http://t.researchsquare.c=
+om/track/open.php?u=3D31114617&amp;id=3Db7a8643868d04824bb3df6e7926db06c" h=
+eight=3D"1" width=3D"1" alt=3D"">
+
+--_av-EnycwMwChBPLa-Yn_pKTzQ--
