@@ -73,10 +73,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent">
+<body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="11-proof-of-concept.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <main class="content" id="quarto-document-content">
 
 
@@ -84,22 +85,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This section uses simulated data to provide a proof-of-concept for our use of topic models to detect the “mainstreaming” of a marginalized topic.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tmfast)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tictoc)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggforce)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tmfast)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2024-03-18</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Simulation parameters</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>k <span class="ot">=</span> <span class="dv">20</span>   <span class="do">## total number of topics</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>N <span class="ot">=</span> <span class="dv">100</span>  <span class="do">## papers per journal</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glue)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tictoc)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(memoise)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2024-03-18</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="do">## Simulation parameters</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>k <span class="ot">=</span> <span class="dv">20</span>            <span class="do">## total number of topics</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>N <span class="ot">=</span> <span class="dv">100</span>           <span class="do">## papers per journal</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>vocab <span class="ot">=</span> <span class="dv">1000</span>      <span class="do">## vocabulary size</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>paper_size <span class="ot">=</span> <span class="dv">500</span>  <span class="do">## length of each paper</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We construct a simulated corpus as follows. We work with five journals, labelled A through E. Journal A primarily publishes the marginalized topic (correspond to race science). Journals C-E are mainstream journals, and publish an even mix from 19 other topics. Journal B is the venue by which the marginalized topic is “mainstreamed.” This journal is represented in a time-indexed way, <span class="math inline">\(B_t\)</span>, with <span class="math inline">\(t\)</span> ranging from 0 to 5.</p>
-<p>This gives us three sets of journals: A, B (0-5), and C-E. In the LDA model, these journal sets correspond to <span class="math inline">\(\mathbf{\alpha}\)</span>, the parameter for the “prior” Dirichlet distribution <span class="math inline">\(\Theta(\mathbf{\alpha})\)</span>. The <code>tmfast</code> package provides a helper function <code>peak_alpha</code> for constructing <span class="math inline">\(\mathbf{\alpha}\)</span>.</p>
+<p>We construct a simulated corpus as follows. We work with five journals, labelled A through E. Journal A primarily publishes the marginalized topic (correspond to race science). Ten journals, C-L, are mainstream journals, and publish an even mix from 19 other topics, but avoid the marginalized topic (weighted 0 in the Dirichlet parameterization below). These journals represent the context or comparison group for identifying the race science topic; their exact number is not important here.</p>
+<p>Journal B is the venue by which the marginalized topic is “mainstreamed.” This journal is represented in a time-indexed way, <span class="math inline">\(B_t\)</span>, with <span class="math inline">\(t\)</span> ranging from 0 to 5. For simplicity, in the text each time-slice of B is treated as a distinct journal, giving us 17 journals total (A; the ten C-L; plus 6 time-slices of B).</p>
+<p>This gives us three sets of journals: A, B (0-5), and C-L. In the LDA model, these journal sets correspond to <span class="math inline">\(\boldsymbol{\alpha}\)</span>, the parameter for the “prior” Dirichlet distribution <span class="math inline">\(\Theta(\boldsymbol{\alpha})\)</span>. The <code>tmfast</code> package provides a helper function <code>peak_alpha()</code> for constructing <span class="math inline">\(\boldsymbol{\alpha}\)</span>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Construct journal theta ----</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="do">## A: marginal topic journal</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>A_alpha <span class="ot">=</span> <span class="fu">peak_alpha</span>(<span class="dv">20</span>, <span class="dv">1</span>, <span class="at">peak =</span> .<span class="dv">9</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>A_alpha <span class="ot">=</span> <span class="fu">peak_alpha</span>(k, <span class="dv">1</span>, <span class="at">peak =</span> .<span class="dv">9</span>)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>A_alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 0.900000000 0.005263158 0.005263158 0.005263158 0.005263158 0.005263158
@@ -108,28 +116,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [19] 0.005263158 0.005263158</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## B: mainstream journal that picks up marginal topic over time</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>B_alpha <span class="ot">=</span> <span class="fu">map</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>, <span class="sc">~</span><span class="fu">peak_alpha</span>(<span class="dv">20</span>, <span class="dv">1</span>, <span class="at">peak =</span> <span class="fl">0.05</span><span class="sc">*</span>.x)) <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>B_alpha <span class="ot">=</span> <span class="fu">map</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>, <span class="sc">~</span><span class="fu">peak_alpha</span>(k, <span class="dv">1</span>, <span class="at">peak =</span> <span class="fl">0.05</span><span class="sc">*</span>.x)) <span class="sc">|&gt;</span> </span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_names</span>(<span class="fu">glue</span>(<span class="st">'B{0:5}'</span>))</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="do">## C-E: mainstream journals</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>C_alpha <span class="ot">=</span> <span class="fu">peak_alpha</span>(<span class="dv">20</span>, <span class="dv">1</span>, <span class="at">peak =</span> <span class="dv">0</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>C_alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>C_alpha <span class="ot">=</span> <span class="fu">rep.int</span>(<span class="fu">list</span>(<span class="fu">peak_alpha</span>(k, <span class="dv">1</span>, <span class="at">peak =</span> <span class="dv">0</span>)), <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_names</span>(LETTERS[<span class="dv">3</span><span class="sc">:</span><span class="dv">12</span>])</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>C_alpha<span class="sc">$</span>C</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 0.00000000 0.05263158 0.05263158 0.05263158 0.05263158 0.05263158
  [7] 0.05263158 0.05263158 0.05263158 0.05263158 0.05263158 0.05263158
 [13] 0.05263158 0.05263158 0.05263158 0.05263158 0.05263158 0.05263158
 [19] 0.05263158 0.05263158</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>alphas <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">list</span>(<span class="at">A =</span> A_alpha), B_alpha, <span class="fu">list</span>(<span class="at">C =</span> C_alpha, </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                                   <span class="at">D =</span> C_alpha, </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                                   <span class="at">E =</span> C_alpha))</span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>alphas <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">list</span>(<span class="at">A =</span> A_alpha), </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>           B_alpha, </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>           C_alpha)</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="do">## 10 journals/journals-at-time-t</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="do">## 17 journals/journals-at-time-t</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(alphas)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 10</code></pre>
+<pre><code>[1] 17</code></pre>
 </div>
 </div>
-<p>Each paper corresponds to a simplex <span class="math inline">\(\theta \sim \Theta(\mathbf{\alpha})\)</span>, representing a distribution over topics. We draw 100 papers from each journals.</p>
+<p>Each paper has a simplex <span class="math inline">\(\theta \sim \Theta(\boldsymbol{\alpha})\)</span>, representing a distribution over topics. We draw 100 papers from each journal.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">map</span>(alphas, <span class="sc">~</span> <span class="fu">rdirichlet</span>(N, .x)) <span class="sc">|&gt;</span> </span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">imap</span>(<span class="sc">~</span> magrittr<span class="sc">::</span><span class="fu">set_rownames</span>(.x, <span class="fu">glue</span>(<span class="st">'{.y}-{str_pad(1:N, </span></span>
@@ -137,36 +146,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="st">                                           pad = "0")}'</span>))) <span class="sc">|&gt;</span> </span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">reduce</span>(rbind)</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(theta)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>theta[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>           [,1]          [,2]          [,3]          [,4]          [,5]
 A-01 1.00000000 5.138782e-121  1.405271e-77  5.474319e-23 4.775345e-194
 A-02 0.98042610  1.378314e-64  2.901145e-20  3.539806e-12 8.176666e-240
 A-03 1.00000000 5.291032e-110 2.571419e-121  2.222786e-33  1.883082e-45
 A-04 0.45786230  7.429466e-70  5.409148e-01 4.928661e-176  1.222683e-03
-A-05 0.09123233  1.128828e-39  9.694849e-10  6.666161e-03  9.574165e-16
-A-06 0.99954896  8.852942e-51  1.371960e-59 6.261895e-112 5.263750e-244
-              [,6]          [,7]          [,8]          [,9]         [,10]
-A-01  1.003284e-21  4.655751e-09  3.958350e-48 4.558199e-169 1.572071e-143
-A-02 1.610832e-117 2.150270e-119  1.355490e-36  4.617375e-86 1.778979e-306
-A-03  1.105434e-89  4.939861e-73  0.000000e+00  2.588018e-74 3.824913e-152
-A-04 7.318509e-129  0.000000e+00 2.166339e-256 6.217324e-161  3.255586e-70
-A-05 2.525072e-198 4.930252e-106  2.515752e-46 1.699698e-117 2.887087e-103
-A-06  4.474591e-04  1.490323e-44  6.583929e-63  1.354128e-32  3.189276e-20
-             [,11]         [,12]        [,13]         [,14]         [,15]
-A-01  7.309903e-81  2.652224e-18 3.838652e-23 1.094097e-217  7.779781e-38
-A-02 2.639929e-102  3.812314e-06 2.610031e-34  2.324585e-50  4.684931e-18
-A-03  2.589522e-76  2.659841e-67 6.072261e-93  1.692979e-54  1.465756e-26
-A-04  2.528352e-09  2.746357e-48 2.870972e-71 2.216685e-166  4.499746e-28
-A-05 1.434816e-130 6.223670e-131 1.693783e-71  1.162405e-76  1.663367e-02
-A-06 1.094295e-114 8.852952e-153 4.657141e-30  2.943639e-44 1.165342e-148
-             [,16]         [,17]         [,18]        [,19]         [,20]
-A-01  1.897862e-46  4.935827e-83 9.861141e-133 2.300518e-83  4.777329e-63
-A-02  9.856821e-10  1.780262e-32  5.434810e-06 1.583142e-12  1.956465e-02
-A-03  9.632157e-41 2.177637e-207  9.121058e-27 2.705184e-87  3.638964e-98
-A-04  4.994605e-32  1.650476e-07  1.537608e-64 1.182264e-88  4.055486e-20
-A-05  2.243313e-72 3.716087e-156 1.649258e-147 8.854678e-01 1.242831e-140
-A-06 4.689651e-111 6.798275e-163  2.287426e-40 3.580740e-06 6.710209e-135</code></pre>
+A-05 0.09123233  1.128828e-39  9.694849e-10  6.666161e-03  9.574165e-16</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>theta_df <span class="ot">=</span> theta <span class="sc">|&gt;</span> </span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as_tibble</span>(<span class="at">rownames =</span> <span class="st">'doc'</span>, </span>
@@ -177,7 +164,7 @@ A-06 4.689651e-111 6.798275e-163  2.287426e-40 3.580740e-06 6.710209e-135</code>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>theta_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 20,000 × 3
+<pre><code># A tibble: 34,000 × 3
    doc   topic     theta
    &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt;
  1 A-01  V01   1.00e+  0
@@ -190,52 +177,210 @@ A-06 4.689651e-111 6.798275e-163  2.287426e-40 3.580740e-06 6.710209e-135</code>
  8 A-01  V08   3.96e- 48
  9 A-01  V09   4.56e-169
 10 A-01  V10   1.57e-143
-# … with 19,990 more rows</code></pre>
+# ℹ 33,990 more rows</code></pre>
 </div>
 </div>
-<p>``` ## Word distributions —- ## 20 topics, 1000 terms, ## uniform Dirichlet distribution w/ param 0.1 phi = rdirichlet(20, 0.1, k = 1000)</p>
-<section id="document-length--" class="level2">
-<h2 class="anchored" data-anchor-id="document-length--">Document length —-</h2>
-</section>
-<section id="words-each" class="level2">
-<h2 class="anchored" data-anchor-id="words-each">500 words each</h2>
-<p>doc_len = rep.int(500, N * length(alphas))</p>
-</section>
-<section id="draw-corpus--" class="level2">
-<h2 class="anchored" data-anchor-id="draw-corpus--">Draw corpus —-</h2>
-<p>tic() corpus = draw_corpus(doc_len, theta, phi) |&gt; mutate(doc = rownames(theta)[doc], n = log1p(n)) toc()</p>
-</section>
-<section id="fit-topic-model--" class="level2">
-<h2 class="anchored" data-anchor-id="fit-topic-model--">Fit topic model —-</h2>
-<p>fitted = tmfast(corpus, c(10, 15, 20, 25, 30))</p>
-</section>
-<section id="topics-by-journal--" class="level2">
-<h2 class="anchored" data-anchor-id="topics-by-journal--">Topics by journal —-</h2>
-<p>tidy(fitted, k = 20, matrix = ‘gamma’) |&gt; mutate(journal = str_extract(document, ’<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>*[0-9]?‘)) |&gt; ggplot(aes(document, topic, fill = gamma)) + geom_tile() + facet_wrap(vars(journal), scales = ’free_x’)</p>
-</section>
-<section id="topic-model-clearly-detects-the-focal-topic-in-a-increase-in-b-over-time-minimal-presence-in-other-journals" class="level2">
-<h2 class="anchored" data-anchor-id="topic-model-clearly-detects-the-focal-topic-in-a-increase-in-b-over-time-minimal-presence-in-other-journals">Topic model clearly detects the focal topic in A, increase in B over time, minimal presence in other journals</h2>
-<p>tidy(fitted, k = 20, matrix = ‘gamma’) |&gt; filter(topic == ‘V01’) |&gt; mutate(journal = str_extract(document, ’<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>*[0-9]?‘)) |&gt; ggplot(aes(journal, gamma)) + ggforce::geom_sina() + stat_summary(color = ’red’)</p>
-</section>
-<section id="with-no-pattern-for-the-other-topics" class="level2">
-<h2 class="anchored" data-anchor-id="with-no-pattern-for-the-other-topics">With no pattern for the other topics</h2>
-<p>tidy(fitted, k = 20, matrix = ‘gamma’) |&gt; filter(topic == ‘V02’) |&gt; mutate(journal = str_extract(document, ’<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>*[0-9]?‘)) |&gt; ggplot(aes(journal, gamma)) + ggforce::geom_sina() + stat_summary(color = ’red’)</p>
-</section>
-<section id="though-without-renormalization-estimated-gamma-values-far-below-true-theta-values" class="level2">
-<h2 class="anchored" data-anchor-id="though-without-renormalization-estimated-gamma-values-far-below-true-theta-values">Though, without renormalization, estimated gamma values far below true (theta) values</h2>
-<p>tidy(fitted, k = 20, matrix = ‘gamma’) |&gt; filter(topic == ‘V01’) |&gt; mutate(journal = str_extract(document, ’<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>*[0-9]?‘)) |&gt; inner_join(theta_df, by = c(’document’ = ‘doc’, ‘topic’)) |&gt; ggplot(aes(theta, gamma, color = journal)) + geom_point() + stat_function(fun = identity, inherit.aes = FALSE, color = ‘black’) + scale_color_viridis_d()</p>
-</section>
+<p>We next define <span class="math inline">\(\phi\)</span>, the distribution over words for each topic. We use a vocabulary of 1000 words, and draw each topic’s <span class="math inline">\(\phi\)</span> as a simplex from a symmetric Dirichlet distribution with <span class="math inline">\(\alpha = 0.1\)</span>. Note that words are simply natural numbers.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Word distributions ----</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="do">## 20 topics, 1000 terms, </span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="do">## uniform Dirichlet distribution w/ param 0.1</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>phi <span class="ot">=</span> <span class="fu">rdirichlet</span>(k, <span class="fl">0.1</span>, <span class="at">k =</span> vocab)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(phi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> num [1:20, 1:1000] 2.78e-04 4.60e-12 5.69e-04 3.61e-05 7.97e-09 ...</code></pre>
+</div>
+</div>
+<p>For simplicity, we use a uniform length of 500 words for each paper. <code>draw_corpus</code> assumes that this is a vector with one element for each document.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Document length ----</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="do">## 500 words each</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>doc_len <span class="ot">=</span> <span class="fu">rep.int</span>(paper_size, N <span class="sc">*</span> <span class="fu">length</span>(alphas))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>With these elements constructed, <code>draw_corpus()</code> generates a synthetic document-term matrix. Because this process is relatively slow (approximately 75 seconds on the laptop used to prepare this simulation), we use <code>memoise</code> to create a cache. As a pre-processing step for the topic model, we apply the <code>log(x+1)</code> transform.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Draw corpus ----</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>draw_corpus_cached <span class="ot">=</span> <span class="fu">memoise</span>(draw_corpus, </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">cache =</span> cachem<span class="sc">::</span><span class="fu">cache_disk</span>(<span class="st">'draw_corpus_cache'</span>))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2024-03-25</span>)  <span class="do">## NB draw_corpus() is non-deterministic! </span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>corpus <span class="ot">=</span> <span class="fu">draw_corpus_cached</span>(doc_len, theta, phi) <span class="sc">|&gt;</span> </span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">doc =</span> <span class="fu">rownames</span>(theta)[doc], </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">n =</span> <span class="fu">log1p</span>(n))</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.033 sec elapsed</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>corpus</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 388,789 × 3
+   doc    word     n
+   &lt;chr&gt; &lt;int&gt; &lt;dbl&gt;
+ 1 A-01      4 0.693
+ 2 A-01     11 1.39 
+ 3 A-01     21 0.693
+ 4 A-01     22 1.39 
+ 5 A-01     25 2.30 
+ 6 A-01     36 1.10 
+ 7 A-01     38 0.693
+ 8 A-01     45 0.693
+ 9 A-01     49 1.10 
+10 A-01     51 1.10 
+# ℹ 388,779 more rows</code></pre>
+</div>
+</div>
+<p>We can now fit the topic model.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Fit topic model ----</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>fitted <span class="ot">=</span> <span class="fu">tmfast</span>(corpus, <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">30</span>))</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1.876 sec elapsed</code></pre>
+</div>
+</div>
+<p>The tile plot indicates that (1) documents in journal A generally have a high probability for topic 1; journals C-E generally have a low probability; and journal B gradually has more articles in topic 1.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Topics by journal ----</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>add_journal <span class="ot">=</span> <span class="cf">function</span>(x) {</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(x, <span class="at">journal =</span> <span class="fu">str_extract</span>(document, <span class="st">'^[A-Z]*[0-9]?'</span>))</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(fitted, <span class="at">k =</span> <span class="dv">20</span>, <span class="at">matrix =</span> <span class="st">'gamma'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_journal</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(document, topic, <span class="at">fill =</span> gamma)) <span class="sc">+</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_raster</span>() <span class="sc">+</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(journal), <span class="at">scales =</span> <span class="st">'free_x'</span>, </span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">ncol =</span> <span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_discrete</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="st">'V01'</span>, <span class="st">'V10'</span>, <span class="st">'V20'</span>)) <span class="sc">+</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_discrete</span>(<span class="at">breaks =</span> <span class="st">'none'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="11-proof-of-concept_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Fitted topic-document distributions for the proof-of-concept simulation.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Focusing on topic 1, we first calculate the average probability across each journal. A has the highest value; C-E are consistently low; and B shows an increase over time.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(fitted, <span class="at">k =</span> <span class="dv">20</span>, <span class="at">matrix =</span> <span class="st">'gamma'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(topic <span class="sc">==</span> <span class="st">'V01'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_journal</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(journal, gamma)) <span class="sc">+</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    ggforce<span class="sc">::</span><span class="fu">geom_sina</span>() <span class="sc">+</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">color =</span> <span class="st">'red'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>No summary function supplied, defaulting to `mean_se()`</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="11-proof-of-concept_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">In the proof-of-concept simulation, the topic model clearly detects the marginal topic in journal A, increase in journal B over time, and minimal presence in other journals</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>While the journals are largely not distinguishable from each other on the other topics, except for the unusually low value for A.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(fitted, <span class="at">k =</span> <span class="dv">20</span>, <span class="at">matrix =</span> <span class="st">'gamma'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(topic <span class="sc">==</span> <span class="st">'V02'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_journal</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(journal, gamma)) <span class="sc">+</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sina</span>() <span class="sc">+</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_summary</span>(<span class="at">color =</span> <span class="st">'red'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>No summary function supplied, defaulting to `mean_se()`</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="11-proof-of-concept_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">In the proof-of-concept simulation, the topic model does not produce a false negative pattern with the mainstream topics</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Next we calculate the rate of documents with probability greater than 0.1 in topic 1. As expected, this is almost all papers in journal A, no papers in the other mainstream journals, and in B the rate increases over time.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(fitted, <span class="at">k =</span> <span class="dv">20</span>, <span class="at">matrix =</span> <span class="st">'gamma'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(topic <span class="sc">==</span> <span class="st">'V01'</span>, </span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>           gamma <span class="sc">&gt;</span> .<span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_journal</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(journal, <span class="at">.drop =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">rate =</span> n <span class="sc">/</span> N) <span class="sc">|&gt;</span> </span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>In the proof-of-concept simulation, almost all articles in journal A contain the marginal topic; the rate in B increases over time; and the marginal topic does not appear in the other journals </caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">journal</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">0.97</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B1</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">0.13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">B2</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0.16</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B3</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">0.21</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">B4</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">0.38</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B5</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">0.36</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>We therefore conclude that this topic model method can detect the “mainstreaming” from a marginal topic over time.</p>
+<p>As a limitation, we note that, for <span class="math inline">\(\theta &gt; 0.05\)</span> or so, the estimated topic probabilities are below the true values.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(fitted, <span class="at">k =</span> <span class="dv">20</span>, <span class="at">matrix =</span> <span class="st">'gamma'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(topic <span class="sc">==</span> <span class="st">'V01'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_journal</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">inner_join</span>(theta_df, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">'document'</span> <span class="ot">=</span> <span class="st">'doc'</span>, <span class="st">'topic'</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(theta, gamma, <span class="at">color =</span> journal)) <span class="sc">+</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_function</span>(<span class="at">fun =</span> identity, </span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>                  <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">'black'</span>) <span class="sc">+</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_viridis_d</span>(<span class="at">guide =</span> <span class="st">'none'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="11-proof-of-concept_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">In the proof-of-concept simulation, without normalization the estimated topic-document probabilities (gamma) are well below the true probabilities (theta) for approx. <span class="math inline">\(\theta &gt; 0.05\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><em>[tmfast paper]</em> notes this problem, and implements a “renormalization” option when extracting the probability distributions from the fitted model. This “renormalization” increases the “peakedness” of the distribution (lower entropy), adjusting the highest probabilities up and making the small probabilities several orders of magnitude smaller. Renormalization would just amplify the differences found here, and so is not implemented for this proof-of-concept. Renormalization is used in the primary, empirical analysis.</p>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>A-Z<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>A-Z<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>A-Z<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>A-Z<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main>
+</main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

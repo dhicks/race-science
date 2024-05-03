@@ -18,17 +18,9 @@ abstract: |
   In this study, bibliometric and text mining methods were used to trace the appearance of race science discourse in both mainstream behavioral science journals and the parascholarly journal *Mankind Quarterly* from 1960 to 2010. 
   Our analysis found two distinguishable lines of race science discourse.  One is strongly associated with *Mankind Quarterly*, while the other — emphasizing race and intelligence — is strongly associated with mainstream journals, especially *Intelligence* and *Personality and Individual Differences*.  
   Psychology, and especially intelligence research, has played a significant role in mainstreaming race science. 
-
-acknowledgements: |
-  | Thanks to Emily Merchant and John Jackson for some initial discussions that helped clarify the scope of the project and identify some key resources related to the Pioneer Fund and *Mankind Quarterly*.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles.  Thanks to Kevin Bird, John Jackson, and Manuela Fernández Pinto for comments on a draft of this paper. 
-  | **Funding:** EJCL's work on this project was partially supported by UC Merced.  DJH's work on this project was not supported by any specific funding. 
-  | **Author contributions:** DJH (conceptualization, data curation, formal analysis, investigation, methodology, project administration, software, validation, visualization, writing-original draft, writing-review & editing); EJCL (conceptualization, methodology, software, validation, visualization, writing-original draft, writing-review & editing)
-  | **Competing interests:** The authors have no competing interests to declare. 
-  | **Data and materials availability:** Web of Science search results and article fulltext are not publicly available due to intellectual property restrictions.  Preprocessed analysis data (document-term counts and article metadata) and analysis scripts are available at *[doi]*. 
-
+  
 bibliography: [references.bib, refs-manual.bib]
-# cite-method: "citeproc"
-# csl: "nature-no-superscript.csl"
+csl: "pnas.csl"
 
 format: 
   pnas-pdf:
@@ -40,6 +32,7 @@ format:
       - twocolumn
       - twoside
     fig.env: "figure*"
+    number-sections: false
     
 crossref:
   fig-prefix: ""
@@ -53,7 +46,8 @@ execute:
 ---
 
 <!-- 
-PNAS guidelines
+PNAS guidelines: <https://www.pnas.org/author-center/submitting-your-manuscript#article-types>
+
 Research Report/Direct Submission: The preferred length of these articles is 6 pages, but PNAS allows articles up to a maximum of 12 pages. A standard 6-page article is approximately 4,000 words, 50 references, and 4 medium-size graphical elements (i.e., figures and tables).
 
 
@@ -81,28 +75,32 @@ Large: approximately 18 cm x 22 cm
  
 *[TODO: 
 - NHB reviews todo
-- sort git tree
-- reorganize into PNAS ms + SI
-- check cite formatting
+- de-anonymize
 - copy updated plots? 
-- abstract formatting
 - figure sizes
+- SI xrefs
 ]*
 
-<!-- # Introduction {.unnumbered} -->
+# Significance 
+
+*[120 words, "undergrad-educated scientist outside their field of specialty"]*
+
+# Introduction
 
 By the end of the Second World War, a combination of technical developments in anthropology and genetics, along with revelations of Nazi atrocities, had led most members of the scientific community to reject attempts to scientifically justify racial inequalities and colonialism [@BarkanRetreatScientificRacism1992].  But eugenic thinking and scientific racism persisted throughout the second half of the twentieth century, and recent work has found that white supremacists continue to attempt to use scientific research to justify racial violence [@DusterBackdoorEugenics2003; @PanofskyHowWhiteNationalists2021; @PronczukRacistResearcherExposed2022].  
 
 The aim of the study reported here was to trace race science in the scholarly and parascholarly literature, examining the ways that fringe ideas can present themselves in mainstream venues as legitimate scholarly inquiry.  
 
-We first propose a distinction between scientific racism, race science, and race science discourse.  *Scientific racism* refers to the social practice of purporting to justify racial inequality and colonialism by appealing to the epistemic authority of science.  *Race science* refers to scientific and/or pseudoscientific research, including research products (journal articles, etc.), that can be utilized for scientific racism.  *Race science discourse* refers to a broader category, any treatment of race science as a legitimate area of scientific research.  This includes methodological and empirical critiques of race science.  For example, the Flynn effect (the finding that IQ scores have increased over time) poses a serious empirical challenge to hereditarian claims of racial differences in intelligence.  But technical debates over the extent and causes of the Flynn effect likely create the impression among the general public of ordinary scientific disagreement.  In this way technical critiques of race science based on the Flynn effect could potentially legitimize race science.  So empirical research supporting the Flynn effect is usually not itself race science, but can still be race science discourse.  
+We first propose a distinction between scientific racism, race science, and race science discourse.  *Scientific racism* refers to the social practice of purporting to justify racial inequality and colonialism by appealing to the epistemic authority of science.  *Race science* refers to scientific and/or pseudoscientific research, including research products (journal articles, etc.), that can be utilized for scientific racism.  *Race science discourse* refers to a broader category, any treatment of race science as a legitimate area of scientific research.  
 
-These distinction allow us to bracket the intentions and attitudes of the researchers involved in any particular piece of research or debate.  For the purposes of the current study, it is not important whether, for instance, psychologist Arthur Jensen is or is not correctly labelled a scientific racist [@JacksonJr.ArthurJensenEvolutionary2022].  But it is important that much of Jensen's research was useful and indeed utilized to purportedly justify racial inequality, and so unambiguously qualifies as race science.  
+We stress that race science discourse includes methodological and empirical critiques of race science.  We argue that such technical critiques — even when they are intended to undermine race science — can instead legitimize it, by creating an impression among the broader public that race science is a matter of ordinary, mainstream scientific debate.  For example, the Flynn effect (the finding that IQ scores have increased over time) poses a serious empirical challenge to hereditarian claims of racial differences in intelligence, and has been extensively debated in the mainstream scientific literature.  Most members of the general public lack the time and skills needed to assess the evidence and arguments concerning the Flynn effect.  Instead, we suggest, they are likely to understand the Flynn effect — and, by extension, race science — as an area of active, mainstream scientific research and ordinary scientific disagreement.  In this way technical critiques of race science based on the Flynn effect can legitimize race science.  So empirical research supporting the Flynn effect is usually not itself race science, but can still be race science discourse.  
+
+The distinction between scientific racism, race science, and race science discourse allows us to bracket the intentions and attitudes of the researchers involved in any particular piece of research or debate.  For the purposes of the current study, it is not important whether, for instance, psychologist Arthur Jensen is or is not correctly labelled a scientific racist [@JacksonJr.ArthurJensenEvolutionary2022].  But it is important that much of Jensen's research was useful and indeed utilized to purportedly justify racial inequality, and so unambiguously qualifies as race science.  
 
 
 
 
-<!-- # Scientific racism, eugenics, and *Brown* {.unnumbered} -->
+## Scientific racism, eugenics, and *Brown* {.unnumbered}
 
 Histories of scientific racism in the twentieth century have often emphasized the Pioneer Fund and the parascholarly journal *Mankind Quarterly* (MQ) [
 @BarkanRetreatScientificRacism1992;
@@ -117,7 +115,7 @@ Histories of scientific racism in the twentieth century have often emphasized th
 
 In the landmark case *Brown v Board of Education of Topeka* (1954), the US Supreme Court banned *de jure* educational segregation.  The Court's decision relied on expert testimony from psychologists and education researchers; but the segregationists also put forward their own experts, including Henry Garrett [@WinstonScienceServiceFar1998; @JacksonScienceSegregationRace2005; @SchafferScientificRacismAgain2007].  As part of this segregationist reaction, MQ was created to provide a favorable venue for race scientists to publish their views, on the grounds that an "equalitarian dogma" created a censorious "taboo" against their research in mainstream publications [@TuckerFundingScientificRacism2002; @JacksonMythicalTabooRace2020].  
 
-In light of the scientific racist origins of Pioneer and MQ, and the significant attention MQ has received in recent historiography, we hypothesized that bibliometric and text mining analyses would show race science ideas originating in MQ, and from there being disseminated to mainstream publications.  This hypothesis was not supported.  Instead, mainstream psychology journals provided a venue for a distinct form of race science, based on intelligence research and originating outside of MQ.  
+In light of the scientific racist origins of Pioneer and MQ, and the significant attention MQ has received in recent historiography, we hypothesized that bibliometric and text mining analyses would show race science discourse originating in MQ, and from there being disseminated to mainstream publications.  This hypothesis was not supported.  Instead, mainstream psychology journals provided a venue for a distinct form of race science discourse, based on intelligence research and originating outside of MQ.  
 
 
 # Results
@@ -166,26 +164,39 @@ The fact that Pioneer-funded researchers published heavily in two mainstream psy
 
 ![Silge plots [@SilgeTopicModeling2017] and smoothed time series for three focal topics.  Top row: top 15 terms by $\beta$ (term-topic distribution) for each topic.  Bottom row: count of articles associated with each topic, by journal and year.  Article counts use a threshold approach, with $\gamma$ (topic-document distribution) greater than 0.5.  Thin lines give annual values, thick lines give 5-year running averages.  Because *Behavior Genetics* and *Behavioral and Brain Sciences* are not prominent in any panel, neither is given a direct label.](img/focal_topics.png){#fig-focal width="4.76in" height="3.57in" fig-env="figure*"}
 
-Figure @fig-focal and this discussion focuses on three topics identified in one of the 24 fitted topic models; see figures [@fig-gamma-lg; @fig-gamma-md; @fig-gamma-sm; @fig-silge-lg; @fig-silge-md; @fig-silge-sm] for all topics from all models, and figures [@fig-grid-lg; @fig-grid-md; @fig-grid-sm] for selected topics from all models.  In the focal model, topic 07 is strongly associated with MQ:  MQ published dozens of articles in this topic each year, and no other journal ever published more than a handful.  The "Silge plot," showing the top 15 terms in the topic [@SilgeTopicModeling2017], contains a number of racial terms (`races`, `whites`, `negroes` and potentially `europe`, `africa`, `india`, and `japan`); as well as `book`, likely reflecting the fact that MQ published a number of book reviews, while the mainstream journals either did not publish book reviews or these were not available for the corpus. 
+Figure @fig-focal focuses on three topics identified in one of the 24 fitted topic models; see figures [@fig-gamma-lg; @fig-gamma-md; @fig-gamma-sm; @fig-silge-lg; @fig-silge-md; @fig-silge-sm] for all topics from all models, and figures [@fig-grid-lg; @fig-grid-md; @fig-grid-sm] for selected topics from all models.  In the focal model, topic 07 is strongly associated with MQ:  MQ published dozens of articles in this topic each year, and no other journal ever published more than a handful.  The "Silge plot," showing the top 15 terms in the topic [@SilgeTopicModeling2017], contains a number of racial terms (`races`, `whites`, `negroes` and potentially `europe`, `africa`, `india`, and `japan`); as well as `book`, likely reflecting the fact that MQ published a number of book reviews, while the mainstream journals either did not publish book reviews or these were not available for the corpus. 
 
-Topic 22 is strongly associated with Int and PID in the same way that 07 is associated with MQ.  The Silge plot does contain `jensen`, as well as a reference to Raymond Cattell, who played a major role in the development of factor analysis and intelligence testing but also advocated for eugenics, fascism, and Nazi race science [@MehlerBeyondismRaymondCattell1997]. However, the other authors named in this topic — John Horn and Peter Bentler — do not appear to have contributed to scientific racism.  Instead this topic appears to identify "mainstream" (non-race science) intelligence research, especially factor analysis and the debate over whether intelligence is unidimensional or multidimensional.  (Three other topics only associated with mainstream intelligence journals and terms were also identified by this topic model.)  This topic indicates that the model is able to distinguish "mainstream" intelligence research from race science discourse.  
+Topic 22 is strongly associated with Int and PID in the same way that 07 is associated with MQ.  The Silge plot does contain `jensen`, as well as a reference to Raymond Cattell, who played a major role in the development of factor analysis and intelligence testing but also advocated for eugenics, fascism, and Nazi race science [@MehlerBeyondismRaymondCattell1997]. However, the other authors named in this topic — John Horn and Peter Bentler — do not appear to have contributed to scientific racism.  Instead this topic appears to identify "mainstream" (non-race science discourse) intelligence research, especially factor analysis and the debate over whether intelligence is unidimensional or multidimensional.  (Three other topics only associated with mainstream intelligence journals and terms were also identified by this topic model.)  This topic indicates that the model is able to distinguish "mainstream" intelligence research from race science discourse.  
 
-The Silge plot for topic 24, by contrast, suggests a distinct race science discourse topic, with multiple racial terms (`whites`, `blacks`, `racial_differences`, `races`, `race_differences`) and the names of three prominent Pioneer-funded researchers, `jensen`, `lynn`, and `rushton`.  Independent qualitative coding of 121 papers in this topic (those with $\gamma > 0.97$ and published in journals other than PR) confirmed this interpretation, with 108 (89%) coded as race science discourse by both authors (Cohen's $\kappa = 0.86$).  
+The Silge plot for topic 24, by contrast, suggests a distinct race science discourse topic, with multiple racial terms (`whites`, `blacks`, `racial_differences`, `races`, `race_differences`) and the names of three prominent Pioneer-funded researchers, `jensen`, `lynn`, and `rushton`.  Independent qualitative coding of 121 papers in this topic (those with $\gamma > 0.97$ and published in journals other than PR) confirmed this interpretation, with 108 (89%) coded as race science discourse by both authors (Cohen's $\kappa = 0.86$); see @sec-topic-quality.  
 
 In almost all years, most papers in topic 24 were published in mainstream journals rather than MQ.  Jensen's "How Much Can We Boost IQ and Scholastic Achievement?" [@JensenHowMuchCan1969] was published in 1969 in *Harvard Educational Review* (not included in this study), and the time series indicates that, in the early 1970s, there was an increase in articles in topic 24 in both PR and MQ (the only two journals in our corpus that were active at the time).  MQ shows another sharp increase in the late 1980s; using content analysis, Adams and Pilloud found that psychology was the dominant discipline in MQ in the period 1992-2018 [@AdamsMisAppropriationBiological2021].  PID published multiple papers in topic 24 almost immediately after it was founded, with Int showing a more gradual increase between the mid-1970s and mid-1990s.  
 
-## Race science, behavior genetics, and psychology {.unnumbered}
+*[across all models]*
+
+- As $k$ increases, multiple different "intelligence only" topics
+- lg, md: usually 1 "race only" topic and/or 1 race-and-intelligence topic
+    - "race only" always almost exclusively in MQ
+    - md: race-and-intelligence predominantly in mainstream
+    - lg: for k=30, race-and-intelligence predominantly MQ; no race-int for k=40, 50; then similar to md for k=60, 70
+- sm: 
+    - seems to have a distinct "race only" topic in PR (V04)
+        - top terms include race_differences, rushton, crime: race science, but poss. either not about intelligence or int-related terms didn't make it into top terms
+    - other one is almost exclusive to MQ
+    - except for k=40, race-int topic, predominantly mainstream
+
+## Race science discourse, behavior genetics, and psychology {.unnumbered}
 
 BG published very few articles in any race-and-intelligence topic identified by any of the 24 topic models. Among both academics and the general public, the field of behavior genetics is strongly associated with race science, and specifically race-and-intelligence research. Panofsky [@PanofskyMisbehavingScienceControversy2014] argues that, prior to Jensen's 1969 paper, behavior genetics emphasized the study of non-human animals and intentionally avoided associations with eugenics and public controversy more generally. In response to Jensen, critics such as Lewontin offered broad critiques of behavior genetics as such, and behavior geneticists in turn adopted a radical conception of academic freedom (without any sense of responsibility for the social implications of academic research) and a siege or wartime mentality, as illustrated by Sandra Scarr's 1986 presidential address to the Behavior Genetics Association (BGA) [@ScarrThreeCheersBehavior1987].  Scarr's address coincided with the period between 1970-1990 when BG published articles in topic 24 (including Scarr's address itself). 
 
-However, the topic model analysis suggests that, by the 1990s, behavior genetics may have distanced itself somewhat from race science, albeit without directly repudiating it. This interpretation was supported by a supplemental analysis that focused on BG specifically (see methods and materials)<!-- [@sec-bg] -->.  In addition, the 1995 BGA presidential address by Glayde Whitney --- in which he criticized the "Marxist-Lysenkoist denial of genetics" and proposed that differences in murder rates between countries and cities were caused by racial genetic differences in intelligence, empathy, aggression, and impulsivity --- was published in MQ rather than BG. Behavior genetics may have been prominent in promoting race science in the past, but appears to have been less receptive to such ideas in more recent history.  Instead, our results suggest that other subdisciplines of psychology have provided the primary venue for mainstreaming race science.  
+However, the topic model analysis suggests that, by the 1990s, behavior genetics may have distanced itself somewhat from race science, albeit without directly repudiating it. This interpretation was supported by a supplemental analysis that focused on BG specifically; see @sec-bg.  In addition, the 1995 BGA presidential address by Glayde Whitney --- in which he criticized the "Marxist-Lysenkoist denial of genetics" and proposed that differences in murder rates between countries and cities were caused by racial genetic differences in intelligence, empathy, aggression, and impulsivity --- was published in MQ rather than BG. Behavior genetics may have been prominent in promoting race science in the past, but appears to have been less receptive to such ideas in more recent history.  Instead, our results suggest that other subdisciplines of psychology have provided the primary venue for mainstreaming race science.  
 
 
 
 
-# Discussion {.unnumbered}
+# Discussion 
 
-Using bibliometric and text-mining methods, this study finds that Pioneer-funded researchers published heavily in certain mainstream psychology journals, much more than in *Mankind Quarterly*; and that a distinct topic of race science discourse, centered on race and intelligence, can be identified in these same mainstream journals across the period 1960-2010.  These findings indicate that *Mankind Quarterly* (MQ) was less important as venue for late 20th century race science than mainstream psychology journals, especially *Intelligence* (Int) and *Personality and Individual Differences* (PID).  Indeed, until the 1990s, MQ published a very different kind of race science from the race-and-intelligence research published in Int and PID.  During this same period of time, race scientists served in prominent and influential positions in behavior genetics and psychology, including as society presidents and members of journal editorial boards.  In some cases, some race scientists simultaneously maintained active connections to both the mainstream scientific community and white supremacist organizations [@WinstonScientificRacismNorth2020; @JacksonJr.ArthurJensenEvolutionary2022; @SlobodianUnequalMindHow2023].  
+Using bibliometric and text-mining methods, this study finds that Pioneer-funded researchers published heavily in certain mainstream psychology journals, much more than in *Mankind Quarterly*; and that a distinct topic of race science discourse, centered on race and intelligence, can be identified in these same mainstream journals across the period 1960-2010.  These findings indicate that *Mankind Quarterly* (MQ) was less important as venue for late 20th century race science discourse than mainstream psychology journals, especially *Intelligence* (Int) and *Personality and Individual Differences* (PID).  Indeed, until the 1990s, MQ published a very different kind of race science discourse from the race-and-intelligence research published in Int and PID.  During this same period of time, race scientists served in prominent and influential positions in behavior genetics and psychology, including as society presidents and members of journal editorial boards.  In some cases, some race scientists simultaneously maintained active connections to both the mainstream scientific community and white supremacist organizations [@WinstonScientificRacismNorth2020; @JacksonJr.ArthurJensenEvolutionary2022; @SlobodianUnequalMindHow2023].  
 
 We are not identifying any particular scientist as a racist, scientific racist, or race scientist based on the topic model results alone.  Such claims require an analysis of documentary evidence that goes beyond the scope of the current study [@JacksonJr.ArthurJensenEvolutionary2022].  We do assume that our readers, like us, regard white supremacy and scientific racism as morally odious and beyond the scope of reasonable debate [@SchroederLimitsDemocratizingScience2022].  However, scientific research can be appropriated to promote scientific racism — and thus count as race science — even when this is contrary to the intentions of the original researchers themselves [@TaberyWhyStudyingGenetics2015; @GillbornSoftlySoftlyGenetics2016; @CarlsonQuantifyingContextualizingImpact2020; @HennWhyDNANo2021].  Panofsky et al. show how the term "human biodiversity," originally developed for anti-racist purposes by biological anthropologist Jonathan Marks, has been inverted by white supremacists and is now a dogwhistle for biological racial hierarchy [@PanofskyHowWhiteNationalists2021].  
 
@@ -203,35 +214,11 @@ How should psychologists exercise these responsibilities?  We believe restorativ
 
 
 
-<!-- 
-\clearpage
-\pagenumbering{arabic}
-\renewcommand*{\thepage}{\thesection.\arabic{page}}
-\appendix
-\renewcommand{\thesection}{S\arabic{section}}
-\renewcommand\thefigure{\thesection.\arabic{figure}}    
-\setcounter{figure}{0} 
-\renewcommand\thetable{\thesection.\arabic{table}}    
-\setcounter{table}{0}
 
 
-\clearpage
-
-# Supplemental Materials {.unnumbered}
-
-| 
-| S1. Materials and methods
-| Figures S2-S7
-| Data S8, S9
-
-\clearpage
- -->
-
-# Materials and methods
+# Methods and materials
 
 ## Corpus assembly
-
-![Corpus assembly.](img/dataset.png){#fig-corpus width="120%" fig-env="figure*"}
 
 Corpus assembly is summarized in figure @fig-corpus.  The corpus was assembled in two parts, one for *Mankind Quarterly* and the other for mainstream journals.  
 
@@ -244,33 +231,13 @@ An electronic archive of *Mankind Quarterly*, from the first issue in 1969 throu
 
 To identify suitable mainstream journals for inclusion in the corpus, we first identified academic researchers who had been funded by the Pioneer Fund.  Pioneer is an American non-profit organization founded in 1937 to fund eugenics research and propaganda [@TuckerFundingScientificRacism2002].  After the *Brown v. Board of Education* ruling in 1954, Pioneer funded various segregationist efforts across the United States, including lectures on eugenics by Stanford physicist William Shockley [@JacksonScienceSegregationRace2005].  We reviewed a critical profile of Pioneer [@MillerPioneerFundBankrolling1994] as well as an archived page from the organization's own web site (<https://web.archive.org/web/20130103005545/http://www.pioneerfund.org/Grantees.html>), which together listed 16 researchers who had received Pioneer funds.  
 
-We then used the author search tool in Clarivate's Web of Science platform (<https://www.webofscience.com/wos/author/search>), retrieving publication lists for 14 researchers.  These searches were conducted between 2021-09-24 and 2021-10-05 by *[AUTHOR 1]*.  After parsing these results, we counted how many of the 14 researchers had published in each journal.  Thirteen journals had published 6 or more of the 14 Pioneer-funded researchers.  We excluded *Mankind Quarterly* (as already included) as well as *Science* and *Nature* (as too general) from further consideration in this side of the corpus.  Three journals published by the American Psychological Association (APA; *American Psychologist*, *Contemporary Psychology*, and *Journal of Educational Psychology*) had to be excluded due to confusion over who could give us permission to use the archives for a text mining project, with both APA and ProQuest asserting that we needed to get permission from the other entity.  *European Journal of Personality*, published by SAGE, also had to be excluded because our institutional access only went back to 1999.  
+We then used the author search tool in Clarivate's Web of Science platform (<https://www.webofscience.com/wos/author/search>), retrieving publication lists for 14 researchers.  These searches were conducted between 2021-09-24 and 2021-10-05 by DH.  After parsing these results, we counted how many of the 14 researchers had published in each journal.  Thirteen journals had published 6 or more of the 14 Pioneer-funded researchers.  We excluded *Mankind Quarterly* (as already included) as well as *Science* and *Nature* (as too general) from further consideration in this side of the corpus.  Three journals published by the American Psychological Association (APA; *American Psychologist*, *Contemporary Psychology*, and *Journal of Educational Psychology*) had to be excluded due to confusion over who could give us permission to use the archives for a text mining project, with both APA and ProQuest asserting that we needed to get permission from the other entity.  *European Journal of Personality*, published by SAGE, also had to be excluded because our institutional access only went back to 1999.  
 
 The remaining 5 journals are all published by major academic publishers — Elsevier, Springer, or Cambridge University Press — and each item in the entire run of each journal has been assigned a DOI (digital object identifier) for archival purposes.  We used the Crossref API and `rcrossref` R interface to this API [@ChamberlainRcrossrefClientVarious2019 version 1.1.0.99] to retrieve metadata for each item published from 1960-2010 in each of these journals.  These metadata included item-level license information — confirming that the text of each item could be used for text mining projects — and a URL to an electronic version of the item.  These URLs were used to retrieve a XML or PDF version of each item, except for *Personality and Individual Differences*.  This journal has published a relatively large number of non-article documents, such as book reviews and commentaries, that are not available at the URL included in the Crossref metadata.  (This is unfortunate, as it was not difficult to find highly relevant documents that we could not automatically retrieve and therefore had to be excluded from our corpus.  One set of examples is an exchange between Rushton and Flynn on the Flynn effect [@FlynnEvidenceRushtonGenetic1998; @RushtonSecularGainsIQ1998; @FlynnReplyRushtonGang1998].)  Instead we used Elsevier's ScienceDirect API (<https://dev.elsevier.com/>) to independently search and retrieve all available items from *Personality and Individual Differences*.  This stage of corpus assembly was conducted between 2021-11 and 2022-05.  
 
 *Behavioral and Brain Sciences* typically uses a target article + commentary format; in some cases there are dozens of commentaries for a single article.  In the Crossref DOI metadata, each target article and individual commentary is given its own DOI, with no distinction between contribution types or metadata links between a commentary and the corresponding target article.  But text is only available in aggregate PDFs that bundle together the target article and all of the commentaries.  In somes cases this results in PDFs that are hundreds of pages long and might be linked from the Crossref metadata 30+ times.  In addition, the retrieved PDFs are not perfectly identical, because Cambridge UP's servers add a timestamped watermark to each page when the PDF is requested.  We attempted to contact Cambridge for assistance but did not receive a response.  We ultimately used a series of ad hoc measures to mitigate text duplication.  Approximately 100,000 documents that were 1-2 pages long (per Crossref metadata) were excluded before PDF retrieval.  After PDF retrieval and text extraction, the timestamped watermarks were removed using a regular expression and the text was hashed using SHA 256.  Hashes were used to efficiently construct groups of identical documents, and a single document (whichever one happened to be first in the dataframe) was chosen from each hash group for inclusion in the corpus.  It is plausible that some duplicates made it through this process: where the watermark overlapped with the text, the regular expression likely would have been unable to identify and remove the watermark (a false negative result), and this small difference in the watermarks (not the text) would produce different hashes.  
 
 After XML/PDF versions were retrieved, text was extracted using either the `xml2` package [@WickhamXml2ParseXML2023] or `pdftools`.  Figure @fig-counts and @tbl-counts show the number of fulltext documents included in the corpus.  All together, the corpus includes 34,896 documents from 6 journals.  
-
-![Count of documents in the corpus, by journal and year.](img/02_count.png){#fig-counts width="11cm" height="11cm" fig-env="figure*"}
-
-\onecolumn
-
-Table: Document counts, by journal, and years included in the corpus. {#tbl-counts}
-
-|journal                                |     n| start|  end|
-|:--------------------------------------|-----:|-----:|----:|
-|Behavior Genetics                      |  2268|  1970| 2010|
-|Intelligence                           |  1237|  1977| 2010|
-|Mankind Quarterly                      |  1821|  1960| 2004|
-|Personality and Individual Differences |  7274|  1980| 2010|
-|Psychological Reports                  | 21398|  1960| 2010|
-|Behavioral and Brain Sciences          |   898|  1978| 2010|
-
-\twocolumn
-
-
-
 
 
 ## Text preparation
@@ -285,7 +252,7 @@ After noun phrase extraction, the corpus comprised 43,162,055 total tokens of 6,
 
 Document metadata retrieved from Crossref does not appear to be covered by any copyright or other intellectual property restrictions.  However, due to copyright restrictions, we are unable to make document fulltext or Web of Science search results publicly available.  Code for the corpus assembly and text preparation steps described above is available by request. 
 
-The public analysis repository, <!-- <https://github.com/dhicks/race-science> --> *[URL and DOI will go here]*, includes document metadata and documentwise counts of NLP-extracted noun phrases ("document-term matrices"), along with code to reproduce the analysis of the following sections. 
+The public analysis repository, <https://github.com/dhicks/race-science> *DOI will go here]*, includes document metadata and documentwise counts of NLP-extracted noun phrases ("document-term matrices"), along with code to reproduce the analysis of the following sections. 
 
 
 ## Vocabulary selection
@@ -301,31 +268,91 @@ A common rule of thumb in topic modeling is that the vocabulary should have abou
 
 ## Topic modeling
 
-To fit topic models, we followed the approach proposed by Rohe and Zeng [@RoheVintageFactorAnalysis2020], which uses varimax-rotated partial principal components instead of the variational inference methods used by standard topic model packages such as `stm` [@RobertsStmPackageStructural2019].  This novel approach was implemented in the R package *[redacted for anonymous review]* <!-- `tmfast` [@HicksTmfastFitsTopic2023] -->.  <!-- We conducted a simulation study of `tmfast`, which found that it was significantly faster and only slightly less accurate at reconstructing known word-topic and topic-document distributions, compared to `stm` [@HicksTmfastFitsTopic2023].   -->
+To fit topic models, we followed the approach proposed by Rohe and Zeng [@RoheVintageFactorAnalysis2020], which uses varimax-rotated partial principal components instead of the variational inference methods used by standard topic model packages such as `stm` [@RobertsStmPackageStructural2019].  This novel approach was implemented in the R package `tmfast` [@HicksTmfastFitsTopic2023].  We conducted a simulation study of `tmfast`, which found that it was significantly faster and only slightly less accurate at reconstructing known word-topic and topic-document distributions, compared to `stm` [@HicksTmfastFitsTopic2023].  We report a proof-of-concept simulation for the current study in @sec-poc. 
 
 Topic models were fit for all three vocabularies (large, medium, and small) with $k = 5, 10, 20, ..., 70$ (number of topics), resulting in a total of $24 = 3 \times 8$ models. 
 
-Following the approach of [@HicksProductivityInterdisciplinaryImpacts2021], we did not attempt to identify a unique best fitted model for further analysis.  While the manuscript text focuses on the medium vocabulary, $k=40$ model as the "median" among the 24 fitted models, we compare and contrast findings from this model with those from the other models.  
+Following the approach of [@HicksProductivityInterdisciplinaryImpacts2021], we did not attempt to identify a unique best fitted model for further analysis.  While the main text of this paper focuses on the medium vocabulary, $k=40$ model as the "median" among the 24 fitted models, qualitatively similar results appear across all models with $k \geq 10$ for all vocabularies; see @sec-topic-quality and @fig-grid-lg, @fig-grid-md, @fig-grid-sm.  
 
-### Proof of concept
+We did conduct two further assessments of topic 24 from the medium vocabulary, $k = 40$ model.  A manual quality assessment achieved consensus that 89% (108/121) of the top papers in this topic were race science discourse; see @sec-topic-quality.  We also replicated the medium vocabulary, $k = 40$ model using the popular `STM` package for topic modeling; see @sec-stm.  This model also gave qualitatively similar results.  Due to the time and computational resources required for these robustness checks, we determined that it would not be feasible for us to repeat them across all 855 topics ($3 \times (5 + 10 + 20 + \cdots + 70)$) and 24 topic models.  
 
-<!-- {{< include ../scripts/11-proof-of-concept.qmd >}} -->
+## Limitations
+
+A key limitation of the current study stems from the inability of text mining techniques to draw on a broader cultural context than what is represented in the corpus.  Scholars of racism and US race relations have noted a shift in the way racist attitudes are understood and expressed, from overt and direct to a subtle "color-blind" racism [@Bonilla-SilvaRacismRacistsColorBlind2006]. Color-blind racism represents a change in the primary mechanisms by which white privilege is maintained, using non-racialized language in furtherance of the racial status quo both institutionally and individually, and increasingly reliant on the invisibility of socio-cultural mechanisms to preserve inequalities. Color-blind racism involves the use of racialized "codes" or "dogwhistles," language that is superficially non-racial but carries racial implications, such as (in the US context) "violent inner city criminals" or "welfare queen" [@SaulDogwhistlesPoliticalManipulation2018].  Alderfer notes that the racist implications of *The Bell Curve* only emerge gradually, with the opening of the book using the color-blind language of "group differences" [@AlderferScienceNonsciencePsychologists2003].  These cases suggest further that color-blindness can facilitate white supremacist appropriation of non-racial research — even contrary to the researchers' own intentions — as scientific racist readers re-interpret racial-neutral language as dogwhistles [@GillbornSoftlySoftlyGenetics2016; @WillsAreClustersRaces2017].  
+
+Techniques such as topic modeling may be able to account for discursive shifts from explicit to coded racial language, but only if the corpus contains a critical mass of documents using both sets of terms together.  This would seem to require either a relatively gradual transition, the inclusion of reflective commentary --- such as scholarship identifying and analyzing the transition --- or both.  It is unlikely that these requirements are met by the corpus used in this study.  So it is plausible that the topic models used here have some rate of "false negatives," documents in the corpus that engage in race science discourse but in a color-blind way that avoids the use of the explicit racial terms in the race-and-intelligence topic.  
+
+The phenomenon of color-blind racism is closely related to ambiguities that cannot be resolved even by human coders familiar with the broader cultural context.  Two relevant examples are the "Flynn effect," a secular increase in intelligence test scores noted by philosopher James Flynn; and studies of "national IQ," exemplified by the work of Richard Lynn.  The Flynn effect implies that environmental factors can create group differences in IQ that are comparable to Black-White differences, and thus directly challenges claims that the racial differences are biological.  Using methods widely regarded as ad hoc, cherry-picking, and generally unreliable, Lynn and collaborators have claimed that national IQ averages are correlated with national GDP.  Both the Flynn effect and "national IQ" are strongly associated with race-and-intelligence discourse in the US cultural context.  But scientific journal articles on these topics may not include any racial language at all.  For example, a meta-analysis of the Flynn effect does not discuss racial differences or use terms such as "White" or "Black" outside the reference list [@TrahanFlynnEffectMetaanalysis2014].  Should such articles be coded as race science discourse?  We expect that even readers who accept our definitions of race science and race science discourse will reasonably disagree on how to answer this question.  Topic models, of course, are not even capable of representing this essential ambiguity.  
+
+# Acknowledgments
+
+Thanks to Emily Merchant and John Jackson for some initial discussions that helped clarify the scope of the project and identify some key resources related to the Pioneer Fund and *Mankind Quarterly*.  Thanks to Anthony Sainez for help retrieving the *Mankind Quarterly* articles.  Thanks to Derek Devnich and James Dooley for their work attempting to secure the APA-published articles.  Thanks to Kevin Bird, John Jackson, and Manuela Fernández Pinto for comments on a draft of this paper. 
+
+**Funding:** EJCL's work on this project was partially supported by UC Merced.  DJH's work on this project was not supported by any specific funding. 
+
+**Author contributions:** DJH (conceptualization, data curation, formal analysis, investigation, methodology, project administration, software, validation, visualization, writing-original draft, writing-review & editing); EJCL (conceptualization, methodology, software, validation, visualization, writing-original draft, writing-review & editing)
+
+**Competing interests:** The authors have no competing interests to declare. 
+
+**Data and materials availability:** Web of Science search results and article fulltext are not publicly available due to intellectual property restrictions.  Preprocessed analysis data (document-term counts and article metadata) and analysis scripts are available at *[doi]*. 
 
 
-### Topic model interpretation and quality assessment
+
+# References
+
+::: {#refs}
+:::
+
+
+\clearpage
+\pagenumbering{arabic}
+\renewcommand*{\thepage}{S\arabic{page}}
+\renewcommand{\thesection}{\emph{SI Appendix}, section \arabic{section}}
+\renewcommand\thefigure{S\arabic{figure}}    
+\setcounter{figure}{0} 
+\renewcommand\thetable{S\arabic{table}}    
+\setcounter{table}{0}
+
+
+\onecolumn
+
+# SI Appendix
+
+![Corpus assembly.](img/dataset.png){#fig-corpus width="120%" fig-env="figure*"}
+
+![Count of documents in the corpus, by journal and year.](img/02_count.png){#fig-counts width="11cm" height="11cm" fig-env="figure*"}
+
+
+Table: Document counts, by journal, and years included in the corpus. {#tbl-counts}
+
+|journal                                |     n| start|  end|
+|:--------------------------------------|-----:|-----:|----:|
+|Behavior Genetics                      |  2268|  1970| 2010|
+|Intelligence                           |  1237|  1977| 2010|
+|Mankind Quarterly                      |  1821|  1960| 2004|
+|Personality and Individual Differences |  7274|  1980| 2010|
+|Psychological Reports                  | 21398|  1960| 2010|
+|Behavioral and Brain Sciences          |   898|  1978| 2010|
+
+
+## Proof of concept {#sec-poc}
+
+{{< include ../scripts/11-proof-of-concept.qmd >}}
+
+
+## Topic model interpretation and quality assessment {#sec-topic-quality}
 
 After fitting topic models, our first research question was whether we could identify distinctive "race science discourse" topics.  Figures [@fig-gamma-lg; @fig-gamma-md; and @fig-gamma-sm] show the gamma (topic-document) distributions for each value of $k$ for the three vocabularies.  In these figures, each panel corresponds to a single journal-$k$ combination, each row of cells is a single document in that journal, and each column of cells is a single topic in that particular model.  Topics correspond within columns of panels, but not within rows; for example, topic 04 for $k=10$ does not necessarily correspond to topic 04 for $k=20$.  Color intensity indicates the value of gamma for that particular topic-document combination.  
-
 
 For $k=5, 10$ the distributions are quite noisy, difficult to interpret, and generally don't form very strong visual clusters.  As $k$ increases from 20 through 40, coherent bands start to appear for journal-distinctive topics in MQ, BG, Int and, to a lesser degree, PID.  Note that the distinctive topics for MQ and Int do not obviously coincide.  Above about $k=50$, the models appear to identify more fine-grained topics and the coherent bands fade.  
 
 We next constructed Silge plots [@SilgeTopicModeling2017], showing the top 15 (highest-probability) terms (noun phrases) from each topic in the model; see figures [@fig-silge-lg; @fig-silge-md; @fig-silge-sm].  Perusing these term lists, we focused on topics in each model that contained racial terms.  Every fitted topic model included at least one racial topic.  Importantly, in some cases these topics contained terms related to intelligence research, but in other cases they did not.  
 
-The gamma distributions and Silge plots suggested that, once $k$ was sufficiently large, the topic models were distinguishing between two types of race science articles.  We therefore examined the prevalence of topics that used racial terms, intelligence-research terms, or both, by journal and across all 24 models; see figures [@fig-grid-lg; @fig-grid-md; @fig-grid-sm]. In these visualizations, each row of facets corresponds to a value of $k$ (excluding 5 as too noisy), and each column of facets corresponds to one topic.  Topics are clustered based on whether the top 15 terms contain racial terms ("race"), terms related to intelligence research ("intelligence"), or both.  Line plots show the count of articles with $\gamma > 0.50$ for the given topic, by journal; thick lines are 5-year running averages and thin lines are raw counts.  
+The gamma distributions and Silge plots suggested that, once $k$ was sufficiently large, the topic models were distinguishing between two types of race science discourse articles.  We therefore examined the prevalence of topics that used racial terms, intelligence-research terms, or both, by journal and across all 24 models; see figures [@fig-grid-lg; @fig-grid-md; @fig-grid-sm]. In these visualizations, each row of facets corresponds to a value of $k$ (excluding 5 as too noisy), and each column of facets corresponds to one topic.  Topics are clustered based on whether the top 15 terms contain racial terms ("race"), terms related to intelligence research ("intelligence"), or both.  Line plots show the count of articles with $\gamma > 0.50$ for the given topic, by journal; thick lines are 5-year running averages and thin lines are raw counts.  
 
 Across all three vocabularies, for sufficiently large values of $k$ the models identify two or more different racial topics, one that appears all but exclusively in MQ and at least one that appears primarily in mainstream journals.  
 
-We next conducted a topic quality check of topic 24 from the medium vocabulary, $k=40$ model, which appeared to identify race science research on intelligence published in mainstream journals.  A spreadsheet of all articles that had a maximum value of $\gamma$ for this topic was extracted (excluding articles published in *Psychological Reports*), and the top 121 articles ($\gamma > 0.97$) were reviewed manually by both authors.  We coded each article as *race science discourse*, or not, using our definition of race science discourse as treating race science as a legitimate area of scientific reearch; this includes methodological critiques of race science and empirical tests that falsify race science hypotheses.  
+We next conducted a topic quality check of topic 24 from the medium vocabulary, $k=40$ model, which appeared to identify race science discourse on intelligence published in mainstream journals.  A spreadsheet of all articles that had a maximum value of $\gamma$ for this topic was extracted (excluding articles published in *Psychological Reports*), and the top 121 articles ($\gamma > 0.97$) were reviewed manually by both authors.  We coded each article as *race science discourse*, or not, using our definition of race science discourse as treating race science as a legitimate area of scientific research; this includes methodological critiques of race science and empirical tests that falsify race science hypotheses.  
 
 For the first round of review, both authors worked independently,  dichotomously coding each article as race science discourse or not.  We calculated the "false positive rate" — documents with maximum $\gamma$ in this topic that were not race science discourse — and interrater reliability using Cohen's $\kappa$.  The consensus true positive rate was 89.3% (108/121), while the consensus false positive rate was 8.3% (10/121), with 98% agreement across the two raters ($\kappa = 0.86)$.  Coding spreadsheets are included in the supplemental materials S8-S9.  For each of the 10 consensus false positive documents, their inclusion in the topic was readily explained, but in different ways for different documents.  Some included text from other documents, as when an article started in the middle of a page; others discussed perceptions of race relations or racial animus; one piece in BG discussed differences in the herding behavior of two cattle breeds, referred to as "white" and "black."  
 
@@ -333,15 +360,13 @@ The 3 non-consensus documents reflected essential ambiguity in the operationaliz
 
 Based on this qualitative review, we judged that the topic model approach was sufficiently sensitive (low "false positive" rate) in identifying race science discourse.  However, "false negatives" are still possible, as some documents that human readers would classify as race science discourse might have been associated with other topics.  
 
-### STM robustness check
+## STM robustness check {#sec-stm}
 
 As a robustness check, we compared the `tmfast` results with a topic model fit using `STM`, a widely used package for topic modeling in R *[cite]*.  Using the medium vocabulary, $k=40$, and a relaxed convergence threshold (`1e-4` compared to the default `1e-5`), fitting a single `STM` model took approximately 20 minutes.  This was approximately two orders of magnitude slower than `tmfast`.  And, unlike `tmfast`, `STM` can only fit a single value of $k$ at a time.  We therefore only fit this one `STM` model.  
 
 *[xref]* shows four topics extracted from the `STM` model, automatically identified by the use of race keywords, intelligence keywords, or both, among the top 15 terms.  As in the `tmfast` analysis, the "race only" topic is almost exclusive to MQ; the "race and intelligence" topic emerges in mainstream journals before appearing in both the mainstream and MQ; and there are distinctive "intelligence only" topics.  Compare *[xref]*.  One notable difference between these results is the role of PR in publishing race and intelligence.  
 
 ![](img/12-stm.png){fig-env="figure*"}
-
-### *[author analysis]*
 
 
 ## Supplemental analysis of *Behavior Genetics* {#sec-bg}
@@ -353,42 +378,20 @@ Twenty-eight documents in this sample from BG were published between 1990 and 20
 At the same time, we were unable to find any articles published in BG that acknowledged the involvement of the field with scientific racism with anything like the force of the statements that have been made by biological anthropologists [@FuentesAAPAStatementRace2019] and human geneticists [@JacksonFacingOurHistory2023].  Notably, the ASHG report includes discussions of behavior genetics race science, and in particular is critical of the field and the organization for failing to publicly reject the race-and-intelligence claims made by Shockley and Jensen [@JacksonFacingOurHistory2023].  A search for "eugenics" in BG found articles that presented the issue as part of the distant past, and a search for "racism" turned up studies of racist attitudes.  A statement on the Behavior Genetics Association website, dated 2021, acknowledges that "The history of our field is inextricably linked with racism, including the misuse of behavior genetic research to support violent eugenic policies," but primarily focuses on BGA member demographics (<https://www.bga.org/content.aspx?page_id=22&club_id=971921&module_id=567723>).  
 
 
-## Limitations
+![Fitted topic models: Gamma (topic-document) distributions, large vocabulary.](img/05_lg_gamma.png){#fig-gamma-lg width="6in" height="4.8in" fig-env="figure*"}
 
-A key limitation of the current study stems from the inability of text mining techniques to draw on a broader cultural context than what is represented in the corpus.  Scholars of racism and US race relations have noted a shift in the way racist attitudes are understood and expressed, from overt and direct to a subtle "color-blind" racism [@Bonilla-SilvaRacismRacistsColorBlind2006]. Color-blind racism represents a change in the primary mechanisms by which white privilege is maintained, using non-racialized language in furtherance of the racial status quo both institutionally and individually, and increasingly reliant on the invisibility of socio-cultural mechanisms to preserve inequalities. Color-blind racism involves the use of racialized "codes" or "dogwhistles," language that is superficially non-racial but carries racial implications, such as (in the US context) "violent inner city criminals" or "welfare queen" [@SaulDogwhistlesPoliticalManipulation2018].  Alderfer notes that the racist implications of *The Bell Curve* only emerge gradually, with the opening of the book using the color-blind language of "group differences" [@AlderferScienceNonsciencePsychologists2003].  These cases suggest further that color-blindness can facilitate white supremacist appropriation of non-racial research — even contrary to the researchers' own intentions — as scientific racist readers re-interpret racial-neutral language as dogwhistles [@GillbornSoftlySoftlyGenetics2016; @WillsAreClustersRaces2017].  
+![Fitted topic models: Gamma (topic-document) distributions, medium vocabulary.](img/05_md_gamma.png){#fig-gamma-md width="6in" height="4.8in" fig-env="figure*"}
 
-Techniques such as topic modeling may be able to account for discursive shifts from explicit to coded racial language, but only if the corpus contains a critical mass of documents using both sets of terms together.  This would seem to require either a relatively gradual transition, the inclusion of reflective commentary --- such as scholarship identifying and analyzing the transition --- or both.  It is unlikely that these requirements are met by the corpus used in this study.  So it is plausible that the topic models used here have some rate of "false negatives," documents in the corpus that engage in race science discourse but in a color-blind way that avoids the use of the explicit racial terms in the race-and-intelligence topic.  
+![Fitted topic models: Gamma (topic-document) distributions, small vocabulary.](img/05_sm_gamma.png){#fig-gamma-sm width="6in" height="4.8in" fig-env="figure*"}
 
-The phenomenon of color-blind racism is closely related to ambiguities that cannot be resolved even by human coders familiar with the broader cultural context.  Two relevant examples are the "Flynn effect," a secular increase in intelligence test scores noted by philosopher James Flynn; and studies of "national IQ," exemplified by the work of Richard Lynn.  The Flynn effect implies that environmental factors can create group differences in IQ that are comparable to Black-White differences, and thus directly challenges claims that the racial differences are biological.  Using methods widely regarded as ad hoc, cherry-picking, and generally unreliable, Lynn and collaborators have claimed that national IQ averages are correlated with national GDP.  Both the Flynn effect and "national IQ" are strongly associated with race-and-intelligence discourse in the US cultural context.  But scientific journal articles on these topics may not include any racial language at all.  For example, a meta-analysis of the Flynn effect does not discuss racial differences or use terms such as "White" or "Black" outside the reference list [@TrahanFlynnEffectMetaanalysis2014].  Should such articles be coded as race science discourse?  We expect that even readers who accept our definitions of race science and race science discourse will reasonably disagree on how to answer this question.  Topic models, of course, are not even capable of representing this essential ambiguity.  
+![Silge plots (top 15 terms) for each topic and model, large vocabulary.](supplements/S2-lg-silge.pdf){#fig-silge-lg fig-env="figure*"}
 
+![Silge plots (top 15 terms) for each topic and model, medium vocabulary.](supplements/S3-md-silge.pdf){#fig-silge-md fig-env="figure*"}
 
-# References
+![Silge plots (top 15 terms) for each topic and model, small vocabulary.](supplements/S4-sm-silge.pdf){#fig-silge-sm fig-env="figure*"}
 
-::: {#refs}
-:::
+![Topics with "race," "intelligence," or both occurring in the top 15 terms, large vocabulary.](supplements/S5_grid_lg.pdf){#fig-grid-lg fig-env="figure*"}
 
+![Topics with "race," "intelligence," or both occurring in the top 15 terms, medium vocabulary.](supplements/S6_grid_md.pdf){#fig-grid-md fig-env="figure*"}
 
-\clearpage
-
-# Extended Data
-
-\renewcommand{\thefigure}{ED-\arabic{figure}}
-\setcounter{figure}{0}
-
-![Fitted topic models: Gamma (topic-document) distributions, large vocabulary.](img/05_lg_gamma.png){#fig-gamma-lg width="6in" height="4.8in"}
-
-![Fitted topic models: Gamma (topic-document) distributions, medium vocabulary.](img/05_md_gamma.png){#fig-gamma-md width="6in" height="4.8in"}
-
-![Fitted topic models: Gamma (topic-document) distributions, small vocabulary.](img/05_sm_gamma.png){#fig-gamma-sm width="6in" height="4.8in"}
-
-![Silge plots (top 15 terms) for each topic and model, large vocabulary.](supplements/S2-lg-silge.pdf){#fig-silge-lg}
-
-![Silge plots (top 15 terms) for each topic and model, medium vocabulary.](supplements/S3-md-silge.pdf){#fig-silge-md}
-
-![Silge plots (top 15 terms) for each topic and model, small vocabulary.](supplements/S4-sm-silge.pdf){#fig-silge-sm}
-
-![Topics with "race," "intelligence," or both occurring in the top 15 terms, large vocabulary.](supplements/S5_grid_lg.pdf){#fig-grid-lg}
-
-![Topics with "race," "intelligence," or both occurring in the top 15 terms, medium vocabulary.](supplements/S6_grid_md.pdf){#fig-grid-md}
-
-![Topics with "race," "intelligence," or both occurring in the top 15 terms, small vocabulary.](supplements/S7_grid_sm.pdf){#fig-grid-sm}
+![Topics with "race," "intelligence," or both occurring in the top 15 terms, small vocabulary.](supplements/S7_grid_sm.pdf){#fig-grid-sm fig-env="figure*"}

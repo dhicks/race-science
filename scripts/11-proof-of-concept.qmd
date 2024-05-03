@@ -1,8 +1,8 @@
 ---
 format:
-  - html
-  - pdf: 
-      mathspec: true
+  html: default
+  pdf: 
+    mathspec: true
 ---
 
 This section uses simulated data to provide a proof-of-concept for our use of topic models to detect the "mainstreaming" of a marginalized topic.  
@@ -136,7 +136,8 @@ tidy(fitted, k = 20, matrix = 'gamma') |>
     facet_wrap(vars(journal), scales = 'free_x', 
                ncol = 7) +
     scale_y_discrete(breaks = c('V01', 'V10', 'V20')) +
-    scale_x_discrete(breaks = 'none')
+    scale_x_discrete(breaks = 'none') +
+    theme_bw()
 ```
 
 Focusing on topic 1, we first calculate the average probability across each journal.  A has the highest value; C-E are consistently low; and B shows an increase over time. 
@@ -148,7 +149,8 @@ tidy(fitted, k = 20, matrix = 'gamma') |>
     add_journal() |> 
     ggplot(aes(journal, gamma)) +
     ggforce::geom_sina() +
-    stat_summary(color = 'red')
+    stat_summary(color = 'red') +
+    theme_bw()
 ```
 
 While the journals are largely not distinguishable from each other on the other topics, except for the unusually low value for A. 
@@ -160,7 +162,8 @@ tidy(fitted, k = 20, matrix = 'gamma') |>
     add_journal() |> 
     ggplot(aes(journal, gamma)) +
     geom_sina() +
-    stat_summary(color = 'red')
+    stat_summary(color = 'red') +
+    theme_bw()
 ```
 
 Next we calculate the rate of documents with probability greater than 0.1 in topic 1. As expected, this is almost all papers in journal A, no papers in the other mainstream journals, and in B the rate increases over time. 
@@ -190,7 +193,8 @@ tidy(fitted, k = 20, matrix = 'gamma') |>
     geom_point() +
     stat_function(fun = identity, 
                   inherit.aes = FALSE, color = 'black') +
-    scale_color_viridis_d(guide = 'none')
+    scale_color_viridis_d(guide = 'none') +
+    theme_bw()
 ```
 
 *[tmfast paper]* notes this problem, and implements a "renormalization" option when extracting the probability distributions from the fitted model.  This "renormalization" increases the "peakedness" of the distribution (lower entropy), adjusting the highest probabilities up and making the small probabilities several orders of magnitude smaller.  Renormalization would just amplify the differences found here, and so is not implemented for this proof-of-concept.  Renormalization is used in the primary, empirical analysis. 
