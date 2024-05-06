@@ -74,11 +74,14 @@ Large: approximately 18 cm x 22 cm
  -->
  
 *[TODO: 
-- NHB reviews todo
+- NHB reviews todo: <https://docs.google.com/document/d/1xzG95pZOZgZQFfSk6yYMFhrnUQ8AWk9U1O5ngm3n_uo/edit>
 - de-anonymize
 - copy updated plots? 
 - figure sizes
 - SI xrefs
+- bookmarks on wrong pages
+- align abstract w/ intro
+- proofread proof-of-concept
 ]*
 
 # Significance 
@@ -93,14 +96,11 @@ The aim of the study reported here was to trace race science in the scholarly an
 
 We first propose a distinction between scientific racism, race science, and race science discourse.  *Scientific racism* refers to the social practice of purporting to justify racial inequality and colonialism by appealing to the epistemic authority of science.  *Race science* refers to scientific and/or pseudoscientific research, including research products (journal articles, etc.), that can be utilized for scientific racism.  *Race science discourse* refers to a broader category, any treatment of race science as a legitimate area of scientific research.  
 
-We stress that race science discourse includes methodological and empirical critiques of race science.  We argue that such technical critiques — even when they are intended to undermine race science — can instead legitimize it, by creating an impression among the broader public that race science is a matter of ordinary, mainstream scientific debate.  For example, the Flynn effect (the finding that IQ scores have increased over time) poses a serious empirical challenge to hereditarian claims of racial differences in intelligence, and has been extensively debated in the mainstream scientific literature.  Most members of the general public lack the time and skills needed to assess the evidence and arguments concerning the Flynn effect.  Instead, we suggest, they are likely to understand the Flynn effect — and, by extension, race science — as an area of active, mainstream scientific research and ordinary scientific disagreement.  In this way technical critiques of race science based on the Flynn effect can legitimize race science.  So empirical research supporting the Flynn effect is usually not itself race science, but can still be race science discourse.  
+We stress that race science discourse includes methodological and empirical critiques of race science.  We argue that such technical critiques — even when they are intended to undermine race science — can instead legitimize it, by creating an impression among the broader public that race science is a matter of ordinary, reasonable, mainstream scientific debate.  For example, the Flynn effect (the finding that IQ scores have increased over time) poses a serious empirical challenge to hereditarian claims of racial differences in intelligence, and has been extensively debated in the mainstream scientific literature.  Most members of the general public lack the time and skills needed to assess these debates for themselves.  So, we suggest, they are quite likely to use a "middle ground" heuristic to understand these debates as ordinary, reasonable disagreement among mainstream scientists.  Some experts say one thing, other experts say something else, and so "the truth is somewhere in the middle."  Tobacco and other industries have exploited this heuristic to "manufacture doubt" about the hazards of their products *[cites]*.  In this way technical critiques of race science based on the Flynn effect could legitimize race science.  So, while empirical research supporting the Flynn effect is usually not itself race science, it can still be race science discourse.  
 
 The distinction between scientific racism, race science, and race science discourse allows us to bracket the intentions and attitudes of the researchers involved in any particular piece of research or debate.  For the purposes of the current study, it is not important whether, for instance, psychologist Arthur Jensen is or is not correctly labelled a scientific racist [@JacksonJr.ArthurJensenEvolutionary2022].  But it is important that much of Jensen's research was useful and indeed utilized to purportedly justify racial inequality, and so unambiguously qualifies as race science.  
 
-
-
-
-## Scientific racism, eugenics, and *Brown* {.unnumbered}
+<!-- ## Scientific racism, eugenics, and *Brown* {.unnumbered} -->
 
 Histories of scientific racism in the twentieth century have often emphasized the Pioneer Fund and the parascholarly journal *Mankind Quarterly* (MQ) [
 @BarkanRetreatScientificRacism1992;
@@ -115,41 +115,44 @@ Histories of scientific racism in the twentieth century have often emphasized th
 
 In the landmark case *Brown v Board of Education of Topeka* (1954), the US Supreme Court banned *de jure* educational segregation.  The Court's decision relied on expert testimony from psychologists and education researchers; but the segregationists also put forward their own experts, including Henry Garrett [@WinstonScienceServiceFar1998; @JacksonScienceSegregationRace2005; @SchafferScientificRacismAgain2007].  As part of this segregationist reaction, MQ was created to provide a favorable venue for race scientists to publish their views, on the grounds that an "equalitarian dogma" created a censorious "taboo" against their research in mainstream publications [@TuckerFundingScientificRacism2002; @JacksonMythicalTabooRace2020].  
 
-In light of the scientific racist origins of Pioneer and MQ, and the significant attention MQ has received in recent historiography, we hypothesized that bibliometric and text mining analyses would show race science discourse originating in MQ, and from there being disseminated to mainstream publications.  This hypothesis was not supported.  Instead, mainstream psychology journals provided a venue for a distinct form of race science discourse, based on intelligence research and originating outside of MQ.  
+In light of the scientific racist origins of Pioneer and MQ, and the significant attention MQ has received in recent historiography, we hypothesized that MQ might have served as an "incubator" for race science discourse, with ideas originating in MQ before appearing within the scientific mainstream.  Establishing venues for favorable research is another key element of the "tobacco strategy" for manufacturing doubt *[FP]*.  Specifically, we hypothesized that bibliometric and text mining analyses would show race science discourse appearing first in MQ, and subsequently appearing in mainstream publications.  This hypothesis was not supported.  Instead, mainstream psychology journals provided a venue for a distinct form of race science discourse, based on intelligence research and originating outside of MQ.  
 
 
 # Results
 
 ## *Mankind Quarterly* and Pioneer-funded researchers {.unnumbered}
 
-We identified 16 researchers who had received funding from Pioneer; 14 of these researchers had profiles in the Web of Science (WoS) author search, allowing us to identify 13 WoS-indexed journals that had published 6 or more of these authors. See @tbl-researchers and figure @fig-wos. 
+We identified 16 researchers who had received funding from Pioneer; 14 of these researchers had profiles in the Web of Science (WoS) author search, allowing us to identify 13 WoS-indexed journals that had published 6 or more of these authors.  See @tbl-researchers and figure @fig-wos.  As the affiliations in @tbl-researchers indicate, almost all of these researchers were faculty at major research universities.  
 
 \onecolumn
 
-| | | |
-|:-----|-----:|----:|
-| Thomas J. Bouchard, Jr. (1937-) | psychology | 184 |
-| Brunetto Chiarelli (?-?) | anthropology | 91 |
-| Hans Eysenck (1916-1997) | psychology | 661 |
-| Robert A. Gordon (1932-) | sociology | 0|
-| Linda Gottfredson (1947-) | psychology | 71 |
-| Garrett Hardin (1915-2003) | ecology | 75 |
-| Joseph M. Horn (1940-) | psychology | 68 |
-| Lloyd Humphreys (1913-2003) | psychology | 0 |
-| Arthur Jensen (1923-2003) | psychology | 235 |
-| Michael Levin (1943-) | philosophy | 96 |
-| Richard Lynn (1930-2023) | psychology | 288 |
-| R. Travis Osborne (1913-2013) | psychology | 59 |
-| J. Phillippe Rushton (1943-2012) | psychology | 277 |
-| Audrey M. Shuey (1900-1977) | psychology | 10 |
-| Philip A. Vernon (1950-) | psychology | 227 |
-| Daniel Vining, Jr. (1944-) | demography | 33 |
+| | | | |
+|:--------|:----|:--------|-:|
+| Thomas J. Bouchard, Jr. (1937-) | psychology | Univ. Minnesota | 184 |
+| Brunetto Chiarelli (?-?) | anthropology | | 91 |
+| Hans Eysenck (1916-1997) | psychology | King's College London | 661 |
+| Robert A. Gordon (1932-) | sociology | Johns Hopkins | 0|
+| Linda Gottfredson (1947-) | psychology | Univ. Delaware | 71 |
+| Garrett Hardin (1915-2003) | ecology | UC Santa Barbara | 75 |
+| Joseph M. Horn (1940-) | psychology | UT Austin | 68 |
+| Lloyd Humphreys (1913-2003) | psychology | Univ. Illinois | 0 |
+| Arthur Jensen (1923-2003) | psychology | UC Berkeley | 235 |
+| Michael Levin (1943-) | philosophy | CCNY | 96 |
+| Richard Lynn (1930-2023) | psychology | Ulster University\* | 288 |
+| R. Travis Osborne (1913-2013) | psychology | Univ. Georgia | 59 |
+| J. Phillippe Rushton (1943-2012) | psychology | Univ. Western Ontario | 277 |
+| Audrey M. Shuey (1900-1977) | psychology | Randolph-Macon Women's College | 10 |
+| Philip A. Vernon (1950-) | psychology | Univ. Western Ontario | 227 |
+| Daniel Vining, Jr. (1944-) | demography | Univ. Pennsylvania | 33 |
 
-Table: Pioneer-funded researchers.  Either identified in [@MillerPioneerFundBankrolling1994] or named on an archive copy of Pioneer's website, along with birth and death dates from Wikipedia, attributed discipline, and WoS author search result counts.  Brunetto Chiarelli does not have a Wikipedia page.  {#tbl-researchers}
+Table: Pioneer-funded researchers.  Either identified in [@MillerPioneerFundBankrolling1994] or named on an archive copy of Pioneer's website; along with birth and death dates from Wikipedia, attributed discipline, academic affiliation, and WoS author search result counts.  Brunetto Chiarelli does not have a Wikipedia page; Richard Lynn's title of Professor Emeritus at Ulster University was withdrawn in 2018 *[<https://www.bbc.co.uk/news/uk-northern-ireland-43768132>]*. {#tbl-researchers}
 
 \twocolumn
 
 ![Journals publishing 6 or more Pioneer-funded researchers, Web of Science author search results.](img/wos_results.png){#fig-wos width="4.76in" height="2.6in" fig-env="figure*"}
+
+
+
 
 Figure @fig-wos shows that, while MQ is among the "Pioneer-publishing" journals, a number of mainstream journals are more prominent: *Personality and Individual Differences* (PID), *Intelligence* (Int), *Behavior Genetics* (BG), and *Psychological Reports* (PR).  In addition, only psychologist Richard Lynn appears to have published heavily in MQ.  Lynn became an assistant editor of MQ in 1979 (vol. XX, Nos. 1 & 2) and is listed as editor-in-chief on MQ's current website as of 2023-07-21.  He was also president of Pioneer from the death of psychologist J. Phillippe Rushton in 2012 [@BeirichPioneerFundAssets2013] until his own death in 2023.  By contrast, a number of Pioneer-funded researchers have published a significant number of papers in PID, Int, and to a lesser degree BG: Bouchard, Eysenck, Jensen, Rushton, Vernon, and also Lynn.  
 
@@ -160,9 +163,9 @@ Figure @fig-wos shows that, while MQ is among the "Pioneer-publishing" journals,
 
 ## Topic model analysis identifies race science discourse {.unnumbered}
 
-The fact that Pioneer-funded researchers published heavily in two mainstream psychology journals does not tell us anything about the content of their publications or the claims of their research.  We assembled a full-text corpus of articles published in MQ, PID, Int, BG, PR, and Behavior and Brain Sciences (BBS) between 1960-2010 and used topic modeling to identify topics discussing race, intelligence, and both.  (See the materials and methods for a discussion of some important limitations with this corpus: journals published by the American Psychological Association could not be included, BBS bundles focus articles and commentaries together in a way that confounds simple document counts, and an unknown number of relevant documents in PID could not be included.) 
+The fact that Pioneer-funded researchers published heavily in two mainstream psychology journals does not tell us anything about the content of their publications or the claims of their research.  We assembled a full-text corpus of articles published in MQ, PID, Int, BG, PR, and Behavior and Brain Sciences (BBS) between 1960-2010 and used topic modeling across three different sizes of vocabulary ("large," "medium," and "small") to identify topics discussing race, intelligence, and both.  (See the materials and methods for a discussion of some important limitations with this corpus: journals published by the American Psychological Association could not be included, BBS bundles focus articles and commentaries together in a way that confounds simple document counts, and an unknown number of relevant documents in PID could not be included.) 
 
-![Silge plots [@SilgeTopicModeling2017] and smoothed time series for three focal topics.  Top row: top 15 terms by $\beta$ (term-topic distribution) for each topic.  Bottom row: count of articles associated with each topic, by journal and year.  Article counts use a threshold approach, with $\gamma$ (topic-document distribution) greater than 0.5.  Thin lines give annual values, thick lines give 5-year running averages.  Because *Behavior Genetics* and *Behavioral and Brain Sciences* are not prominent in any panel, neither is given a direct label.](img/focal_topics.png){#fig-focal width="4.76in" height="3.57in" fig-env="figure*"}
+![Silge plots [@SilgeTopicModeling2017] and smoothed time series for three focal topics from the medium vocabulary, $k = 40$ model.  Top row: top 15 terms by $\beta$ (term-topic distribution) for each topic.  Bottom row: count of articles associated with each topic, by journal and year.  Article counts use a threshold approach, with $\gamma$ (topic-document distribution) greater than 0.5.  Thin lines give annual values, thick lines give 5-year running averages.  Because *Behavior Genetics* and *Behavioral and Brain Sciences* are not prominent in any panel, neither is given a direct label.](img/focal_topics.png){#fig-focal width="4.76in" height="3.57in" fig-env="figure*"}
 
 Figure @fig-focal focuses on three topics identified in one of the 24 fitted topic models; see figures [@fig-gamma-lg; @fig-gamma-md; @fig-gamma-sm; @fig-silge-lg; @fig-silge-md; @fig-silge-sm] for all topics from all models, and figures [@fig-grid-lg; @fig-grid-md; @fig-grid-sm] for selected topics from all models.  In the focal model, topic 07 is strongly associated with MQ:  MQ published dozens of articles in this topic each year, and no other journal ever published more than a handful.  The "Silge plot," showing the top 15 terms in the topic [@SilgeTopicModeling2017], contains a number of racial terms (`races`, `whites`, `negroes` and potentially `europe`, `africa`, `india`, and `japan`); as well as `book`, likely reflecting the fact that MQ published a number of book reviews, while the mainstream journals either did not publish book reviews or these were not available for the corpus. 
 
@@ -172,24 +175,18 @@ The Silge plot for topic 24, by contrast, suggests a distinct race science disco
 
 In almost all years, most papers in topic 24 were published in mainstream journals rather than MQ.  Jensen's "How Much Can We Boost IQ and Scholastic Achievement?" [@JensenHowMuchCan1969] was published in 1969 in *Harvard Educational Review* (not included in this study), and the time series indicates that, in the early 1970s, there was an increase in articles in topic 24 in both PR and MQ (the only two journals in our corpus that were active at the time).  MQ shows another sharp increase in the late 1980s; using content analysis, Adams and Pilloud found that psychology was the dominant discipline in MQ in the period 1992-2018 [@AdamsMisAppropriationBiological2021].  PID published multiple papers in topic 24 almost immediately after it was founded, with Int showing a more gradual increase between the mid-1970s and mid-1990s.  
 
-*[across all models]*
+These qualitative results are similar across models using the large and medium vocabularies; see @fig-grid-lg, @fig-grid-md, @fig-grid-sm.  Across all vocabularies, as $k$ increases, multiple different "intelligence only" topics emerge, apparently picking out different methods or aspects of intelligence research.  For example, there is often an "intelligence only" topic that is highly associated with BG.  MQ never has many publications in an "intelligence only" topic, except for $k=10, 20$ in the large vocabulary; in these two models, there is neither a "race only" nor "race-and-intelligence" topic.  
 
-- As $k$ increases, multiple different "intelligence only" topics
-- lg, md: usually 1 "race only" topic and/or 1 race-and-intelligence topic
-    - "race only" always almost exclusively in MQ
-    - md: race-and-intelligence predominantly in mainstream
-    - lg: for k=30, race-and-intelligence predominantly MQ; no race-int for k=40, 50; then similar to md for k=60, 70
-- sm: 
-    - seems to have a distinct "race only" topic in PR (V04)
-        - top terms include race_differences, rushton, crime: race science, but poss. either not about intelligence or int-related terms didn't make it into top terms
-    - other one is almost exclusive to MQ
-    - except for k=40, race-int topic, predominantly mainstream
+In the large and medium vocabularies, there is usually one "race only" topic and/or one "race-and-intelligence" topic, and the "race only" topic is always virtually exclusive to MQ.  In the medium vocabulary, "race-and-intelligence" is more prevalent in mainstream journals than in MQ; except for $k=20$, where there is no "race only" topic.  In the large vocabulary, a "race only" topic does not emerge until $k=40$, and there are not simultaneous "race only" and "race-and-intelligence" topics until $k=60$.  However, in $k=60, 70$ there are both topics, and they follow the same pattern seen in the medium vocabulary: "race only" is almost exclusive to MQ, and "race-and-intelligence" is more prevalent in mainstream journals. 
+
+Unlike the other two vocabularies, in the small vocabulary there are two "race only" topics for $k \geq 50$.  Across values of $k$, topic V04 is more prevalent in PS through about 1990; the other "race only" topic is typically more prevalent in MQ, but also includes a few articles from PS. For $k \geq 40$, the small vocabulary models have distinct "race only," "race-and-intelligence," and "intelligence only" topics; "race-and-intelligence" is always predominantly mainstream, and increases in prevalence over the course of the 1980s.  The "extra" "race only" topic appars to fade out quickly over the course of the 1980s, and its top terms include `race differences`, `rushton`, and `crime`. So one possibility is that that the small vocabulary is able to pick out a distinct line of race science discourse that is focused on crime and/or other behaviors, rather than intelligence, and was replaced with a more intelligence-focused line, perhaps in a way that anticipated publication of *The Bell Curve* in 1994.  However, we think it's more plausible that this separation is an artifact due to the very small size of this vocabulary, with many fewer terms than documents. 
+
 
 ## Race science discourse, behavior genetics, and psychology {.unnumbered}
 
-BG published very few articles in any race-and-intelligence topic identified by any of the 24 topic models. Among both academics and the general public, the field of behavior genetics is strongly associated with race science, and specifically race-and-intelligence research. Panofsky [@PanofskyMisbehavingScienceControversy2014] argues that, prior to Jensen's 1969 paper, behavior genetics emphasized the study of non-human animals and intentionally avoided associations with eugenics and public controversy more generally. In response to Jensen, critics such as Lewontin offered broad critiques of behavior genetics as such, and behavior geneticists in turn adopted a radical conception of academic freedom (without any sense of responsibility for the social implications of academic research) and a siege or wartime mentality, as illustrated by Sandra Scarr's 1986 presidential address to the Behavior Genetics Association (BGA) [@ScarrThreeCheersBehavior1987].  Scarr's address coincided with the period between 1970-1990 when BG published articles in topic 24 (including Scarr's address itself). 
+BG published very few articles in any race-and-intelligence topic identified by any of the 24 topic models.  But, among both (other) academics and the general public, the field of behavior genetics is strongly associated with race science, and specifically race-and-intelligence research. Panofsky [@PanofskyMisbehavingScienceControversy2014] argues that, prior to Jensen's 1969 paper, behavior genetics emphasized the study of non-human animals and intentionally avoided associations with eugenics and public controversy more generally. In response to Jensen, critics such as Lewontin offered broad critiques of behavior genetics as such, and behavior geneticists in turn adopted a radical conception of academic freedom (without any sense of responsibility for the social implications of academic research) and a siege or wartime mentality, as illustrated by Sandra Scarr's 1986 presidential address to the Behavior Genetics Association (BGA) [@ScarrThreeCheersBehavior1987].  Scarr's address coincided with the period between 1970-1990 when BG published articles (including Scarr's address itself) in the race science discourse topic (24) of the medium vocabulary, $k = 40$ model. 
 
-However, the topic model analysis suggests that, by the 1990s, behavior genetics may have distanced itself somewhat from race science, albeit without directly repudiating it. This interpretation was supported by a supplemental analysis that focused on BG specifically; see @sec-bg.  In addition, the 1995 BGA presidential address by Glayde Whitney --- in which he criticized the "Marxist-Lysenkoist denial of genetics" and proposed that differences in murder rates between countries and cities were caused by racial genetic differences in intelligence, empathy, aggression, and impulsivity --- was published in MQ rather than BG. Behavior genetics may have been prominent in promoting race science in the past, but appears to have been less receptive to such ideas in more recent history.  Instead, our results suggest that other subdisciplines of psychology have provided the primary venue for mainstreaming race science.  
+However, the topic model analysis suggests that, by the 1990s, behavior genetics may have distanced itself somewhat from race science, albeit without directly repudiating it. This interpretation was supported by a supplemental analysis that focused on BG specifically; see @sec-bg.  For example, the 1995 BGA presidential address by Glayde Whitney --- in which he criticized the "Marxist-Lysenkoist denial of genetics" and proposed that differences in murder rates between countries and cities were caused by racial genetic differences in intelligence, empathy, aggression, and impulsivity --- was published in MQ rather than BG. Behavior genetics may have been prominent in promoting race science in the past, but appears to have been less receptive to such ideas in more recent history.  Instead, our results suggest that other subdisciplines of psychology — perhaps especially cognitive psychology — have provided the primary venue for mainstreaming race science.  
 
 
 
