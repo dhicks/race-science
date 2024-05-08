@@ -5,7 +5,7 @@ format:
     mathspec: true
 ---
 
-This section uses simulated data to provide a proof-of-concept for our use of topic models to detect the "mainstreaming" of a marginalized topic.  
+This section uses simulated data to provide a proof-of-concept for our use of topic models to detect the "mainstreaming" of a marginalized topic (corresponding to race science).  The `tmfast` package [@HicksTmfastFitsTopic2023] provides samplers that can be used to generate a simulated document-term matrix. 
 
 ```{r setup}
 #| message: false
@@ -22,19 +22,20 @@ library(memoise)
 set.seed(2024-03-18)
 
 ## Simulation parameters
+j = 10            ## number of journals
 k = 20            ## total number of topics
 N = 100           ## papers per journal
 vocab = 1000      ## vocabulary size
 paper_size = 500  ## length of each paper
 ```
 
-We construct a simulated corpus as follows.  We work with five journals, labelled A through E.  Journal A primarily publishes the marginalized topic (correspond to race science).  Ten journals, C-L, are mainstream journals, and publish an even mix from `r k-1` other topics, but avoid the marginalized topic (weighted 0 in the Dirichlet parameterization below).  These journals represent the context or comparison group for identifying the race science topic; their exact number is not important here.  
+We construct a simulated corpus as follows.  We work with `r j` journals, labelled A through `r LETTERS[j]`.  Journal A primarily publishes the marginalized topic.  Journals C-`r LETTERS[j]` are mainstream journals, and publish an even mix from `r k-1` other topics, but avoid the marginalized topic (weighted 0 in the Dirichlet parameterization below).  These journals represent the context or comparison group for identifying the race science topic. 
 
-Journal B is the venue by which the marginalized topic is "mainstreamed."  This journal is represented in a time-indexed way, $B_t$, with $t$ ranging from 0 to 5.  For simplicity, in the text each time-slice of B is treated as a distinct journal, giving us 17 journals total (A; the ten C-L; plus 6 time-slices of B). 
+Journal B is the venue by which the marginalized topic is "mainstreamed."  This journal is represented as a series of time slices, $B_t$, with $t$ ranging from 0 to 5.  For simplicity, in the simulation each time-slice of B is treated as a distinct journal, giving us `r j + 5` "journals" total. 
 
-This gives us three sets of journals: A, B (0-5), and C-L.  In the LDA model, these journal sets correspond to $\boldsymbol{\alpha}$, the parameter for the "prior" Dirichlet distribution $\Theta(\boldsymbol{\alpha})$. The `tmfast` package provides a helper function `peak_alpha()` for constructing $\boldsymbol{\alpha}$. 
+This gives us three sets of journals: A, B (0-5), and C-`r LETTERS[j]`.  In the LDA model, these journal sets correspond to $\boldsymbol{\alpha}$, the parameter for the "prior" Dirichlet distribution $\Theta(\boldsymbol{\alpha})$. The `tmfast` package provides a helper function `peak_alpha()` for constructing $\boldsymbol{\alpha}$. 
 
-```{r}
+```{r journal_priors}
 ## Construct journal theta ----
 ## A: marginal topic journal
 A_alpha = peak_alpha(k, 1, peak = .9)
@@ -43,21 +44,21 @@ A_alpha
 B_alpha = map(0:5, ~peak_alpha(k, 1, peak = 0.05*.x)) |> 
     set_names(glue('B{0:5}'))
 ## C-E: mainstream journals
-C_alpha = rep.int(list(peak_alpha(k, 1, peak = 0)), 10) |> 
-    set_names(LETTERS[3:12])
+C_alpha = rep.int(list(peak_alpha(k, 1, peak = 0)), j - 2) |> 
+    set_names(LETTERS[3:j])
 C_alpha$C
 
 alphas = c(list(A = A_alpha), 
            B_alpha, 
            C_alpha)
 
-## 17 journals/journals-at-time-t
-length(alphas)
+## j + 5 journals/journals-at-time-t
+identical(length(alphas), j + 5)
 ```
 
 Each paper has a simplex $\theta \sim \Theta(\boldsymbol{\alpha})$, representing a distribution over topics. We draw `r N` papers from each journal. 
 
-```{r}
+```{r journal_theta}
 theta = map(alphas, ~ rdirichlet(N, .x)) |> 
     imap(~ magrittr::set_rownames(.x, glue('{.y}-{str_pad(1:N, 
                                            2, 
@@ -78,7 +79,7 @@ theta_df
 
 We next define $\phi$, the distribution over words for each topic.  We use a vocabulary of `r vocab` words, and draw each topic's $\phi$ as a simplex from a symmetric Dirichlet distribution with $\alpha = 0.1$. Note that words are simply natural numbers. 
 
-```{r}
+```{r words}
 ## Word distributions ----
 ## 20 topics, 1000 terms, 
 ## uniform Dirichlet distribution w/ param 0.1
@@ -88,15 +89,15 @@ str(phi)
 
 For simplicity, we use a uniform length of `r paper_size` words for each paper. `draw_corpus` assumes that this is a vector with one element for each document.   
 
-```{r}
+```{r doc_length}
 ## Document length ----
 ## 500 words each
 doc_len = rep.int(paper_size, N * length(alphas))
 ```
 
-With these elements constructed, `draw_corpus()` generates a synthetic document-term matrix. Because this process is relatively slow (approximately 75 seconds on the laptop used to prepare this simulation), we use `memoise` to create a cache. As a pre-processing step for the topic model, we apply the `log(x+1)` transform. 
+With these elements constructed, `draw_corpus()` generates a synthetic document-term matrix. Because this process is relatively slow (~100 seconds on the laptop used to prepare this simulation), we use `memoise` to create a cache. (Due to memoization, the wall time reported in the chunk output may be much faster than the actual time to generate the document-term matrix.) As a pre-processing step for the topic model, we apply the `log(x+1)` transform. 
 
-```{r}
+```{r draw_corpus}
 ## Draw corpus ----
 draw_corpus_cached = memoise(draw_corpus, 
                               cache = cachem::cache_disk('draw_corpus_cache'))
@@ -109,18 +110,18 @@ toc()
 corpus
 ```
 
-We can now fit the topic model. 
+We can now fit the topic model.  (Note that this is not memoized, so the wall time reported in the chunk output corresponds to the actual time to fit.) 
 
-```{r}
+```{r fit_model}
 ## Fit topic model ----
 tic()
 fitted = tmfast(corpus, c(10, 15, 20, 25, 30))
 toc()
 ```
 
-The tile plot indicates that (1) documents in journal A generally have a high probability for topic 1; journals C-E generally have a low probability; and journal B gradually has more articles in topic 1. 
+The tile plot indicates that (1) documents in journal A generally have a high probability for topic 1; journals C-`r LETTERS[j]` generally have a low probability; and journal B gradually has more articles in topic 1. 
 
-```{r}
+```{r tile_plot}
 #| fig-width: 7
 #| fig-height: 4
 #| fig-cap: "Fitted topic-document distributions for the proof-of-concept simulation."
@@ -134,28 +135,28 @@ tidy(fitted, k = 20, matrix = 'gamma') |>
     ggplot(aes(document, topic, fill = gamma)) +
     geom_raster() +
     facet_wrap(vars(journal), scales = 'free_x', 
-               ncol = 7) +
+               ncol = 5) +
     scale_y_discrete(breaks = c('V01', 'V10', 'V20')) +
     scale_x_discrete(breaks = 'none') +
     theme_bw()
 ```
 
-Focusing on topic 1, we first calculate the average probability across each journal.  A has the highest value; C-E are consistently low; and B shows an increase over time. 
+Focusing on topic 1, we first calculate the average probability across each journal.  A has the highest value; C-`r LETTERS[j]` are consistently low; and B shows an increase over time. 
 
-```{r}
+```{r marginal_topic_plot}
 #| fig-cap: "In the proof-of-concept simulation, the topic model clearly detects the marginal topic in journal A, increase in journal B over time, and minimal presence in other journals"
 tidy(fitted, k = 20, matrix = 'gamma') |> 
     filter(topic == 'V01') |> 
     add_journal() |> 
     ggplot(aes(journal, gamma)) +
-    ggforce::geom_sina() +
+    geom_sina() +
     stat_summary(color = 'red') +
     theme_bw()
 ```
 
 While the journals are largely not distinguishable from each other on the other topics, except for the unusually low value for A. 
 
-```{r}
+```{r ms_topic_plot}
 #| fig-cap: "In the proof-of-concept simulation, the topic model does not produce a false negative pattern with the mainstream topics"
 tidy(fitted, k = 20, matrix = 'gamma') |> 
     filter(topic == 'V02') |> 
@@ -168,7 +169,7 @@ tidy(fitted, k = 20, matrix = 'gamma') |>
 
 Next we calculate the rate of documents with probability greater than 0.1 in topic 1. As expected, this is almost all papers in journal A, no papers in the other mainstream journals, and in B the rate increases over time. 
 
-```{r}
+```{r marginal_topic_rate}
 #| tbl-cap: "In the proof-of-concept simulation, almost all articles in journal A contain the marginal topic; the rate in B increases over time; and the marginal topic does not appear in the other journals"
 tidy(fitted, k = 20, matrix = 'gamma') |> 
     filter(topic == 'V01', 
@@ -181,9 +182,9 @@ tidy(fitted, k = 20, matrix = 'gamma') |>
 
 We therefore conclude that this topic model method can detect the "mainstreaming" from a marginal topic over time.  
 
-As a limitation, we note that, for $\theta > 0.05$ or so, the estimated topic probabilities are below the true values. 
+As a limitation, we note that, for $\theta > 0.05$ or so, the estimated topic probabilities (`gamma`) are below the true values (`theta`). 
 
-```{r}
+```{r gamma_theta_scatter}
 #| fig-cap: "In the proof-of-concept simulation, without normalization the estimated topic-document probabilities (gamma) are well below the true probabilities (theta) for approx. $\\theta > 0.05$"
 tidy(fitted, k = 20, matrix = 'gamma') |> 
     filter(topic == 'V01') |> 
@@ -197,6 +198,6 @@ tidy(fitted, k = 20, matrix = 'gamma') |>
     theme_bw()
 ```
 
-*[tmfast paper]* notes this problem, and implements a "renormalization" option when extracting the probability distributions from the fitted model.  This "renormalization" increases the "peakedness" of the distribution (lower entropy), adjusting the highest probabilities up and making the small probabilities several orders of magnitude smaller.  Renormalization would just amplify the differences found here, and so is not implemented for this proof-of-concept.  Renormalization is used in the primary, empirical analysis. 
+@HicksTmfastFitsTopic2023 notes this problem, and implements a "renormalization" option when extracting the probability distributions from the fitted model.  This "renormalization" increases the "peakedness" of the distribution (lower entropy), adjusting the highest probabilities up and making the small probabilities several orders of magnitude smaller.  Renormalization would just amplify the differences found here, and so is not implemented for this proof-of-concept.  Renormalization is used in the primary, empirical analysis. 
 
 

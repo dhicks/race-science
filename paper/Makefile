@@ -7,6 +7,10 @@ paper.pdf: paper.qmd \
 # 	Rscript -e "rmarkdown::render('paper.Rmd')"
 	quarto render paper.qmd
 
+.PHONY: recache
+recache: 
+	quarto render paper.qmd --cache-refresh
+
 .PHONY: wc
 wc: 
 	pdftotext paper.pdf - | wc -w

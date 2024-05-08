@@ -7,9 +7,9 @@ purrr
 dplyr
 stringr
 forcats
+lubridate
 ggforce
 tmfast
 glue
 tictoc
 memoise
-lubridate

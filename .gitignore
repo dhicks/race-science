@@ -6,6 +6,7 @@
 data
 out
 paper/paper.pdf
+paper/paper_cache
 talk/talk.pdf
 .DS_Store
 */.DS_Store
