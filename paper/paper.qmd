@@ -81,7 +81,9 @@ Large: approximately 18 cm x 22 cm
  
 *[TODO: 
 - NHB reviews todo: <https://docs.google.com/document/d/1xzG95pZOZgZQFfSk6yYMFhrnUQ8AWk9U1O5ngm3n_uo/edit>
-- copy updated plots
+- figure out renv::restore()
+    - re-make
+    - copy updated plots
 - figure sizes
 - align abstract w/ intro
 - figures and tables to end

@@ -66,7 +66,7 @@ hellinger_betas = function(model_file, name) {
                     breaks = scales::pretty_breaks(n = 3)) +
                 coord_flip(ylim = c(0, NA)) +
                 facet_wrap(vars(topic),
-                           scales = 'free',
+                           scales = 'free_y',
                            ncol = 5) +
                 theme(plot.background = 
                           element_rect(colour = "black", 

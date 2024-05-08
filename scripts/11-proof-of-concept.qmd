@@ -198,6 +198,6 @@ tidy(fitted, k = 20, matrix = 'gamma') |>
     theme_bw()
 ```
 
-@HicksTmfastFitsTopic2023 notes this problem, and implements a "renormalization" option when extracting the probability distributions from the fitted model.  This "renormalization" increases the "peakedness" of the distribution (lower entropy), adjusting the highest probabilities up and making the small probabilities several orders of magnitude smaller.  Renormalization would just amplify the differences found here, and so is not implemented for this proof-of-concept.  Renormalization is used in the primary, empirical analysis. 
+@HicksTmfastFitsTopic2023 notes this problem, and implements a "renormalization" option when extracting the probability distributions from the fitted model.  This "renormalization" increases the "peakedness" of the distribution (lower entropy), adjusting the highest probabilities up and making the small probabilities several orders of magnitude smaller.  Renormalization would just amplify the differences found here, and so is not implemented for this proof-of-concept.  
 
 

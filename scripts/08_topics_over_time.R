@@ -214,7 +214,7 @@ silge_gg = tidy(md_tmf, matrix = 'beta', k = 40) |>
     coord_flip() +
     scale_x_reordered() + 
     labs(y = 'β') +
-    facet_wrap(vars(topic), scales = 'free')
+    facet_wrap(vars(topic), scales = 'free_y')
 if (interactive()) silge_gg
 
 # silge_gg / time_gg +
