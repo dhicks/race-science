@@ -117,7 +117,7 @@ We identified 16 researchers who had received funding from Pioneer; 14 of these 
 
 \onecolumn
 
-| | | | |
+| name (birth-death) | field | affiliation | WoS doc. count |
 |:--------|:----|:--------|-:|
 | Thomas J. Bouchard, Jr. (1937-) | psychology | Univ. Minnesota | 184 |
 | Brunetto Chiarelli (?-?) | anthropology | | 91 |
