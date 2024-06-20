@@ -1,3 +1,4 @@
+renv::load(here::here())
 ## This scripts fits a STM topic model, as a robustness check
 library(tidyverse)
 theme_set(theme_bw())

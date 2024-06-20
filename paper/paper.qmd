@@ -79,12 +79,6 @@ Large: approximately 18 cm x 22 cm (7.1 in x 8.7 in)
 
  -->
  
-*[TODO: 
-- figure out renv::restore()
-    - re-make
-    - copy updated plots
-]*
-
 # Introduction {.unnumbered}
 
 By the end of the Second World War, a combination of technical developments in anthropology and genetics, along with revelations of Nazi atrocities, had led most members of the scientific community to reject attempts to scientifically justify racial inequalities and colonialism [@BarkanRetreatScientificRacism1992].  But eugenic thinking and scientific racism persisted throughout the second half of the twentieth century, and recent work has found that white supremacists continue to attempt to use scientific research to justify racial violence [@DusterBackdoorEugenics2003; @PanofskyHowWhiteNationalists2021; @PronczukRacistResearcherExposed2022].  
