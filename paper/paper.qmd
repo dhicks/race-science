@@ -13,7 +13,7 @@ authors:
   - name: "Emilio J. C. Lobato"
     affiliations:
       - ref: a
-    orcid: "*[todo]*"
+    orcid: "0000-0002-3066-2932"
 
 abstract: |
   | Anthropologists and human geneticists have long rejected race science, research that can be utilized to purportedly justify racial inequality and colonialism.  But race science has persisted, at the very least on the margins of the mainstream scientific community.  In this study, bibliometric and text mining methods were used to trace the appearance of race science discourse in both mainstream behavioral science journals and the parascholarly journal *Mankind Quarterly* from 1960 to 2010.  Our analysis found two distinguishable lines of race science discourse.  One is strongly associated with *Mankind Quarterly*, while the other — emphasizing race and intelligence — is strongly associated with mainstream psychology journals, especially *Intelligence* and *Personality and Individual Differences*.  We compare psychology's response to race science to those of other fields, and discuss the social responsibility of scientists with respect to race science. 
@@ -73,20 +73,16 @@ Research Report/Direct Submission: The preferred length of these articles is 6 p
 - revised submission will require track changes version
 
 figure sizes: 
-Small: approximately 9 cm x 6 cm
-Medium: approximately 11 cm x 11 cm
-Large: approximately 18 cm x 22 cm
+Small: approximately 9 cm x 6 cm (3.5 in x 2.4 in)
+Medium: approximately 11 cm x 11 cm (4.3 in x 4.3 in)
+Large: approximately 18 cm x 22 cm (7.1 in x 8.7 in)
 
  -->
  
 *[TODO: 
-- NHB reviews todo: <https://docs.google.com/document/d/1xzG95pZOZgZQFfSk6yYMFhrnUQ8AWk9U1O5ngm3n_uo/edit>
 - figure out renv::restore()
     - re-make
     - copy updated plots
-- figure sizes
-- align abstract w/ intro
-- figures and tables to end
 ]*
 
 # Introduction {.unnumbered}
@@ -97,7 +93,7 @@ The aim of the study reported here was to trace race science in the scholarly an
 
 We first propose a distinction between scientific racism, race science, and race science discourse.  *Scientific racism* refers to the social practice of purporting to justify racial inequality and colonialism by appealing to the epistemic authority of science.  *Race science* refers to scientific and/or pseudoscientific research, including research products (journal articles, etc.), that can be utilized for scientific racism.  *Race science discourse* refers to a broader category, any treatment of race science as a legitimate area of scientific research.  
 
-We stress that race science discourse includes methodological and empirical critiques of race science.  We argue that such technical critiques — even when they are intended to undermine race science — can instead legitimize it, by creating an impression among the broader public that race science is a matter of ordinary, reasonable, mainstream scientific debate.  For example, the Flynn effect (the finding that IQ scores have increased over time) poses a serious empirical challenge to hereditarian claims of racial differences in intelligence, and has been extensively debated in the mainstream scientific literature.  Most members of the general public lack the time and skills needed to assess these debates for themselves.  So, we suggest, they are quite likely to use a "middle ground" heuristic to understand these debates as ordinary, reasonable disagreement among mainstream scientists.  Some experts say one thing, other experts say something else, and so "the truth is somewhere in the middle."  Tobacco and other industries have exploited this heuristic to "manufacture doubt" about the hazards of their products *[cites]*.  In this way technical critiques of race science based on the Flynn effect could legitimize race science.  So, while empirical research supporting the Flynn effect is usually not itself race science, it can still be race science discourse.  
+We stress that race science discourse includes methodological and empirical critiques of race science.  We argue that such technical critiques — even when they are intended to undermine race science — can instead legitimize it, by creating an impression among the broader public that race science is a matter of ordinary, reasonable, mainstream scientific debate.  For example, the Flynn effect (the finding that IQ scores have increased over time) poses a serious empirical challenge to hereditarian claims of racial differences in intelligence, and has been extensively debated in the mainstream scientific literature.  Most members of the general public lack the time and skills needed to assess these debates for themselves.  So, we suggest, they are quite likely to use a "middle ground" heuristic to understand these debates as ordinary, reasonable disagreement among mainstream scientists.  Some experts say one thing, other experts say something else, and so "the truth is somewhere in the middle."  Tobacco and other industries have exploited this heuristic to "manufacture doubt" about the hazards of their products [@FernandezPintoKnowBetterNot2017].  In this way technical critiques of race science based on the Flynn effect could legitimize race science.  So, while empirical research supporting the Flynn effect is usually not itself race science, it can still be race science discourse.  
 
 The distinction between scientific racism, race science, and race science discourse allows us to bracket the intentions and attitudes of the researchers involved in any particular piece of research or debate.  For the purposes of the current study, it is not important whether, for instance, psychologist Arthur Jensen is or is not correctly labelled a scientific racist [@JacksonJr.ArthurJensenEvolutionary2022].  But it is important that much of Jensen's research was useful and indeed utilized to purportedly justify racial inequality, and so unambiguously qualifies as race science.  
 
@@ -116,7 +112,7 @@ Histories of scientific racism in the twentieth century have often emphasized th
 
 In the landmark case *Brown v Board of Education of Topeka* (1954), the US Supreme Court banned *de jure* educational segregation.  The Court's decision relied on expert testimony from psychologists and education researchers; but the segregationists also put forward their own experts, including Henry Garrett [@WinstonScienceServiceFar1998; @JacksonScienceSegregationRace2005; @SchafferScientificRacismAgain2007].  As part of this segregationist reaction, MQ was created to provide a favorable venue for race scientists to publish their views, on the grounds that an "equalitarian dogma" created a censorious "taboo" against their research in mainstream publications [@TuckerFundingScientificRacism2002; @JacksonMythicalTabooRace2020].  
 
-In light of the scientific racist origins of Pioneer and MQ, and the significant attention MQ has received in recent historiography, we hypothesized that MQ might have served as an "incubator" for race science discourse, with ideas originating in MQ before appearing within the scientific mainstream.  Establishing venues for favorable research is another key element of the "tobacco strategy" for manufacturing doubt *[FP]*.  Specifically, we hypothesized that bibliometric and text mining analyses would show race science discourse appearing first in MQ, and subsequently appearing in mainstream publications.  This hypothesis was not supported.  Instead, mainstream psychology journals provided a venue for a distinct form of race science discourse, based on intelligence research and originating outside of MQ.  
+In light of the scientific racist origins of Pioneer and MQ, and the significant attention MQ has received in recent historiography, we hypothesized that MQ might have served as an "incubator" for race science discourse, with ideas originating in MQ before appearing within the scientific mainstream.  Establishing venues for favorable research is another key element of the "tobacco strategy" for manufacturing doubt [@FernandezPintoKnowBetterNot2017].  Specifically, we hypothesized that bibliometric and text mining analyses would show race science discourse appearing first in MQ, and subsequently appearing in mainstream publications.  This hypothesis was not supported.  Instead, mainstream psychology journals provided a venue for a distinct form of race science discourse, based on intelligence research and originating outside of MQ.  
 
 
 # Results {.unnumbered}
@@ -150,7 +146,7 @@ Table: Pioneer-funded researchers.  Either identified in [@MillerPioneerFundBank
 
 \twocolumn
 
-![Journals publishing 6 or more Pioneer-funded researchers, Web of Science author search results.](img/wos_results.png){#fig-wos width="4.76in" height="2.6in" fig-env="figure*"}
+![Journals publishing 6 or more Pioneer-funded researchers, Web of Science author search results.](img/pf_wos_results.png){#fig-wos width="7.1in" height="3.5in" fig-env="figure*"}
 
 
 
@@ -166,7 +162,7 @@ Figure @fig-wos shows that, while MQ is among the "Pioneer-publishing" journals,
 
 The fact that Pioneer-funded researchers published heavily in two mainstream psychology journals does not tell us anything about the content of their publications or the claims of their research.  We assembled a full-text corpus of articles published in MQ, PID, Int, BG, PR, and Behavior and Brain Sciences (BBS) between 1960-2010 and used topic modeling across three different sizes of vocabulary ("large," "medium," and "small") to identify topics discussing race, intelligence, and both.  (See the materials and methods for a discussion of some important limitations with this corpus: journals published by the American Psychological Association could not be included, BBS bundles focus articles and commentaries together in a way that confounds simple document counts, and an unknown number of relevant documents in PID could not be included.) 
 
-![Silge plots [@SilgeTopicModeling2017] and smoothed time series for three focal topics from the medium vocabulary, $k = 40$ model.  Top row: top 15 terms by $\beta$ (term-topic distribution) for each topic.  Bottom row: count of articles associated with each topic, by journal and year.  Article counts use a threshold approach, with $\gamma$ (topic-document distribution) greater than 0.5.  Thin lines give annual values, thick lines give 5-year running averages.  Because *Behavior Genetics* and *Behavioral and Brain Sciences* are not prominent in any panel, neither is given a direct label.](img/focal_topics.png){#fig-focal width="4.76in" height="3.57in" fig-env="figure*"}
+![Silge plots [@SilgeTopicModeling2017] and smoothed time series for three focal topics from the medium vocabulary, $k = 40$ model.  Top row: top 15 terms by $\beta$ (term-topic distribution) for each topic.  Bottom row: count of articles associated with each topic, by journal and year.  Article counts use a threshold approach, with $\gamma$ (topic-document distribution) greater than 0.5.  Thin lines give annual values, thick lines give 5-year running averages.  Because *Behavior Genetics* and *Behavioral and Brain Sciences* are not prominent in any panel, neither is given a direct label.](img/08_focal_topics.png){#fig-focal width="7.1in" height="5.2in" fig-env="figure*"}
 
 Figure @fig-focal focuses on three topics identified in one of the 24 fitted topic models; see figures [@fig-gamma-lg; @fig-gamma-md; @fig-gamma-sm; @fig-silge-lg; @fig-silge-md; @fig-silge-sm] for all topics from all models, and figures [@fig-grid-lg; @fig-grid-md; @fig-grid-sm] for selected topics from all models.  In the focal model, topic 07 is strongly associated with MQ:  MQ published dozens of articles in this topic each year, and no other journal ever published more than a handful.  The "Silge plot," showing the top 15 terms in the topic [@SilgeTopicModeling2017], contains a number of racial terms (`races`, `whites`, `negroes` and potentially `europe`, `africa`, `india`, and `japan`); as well as `book`, likely reflecting the fact that MQ published a number of book reviews, while the mainstream journals either did not publish book reviews or these were not available for the corpus. 
 
@@ -323,7 +319,7 @@ Daniel J. Hicks, Emilio J.C. Lobato
 
 ![Corpus assembly.](img/dataset.png){#fig-corpus width="120%" fig-env="figure*"}
 
-![Count of documents in the corpus, by journal and year.](img/02_count.png){#fig-counts width="11cm" height="11cm" fig-env="figure*"}
+![Count of documents in the corpus, by journal and year.](img/02_count.png){#fig-counts width="3.5in" height="2.4in" fig-env="figure*"}
 
 
 Table: Document counts, by journal, and years included in the corpus. {#tbl-counts}
@@ -387,14 +383,14 @@ At the same time, we were unable to find any articles published in BG that ackno
 
 ![Fitted topic models: Gamma (topic-document) distributions, small vocabulary.](img/05_sm_gamma.png){#fig-gamma-sm width="6in" height="4.8in" fig-env="figure*"}
 
-![Silge plots (top 15 terms) for each topic and model, large vocabulary.](supplements/S2-lg-silge.pdf){#fig-silge-lg fig-env="figure*"}
+![Silge plots (top 15 terms) for each topic and model, large vocabulary.](img/06-lg-silge.pdf){#fig-silge-lg fig-env="figure*"}
 
-![Silge plots (top 15 terms) for each topic and model, medium vocabulary.](supplements/S3-md-silge.pdf){#fig-silge-md fig-env="figure*"}
+![Silge plots (top 15 terms) for each topic and model, medium vocabulary.](img/06-md-silge.pdf){#fig-silge-md fig-env="figure*"}
 
-![Silge plots (top 15 terms) for each topic and model, small vocabulary.](supplements/S4-sm-silge.pdf){#fig-silge-sm fig-env="figure*"}
+![Silge plots (top 15 terms) for each topic and model, small vocabulary.](img/06-sm-silge.pdf){#fig-silge-sm fig-env="figure*"}
 
-![Topics with "race," "intelligence," or both occurring in the top 15 terms, large vocabulary.](supplements/S5_grid_lg.pdf){#fig-grid-lg fig-env="figure*"}
+![Topics with "race," "intelligence," or both occurring in the top 15 terms, large vocabulary.](img/08_grid_lg.pdf){#fig-grid-lg fig-env="figure*"}
 
-![Topics with "race," "intelligence," or both occurring in the top 15 terms, medium vocabulary.](supplements/S6_grid_md.pdf){#fig-grid-md fig-env="figure*"}
+![Topics with "race," "intelligence," or both occurring in the top 15 terms, medium vocabulary.](img/08_grid_md.pdf){#fig-grid-md fig-env="figure*"}
 
-![Topics with "race," "intelligence," or both occurring in the top 15 terms, small vocabulary.](supplements/S7_grid_sm.pdf){#fig-grid-sm fig-env="figure*"}
+![Topics with "race," "intelligence," or both occurring in the top 15 terms, small vocabulary.](img/08_grid_sm.pdf){#fig-grid-sm fig-env="figure*"}

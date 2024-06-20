@@ -10,6 +10,7 @@ library(arrow)
 library(cowplot)
 library(glue)
 library(ggh4x)
+library(slider)
 
 ## Load data ----
 data_dir = here('data')
@@ -136,7 +137,7 @@ count_plot = function(tmf, vocab, exp, this_k, topics, threshold,
         group_by(k, topic, container.title) |> 
         complete(year = seq.int(min(year), max(year)), 
                  fill = list('gamma' = 0)) |> 
-        mutate(gamma_sm = slider::slide_index_dbl(gamma, year, 
+        mutate(gamma_sm = slide_index_dbl(gamma, year, 
                                                   mean, 
                                                   .complete = TRUE,
                                                   .before = 2, 
@@ -188,7 +189,7 @@ jr_labels = tribble(
     'V22', 'Personality and Individual Differences', 'Person. & Indiv. Diff.', 1985, 13,
     'V22', 'Intelligence', 'Intelligence', 1985, 10,
     'V07', 'Mankind Quarterly', 'Mankind Quarterly', 1995, 30, 
-    'V24', 'Psychological Reports', 'Psychological Reports', 1997, 8
+    'V24', 'Psychological Reports', 'Psychological Reports', 1987, 7
 )
 
 time_gg = plot_50 +
@@ -226,7 +227,8 @@ if (interactive()) focal_topics_gg
 
 ggsave(here(out_dir, '08_focal_topics.png'), 
        plot = focal_topics_gg,
-       height = 3*3, width = 4*3, bg = 'white')
+       width = 7.1, height = .6*8.7, scale = 1.4,
+       bg = 'white')
 
 ## Big grid ----
 big_grid = function(model_file, exp_file, name, plot = TRUE, verbose = TRUE) {

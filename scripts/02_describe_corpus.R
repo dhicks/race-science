@@ -37,7 +37,7 @@ count_df = meta_ar |>
 label_df = count_df |> 
     group_by(container.title) |> 
     slice_max(n, n = 1) |> 
-    mutate(container.title = str_wrap(container.title, width = 25))
+    mutate(container.title_w = str_wrap(container.title, width = 25))
 
 ggplot(count_df, 
        aes(year, n, color = container.title, group = container.title)) +
@@ -46,7 +46,7 @@ ggplot(count_df,
     geom_label_repel(
         data = label_df, 
         mapping = aes(fill = container.title, 
-                      label = container.title), 
+                      label = container.title_w), 
         hjust = 0, nudge_y = 20,
         xlim = c(1960, 2100), direction = 'x',
         color = 'black', alpha = .9) +
@@ -57,7 +57,7 @@ ggplot(count_df,
     theme(plot.margin = margin(t = 10, r = 50, b = 10, l = 10))
 
 ggsave(here(out_dir, '02_count.png'), 
-       width = 4.76, height = 3/4 * 4.76, scale = 1.75,
+       width = 3.5, height = 2.4, scale = 2,
        bg = 'white')
 
 meta_ar |> 
