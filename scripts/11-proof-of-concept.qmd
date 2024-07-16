@@ -1,10 +1,3 @@
----
-format:
-  html: default
-  pdf: 
-    mathspec: true
----
-
 This section uses simulated data to provide a proof-of-concept for our use of topic models to detect the "mainstreaming" of a marginalized topic (corresponding to race science).  The `tmfast` package [@HicksTmfastFitsTopic2023] provides samplers that can be used to generate a simulated document-term matrix. 
 
 ```{r setup}

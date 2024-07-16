@@ -1,24 +1,60 @@
-This section uses simulated data to provide a proof-of-concept for our use of topic models to detect the "mainstreaming" of a marginalized topic.  
+---
+title: "Race Science in Mainstream Psychology, 1960-2010"
+authors:
+  - name: "Daniel J. Hicks"
+    email: "dhicks4@ucmerced.edu"
+    affiliations: 
+      - id: a
+        name: "University of California, Merced"
+        city: "Merced"
+        country: "CA, USA"
+    orcid: "0000-0001-7945-4416"
+    corresponding: true
+  - name: "Emilio J. C. Lobato"
+    affiliations:
+      - ref: a
+    orcid: "0000-0002-3066-2932"
 
-```{r setup}
-#| message: false
-#| warning: false
-library(tidyverse)
-theme_set(theme_bw())
-library(tmfast)
+abstract: |
+  | Anthropologists and human geneticists have long rejected race science, research that can be utilized to purportedly justify racial inequality and colonialism.  But race science has persisted, at the very least on the margins of the mainstream scientific community.  In this study, bibliometric and text mining methods were used to trace the appearance of race science discourse in both mainstream behavioral science journals and the parascholarly journal *Mankind Quarterly* from 1960 to 2010.  Our analysis found two distinguishable lines of race science discourse.  One is strongly associated with *Mankind Quarterly*, while the other — emphasizing race and intelligence — is strongly associated with mainstream psychology journals, especially *Intelligence* and *Personality and Individual Differences*.  We compare psychology's response to race science to those of other fields, and discuss the social responsibility of scientists with respect to race science. 
+  
+significance: |
+  | Anthropologists and human geneticists have long rejected efforts to purportedly scientifically justify racial inequality and colonialism.  This study examines the persistence of scientific racism throughout the second half of the twentieth century, examining both mainstream behavioral science journals and a notorious fringe journal, *Mankind Quarterly* (MQ).  While we expected to find evidence that race science emerged first in MQ and later spread to mainstream journals, we instead found two distinct lines of race science discourse.  Race-and-intelligence discourse appears first and primarily in two mainstream journals, *Intelligence* and *Personality and Individual Differences*. Unlike anthropology and human genetics, psychology has not strongly condemned race science in the mainstream of the field.  
+  
+keywords: 
+  - race science
+  - race and intelligence
+  - psychology
+  - behavior genetics
+  - text mining
+  - topic modeling
+  
+bibliography: [references.bib, refs-manual.bib]
 
-library(glue)
-library(tictoc)
-library(memoise)
+format: 
+  elsevier-pdf:
+    keep-tex: true
+    link-citations: true
+    mathspec: true
+    fig.env: "figure*"
+    number-sections: true
+    journal:
+      name: "NA"
+      layout: "twocolumn"
+      cite-style: "authoryear"
+    
+crossref:
+  fig-prefix: ""
+  sec-prefix: "*SI Appendix*, section"
 
-set.seed(2024-03-18)
+execute:
+  cache: true
+---
 
-## Simulation parameters
-k = 20            ## total number of topics
-N = 100           ## papers per journal
-vocab = 1000      ## vocabulary size
-paper_size = 500  ## length of each paper
+# Introduction
 
-paper_size
-```
+By the end of the Second World War, a combination of technical developments in anthropology and genetics, along with revelations of Nazi atrocities, had led most members of the scientific community to reject attempts to scientifically justify racial inequalities and colonialism [@BarkanRetreatScientificRacism1992].  But eugenic thinking and scientific racism persisted throughout the second half of the twentieth century, and recent work has found that white supremacists continue to attempt to use scientific research to justify racial violence [@DusterBackdoorEugenics2003; @PanofskyHowWhiteNationalists2021; @PronczukRacistResearcherExposed2022].  
+
+
+{{< include ../scripts/11-proof-of-concept.qmd >}}
 

@@ -1,5 +1,7 @@
 all: pdf wc
 
+split = 23
+
 pdf: paper.pdf
 paper.pdf: paper.qmd \
            references.bib \
@@ -28,7 +30,9 @@ recache:
 
 .PHONY: wc
 wc: 
-	pdftotext paper.pdf - | wc -w
+	echo "splitting at page $(split)"
+	qpdf paper.pdf --pages . 1-$(split) -- main.pdf
+	pdftotext main.pdf - | wc -w
 
 .PHONY: clean
 clean:
