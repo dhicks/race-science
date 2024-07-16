@@ -52,30 +52,21 @@ execute:
 ---
 
 <!-- 
-PNAS guidelines: <https://www.pnas.org/author-center/submitting-your-manuscript#article-types>
+QSS submission guidelines: 
+<https://direct.mit.edu/qss/pages/submission-guidelines>
 
-Research Report/Direct Submission: The preferred length of these articles is 6 pages, but PNAS allows articles up to a maximum of 12 pages. A standard 6-page article is approximately 4,000 words, 50 references, and 4 medium-size graphical elements (i.e., figures and tables).
+- 300-word cover letter on significance and fit
+- non-anonymous
+- 200-word abstract
+- 6 keywords
+- number sections, subsections, and lines
+- figures and tables near first ref
+- author-date APA citations
+- supplemental materials okay
+- methods in "body," not end
+- Acknowledgments, author contribution statements, competing interests statements, funding information, data availability statements, and appendices all at end
 
-
-- a manuscript file (in any format) including the following:
-    title page (title, author list, classification, keywords)
-    abstract
-    significance statement
-    main text
-    references
-    figures or tables with appropriate legends (may be uploaded separately)
-    SI files (may be uploaded separately)
-- contact and competing interest information for all authors
-- data sharing plans (for all data, documentation, and code used in analysis)
-- funding information and whether an open access license has been selected
-- list of appropriate Editorial Board members, NAS members, and qualified reviewers (minimum of three each) who are experts in the paper's scientific area. (A brief justification for suggested reviewers is welcome, particularly for interdisciplinary papers)
-
-- revised submission will require track changes version
-
-figure sizes: 
-Small: approximately 9 cm x 6 cm (3.5 in x 2.4 in)
-Medium: approximately 11 cm x 11 cm (4.3 in x 4.3 in)
-Large: approximately 18 cm x 22 cm (7.1 in x 8.7 in)
+- Articles: original theoretical, empirical, or methodological research (typically between 5,000 and 8,000 words)
 
  -->
  
@@ -240,7 +231,7 @@ After noun phrase extraction, the corpus comprised 43,162,055 total tokens of 6,
 
 Document metadata retrieved from Crossref does not appear to be covered by any copyright or other intellectual property restrictions.  However, due to copyright restrictions, we are unable to make document fulltext or Web of Science search results publicly available.  Code for the corpus assembly and text preparation steps described above is available by request. 
 
-The public analysis repository, <https://github.com/dhicks/race-science> *DOI will go here]*, includes document metadata and documentwise counts of NLP-extracted noun phrases ("document-term matrices"), along with code to reproduce the analysis of the following sections. 
+The public analysis repository, <https://github.com/dhicks/race-science> *[DOI will go here]*, includes document metadata and documentwise counts of NLP-extracted noun phrases ("document-term matrices"), along with code to reproduce the analysis of the following sections. 
 
 
 ## Vocabulary selection {.unnumbered}
