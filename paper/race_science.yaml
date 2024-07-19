@@ -4534,6 +4534,44 @@ references:
   type: article-magazine
   URL: https://slate.com/technology/2007/11/liberal-creationism.html
 
+- id: SamorodnitskyJournalsThatPublished2024
+  abstract: >-
+    Richard Lynn's work has been repeatedly condemned for using flawed
+    methodology and deceptively collated data to support racism. It's past time
+    to retract the studies.
+  accessed:
+    - year: 2024
+      month: 6
+      day: 20
+  author:
+    - family: Samorodnitsky
+      given: Dan
+    - family: Bird
+      given: Kevin
+    - family: Carlson
+      given: Jedidiah
+    - family: Lingford
+      given: James
+    - family: Phillips
+      given: Jon
+    - family: Sear
+      given: Rebecca
+    - family: Townsend
+      given: Cathryn
+  citation-key: SamorodnitskyJournalsThatPublished2024
+  container-title: STAT
+  issued:
+    - year: 2024
+      month: 6
+      day: 20
+  language: en-US
+  title: >-
+    Journals that published Richard Lynn's racist 'research' articles should
+    retract them
+  type: article-magazine
+  URL: >-
+    https://www.statnews.com/2024/06/20/richard-lynn-racist-research-articles-journals-retractions/
+
 - id: SaulDogwhistlesPoliticalManipulation2018
   abstract: >-
     This essay explores the speech act of dogwhistling (sometimes referred to as
@@ -4797,12 +4835,12 @@ references:
   URL: https://www.nybooks.com/daily/2022/02/05/ideology-as-biology/
 
 - id: SilgeTopicModeling2017
-  citation-key: SilgeTopicModeling2017
-  container-author:
+  author:
     - family: Silge
       given: Julia
     - family: Robinson
       given: David
+  citation-key: SilgeTopicModeling2017
   container-title: 'Text Mining with R: A Tidy Approach'
   ISBN: 978-1-4919-8160-3
   issued:
