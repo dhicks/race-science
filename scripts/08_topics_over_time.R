@@ -1,7 +1,8 @@
-renv::load(here::here())
+# renv::load(here::here())
 library(tidyverse)
 library(tidytext)
 theme_set(theme_bw())
+library(gt)
 
 library(tmfast)
 library(here)
@@ -217,6 +218,24 @@ silge_gg = tidy(md_tmf, matrix = 'beta', k = 40) |>
     labs(y = 'β') +
     facet_wrap(vars(topic), scales = 'free_y')
 if (interactive()) silge_gg
+
+## Table version of Silge plot
+silge_gt = tidy(md_tmf, matrix = 'beta', k = 40) |> 
+    filter(topic %in% c('V07', 'V22', 'V24')) |> 
+    group_by(topic) |> 
+    top_n(15, beta) |> 
+    arrange(topic, desc(beta)) |> 
+    ungroup() |> 
+    pivot_wider(names_from = topic,
+                values_from = c(token, beta), 
+                names_vary = 'slowest') |> 
+    unnest(everything()) |> 
+    gt() |> 
+    fmt_number(decimals = 4) |> 
+    tab_spanner_delim(delim = '_', reverse = TRUE)
+silge_gt
+write_rds(silge_gt, here(out_dir, '08_silge_gt.Rds'))
+
 
 # silge_gg / time_gg +
 #     plot_layout()

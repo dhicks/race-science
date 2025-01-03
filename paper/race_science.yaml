@@ -1,6 +1,6 @@
 ---
 references:
-- id: AdamsMisAppropriationBiological2021
+- id: AdamsMisappropriationBiologicalAnthropology2021
   abstract: >-
     Most biological anthropologists acknowledge that phenotypic human variation
     is distinct from human race. However, there is the potential for the
@@ -24,7 +24,7 @@ references:
       given: Donovan
     - family: Pilloud
       given: Marin
-  citation-key: AdamsMisAppropriationBiological2021
+  citation-key: AdamsMisappropriationBiologicalAnthropology2021
   container-title: Forensic Anthropology
   container-title-short: FA
   DOI: 10.5744/fa.2021.0010
@@ -1760,6 +1760,59 @@ references:
   URL: >-
     https://www.lareviewofbooks.org/article/why-dna-is-no-key-to-social-equality-on-kathryn-paige-hardens-the-genetic-lottery/
 
+- id: HicksImpactingCapabilitiesConceptual2018
+  abstract: >-
+    There is widespread interest in evaluating the social impacts of research
+    and other scholarly activities. Conventional metrics for social impacts
+    focus on economics or wealth creation, such as patents or technology
+    transfer. These kinds of metrics are less appropriate for many scholarly
+    fields, and miss the specific social concerns or needs that researchers aim
+    to address. In this paper, drawing on ideas from ethics and development
+    economics, we develop a conceptual framework for characterizing the social
+    goals of research. We first distinguish resources — such as wealth and
+    intellectual credit — from the goals of scholarship, and further distinguish
+    inward- and outward-facing goals. Outward-facing goals refer to the intended
+    social impacts of research. Next we introduce the Capabilities Approach, a
+    conceptual framework for human well-being developed by ethicists and
+    economists over the last 40 years. This Approach focuses on basic human
+    needs, rather than wealth, and we draw specifically on a list of central
+    human capabilities developed by philosopher Martha Nussbaum. We propose that
+    the items on this list provide a useful starting point for articulating the
+    specific social aims of research. We argue that the Capabilities Approach
+    can facilitate research communication and improve the recognition of public
+    engagement in academic and funding institutions. Familiar bibliographic data
+    and text mining methods can be used in a capabilities-inspired portfolio
+    analysis, and modest changes to existing data collection systems — for
+    tenure and promotion, or research funding applications — could support the
+    development of even richer capabilities-inspired metrics and incentive
+    systems.
+  accessed:
+    - year: 2018
+      month: 8
+      day: 28
+  author:
+    - family: Hicks
+      given: Daniel J.
+    - family: Stahmer
+      given: Carl
+    - family: Smith
+      given: MacKenzie
+  citation-key: HicksImpactingCapabilitiesConceptual2018
+  container-title: Frontiers in Research Metrics and Analytics
+  container-title-short: Front. Res. Metr. Anal.
+  DOI: 10.3389/frma.2018.00024
+  ISSN: 2504-0537
+  issued:
+    - year: 2018
+  language: English
+  source: Frontiers
+  title: >-
+    Impacting Capabilities: A Conceptual Framework for the Social Value of
+    Research
+  title-short: Impacting Capabilities
+  type: article-journal
+  URL: https://www.frontiersin.org/articles/10.3389/frma.2018.00024/full
+
 - id: HicksProductivityInterdisciplinaryImpacts2021
   abstract: >-
     Organized Research Units (ORUs) are nondepartmental units utilized by U.S.
@@ -2320,12 +2373,12 @@ references:
   URL: http://www.hepgjournals.org/doi/abs/10.17763/haer.39.1.l3u15956627424k7
   volume: '39'
 
-- id: JohnLoehlin19262020
+- id: JohnLoehlin192620202020
   accessed:
     - year: 2023
       month: 7
       day: 13
-  citation-key: JohnLoehlin19262020
+  citation-key: JohnLoehlin192620202020
   container-title: Behavior Genetics
   container-title-short: Behav Genet
   DOI: 10.1007/s10519-020-10024-w
@@ -2404,7 +2457,7 @@ references:
   type: webpage
   URL: https://twitter.com/joycbrennan/status/1492197126415261700
 
-- id: KaplanGaltonQuincunxProbabilistic2021
+- id: KaplanGaltonsQuincunxProbabilistic2021
   abstract: >-
     In what sense are associations between particular markers and complex
     behaviors made by genome-wide association studies (GWAS) and related
@@ -2436,7 +2489,7 @@ references:
       given: Jonathan Michael
     - family: Turkheimer
       given: Eric
-  citation-key: KaplanGaltonQuincunxProbabilistic2021
+  citation-key: KaplanGaltonsQuincunxProbabilistic2021
   container-title: Studies in History and Philosophy of Science Part A
   container-title-short: Studies in History and Philosophy of Science Part A
   DOI: 10.1016/j.shpsa.2021.04.001
@@ -3361,6 +3414,47 @@ references:
   title: On Liberty
   type: book
   URL: http://books.google.com/books?id=9xARAAAAYAAJ
+
+- id: MillsRacialContract2014
+  abstract: >-
+    The Racial Contract puts classic Western social contract theory, deadpan, to
+    extraordinary radical use. With a sweeping look at the European expansionism
+    and racism of the last five hundred years, Charles W. Mills demonstrates how
+    this peculiar and unacknowledged "contract" has shaped a system of global
+    European domination: how it brings into existence "whites" and "non-whites,"
+    full persons and sub-persons, how it influences white moral theory and moral
+    psychology; and how this system is imposed on non-whites through ideological
+    conditioning and violence. The Racial Contract argues that the society we
+    live in is a continuing white supremacist state. Holding up a mirror to
+    mainstream philosophy, this provocative book explains the evolving outline
+    of the racial contract from the time of the New World conquest and
+    subsequent colonialism to the written slavery contract, to the "separate but
+    equal" system of segregation in the twentieth-century United States.
+    According to Mills, the contract has provided the theoretical architecture
+    justifying an entire history of European atrocity against non-whites, from
+    David Hume's and Immanuel Kant's claims that blacks had inferior cognitive
+    power, to the Holocaust, to the kind of imperialism in Asia that was
+    demonstrated by the Vietnam War.Mills suggests that the ghettoization of
+    philosophical work on race is no accident. This work challenges the
+    assumption that mainstream theory is itself raceless. Just as feminist
+    theory has revealed orthodox political philosophy's invisible white male
+    bias, Mills's explication of the racial contract exposes its racial
+    underpinnings.
+  author:
+    - family: Mills
+      given: Charles W.
+  citation-key: MillsRacialContract2014
+  ISBN: 978-0-8014-7134-6
+  issued:
+    - year: 2014
+      month: 1
+      day: 27
+  language: en
+  number-of-pages: '165'
+  publisher: Cornell University Press
+  source: Google Books
+  title: The Racial Contract
+  type: book
 
 - id: NathanCofnasProblemIsnThat2021
   accessed:
@@ -5616,6 +5710,102 @@ references:
   type: article-journal
   URL: https://doi.org/10.1177/0959354320925176
   volume: '30'
+
+- id: WoodleyOfMenieAntiMertonianNormsUndermine2025
+  accessed:
+    - year: 2024
+      month: 12
+      day: 20
+  author:
+    - family: Woodley Of Menie
+      given: Michael A.
+    - family: Peñaherrera-Aguirre
+      given: Mateo
+    - family: Figueredo
+      given: Aurelio-José
+    - family: Miller
+      given: Geoffrey F.
+    - family: Coyle
+      given: Thomas R.
+    - family: Carl
+      given: Noah
+    - family: Debes
+      given: Fróði
+    - family: Frisby
+      given: Craig L.
+    - family: Léon
+      given: Federico R.
+    - family: Madison
+      given: Guy
+    - family: Rindermann
+      given: Heiner
+  citation-key: WoodleyOfMenieAntiMertonianNormsUndermine2025
+  container-title: Intelligence
+  container-title-short: Intelligence
+  DOI: 10.1016/j.intell.2024.101879
+  ISSN: '01602896'
+  issued:
+    - year: 2025
+      month: 1
+  language: en
+  page: '101879'
+  publisher: JAI
+  source: DOI.org (Crossref)
+  title: >-
+    Anti-Mertonian norms undermine the scientific ethos: A critique of Bird,
+    Jackson Jr., and Winston's policy proposals and associated justification
+  title-short: Anti-Mertonian norms undermine the scientific ethos
+  type: article-journal
+  URL: https://linkinghub.elsevier.com/retrieve/pii/S0160289624000734
+  volume: '108'
+
+- id: WoodleyofMenieContentMetaanalysisRacial2025
+  abstract: "Bird, Jackson Jr., and Winston (BJ&W; 2024) argue that a “racial hereditarian research” (RHR) program exists, is prominently represented in academic literature, and is socially harmful as it supports “scientific racism” and emboldens the far-right. Consequently, drastic steps should be taken by the American Psychological Association to curb its production. They support these claims with a bibliography of alleged RHR publications and other outputs appearing from 2012 on. To determine the validity of their claims, we conducted a content meta-analysis of the 268 peer-reviewed articles (excluding editorials, book reviews, etc.) listed in Section 1 of their bibliography. These were independently rated using the following dimensions (as explicated by BJ&W): (1) use of “folk” racial categories; (2) biological race realism; (3) claims that differences between “races” are due to selection and/or genetic factors - these being the core of BJ&W's definition of RHR. Additional criteria were: (4) discussion of racial “proxy” categories (e.g., nations); and (5) degree of interest shown in the articles by one White nationalist publication. Inter-rater reliability was acceptable (ICC3,k\_=\_0.711, 95% CI\_=\_0.633, 0.773). A Content factor was identified among the averaged ratings exhibiting strong positive loadings for 1, 2, and 3 (indicating an RHR program), but a significant negative loading for 4 (indicating that nations, etc. tend not to be employed as racial proxies, but are typically used rather than race in such studies), and a null loading for 5. The last result (along with consideration of data presented elsewhere in the bibliography) counteracts the idea that RHR constitutes “scientific racism”, or supports White nationalism. Only 23\_% of the publications unambiguously (based on 100\_% convergence between raters for 1, 2, and 3) qualify as RHR, with the plurality (37\_%) appearing in one niche journal, consistent with strong scientific taboos against RHR. Moreover, 30% of the publications unambiguously had nothing to do with RHR. BJ&W's characterisation of their bibliography as evidencing wide scale “scientific racism” is therefore not compellingly supported by its contents."
+  accessed:
+    - year: 2024
+      month: 12
+      day: 20
+  author:
+    - family: Woodley of Menie
+      given: Michael A.
+    - family: Peñaherrera-Aguirre
+      given: Mateo
+    - family: Figueredo
+      given: Aurelio-José
+    - family: Miller
+      given: Geoffrey F.
+    - family: Coyle
+      given: Thomas R.
+    - family: Carl
+      given: Noah
+    - family: Debes
+      given: Fróði
+    - family: Frisby
+      given: Craig L.
+    - family: Léon
+      given: Federico R.
+    - family: Madison
+      given: Guy
+    - family: Rindermann
+      given: Heiner
+  citation-key: WoodleyofMenieContentMetaanalysisRacial2025
+  container-title: Intelligence
+  container-title-short: Intelligence
+  DOI: 10.1016/j.intell.2024.101878
+  ISSN: 0160-2896
+  issued:
+    - year: 2025
+      month: 1
+      day: 1
+  page: '101878'
+  source: ScienceDirect
+  title: >-
+    Content meta-analysis of a racial hereditarian research “bibliography”
+    reveals minimal support for Bird, Jackson Jr., and Winston's model of
+    “scientific racism”
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0160289624000722
+  volume: '108'
 
 - id: WoodwardDataPhenomenaRestatement2009
   abstract: >-
