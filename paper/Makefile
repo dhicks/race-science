@@ -1,10 +1,11 @@
 all: pdf wc
 
-split = 23
+split = 24
 
 pdf: paper.pdf
 paper.pdf: paper.qmd \
-           references.bib \
+           references.yaml \
+           refs-manual.bib \
            ../scripts/11-proof-of-concept.qmd
 # 	Rscript -e "rmarkdown::render('paper.Rmd')"
 	quarto render paper.qmd

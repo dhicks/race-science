@@ -1,5 +1,4 @@
 ## Formerly, this script generated two-dimensional UMAP embeddings, for use in interactive and static visualizations.  These visualizations were dropped from the analysis pipeline.  Because calculating these embeddings is computationally intensive, the relevant lines (last 3 lines at the end of the script) are commented out.  This script is still used in the workflow to generate a quality check spreadsheet for the focal topic.  
-renv::load(here::here())
 library(tidyverse)
 theme_set(theme_minimal())
 library(tmfast)
@@ -217,3 +216,5 @@ make_umap('md', 40, spreadsheet = 'V24', visualization = FALSE)
 # make_umap('md', c(20, 30, 40, 50, 60, 70), seed = seed, force = force)
 # make_umap('sm', c(20, 30, 40, 50, 60, 70), seed = seed, force = force)
 # make_umap('lg', c(20, 30, 40, 50, 60, 70), seed = seed, force = force)
+make_umap('md', 40, spreadsheet = c('V07', 'V22', 'V24'), 
+          visualization = FALSE)
