@@ -202,6 +202,21 @@ references:
   URL: https://unesdoc.unesco.org/ark:/48223/pf0000128291
   volume: '1'
 
+- id: BeautifulSoupScreenscrapingLibrary
+  accessed:
+    - year: 2025
+      month: 1
+      day: 18
+  citation-key: BeautifulSoupScreenscrapingLibrary
+  genre: Python
+  license: 'OSI Approved :: Python Software Foundation License'
+  source: PyPI
+  title: 'BeautifulSoup: Screen-scraping library'
+  title-short: BeautifulSoup
+  type: software
+  URL: http://www.crummy.com/software/BeautifulSoup/
+  version: 3.2.2
+
 - id: BeirichPioneerFundAssets2013
   accessed:
     - year: 2023
@@ -1189,36 +1204,6 @@ references:
     Selective Arrests, an Ever-Expanding DNA  Forensic Database, and the Specter
     of an Early  Twenty-First-Century Equivalent of Phrenology
   type: chapter
-
-- id: EditorsScienceMustRespect2022
-  abstract: >-
-    New ethics guidance addresses potential harms for human population groups
-    who do not participate in research but may be harmed by its publication.
-  accessed:
-    - year: 2023
-      month: 11
-      day: 3
-  author:
-    - literal: Editors
-  citation-key: EditorsScienceMustRespect2022
-  container-title: Nature Human Behaviour
-  container-title-short: Nat Hum Behav
-  DOI: 10.1038/s41562-022-01443-2
-  ISSN: 2397-3374
-  issue: '8'
-  issued:
-    - year: 2022
-      month: 8
-  language: en
-  license: 2022 Springer Nature Limited
-  number: '8'
-  page: 1029-1031
-  publisher: Nature Publishing Group
-  source: www.nature.com
-  title: Science must respect the dignity and rights of all humans
-  type: article-journal
-  URL: https://www.nature.com/articles/s41562-022-01443-2
-  volume: '6'
 
 - id: ElgabsiEthicKnowledgeResponsible2021
   abstract: >-
@@ -5441,6 +5426,34 @@ references:
     https://www.cambridge.org/core/journals/philosophy-of-science/article/limits-of-democratizing-science-when-scientists-should-ignore-the-public/0722C3510F730BA972AAC17FE53CFFE8
   volume: '89'
 
+- id: ScienceMustRespect2022
+  abstract: >-
+    New ethics guidance addresses potential harms for human population groups
+    who do not participate in research but may be harmed by its publication.
+  accessed:
+    - year: 2023
+      month: 11
+      day: 3
+  citation-key: ScienceMustRespect2022
+  container-title: Nature Human Behaviour
+  container-title-short: Nat Hum Behav
+  DOI: 10.1038/s41562-022-01443-2
+  ISSN: 2397-3374
+  issue: '8'
+  issued:
+    - year: 2022
+      month: 8
+  language: en
+  license: 2022 Springer Nature Limited
+  number: '8'
+  page: 1029-1031
+  publisher: Nature Publishing Group
+  source: www.nature.com
+  title: Science must respect the dignity and rights of all humans
+  type: article-journal
+  URL: https://www.nature.com/articles/s41562-022-01443-2
+  volume: '6'
+
 - id: SclafaniCorrelationCausationStudy1981
   abstract: >-
     //static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0140525X0000042X/resource/name/firstPage-S0140525X0000042Xa.jpg
@@ -6255,11 +6268,6 @@ references:
       given: Jim
     - family: Ooms
       given: Jeroen
-    - family: RStudio
-      given: ''
-    - family: example)
-      given: R. Foundation (Copy of R.-project
-      dropping-particle: homepage cached as
   citation-key: WickhamXml2ParseXML2023
   issued:
     - year: 2023
