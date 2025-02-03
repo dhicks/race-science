@@ -42,3 +42,7 @@ clean:
 .PHONY: aux
 aux: 
 	latexmk -pdf
+
+.PHONY: diff
+diff:
+	Rscript -e "latexdiffr::git_latexdiff('paper.qmd', 'HEAD~4')"

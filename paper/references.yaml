@@ -5246,29 +5246,11 @@ references:
     https://www.statnews.com/2024/06/20/richard-lynn-racist-research-articles-journals-retractions/
 
 - id: SaulDogwhistlesPoliticalManipulation2018
-  abstract: >-
-    This essay explores the speech act of dogwhistling (sometimes referred to as
-    ‘using coded language’). Dogwhistles may be overt or covert, and within each
-    of these categories may be intentional or unintentional. Dogwhistles are a
-    powerful form of political speech, allowing people to be manipulated in ways
-    they would resist if the manipulation was carried outmore openly—often
-    drawing on racist attitudes that are consciously rejected. If philosophers
-    focus only on content expressed or otherwise consciously conveyed they may
-    miss what is most powerful and pernicious in the speech of political
-    culture. This essay is a call to start paying attention to these more covert
-    speech acts, and a first attempt at beginning to theorize them. It argues
-    that dogwhistles present a complex and interesting case for the philosopher
-    of language, and explores their implications for democratic politics.
-  accessed:
-    - year: 2023
-      month: 7
-      day: 14
   author:
     - family: Saul
       given: Jennifer
   citation-key: SaulDogwhistlesPoliticalManipulation2018
   container-title: New Work on Speech Acts
-  DOI: 10.1093/oso/9780198738831.003.0013
   editor:
     - family: Fogal
       given: Daniel
@@ -5276,17 +5258,17 @@ references:
       given: Daniel W.
     - family: Moss
       given: Matt
-  ISBN: 978-0-19-873883-1
+  ISBN: 978-0-19-105901-8
   issued:
     - year: 2018
       month: 7
-      day: 19
-  page: '0'
+      day: 4
+  language: en
+  page: 360-383
   publisher: Oxford University Press
-  source: Silverchair
-  title: Dogwhistles, Political Manipulation, and Philosophy of Language
+  source: Google Books
+  title: Dogwhistles, political manipulation, and philosophy of language
   type: chapter
-  URL: https://doi.org/10.1093/oso/9780198738831.003.0013
 
 - id: ScarrThreeCheersBehavior1987
   accessed:
@@ -5506,6 +5488,30 @@ references:
   title: Ideology as Biology
   type: article-magazine
   URL: https://www.nybooks.com/daily/2022/02/05/ideology-as-biology/
+
+- id: ShukmanRaceScienceInc2024
+  abstract: >-
+    Undercover in The Human Diversity Foundation, the million-dollar race
+    science company
+  accessed:
+    - year: 2025
+      month: 1
+      day: 8
+  author:
+    - family: Shukman
+      given: Harry
+    - family: Hermansson
+      given: Patrik
+  citation-key: ShukmanRaceScienceInc2024
+  container-title: Hope not Hate
+  issued:
+    - year: 2024
+      month: 10
+      day: 16
+  language: en
+  title: Race Science Inc.
+  type: webpage
+  URL: https://investigations.hopenothate.org.uk/race-science-inc/
 
 - id: SilgeTopicModeling2017
   author:
