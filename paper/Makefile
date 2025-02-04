@@ -45,4 +45,4 @@ aux:
 
 .PHONY: diff
 diff:
-	Rscript -e "latexdiffr::git_latexdiff('paper.qmd', 'HEAD~4')"
+	Rscript -e "latexdiffr::git_latexdiff('paper.qmd', '529c8')"
