@@ -975,6 +975,115 @@ references:
   URL: https://onlinelibrary.wiley.com/doi/abs/10.1111/evo.14449
   volume: '76'
 
+- id: DasguptaBiologicalEssentialismWhite2024
+  abstract: >-
+    Scholars and practitioners position health disparities research as an
+    important tool for redressing race-based inequities and re-conceptualizing
+    racialized health outcomes in non-essentialist terms. Given this context, we
+    explore a peculiar phenomenon, which is the circulation of such research
+    among white nationalists. We discover that white nationalists incorporate
+    and respond to health disparities research not solely to defend racist and
+    essentialist reasoning, but also to project a discourse that indicts the
+    science establishment for ostensibly incorporating liberal politics,
+    corrupting inquiry, and obfuscating understanding of biology in the name of
+    anti-racism or social constructionism. We term this practice “lay
+    agnotology,” as it involves white nationalists capitalizing on their role as
+    non-specialists to charge the health disparities field and its expert
+    contributors with an alleged set of institutionalized biases that produce
+    ignorance about the “truth” of race. We connect this finding to the
+    literature on racialized ignorance, as it demonstrates how stories about the
+    institutional nature of science can be as central to myth-making about race
+    as stories about the scientific nature of people.
+  accessed:
+    - year: 2025
+      month: 3
+      day: 30
+  author:
+    - family: Dasgupta
+      given: Kushan
+    - family: Iturriaga
+      given: Nicole
+    - family: Panofsky
+      given: Aaron
+  citation-key: DasguptaBiologicalEssentialismWhite2024
+  container-title: Social Problems
+  container-title-short: Social Problems
+  DOI: 10.1093/socpro/spad007
+  ISSN: 0037-7791
+  issue: '4'
+  issued:
+    - year: 2024
+      month: 11
+      day: 1
+  page: 1200-1215
+  source: Silverchair
+  title: >-
+    Beyond Biological Essentialism: White Nationalism, Health Disparities Data,
+    and the Cultivation of Lay Agnotology
+  title-short: Beyond Biological Essentialism
+  type: article-journal
+  URL: https://doi.org/10.1093/socpro/spad007
+  volume: '71'
+
+- id: DasguptaRacistAgnotologyHow2025
+  abstract: >-
+    Recently, scholars have revitalized the study of race by exploring how
+    ignorance epistemologically fortifies racial domination. To articulate terms
+    of analysis, much of this literature invokes two recurrent modes of
+    racialized ignorance—racist essentialism and racialized nonknowing. We
+    introduce a third mode—racist agnotology. With racist agnotology, actors
+    perpetuate racialized ignorance by characterizing social constructionist
+    accounts of race or anti-racist forms of knowledge as evidence of how
+    knowledge-producing institutions—like science, academia, or other
+    research-intensive fields—have become intellectually compromised or beholden
+    to political principles that produce inaccurate knowledge about race.
+    Whereas racist essentialism and racialized nonknowing produce ignorance by,
+    respectively, distorting and occluding knowledge about racialized subjects,
+    racist agnotology produces ignorance through stories and narratives about
+    how such knowledge is prefigured by institutions. To demonstrate the
+    usefulness of our contribution, and its relationship to extant literature,
+    we empirically explore the intersection of race and health to illustrate how
+    racialized ignorance thrives in patterned ways that reflect the logics of
+    racist essentialism, racialized nonknowing, and racist agnotology. Our
+    analysis reveals additional stakes and contours involved in the phenomenon
+    of racialized ignorance. Importantly, it also reveals how many of the
+    hermeneutic processes that have been revelatory for scholars and their study
+    of race and ignorance—for example, demystification—can be used toward racist
+    ends as well. In this regard, our contribution helps apprehend and theorize
+    the social politics of knowledge involved in much of the contemporary,
+    reactionary response to anti-racism or racial equity interventions.
+  accessed:
+    - year: 2025
+      month: 3
+      day: 30
+  author:
+    - family: Dasgupta
+      given: Kushan
+    - family: Iturriaga
+      given: Nicole
+    - family: Panofsky
+      given: Aaron
+  citation-key: DasguptaRacistAgnotologyHow2025
+  container-title: Sociology of Race and Ethnicity
+  DOI: 10.1177/23326492241259403
+  ISSN: 2332-6492
+  issue: '2'
+  issued:
+    - year: 2025
+      month: 4
+      day: 1
+  language: EN
+  page: 191-206
+  publisher: SAGE Publications Inc
+  source: SAGE Journals
+  title: >-
+    Racist Agnotology: How Myth-Making about Institutions and Knowledge
+    Production Contributes to Racialized Ignorance
+  title-short: Racist Agnotology
+  type: article-journal
+  URL: https://doi.org/10.1177/23326492241259403
+  volume: '11'
+
 - id: DavisImplicature2024
   abstract: >-
     “Implicature” denotes either (i) the act of meaning orimplying one thing by
@@ -1679,6 +1788,69 @@ references:
   title: 'Racism, Not Race: Answers to Frequently Asked Questions'
   title-short: Racism, Not Race
   type: book
+
+- id: GundleProveThisIndustrys2010
+  abstract: >-
+    Background
+
+    New molecular techniques focus a genetic lens on nicotine addiction. Given
+    the medical and economic costs associated with smoking, innovative
+    approaches to smoking cessation and prevention must be pursued., But can
+    sound research be manipulated by the tobacco industry?
+
+
+    Methodology
+
+    The chronological narrative of this paper was created using iterative
+    reviews of primary sources (the Legacy Tobacco Documents), supplemented with
+    secondary literature to provide broader context. The empirical data inform
+    an ethics and policy analysis of tobacco-industry funded research.
+
+
+    Findings
+
+    The search for a genetic basis for smoking is consistent with industry’s
+    decades-long plan to deflect responsibility away from the tobacco companies
+    and onto individuals’ genetic constitutions. Internal documents reveal
+    longstanding support for genetic research as a strategy to relieve the
+    tobacco industry of its legal responsibility for tobacco-related disease.
+
+
+    Conclusions
+
+    Industry may turn the findings of genetics to its own ends, changing
+    strategy from creating a “safe” cigarette to defining a “safe” smoker.
+  accessed:
+    - year: 2015
+      month: 10
+      day: 9
+  author:
+    - family: Gundle
+      given: Kenneth R.
+    - family: Dingel
+      given: Molly J.
+    - family: Koenig
+      given: Barbara A.
+  citation-key: GundleProveThisIndustrys2010
+  container-title: Addiction (Abingdon, England)
+  container-title-short: Addiction
+  DOI: 10.1111/j.1360-0443.2010.02940.x
+  ISSN: 0965-2140
+  issue: '6'
+  issued:
+    - year: 2010
+      month: 6
+  page: 974-983
+  PMCID: PMC2911634
+  PMID: '20659058'
+  source: PubMed Central
+  title: >-
+    “To Prove This is the Industry’s Best Hope”: Big Tobacco’s Support of
+    Research on the Genetics of Nicotine Addiction
+  title-short: “To Prove This is the Industry’s Best Hope”
+  type: article-journal
+  URL: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2911634/
+  volume: '105'
 
 - id: HamiltonReviewDysgenicsGenetic2000
   abstract: >-
