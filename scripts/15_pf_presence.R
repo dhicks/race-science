@@ -7,7 +7,7 @@ library(tinytable)
 library(here)
 library(arrow)
 
-## Used for simulation draws
+## Used for resampling draws
 library(furrr)
 plan(multisession, workers = availableCores() - 2)
 
@@ -35,14 +35,12 @@ doc_gamma = read_rds(model_files['md']) |>
 docs_df = inner_join(meta_ar, doc_gamma, by = c('article_id' = 'document')) |> 
     ## And then to authors
     left_join(author_data(), by = 'article_id') |> 
-    collect() |> 
-    mutate(family = {str_split(author, ' ') |> 
-            map_chr(last)})
+    collect()
 
 
-## Diversity as number of authors, irrespective of pub count
+## Number of authors ----
 n_authors_df = docs_df |> 
-    count(topic, year, family, name = 'nn') |> 
+    count(topic, year, author, name = 'nn') |> 
     count(topic, year) |> 
     complete(topic, year, fill = list(n = 0L))
 
@@ -67,7 +65,7 @@ n_authors_gg
 #     ggplot(aes(year, perplexity, color = topic)) +
 #     geom_line()
 
-## What share of papers have a PF-funded author? 
+## What share of papers have a PF-funded author? ----
 share_papers_df = docs_df |> 
     mutate(pf = author %in% mq$author) |> 
     summarize(pf = any(pf), authors = list(author),
@@ -95,7 +93,51 @@ share_papers_gg = ggplot(share_papers_df, aes(year,
 share_papers_gg
 
 
-## % of authors PF-funded
+## % of authors PF-funded ----
+## Count of PF-funded authors
+docs_df |> 
+    count(topic, year, author) |> 
+    mutate(pf = author %in% mq$author) |> 
+    filter(pf) |> 
+    count(topic, year) |> 
+    complete(topic, year = 1960:2010, 
+             fill = list(n = 0L)) |> 
+    ggplot(aes(year, n, color = topic, group = topic)) +
+    geom_line() +
+    # geom_point() +
+    ylim(0, 5) +
+    scale_color_brewer(palette = 'Set2')
+ggsave(here(out_dir, '15_pf_count.png'), 
+       height = 3, width = 4)
+
+## Which? 
+## 12/15 show up at some point
+## Rushton, Lynn, Jensen, Humphreys, and Vernon all have 10+
+docs_df |> 
+    count(topic, year, author) |> 
+    mutate(pf = author %in% mq$author) |> 
+    filter(pf) |> 
+    group_by(author) |> 
+    summarize(n = sum(n)) |> 
+    arrange(desc(n))
+
+## Authors in topic 24, 1989
+docs_df |> 
+    filter(year == 1991, topic == 'V24') |> 
+    count(author) |> 
+    view()
+
+# docs_df |> 
+#     count(topic, year, author) |> 
+#     mutate(pf = author %in% mq$author) |> 
+#     filter(pf) |> 
+#     count(topic, year) |> 
+#     complete(topic, year = 1960:2010, 
+#              fill = list(n = 0L)) |> 
+#     ggplot(aes(year, topic, fill = n)) +
+#     geom_raster() +
+#     scale_fill_viridis_b(breaks = 1:4)
+
 share_authors_df = docs_df |> 
     count(topic, year, author) |> 
     mutate(pf = author %in% mq$author) |> 
@@ -183,14 +225,14 @@ sim_df = future_map(1:1000,
                         ## Random sample of 15 authors
                         authors = docs_df |> 
                             group_by(topic) |> 
-                            distinct(family) |> 
+                            distinct(author) |> 
                             slice_sample(n = 15) |> 
                             mutate(in_sample = TRUE) |> 
                             ungroup()
                         
                         ## Share of papers w/ at least one author from `authors`
                         papers = docs_df |> 
-                            left_join(authors, by = c('topic', 'family')) |> 
+                            left_join(authors, by = c('topic', 'author')) |> 
                             replace_na(list(in_sample = FALSE)) |> 
                             summarize(in_sample = any(in_sample), authors = list(author),
                                       .by = c(article_id, year, topic)) |> 
@@ -200,8 +242,8 @@ sim_df = future_map(1:1000,
                             filter(in_sample)
                         ## Share of authors
                         docs = docs_df |> 
-                            count(topic, year, family) |> 
-                            left_join(authors, by = c('topic', 'family')) |> 
+                            count(topic, year, author) |> 
+                            left_join(authors, by = c('topic', 'author')) |> 
                             replace_na(list(in_sample = FALSE)) |> 
                             summarize(share_authors = mean(in_sample), .by = c(topic, year)) |> 
                             complete(topic, year, fill = list(share_authors = 0))
@@ -263,8 +305,9 @@ density_gg = ggplot(sim_df, aes(diff, color = topic)) +
                linewidth = 1,
                data = diff_df) +
     scale_color_brewer(palette = 'Set2', guide = 'none') +
-    scale_x_continuous(breaks = scales::breaks_pretty(n = 3), 
-                       name = 'mean(paper share - author share)') +
+    scale_x_continuous(breaks = scales::breaks_pretty(n = 3),
+                       labels = scales::percent_format(),
+                       name = 'presence') +
     labs(y = '') +
     facet_wrap(vars(topic), scales = 'free') +
     theme(
@@ -296,7 +339,7 @@ ggsave(here(out_dir, '15_presence.png'),
        width = 6, height = 4, scale = 1.75)
 
 "Disproportionate presence of Pioneer-funded authors in three focal topics.  
-A: Number of authors (distinguished by family name) for three focal topics from the medium vocabulary, k= 40 model, by year. Mainstream intelligence (topic 22) shows exponential-like increase while MQ race science (topic 7) and race-and-intelligence research (topic 24) remain flat. 
+A: Number of authors for three focal topics from the medium vocabulary, k= 40 model, by year. Mainstream intelligence (topic 22) shows exponential-like increase while MQ race science (topic 7) and race-and-intelligence research (topic 24) remain flat. 
 B: Pioneer-funded authors as a share (%) of all authors publishing in a given topic, by year (thin lines) and 5-year running mean (thick lines). Usually fewer than 15% of authors in a topic are Pioneer-funded. 
 C: Share of papers (%) with at least one Pioneer-funded author, by year (thin lines) and 5-year running mean (thick lines). After about 1985, more than 15% of papers in topic 24 have at least one Pioneer-funded author. 
 D: Comparison of author share (panel B) to paper share (panel C). Each point represents one year. If Pioneer-funded authors had publishing profiles (y-axis) proportionate to their authorship profiles (x-axis), points would be close to the dark line $y = x$. Points above this line indicate that Pioneer-funded authors had a relatively greater publishing presence than would be expected given their authorship profile. Length of thin vertical lines indicates difference between paper share and author share. 

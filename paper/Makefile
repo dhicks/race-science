@@ -1,6 +1,6 @@
 all: pdf wc
 
-split = 24
+split = 27
 
 pdf: paper.pdf
 paper.pdf: paper.qmd \
@@ -45,4 +45,4 @@ aux:
 
 .PHONY: diff
 diff:
-	Rscript -e "latexdiffr::git_latexdiff('paper.qmd', '529c8')"
+	Rscript -e "latexdiffr::git_latexdiff('paper.qmd', '334e16388c27d542644b50c8feae36362a2eac74')"
