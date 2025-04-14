@@ -42,18 +42,19 @@ author_data = function(data_dir = here::here('data'),
 }
 
 
-mq = tibble(author = c('Arthur R. Jensen', 
-                       'J. Philippe Rushton', 
-                       'Michael Levin', 
-                       'Robert M. Gordon', 
+pf = tibble(author = c('Thomas J. Bouchard, Jr.', 
+                       'Brunetto Chiarelli',
+                       'Hans J. Eysenck', 
+                       'Robert A. Gordon',
                        'Linda S. Gottfredson', 
-                       'Daniel R. Vining, Jr.', 
+                       'Joseph M. Horn', 
+                       'Lloyd G. Humphreys', 
+                       'Arthur R. Jensen', 
+                       'Michael Levin', 
                        'Richard Lynn', 
                        'R. Travis Osborne', 
-                       'Hans J. Eysenck', 
-                       'Thomas J. Bouchard, Jr.', 
-                       'Joseph M. Horn', 
+                       'J. Philippe Rushton', 
+                       'Audrey M. Shuey',
                        'Philip A. Vernon', 
-                       'Brunetto Chiarelli',
-                       'Lloyd G. Humphreys', 
-                       'Audrey M. Shuey'))
+                       'Daniel R. Vining, Jr.'
+                       ))

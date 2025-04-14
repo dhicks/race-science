@@ -1,6 +1,7 @@
 library(tidyverse)
-library(tmfast)
 theme_set(theme_bw())
+library(tmfast)
+
 library(patchwork)
 library(tinytable)
 
@@ -67,7 +68,7 @@ n_authors_gg
 
 ## What share of papers have a PF-funded author? ----
 share_papers_df = docs_df |> 
-    mutate(pf = author %in% mq$author) |> 
+    mutate(pf = author %in% pf$author) |> 
     summarize(pf = any(pf), authors = list(author),
               .by = c(article_id, year, topic)) |> 
     count(topic, year, pf) |> 
@@ -89,7 +90,8 @@ share_papers_gg = ggplot(share_papers_df, aes(year,
     geom_line(aes(y = share_sm), linewidth = 1) +
     scale_color_brewer(palette = 'Set2', guide = 'none') +
     scale_y_continuous(labels = scales::percent_format(), 
-                       name = 'paper share')
+                       name = 'paper share') +
+    coord_cartesian(ylim = c(0, .5))
 share_papers_gg
 
 
@@ -97,7 +99,7 @@ share_papers_gg
 ## Count of PF-funded authors
 docs_df |> 
     count(topic, year, author) |> 
-    mutate(pf = author %in% mq$author) |> 
+    mutate(pf = author %in% pf$author) |> 
     filter(pf) |> 
     count(topic, year) |> 
     complete(topic, year = 1960:2010, 
@@ -111,25 +113,26 @@ ggsave(here(out_dir, '15_pf_count.png'),
        height = 3, width = 4)
 
 ## Which? 
-## 12/15 show up at some point
+## 13/16 show up at some point
 ## Rushton, Lynn, Jensen, Humphreys, and Vernon all have 10+
+## Hardin, Horn, and Shuey do not appear
 docs_df |> 
     count(topic, year, author) |> 
-    mutate(pf = author %in% mq$author) |> 
+    mutate(pf = author %in% pf$author) |> 
     filter(pf) |> 
     group_by(author) |> 
     summarize(n = sum(n)) |> 
     arrange(desc(n))
 
 ## Authors in topic 24, 1989
-docs_df |> 
-    filter(year == 1991, topic == 'V24') |> 
-    count(author) |> 
-    view()
+# docs_df |> 
+#     filter(year == 1991, topic == 'V24') |> 
+#     count(author) |> 
+#     view()
 
 # docs_df |> 
 #     count(topic, year, author) |> 
-#     mutate(pf = author %in% mq$author) |> 
+#     mutate(pf = author %in% pf$author) |> 
 #     filter(pf) |> 
 #     count(topic, year) |> 
 #     complete(topic, year = 1960:2010, 
@@ -140,7 +143,7 @@ docs_df |>
 
 share_authors_df = docs_df |> 
     count(topic, year, author) |> 
-    mutate(pf = author %in% mq$author) |> 
+    mutate(pf = author %in% pf$author) |> 
     summarize(share_authors = mean(pf), .by = c(topic, year)) |> 
     complete(topic, year, fill = list(share_authors = 0)) |> 
     mutate(share_sm = slider::slide_index_dbl(share_authors, 
@@ -184,21 +187,22 @@ papers_authors_gg = full_join(share_papers_df, share_authors_df,
     geom_point(size = 2) +
     geom_abline(slope = 1, intercept = 0) +
     scale_color_brewer(palette = 'Set2') +
-    scale_y_continuous(name = 'paper share', 
+    scale_y_continuous(name = 'paper share',
                        labels = scales::percent_format()) +
     scale_x_continuous(name = 'author share', 
-                       labels = scales::percent_format())
+                       labels = scales::percent_format()) +
+    coord_equal()
 papers_authors_gg
 
 
 
-## Median difference ----
+## Mean difference ----
 ## (length of line in plot), when share_authors > 0
 # # A tibble: 3 × 2
 # topic     diff
 # <chr>    <dbl>
 # 1 V07   -0.00100
-# 2 V22    0.0418 
+# 2 V22    0.0576
 # 3 V24    0.117  
 diff_df = full_join(share_papers_df, share_authors_df, 
                     by = c('topic', 'year')) |> 
@@ -211,22 +215,22 @@ diff_df
 ## Drawing sets of 15 authors randomly, 
 ## across 1000 iterations 99% CI is 
 # # A tibble: 3 × 4
-# topic     n     low   high
-# <chr> <int>   <dbl>  <dbl>
-# 1 V07    1000 -0.0238 0.213 
-# 2 V22    1000  0.0148 0.0845
-# 3 V24    1000  0.0217 0.107 
+# topic     n     low    high
+# <chr> <int>   <dbl>    <dbl>
+# 1 V07    1000 -0.0245  0.218 
+# 2 V22    1000  0.00853 0.0953
+# 3 V24    1000  0.0194  0.113 
 
 set.seed(2025-04-07)
 sim_df = future_map(1:1000, 
                     .progress = TRUE,
                     .options = furrr_options(seed = 2025-04-07),
                     ~ {
-                        ## Random sample of 15 authors
+                        ## Random sample of 13 authors
                         authors = docs_df |> 
                             group_by(topic) |> 
                             distinct(author) |> 
-                            slice_sample(n = 15) |> 
+                            slice_sample(n = 13) |> 
                             mutate(in_sample = TRUE) |> 
                             ungroup()
                         
@@ -329,7 +333,7 @@ design = 'AD
 list(A = n_authors_gg, 
      B = share_authors_gg, 
      C = share_papers_gg, 
-     D = papers_authors_gg + coord_equal(), 
+     D = papers_authors_gg + coord_equal(ylim = c(NA, .55)), 
      E = density_gg) |> 
     wrap_plots(guides = 'collect', 
                design = design) +
