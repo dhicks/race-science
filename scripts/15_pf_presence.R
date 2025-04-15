@@ -27,16 +27,31 @@ model_files = list.files(tm_dir, '*_tmfast.Rds') %>%
     set_names('lg', 'md', 'sm')
 
 ## med vocab, k = 40, topics 7, 22, 24 ----
+## NB In script 08, docs are assigned to topics based on a threshold of normalized gamma > 0.5
+## For simplicity, here we use the max value of gamma
+## This results in much higher document counts than in figure 2, 
 doc_gamma = read_rds(model_files['md']) |> 
     tidy(k = 40, matrix = 'gamma') |> 
     filter(gamma == max(gamma) & topic %in% c('V07', 'V22', 'V24'), 
            .by = document)
+
+# # A tibble: 3 × 2
+# topic     n
+# <chr> <int>
+# 1 V07    1436
+# 2 V22     963
+# 3 V24     611
+count(doc_gamma, topic)
 
 ## Link metadata to documents of interest
 docs_df = inner_join(meta_ar, doc_gamma, by = c('article_id' = 'document')) |> 
     ## And then to authors
     left_join(author_data(), by = 'article_id') |> 
     collect()
+
+ggplot(docs_df, 
+       aes(year, color = topic, group = topic)) +
+    geom_line(stat = 'count', aes(y = after_stat(count)))
 
 
 ## Number of authors ----

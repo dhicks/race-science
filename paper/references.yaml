@@ -2254,6 +2254,31 @@ references:
   type: article
   URL: http://arxiv.org/abs/2305.01535
 
+- id: HicksYoungsPValuePlot2022
+  abstract: >-
+    In a recent paper in the journal Environmental Epidemiology (Hicks 2022), I
+    examined the statistical-evidential properties of Young’s p-value plot, a
+    method used by the biostatistician S.
+  accessed:
+    - year: 2022
+      month: 3
+      day: 16
+  author:
+    - family: Hicks
+      given: Dan
+  citation-key: HicksYoungsPValuePlot2022
+  container-title: Social Epistemology Review and Reply Collective
+  issued:
+    - year: 2022
+      month: 3
+      day: 16
+  language: en-US
+  license: All rights reserved
+  title: Young’s P-Value Plot as an Agnogenic Technique, Dan Hicks
+  type: webpage
+  URL: >-
+    https://social-epistemology.com/2022/03/16/youngs-p-value-plot-as-an-agnogenic-technique-dan-hicks/
+
 - id: HolmanExperimentationIndustrialSelection2017
   author:
     - family: Holman
@@ -5928,6 +5953,27 @@ references:
   type: article-journal
   URL: https://www.cell.com/one-earth/abstract/S2590-3322(21)00233-5
   volume: '0'
+
+- id: TaberyStruggleUnderstandInteraction2014
+  author:
+    - family: Tabery
+      given: James
+  call-number: BF341 .T33 2014
+  citation-key: TaberyStruggleUnderstandInteraction2014
+  collection-title: 'Life and mind: philosophical issues in biology and psychology'
+  event-place: Cambridge, Massachusetts
+  ISBN: 978-0-262-02737-3
+  issued:
+    - year: 2014
+  number-of-pages: '279'
+  publisher: MIT Press
+  publisher-place: Cambridge, Massachusetts
+  source: Library of Congress ISBN
+  title: >-
+    Beyond versus: the struggle to understand the interaction of nature and
+    nurture
+  title-short: Beyond versus
+  type: book
 
 - id: TaberyWhyStudyingGenetics2015
   abstract: >-
