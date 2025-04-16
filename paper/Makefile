@@ -6,7 +6,8 @@ pdf: paper.pdf
 paper.pdf: paper.qmd \
            references.yaml \
            refs-manual.bib \
-           ../scripts/11-proof-of-concept.qmd
+           ../scripts/11-proof-of-concept.qmd \
+           img/*
 # 	Rscript -e "rmarkdown::render('paper.Rmd')"
 	quarto render paper.qmd
 
@@ -24,6 +25,8 @@ images:
 	cp ../out/08_grid_lg.pdf img/08_grid_lg.pdf
 	cp ../out/08_grid_md.pdf img/08_grid_md.pdf
 	cp ../out/08_grid_sm.pdf img/08_grid_sm.pdf
+	cp ../out/15_pf_count.png img/15_pf_count.png
+	cp ../out/15_presence.png img/15_presence.png
 
 .PHONY: recache
 recache: 
