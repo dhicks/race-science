@@ -1,6 +1,6 @@
-all: pdf wc
+all: pdf tex wc
 
-split = 27
+split = 31
 
 pdf: paper.pdf
 paper.pdf: paper.qmd \
@@ -10,6 +10,12 @@ paper.pdf: paper.qmd \
            img/*
 # 	Rscript -e "rmarkdown::render('paper.Rmd')"
 	quarto render paper.qmd
+	
+tex: paper-noapdx.tex
+paper-noapdx.tex: paper.tex
+	sed '/\\appendix/,$$d' $< > $@
+	echo '' >> $@
+	echo '\end{document}' >> $@
 
 .PHONY: images
 images:

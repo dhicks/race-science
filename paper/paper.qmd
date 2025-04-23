@@ -30,6 +30,7 @@ keywords:
   - topic modeling
   
 bibliography: [references.yaml, refs-manual.bib]
+csl: apa.csl
 
 format: 
   aft-pdf:
@@ -39,13 +40,6 @@ format:
     fig.env: "figure*"
     number-sections: true
     cite-method: citeproc
-    include-in-header: 
-        text: |
-            \usepackage{lineno}
-            \linenumbers
-    geometry:
-        - left = 1.5in
-        - right = 1.5in
 
 #  elsevier-pdf:  # https://github.com/quarto-journals/elsevier
 #    keep-tex: true
@@ -71,14 +65,15 @@ execute:
   cache: true
 ---
 
-<!-- 
-QSS submission guidelines: 
-<https://direct.mit.edu/qss/pages/submission-guidelines>
+keywords: 
 
-- 300-word cover letter on significance and fit
-- Articles: original theoretical, empirical, or methodological research (typically between 5,000 and 8,000 words)
+- race science
+- race and intelligence
+- psychology
+- behavior genetics
+- text mining
+- topic modeling
 
- -->
  
 # Introduction
 
@@ -164,7 +159,7 @@ We then used the author search tool in Clarivate's Web of Science platform (<htt
 
 Table: Pioneer-funded researchers.  Either identified in [@MillerPioneerFundBankrolling1994] or named on an archive copy of Pioneer's website; along with birth and death dates from Wikipedia, attributed discipline, academic affiliation, and WoS author search result counts.  Brunetto Chiarelli does not have a Wikipedia page; Richard Lynn's title of Professor Emeritus at Ulster University was withdrawn in 2018. {#tbl-researchers}
 
-![Journals publishing 6 or more Pioneer-funded researchers, Web of Science author search results.](img/pf_wos_results.png){#fig-wos fig-env="figure*"}
+![Journals publishing 6 or more Pioneer-funded researchers, Web of Science author search results.](img/fig-01.png){#fig-wos fig-env="figure*"}
 
 For further consideration in this side of the corpus, we excluded *Mankind Quarterly* (as already included on the other side) as well as *Science* and *Nature* (as too general).  Three journals published by the American Psychological Association (APA; *American Psychologist*, *Contemporary Psychology*, and *Journal of Educational Psychology*) had to be excluded due to confusion over who could give us permission to use the archives for a text mining project, with both APA and ProQuest asserting that permission could only be granted by the other entity.  *European Journal of Personality*, published by SAGE, also had to be excluded because our institutional access only went back to 1999.  
 
@@ -207,9 +202,9 @@ To fit these topic models, we followed the approach proposed by @RoheVintageFact
 
 Topic models were fit for all three vocabularies (large, medium, and small) with $k = 5, 10, 20, ..., 70$ (number of topics), resulting in a total of $24 = 3 \times 8$ models. 
 
-Following the approach of @HicksProductivityInterdisciplinaryImpacts2021, we did not attempt to identify a unique best fitted model for further analysis.  While the results section of this paper focuses on the medium vocabulary, $k=40$ model as the "median" among the 24 fitted models, qualitatively similar results appear across all models with $k \geq 10$ for all vocabularies; see @sec-topic-quality and figures @fig-grid-lg, @fig-grid-md, @fig-grid-sm.  
+Following the approach of @HicksProductivityInterdisciplinaryImpacts2021, we did not attempt to identify a unique best fitted model for further analysis.  While the results section of this paper focuses on the medium vocabulary, $k=40$ model as the "median" among the 24 fitted models, qualitatively similar results appear across all models with $k \geq 10$ for all vocabularies; see @sec-topic-quality and supplements SM7, SM8, SM9<!-- figures @fig-grid-lg, @fig-grid-md, @fig-grid-sm -->.  
 
-To analyze the fitted topic models, we first constructed and manually inspected visualizations of the topic-document distributions (see figures @fig-gamma-lg, @fig-gamma-md, @fig-gamma-sm) and the top (highest-probability) terms for each topic (see figures @fig-silge-lg, @fig-silge-md, @fig-silge-sm).  This suggested that the models often identified two distinct topics with racial terms, that some of these topics used terms from intelligence research, and that these topics had different occurrence patterns across journals.  To examine these patterns more systematically, we programmatically identified every topic across all 24 models that used some combination of racial and intelligence terms, and assembled visualization grids of the occurrence of these topics by journal over time (see figures @fig-grid-lg, @fig-grid-md, @fig-grid-sm).  
+To analyze the fitted topic models, we first constructed and manually inspected visualizations of the topic-document distributions (see figures @fig-gamma-lg, @fig-gamma-md, @fig-gamma-sm) and the top (highest-probability) terms for each topic (see supplements SM4-6<!-- figures @fig-silge-lg, @fig-silge-md, @fig-silge-sm -->).  This suggested that the models often identified two distinct topics with racial terms, that some of these topics used terms from intelligence research, and that these topics had different occurrence patterns across journals.  To examine these patterns more systematically, we programmatically identified every topic across all 24 models that used some combination of racial and intelligence terms, and assembled visualization grids of the occurrence of these topics by journal over time (see supplements SM7, SM8, SM9<!-- figures @fig-grid-lg, @fig-grid-md, @fig-grid-sm -->).  
 
 This analysis relied on an interpretive assumption that topics with racial top terms were reliable indicators of race science discourse.  To confirm this assumption, we conducted two quality assessments of topic 24 from the medium vocabulary, $k = 40$ model.  A manual assessment by both authors achieved consensus that 89% (108/121) of the top (highest likelihood) papers in this topic were race science discourse; see @sec-topic-quality.  We also replicated the medium vocabulary, $k = 40$ model using the popular `STM` package for topic modeling; see @sec-stm.  This model also gave qualitatively similar results.  Due to the time and computational resources required for these interpretive checks, we determined that it would not be feasible for us to repeat them across all 855 topics ($3 \times (5 + 10 + 20 + \cdots + 70)$) and 24 topic models.  
 
@@ -241,9 +236,9 @@ Figure @fig-wos shows that, while MQ is among the "Pioneer-publishing" journals,
 
 Per our hypothesis that MQ served as an "incubator" or "safe space" for race science, we had expected the topic models to identify a distinct race science discourse topic, that this topic would appear first and most prominently in MQ, and only later "spread" to mainstream journals.  Instead, the models robustly identified two distinct kinds of race science discourse.  One of these was almost exclusive to MQ; the other originated outside of MQ and was almost always more prevalent in mainstream journals, especially Int and PID.  
 
-![Silge plots [@SilgeTopicModeling2017] and smoothed time series for three focal topics from the medium vocabulary, $k = 40$ model.  Topics 07 and 24 are examples of the two distinct types of race science discourse, while topic 22 is "mainstream" or non-race science intelligence research.  Top row: top 15 terms by $\beta$ (term-topic distribution) for each topic; text version in table @tbl-silge.  Bottom row: count of articles associated with each topic, by journal and year.  Article counts use a threshold approach, with $\gamma$ (topic-document distribution) greater than 0.5.  Thin lines give annual values, thick lines give 5-year running averages.  Because *Behavior Genetics* and *Behavioral and Brain Sciences* are not prominent in any panel, neither is given a direct label.](img/08_focal_topics.png){#fig-focal}
+![Silge plots [@SilgeTopicModeling2017] and smoothed time series for three focal topics from the medium vocabulary, $k = 40$ model.  Topics 07 and 24 are examples of the two distinct types of race science discourse, while topic 22 is "mainstream" or non-race science intelligence research.  Top row: top 15 terms by $\beta$ (term-topic distribution) for each topic; text version in table @tbl-silge.  Bottom row: count of articles associated with each topic, by journal and year.  Article counts use a threshold approach, with $\gamma$ (topic-document distribution) greater than 0.5.  Thin lines give annual values, thick lines give 5-year running averages.  Because *Behavior Genetics* and *Behavioral and Brain Sciences* are not prominent in any panel, neither is given a direct label.](img/fig-02.png){#fig-focal}
 
-Figure @fig-focal focuses on three topics identified in one of the 24 fitted topic models; see table @tbl-silge for a table version of the Silge plot in @fig-focal; figures [@fig-gamma-lg; @fig-gamma-md; @fig-gamma-sm; @fig-silge-lg; @fig-silge-md; @fig-silge-sm] for all topics from all models, and figures [@fig-grid-lg; @fig-grid-md; @fig-grid-sm] for selected topics from all models; we discuss the robustness of our findings across all models below.  In the focal model, topic 07 is strongly associated with MQ:  MQ published dozens of articles in this topic each year, and no other journal ever published more than a handful.  The "Silge plot," showing the top 15 terms in the topic [@SilgeTopicModeling2017], contains a number of racial terms (`races`, `whites`, `negroes` and potentially `europe`, `africa`, `india`, and `japan`); as well as `book`, likely reflecting the fact that MQ published a number of book reviews, while the mainstream journals either did not publish book reviews or (in the case of PID) these were not available for the corpus. 
+Figure @fig-focal focuses on three topics identified in one of the 24 fitted topic models; see table @tbl-silge for a table version of the Silge plot in @fig-focal; figures [@fig-gamma-lg; @fig-gamma-md; @fig-gamma-sm; and supplements SM4, SM5, SM6<!--  @fig-silge-lg; @fig-silge-md; @fig-silge-sm -->] for all topics from all models, and supplements SM7, SM8, SM9<!-- figures [@fig-grid-lg; @fig-grid-md; @fig-grid-sm] --> for selected topics from all models; we discuss the robustness of our findings across all models below.  In the focal model, topic 07 is strongly associated with MQ:  MQ published dozens of articles in this topic each year, and no other journal ever published more than a handful.  The "Silge plot," showing the top 15 terms in the topic [@SilgeTopicModeling2017], contains a number of racial terms (`races`, `whites`, `negroes` and potentially `europe`, `africa`, `india`, and `japan`); as well as `book`, likely reflecting the fact that MQ published a number of book reviews, while the mainstream journals either did not publish book reviews or (in the case of PID) these were not available for the corpus. 
 
 Topic 22 is strongly associated with Int and PID in the same way that 07 is associated with MQ.  The Silge plot does contain `jensen`, as well as a reference to Raymond Cattell, who played a major role in the development of factor analysis and intelligence testing but also advocated for eugenics, fascism, and Nazi race science [@MehlerBeyondismRaymondCattell1997]. However, the other authors named in this topic — John Horn and Peter Bentler — do not appear to have contributed to race science.  Instead this topic appears to identify "mainstream" (non-race science discourse) intelligence research, especially factor analysis and the debate over whether intelligence is unidimensional or multidimensional.  (Three other topics only associated with mainstream intelligence journals and terms were also identified by this topic model.)  This topic indicates that the model is able to distinguish "mainstream" intelligence research from race science discourse.  
 
@@ -251,7 +246,7 @@ The Silge plot for topic 24, by contrast, suggests a distinct race science disco
 
 In almost all years, most papers in topic 24 were published in mainstream journals rather than MQ.  Jensen's "How Much Can We Boost IQ and Scholastic Achievement?" [@JensenHowMuchCan1969] was published in 1969 in *Harvard Educational Review* (not included in this study), and the time series indicates that, in the early 1970s, there was an increase in articles in topic 24 in both PR and MQ (the only two journals in our corpus that were active at the time).  MQ shows another sharp increase in the late 1980s; using content analysis, Adams and Pilloud found that psychology was the dominant discipline in MQ in the period 1992-2018 [@AdamsMisappropriationBiologicalAnthropology2021].  PID published multiple papers in topic 24 almost immediately after it was founded, with Int showing a more gradual increase between the mid-1970s and mid-1990s.  
 
-These qualitative results are robust across models using the large and medium vocabularies; see @fig-grid-lg, @fig-grid-md, @fig-grid-sm.  Across all vocabularies, as $k$ increases, multiple different "intelligence only" topics emerge, apparently picking out different methods or aspects of intelligence research.  For example, there is often an "intelligence only" topic that is highly associated with BG.  MQ never has many publications in an "intelligence only" topic, except for $k=10, 20$ in the large vocabulary; in these two models, there is neither a "race only" nor "race-and-intelligence" topic.  
+These qualitative results are robust across models using the large and medium vocabularies; see supplements SM7, SM8, SM9<!-- @fig-grid-lg, @fig-grid-md, @fig-grid-sm -->.  Across all vocabularies, as $k$ increases, multiple different "intelligence only" topics emerge, apparently picking out different methods or aspects of intelligence research.  For example, there is often an "intelligence only" topic that is highly associated with BG.  MQ never has many publications in an "intelligence only" topic, except for $k=10, 20$ in the large vocabulary; in these two models, there is neither a "race only" nor "race-and-intelligence" topic.  
 
 In the large and medium vocabularies, there is usually one "race only" topic and/or one "race-and-intelligence" topic, and the "race only" topic is always virtually exclusive to MQ.  In the medium vocabulary, "race-and-intelligence" is more prevalent in mainstream journals than in MQ; except for $k=20$, where there is no "race only" topic.  In the large vocabulary, a "race only" topic does not emerge until $k=40$, and there are not simultaneous "race only" and "race-and-intelligence" topics until $k=60$.  However, in $k=60, 70$ there are both topics, and they follow the same pattern seen in the medium vocabulary: "race only" is almost exclusive to MQ, and "race-and-intelligence" is more prevalent in mainstream journals. 
 
@@ -273,7 +268,7 @@ However, the topic model analysis suggests that, by the 1990s, behavior genetics
 (B) Pioneer-funded authors as a share (%) of all authors publishing in a given topic, by year (thin lines) and 5-year running mean (thick lines). Usually less than 15% of authors in a topic are Pioneer-funded. \
 (C) Share of papers (%) with at least one Pioneer-funded author, by year (thin lines) and 5-year running mean (thick lines). Not shown is 1963 for topic 22, where Robert A. Gordon was one of two coauthors of the single publication in that topic that year. After about 1985, more than 15% of papers in topic 24 have at least one Pioneer-funded author. \
 (D) Comparison of author share (panel B) to paper share (panel C). Each point is one year-topic combination. Not shown here is 1963 for topic 22. Points above the dark line $y = x$ indicate Pioneer-funded authors had a greater paper share than would be expected based on author share. Length of thin vertical lines measures "presence." \
-(E) Empirical density plots of "presence," mean difference between paper share and author share for 1,000 randomly drawn sets of 13 authors. Bold vertical lines are the mean values for the Pioneer-funded authors (signed length of lines in panel D). Pioneer-funded authors are similar to randomly drawn sets for topics 7 and 22, but very different for topic 24. ](img/15_presence.png){#fig-presence}
+(E) Empirical density plots of "presence," mean difference between paper share and author share for 1,000 randomly drawn sets of 13 authors. Bold vertical lines are the mean values for the Pioneer-funded authors (signed length of lines in panel D). Pioneer-funded authors are similar to randomly drawn sets for topics 7 and 22, but very different for topic 24. ](img/fig-03.png){#fig-presence}
 
 Post hoc, we were interested in trying to understand the impact that Pioneer might have had as an institution for supporting friendly scientists. (We thank a reviewer for comments that suggested this further analysis.) Because we did not have citation data, we were unable to examine "impact" in its usual sense of citations. Instead we chose to examine "presence," which we operationalized as the difference between the share of papers with at least one Pioneer-funded author ("paper share") against the share of all authors who were on our list of Pioneer-funded authors ("author share"). Positive values of "presence" would indicate that Pioneer-funded authors publish more (in a given topic) than might be expected. 
 
@@ -369,9 +364,9 @@ D.J. Hicks, Emilio J.C. Lobato
 
 \clearpage
 
-![Corpus assembly.](img/dataset.png){#fig-corpus width="120%" fig-env="figure*"}
+![Corpus assembly.](img/fig-S01.png){#fig-corpus width="120%" fig-env="figure*"}
 
-![Count of documents in the corpus, by journal and year.](img/02_count.png){#fig-counts  fig-env="figure*"}
+![Count of documents in the corpus, by journal and year.](img/fig-S02.png){#fig-counts  fig-env="figure*"}
 
 Table: Document counts, by journal, and years included in the corpus. {#tbl-counts}
 
@@ -444,27 +439,29 @@ After fitting topic models, our first research question was whether we could ide
 
 For $k=5, 10$ the distributions are quite noisy, difficult to interpret, and generally don't form very strong visual clusters.  For moderate values of $k$, 20 through 40, coherent bands start to appear for journal-distinctive topics in MQ, BG, Int and, to a lesser degree, PID.  Note that the distinctive topics for MQ and Int do not obviously coincide.  At a low level, these journal-distinctive topics reflect different distributions of noun phrases, and prima facie are likely explained by the relatively narrow scope of these four journals; PR is a generalist journal covering all of psychology and BBS is an interdisciplinary cognitive science journal.  Above about $k=50$, the models appear to identify more fine-grained topics, the coherent bands fade, and the topics do not obviously distinguish different journals.  
 
-We next constructed Silge plots [@SilgeTopicModeling2017], showing the top 15 (highest-probability) terms (noun phrases) from each topic in the model; see figures [@fig-silge-lg; @fig-silge-md; @fig-silge-sm].  Perusing these term lists, we focused on topics in each model that contained racial terms.  Every fitted topic model included at least one racial topic.  Importantly, in some cases these topics contained terms related to intelligence research, but in other cases they did not.  
+We next constructed Silge plots [@SilgeTopicModeling2017], showing the top 15 (highest-probability) terms (noun phrases) from each topic in the model; see supplements SM4, SM5, SM6<!-- figures [@fig-silge-lg; @fig-silge-md; @fig-silge-sm] -->.  Perusing these term lists, we focused on topics in each model that contained racial terms.  Every fitted topic model included at least one racial topic.  Importantly, in some cases these topics contained terms related to intelligence research, but in other cases they did not.  
 
-The gamma distributions and Silge plots suggested that, once $k$ was sufficiently large, the topic models were distinguishing between two types of race science discourse articles.  We therefore examined the prevalence of topics that used racial terms, intelligence-research terms, or both, by journal and across all 24 models; see figures [@fig-grid-lg; @fig-grid-md; @fig-grid-sm]. In these visualizations, each row of facets corresponds to a value of $k$ (excluding 5 as too noisy), and each column of facets corresponds to one topic.  Topics are clustered based on whether the top 15 terms contain racial terms ("race"), terms related to intelligence research ("intelligence"), or both.  Line plots show the count of articles with $\gamma > 0.50$ for the given topic, by journal; thick lines are 5-year running averages and thin lines are raw counts.  
+The gamma distributions and Silge plots suggested that, once $k$ was sufficiently large, the topic models were distinguishing between two types of race science discourse articles.  We therefore examined the prevalence of topics that used racial terms, intelligence-research terms, or both, by journal and across all 24 models; see supplements SM7, SM8, SM9<!-- figures [@fig-grid-lg; @fig-grid-md; @fig-grid-sm] -->. In these visualizations, each row of facets corresponds to a value of $k$ (excluding 5 as too noisy), and each column of facets corresponds to one topic.  Topics are clustered based on whether the top 15 terms contain racial terms ("race"), terms related to intelligence research ("intelligence"), or both.  Line plots show the count of articles with $\gamma > 0.50$ for the given topic, by journal; thick lines are 5-year running averages and thin lines are raw counts.  
 
 Across all three vocabularies, for sufficiently large values of $k$ the models identify two or more different racial topics, one that appears all but exclusively in MQ and at least one that appears primarily in mainstream journals.  
 
 We next conducted a topic quality check of topic 24 from the medium vocabulary, $k=40$ model, which appeared to identify race science discourse on intelligence published in mainstream journals.  A spreadsheet of all articles that had a maximum value of $\gamma$ for this topic was extracted (excluding articles published in *Psychological Reports*), and the top 121 articles ($\gamma > 0.97$) were reviewed manually by both authors.  We coded each article as *race science discourse*, or not, using our definition of race science discourse as treating race science as a legitimate area of scientific research; this includes methodological critiques of race science and empirical tests that falsify race science hypotheses.  
 
-For the first round of review, both authors worked independently,  dichotomously coding each article as race science discourse or not.  We calculated the "false positive rate" — documents with maximum $\gamma$ in this topic that were not race science discourse — and interrater reliability using Cohen's $\kappa$.  The consensus true positive rate was 89.3% (108/121), while the consensus false positive rate was 8.3% (10/121), with 98% agreement across the two raters ($\kappa = 0.86)$.  Coding spreadsheets are included in the supplemental materials S8-S9.  For each of the 10 consensus false positive documents, their inclusion in the topic was readily explained, but in different ways for different documents.  Some included text from other documents, as when an article started in the middle of a page; others discussed perceptions of race relations or racial animus; one piece in BG discussed differences in the herding behavior of two cattle breeds, referred to as "white" and "black."  
+For the first round of review, both authors worked independently,  dichotomously coding each article as race science discourse or not.  We calculated the "false positive rate" — documents with maximum $\gamma$ in this topic that were not race science discourse — and interrater reliability using Cohen's $\kappa$.  The consensus true positive rate was 89.3% (108/121), while the consensus false positive rate was 8.3% (10/121), with 98% agreement across the two raters ($\kappa = 0.86)$.  Coding spreadsheets are included in the supplemental materials SM2 and SM3.  For each of the 10 consensus false positive documents, their inclusion in the topic was readily explained, but in different ways for different documents.  Some included text from other documents, as when an article started in the middle of a page; others discussed perceptions of race relations or racial animus; one piece in BG discussed differences in the herding behavior of two cattle breeds, referred to as "white" and "black."  
 
 The 3 non-consensus documents reflected essential ambiguity in the operationalization of race science discourse.  One is a table of contents from a 1980 issue of Int; arguably this document should have been excluded as irrelevant front matter, but arguably it legitimizes the research published in the issue.  The second case is a paper on racial differences in emotional intelligence that was classified as race science discourse by one author, while the other author felt it was more focused on psychometrics [@GignacGroupDifferencesEI2010].  And a 1990 article in MQ (<https://www.unz.com/print/MankindQuarterly-1990q3-00108/>) proposed to offer an economic explanation for crime.  While it has a few pages connecting race/ethnicity to both crime and poverty, it ultimately focuses on unemployment and alcohol sales, rather than race, as the key predictors of crime.  
 
 Based on this qualitative review, we judged that the topic model approach was sufficiently sensitive (low "false positive" rate) in identifying race science discourse.  However, "false negatives" are still possible, as some documents that human readers would classify as race science discourse might have been associated with other topics.  
 
+At the request of a reviewer, we also extracted a list of the top documents for each of the three focal topics in the $k=40$, medium vocabulary model. This list is supplement SM10.  
+
 # STM robustness check {#sec-stm}
 
 As a robustness check, we compared the `tmfast` results with a topic model fit using `STM`, a widely used package for topic modeling in R [@RobertsStmPackageStructural2019].  Using the medium vocabulary, $k=40$, and a relaxed convergence threshold (`1e-4` compared to the default `1e-5`), fitting a single `STM` model took approximately 20 minutes.  This was approximately two orders of magnitude slower than `tmfast`.  And, unlike `tmfast`, `STM` can only fit a single value of $k$ at a time.  We therefore only fit this one `STM` model.  
 
-Figure @fig-stm shows four topics extracted from the `STM` model, automatically identified by the use of race keywords, intelligence keywords, or both, among the top 15 terms.  As in the `tmfast` analysis, the "race only" topic is almost exclusive to MQ; the "race and intelligence" topic emerges in mainstream journals before appearing in both the mainstream and MQ; and there are distinctive "intelligence only" topics.  Compare figures @fig-focal, @fig-grid-md.  One notable difference between these results is the role of PR in publishing race and intelligence.  
+Figure @fig-stm shows four topics extracted from the `STM` model, automatically identified by the use of race keywords, intelligence keywords, or both, among the top 15 terms.  As in the `tmfast` analysis, the "race only" topic is almost exclusive to MQ; the "race and intelligence" topic emerges in mainstream journals before appearing in both the mainstream and MQ; and there are distinctive "intelligence only" topics.  Compare figure @fig-focal with supplement SM8<!-- @fig-grid-md -->.  One notable difference between these results is the role of PR in publishing race and intelligence.  
 
-![Silge plots and thresholded document counts for "race only," "race-and-intelligence," and "intelligence only" topics in the STM model.](img/12-stm.png){#fig-stm fig-env="figure*"}
+![Silge plots and thresholded document counts for "race only," "race-and-intelligence," and "intelligence only" topics in the STM model.](img/fig-S07.png){#fig-stm fig-env="figure*"}
 
 
 # Supplemental analysis of *Behavior Genetics* {#sec-bg}
@@ -483,7 +480,7 @@ For this supplemental analysis, we focused on the medium vocabulary, $k = 40$ an
 
 The Crossref API does not standardize or disambiguate author names. We manually disambiguated the names of the Pioneer-funded authors, e.g., searching the author field for every occurrence of "Rushton" and then identifying all the variations for J. Philippe Rushton. A simple crosswalk table allowed us to standardize all of these variations to a "canonical" version of the name of each Pioneer-funded author, e.g., J.P. Rushton would be replaced with the "canonical" version J. Philippe Rushton before proceeding with further analysis. Fig. @fig-pf-count shows the number of Pioneer-funded authors who published in the three focal topics, by year. Across the entire scope of the data, 13 of the Pioneer-funded authors ever published in any of these three topics, with Rushton, Lynn, Jensen, Humphreys, and Vernon each publishing 10 or more papers (aggregated across topics).  (Note that Lloyd Humphreys and Robert A. Gordon did not have any results in the Web of Science searches but did have papers in the corpus. Hardin, Horn, and Shuey do not appear in the papers for these focal topics.) 
 
-![Count of Pioneer-funded authors publishing in three focal topics, by year](img/15_pf_count.png){#fig-pf-count}
+![Count of Pioneer-funded authors publishing in three focal topics, by year](img/fig-S08.png){#fig-pf-count}
 
 Names of other authors were not disambiguated, and so, e.g., D.J. Hicks and Daniel J. Hicks would be treated as two different authors for the purposes of this analysis. As a consequence, the total number of authors is probably too high in the estimate of `author_share`, and so the estimate of `author_share` is probably too low. Assuming no issues with the manual disambiguation of Pioneer-funded authors, `paper_share` does not have this problem. Therefore the estimated difference `paper_share - author_share` is probably larger than the true difference. In terms of subfigure @fig-presence E, the vertical bar is probably too far to the right. 
 
@@ -518,20 +515,22 @@ This approach is equivalent to randomly assigning group labels in a permutation 
 
 
 
-![Fitted topic models: Gamma (topic-document) distributions, large vocabulary.](img/05_lg_gamma.png){#fig-gamma-lg  fig-env="figure*"}
+![Fitted topic models: Gamma (topic-document) distributions, large vocabulary.](img/fig-S09.png){#fig-gamma-lg  fig-env="figure*"}
 
-![Fitted topic models: Gamma (topic-document) distributions, medium vocabulary.](img/05_md_gamma.png){#fig-gamma-md  fig-env="figure*"}
+![Fitted topic models: Gamma (topic-document) distributions, medium vocabulary.](img/fig-S10.png){#fig-gamma-md  fig-env="figure*"}
 
-![Fitted topic models: Gamma (topic-document) distributions, small vocabulary.](img/05_sm_gamma.png){#fig-gamma-sm  fig-env="figure*"}
+![Fitted topic models: Gamma (topic-document) distributions, small vocabulary.](img/fig-S11.png){#fig-gamma-sm  fig-env="figure*"}
 
-![Silge plots (top 15 terms) for each topic and model, large vocabulary.](img/06-lg-silge.pdf){#fig-silge-lg fig-env="figure*"}
+<!-- 
+![Silge plots (top 15 terms) for each topic and model, large vocabulary.](img/fig-S12.pdf){#fig-silge-lg fig-env="figure*"}
 
-![Silge plots (top 15 terms) for each topic and model, medium vocabulary.](img/06-md-silge.pdf){#fig-silge-md fig-env="figure*"}
+![Silge plots (top 15 terms) for each topic and model, medium vocabulary.](img/fig-S13.pdf){#fig-silge-md fig-env="figure*"}
 
-![Silge plots (top 15 terms) for each topic and model, small vocabulary.](img/06-sm-silge.pdf){#fig-silge-sm fig-env="figure*"}
+![Silge plots (top 15 terms) for each topic and model, small vocabulary.](img/fig-S14.pdf){#fig-silge-sm fig-env="figure*"}
 
-![Topics with "race," "intelligence," or both occurring in the top 15 terms, large vocabulary.](img/08_grid_lg.pdf){#fig-grid-lg fig-env="figure*"}
+![Topics with "race," "intelligence," or both occurring in the top 15 terms, large vocabulary.](img/fig-S15.pdf){#fig-grid-lg fig-env="figure*"}
 
-![Topics with "race," "intelligence," or both occurring in the top 15 terms, medium vocabulary.](img/08_grid_md.pdf){#fig-grid-md fig-env="figure*"}
+![Topics with "race," "intelligence," or both occurring in the top 15 terms, medium vocabulary.](img/fig-S16.pdf){#fig-grid-md fig-env="figure*"}
 
-![Topics with "race," "intelligence," or both occurring in the top 15 terms, small vocabulary.](img/08_grid_sm.pdf){#fig-grid-sm fig-env="figure*"}
+![Topics with "race," "intelligence," or both occurring in the top 15 terms, small vocabulary.](img/fig-S17.pdf){#fig-grid-sm fig-env="figure*"}
+ -->
