@@ -182,7 +182,7 @@ After noun phrase extraction, the corpus comprised 43,162,055 total tokens of 6,
 
 Document metadata retrieved from Crossref does not appear to be covered by any copyright or other intellectual property restrictions.  However, due to copyright restrictions, we are unable to make document fulltext or Web of Science search results publicly available.  Code for the corpus assembly and text preparation steps described above is available by request. 
 
-The public analysis repository, <https://github.com/dhicks/race-science> *[DOI will go here]*, includes document metadata and documentwise counts of NLP-extracted noun phrases ("document-term matrices"), along with code to reproduce the analysis of the following sections. 
+The public analysis repository (<https://github.com/dhicks/race-science> and <https://doi.org/10.5281/zenodo.15272241>) includes document metadata and documentwise counts of NLP-extracted noun phrases ("document-term matrices"), along with code to reproduce the analysis of the following sections. 
 
 
 ## Vocabulary selection 
@@ -337,7 +337,7 @@ Thanks to Emily Merchant and John Jackson for some initial discussions that help
 
 **Competing interests:** The authors have no competing interests to declare. 
 
-**Data and materials availability:** Web of Science search results and article fulltext are not publicly available due to intellectual property restrictions.  Preprocessed analysis data (document-term counts and article metadata) and analysis scripts are available at *[doi]*. 
+**Data and materials availability:** Web of Science search results and article fulltext are not publicly available due to intellectual property restrictions.  Preprocessed analysis data (document-term counts and article metadata) and analysis scripts are available at <https://doi.org/10.5281/zenodo.15272241>. 
 
 
 
