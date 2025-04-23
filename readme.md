@@ -1,10 +1,14 @@
 ---
-title: "Mainstreaming Race Science"
-author: "Daniel J. Hicks, Emilio Lobato"
+title: "Race Science in Mainstream Psychology, 1960-2010"
+author: "D. J. Hicks, Emilio Lobato"
 email: <dhicks4@ucmerced.edu>
 ---
 
-This repository contains the preprocessed analysis data and code for the paper "Mainstreaming Race Science" by Daniel J. Hicks and Emilio Lobato.  
+This repository contains the preprocessed analysis data and code for the paper "Race Science in Mainstream Psychology, 1960-2010" by D. J. Hicks and Emilio Lobato.  
+
+Most of the analysis was conducted in R version 4.1.  We initially attempted to support computational reproducibility using [renv version 0.15.2](https://cran.r-project.org/src/contrib/Archive/renv/). However, due to the extended time frame of the project, we found that it was not feasible to maintain a version-fixed package list. Below, we include reproducibility instructions intended for use with `renv`. 
+
+----
 
 Reproducing this analysis requires [R](https://cran.r-project.org/index.html) version 4.1 and [renv version 0.15.2](https://cran.r-project.org/src/contrib/Archive/renv/).  We also recommend using GNU make, which should be installed automatically with the OS on Unix-based systems (including macOS and Linux).  
 
